@@ -274,3 +274,16 @@ void turnRight135(DC_motor *mL, DC_motor *mR){
         a--;
     }
 }
+
+void turnLeft135(DC_motor *mL, DC_motor *mR){
+    
+    unsigned char a=0;
+    while(a<69){ // (Calibration of 77 gives 180 deg turn but may differ for different surfaces and buggy acceleration)
+        turnLeft(&mL, &mR); // Make the Buggy turn left
+        a++;
+    }
+    while(a>0){
+        stop(&mL, &mR); // Stop turn 
+        a--;
+    }
+}

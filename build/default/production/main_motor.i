@@ -24269,6 +24269,7 @@ void turnLeft90(DC_motor *mL, DC_motor *mR);
 void turnRight90(DC_motor *mL, DC_motor *mR);
 void turn180(DC_motor *mL, DC_motor *mR);
 void turnRight135(DC_motor *mL, DC_motor *mR);
+void turnLeft135(DC_motor *mL, DC_motor *mR);
 # 10 "main_motor.c" 2
 
 

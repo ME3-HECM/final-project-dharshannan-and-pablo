@@ -8,9 +8,9 @@
       <itemPath>i2c.h</itemPath>
       <itemPath>LED_Buttons.h</itemPath>
       <itemPath>dc_motor.h</itemPath>
+      <itemPath>interrupts.h</itemPath>
       <itemPath>serial.h</itemPath>
       <itemPath>timers.h</itemPath>
-      <itemPath>interrupts.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -23,10 +23,10 @@
       <itemPath>i2c.c</itemPath>
       <itemPath>LED_Buttons.c</itemPath>
       <itemPath>dc_motor.c</itemPath>
+      <itemPath>interrupts.c</itemPath>
       <itemPath>serial.c</itemPath>
       <itemPath>timers.c</itemPath>
-      <itemPath>interrupts.c</itemPath>
-      <itemPath>main_calibration.c</itemPath>
+      <itemPath>main_motor.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -45,7 +45,7 @@
         <targetDevice>PIC18F67K40</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>pk4hybrid</platformTool>
+        <platformTool>noID</platformTool>
         <languageToolchain>XC8</languageToolchain>
         <languageToolchainVersion>2.40</languageToolchainVersion>
         <platform>3</platform>

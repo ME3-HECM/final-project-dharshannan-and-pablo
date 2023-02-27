@@ -223,3 +223,15 @@ void fullSpeedBackwards(DC_motor *mL, DC_motor *mR){
     __delay_ms(50); // Delay the incrementation
 }
 
+void turnLeft90(DC_motor *mL, DC_motor *mR){
+    
+    unsigned char a=0;
+    while(a<60){ // (Calibration of 77 gives 180 deg turn but may differ for different surfaces and buggy acceleration)
+        turnLeft(&mL, &mR); // Make the Buggy turn left
+        a++;
+    }
+    while(a>0){
+        stop(&mL, &mR); // Stop turn 
+        a--;
+    }
+}

@@ -1,4 +1,4 @@
-# 1 "dc_motor.c"
+# 1 "main_motor.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,7 +6,16 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "dc_motor.c" 2
+# 1 "main_motor.c" 2
+
+#pragma config FEXTOSC = HS
+#pragma config RSTOSC = EXTOSC_4PLL
+
+
+#pragma config WDTCPS = WDTCPS_31
+#pragma config WDTE = OFF
+
+
 # 1 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -24229,7 +24238,7 @@ __attribute__((__unsupported__("The READTIMER" "0" "() macro is not available wi
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\\pic\\include\\xc.h" 2 3
-# 1 "dc_motor.c" 2
+# 9 "main_motor.c" 2
 
 # 1 "./dc_motor.h" 1
 
@@ -24257,240 +24266,29 @@ void turnRight(DC_motor *mL, DC_motor *mR);
 void fullSpeedAhead(DC_motor *mL, DC_motor *mR);
 void fullSpeedBackwards(DC_motor *mL, DC_motor *mR);
 void turnLeft90(DC_motor *mL, DC_motor *mR);
-# 2 "dc_motor.c" 2
+# 10 "main_motor.c" 2
 
 
 
-void initDCmotorsPWM(unsigned int PWMperiod){
 
-    LATEbits.LATE2 = 0;
-    TRISEbits.TRISE2 = 0;
-    LATEbits.LATE4 = 0;
-    TRISEbits.TRISE4 = 0;
-    LATCbits.LATC7 = 0;
-    TRISCbits.TRISC7 = 0;
-    LATGbits.LATG6 = 0;
-    TRISGbits.TRISG6 = 0;
+void main(void) {
 
+    initDCmotorsPWM(99);
 
-    RE2PPS=0x05;
-    RE4PPS=0x06;
-    RC7PPS=0x07;
-    RG6PPS=0x08;
+    struct DC_motor motorL, motorR;
 
+    motorL.power=0;
+    motorL.direction=1;
+    motorL.brakemode=1;
+    motorL.posDutyHighByte=(unsigned char *)(&CCPR1H);
+    motorL.negDutyHighByte=(unsigned char *)(&CCPR2H);
+    motorL.PWMperiod= T2PR;
 
-    T2CONbits.CKPS=0b100;
-    T2HLTbits.MODE=0b00000;
-    T2CLKCONbits.CS=0b0001;
+    motorR.power=0;
+    motorR.direction=1;
+    motorR.brakemode=1;
+    motorR.posDutyHighByte=(unsigned char *)(&CCPR3H);
+    motorR.negDutyHighByte=(unsigned char *)(&CCPR4H);
+    motorR.PWMperiod= T2PR;
 
-
-
-    T2PR=PWMperiod;
-    T2CONbits.ON=1;
-
-
-
-    CCPR1H=0;
-    CCPR2H=0;
-    CCPR3H=0;
-    CCPR4H=0;
-
-
-    CCPTMRS0bits.C1TSEL=0;
-    CCPTMRS0bits.C2TSEL=0;
-    CCPTMRS0bits.C3TSEL=0;
-    CCPTMRS0bits.C4TSEL=0;
-
-
-    CCP1CONbits.FMT=1;
-    CCP1CONbits.CCP1MODE=0b1100;
-    CCP1CONbits.EN=1;
-
-    CCP2CONbits.FMT=1;
-    CCP2CONbits.CCP2MODE=0b1100;
-    CCP2CONbits.EN=1;
-
-    CCP3CONbits.FMT=1;
-    CCP3CONbits.CCP3MODE=0b1100;
-    CCP3CONbits.EN=1;
-
-    CCP4CONbits.FMT=1;
-    CCP4CONbits.CCP4MODE=0b1100;
-    CCP4CONbits.EN=1;
-}
-
-
-void setMotorPWM(DC_motor *m)
-{
-    unsigned char posDuty, negDuty;
-
-    if(m->brakemode) {
-        posDuty=m->PWMperiod - ((unsigned int)(m->power)*(m->PWMperiod))/100;
-        negDuty=m->PWMperiod;
-    }
-    else {
-        posDuty=0;
-  negDuty=((unsigned int)(m->power)*(m->PWMperiod))/100;
-    }
-
-    if (m->direction) {
-        *(m->posDutyHighByte)=posDuty;
-        *(m->negDutyHighByte)=negDuty;
-    } else {
-        *(m->posDutyHighByte)=negDuty;
-        *(m->negDutyHighByte)=posDuty;
-    }
-}
-
-
-void stop(DC_motor *mL, DC_motor *mR)
-{
-    if(mL->direction==1 && mR->direction==1){
-
-        mL->brakemode = 1;
-        mR->brakemode = 1;
-
-        if(mL->power<0){mL->power=0;}
-        if(mR->power<0){mR->power=0;}
-
-        --mL->power;
-        --mR->power;
-
-        setMotorPWM(mL);
-        setMotorPWM(mR);
-        _delay((unsigned long)((10)*(64000000/4000.0)));
-    }
-
-    if(mL->direction==1 && mR->direction==0){
-
-        mL->brakemode = 1;
-        mR->brakemode = 1;
-
-        if(mL->power<0){mL->power=0;}
-        if(mR->power<0){mR->power=0;}
-
-        --mL->power;
-        --mR->power;
-
-        setMotorPWM(mL);
-        setMotorPWM(mR);
-        _delay((unsigned long)((10)*(64000000/4000.0)));
-    }
-
-    if(mL->direction==0 && mR->direction==1){
-
-        mL->brakemode = 1;
-        mR->brakemode = 1;
-
-        if(mL->power<0){mL->power=0;}
-        if(mR->power<0){mR->power=0;}
-
-        --mL->power;
-        --mR->power;
-
-        setMotorPWM(mL);
-        setMotorPWM(mR);
-        _delay((unsigned long)((10)*(64000000/4000.0)));
-    }
-}
-
-
-void turnLeft(DC_motor *mL, DC_motor *mR)
-{
-
-    mL->direction = 1;
-    mL->brakemode = 0;
-
-    mR->direction = 0;
-    mR->brakemode = 0;
-
-
-    if(mL->power>75){mL->power=75;}
-    if(mR->power>75){mR->power=75;}
-
-    ++mL->power;
-    ++mR->power;
-
-    setMotorPWM(mL);
-    setMotorPWM(mR);
-    _delay((unsigned long)((50)*(64000000/4000.0)));
-}
-
-
-void turnRight(DC_motor *mL, DC_motor *mR)
-{
-
-    mL->direction = 0;
-    mL->brakemode = 0;
-
-    mR->direction = 1;
-    mR->brakemode = 0;
-
-
-    if(mL->power>75){mL->power=75;}
-    if(mR->power>75){mR->power=75;}
-
-    ++mL->power;
-    ++mR->power;
-
-    setMotorPWM(mL);
-    setMotorPWM(mR);
-    _delay((unsigned long)((50)*(64000000/4000.0)));
-}
-
-
-void fullSpeedAhead(DC_motor *mL, DC_motor *mR)
-{
-
-    mL->direction = 1;
-    mL->brakemode = 0;
-
-    mR->direction = 1;
-    mR->brakemode = 0;
-
-
-    if(mL->power>75){mL->power=75;}
-    if(mR->power>75){mR->power=75;}
-
-    ++mL->power;
-    ++mR->power;
-
-    setMotorPWM(mL);
-    setMotorPWM(mR);
-    _delay((unsigned long)((50)*(64000000/4000.0)));
-
-}
-
-void fullSpeedBackwards(DC_motor *mL, DC_motor *mR){
-
-
-    mL->direction = 0;
-    mL->brakemode = 0;
-
-    mR->direction = 0;
-    mR->brakemode = 0;
-
-
-    if(mL->power>75){mL->power=75;}
-    if(mR->power>75){mR->power=75;}
-
-    ++mL->power;
-    ++mR->power;
-
-    setMotorPWM(mL);
-    setMotorPWM(mR);
-    _delay((unsigned long)((50)*(64000000/4000.0)));
-}
-
-void turnLeft90(DC_motor *mL, DC_motor *mR){
-
-    unsigned char a=0;
-    while(a<60){
-        turnLeft(&mL, &mR);
-        a++;
-    }
-    while(a>0){
-        stop(&mL, &mR);
-        a--;
-    }
 }

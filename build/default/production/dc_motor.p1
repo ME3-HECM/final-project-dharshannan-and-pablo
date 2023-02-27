@@ -2894,3 +2894,57 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;dc_motor.c: 237: }
 [e :UE 2044 ]
 }
+"239
+[; ;dc_motor.c: 239: void turnRight90(DC_motor *mL, DC_motor *mR){
+[v _turnRight90 `(v ~T0 @X0 1 ef2`*S2015`*S2015 ]
+{
+[e :U _turnRight90 ]
+[v _mL `*S2015 ~T0 @X0 1 r1 ]
+[v _mR `*S2015 ~T0 @X0 1 r2 ]
+[f ]
+"241
+[; ;dc_motor.c: 241:     unsigned char a=0;
+[v _a `uc ~T0 @X0 1 a ]
+[e = _a -> -> 0 `i `uc ]
+"242
+[; ;dc_motor.c: 242:     while(a<60){
+[e $U 2052  ]
+[e :U 2053 ]
+{
+"243
+[; ;dc_motor.c: 243:         turnRight(&mL, &mR);
+[e ( _turnRight (2 , -> &U _mL `*S2015 -> &U _mR `*S2015 ]
+"244
+[; ;dc_motor.c: 244:         a++;
+[e ++ _a -> -> 1 `i `uc ]
+"245
+[; ;dc_motor.c: 245:     }
+}
+[e :U 2052 ]
+"242
+[; ;dc_motor.c: 242:     while(a<60){
+[e $ < -> _a `i -> 60 `i 2053  ]
+[e :U 2054 ]
+"246
+[; ;dc_motor.c: 246:     while(a>0){
+[e $U 2055  ]
+[e :U 2056 ]
+{
+"247
+[; ;dc_motor.c: 247:         stop(&mL, &mR);
+[e ( _stop (2 , -> &U _mL `*S2015 -> &U _mR `*S2015 ]
+"248
+[; ;dc_motor.c: 248:         a--;
+[e -- _a -> -> 1 `i `uc ]
+"249
+[; ;dc_motor.c: 249:     }
+}
+[e :U 2055 ]
+"246
+[; ;dc_motor.c: 246:     while(a>0){
+[e $ > -> _a `i -> 0 `i 2056  ]
+[e :U 2057 ]
+"250
+[; ;dc_motor.c: 250: }
+[e :UE 2051 ]
+}

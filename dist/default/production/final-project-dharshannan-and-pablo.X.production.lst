@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.40 build 20220703182018 
-                                                                                               Mon Feb 27 16:35:30 2023
+                                                                                               Mon Feb 27 16:41:52 2023
 
 Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1 
      1                           	processor	18F67K40
@@ -591,24 +591,24 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    561                           ;interrupts.c: 37:     if(PIR0bits.TMR0IF){
    562   000026  010E               	movlb	14	; () banked
    563   000028  AB33               	btfss	51,5,b	;volatile
-   564   00002A  EF19  F000         	goto	i1u35_21
-   565   00002E  EF1B  F000         	goto	i1u35_20
-   566   000032                     i1u35_21:
-   567   000032  EF35  F000         	goto	i1l271
-   568   000036                     i1u35_20:
+   564   00002A  EF19  F000         	goto	i1u37_21
+   565   00002E  EF1B  F000         	goto	i1u37_20
+   566   000032                     i1u37_21:
+   567   000032  EF35  F000         	goto	i1l280
+   568   000036                     i1u37_20:
    569   000036                     
    570                           ; BSR set to: 14
    571                           ;interrupts.c: 38:         LATHbits.LATH3 = !LATHbits.LATH3;
    572   000036  A680               	btfss	128,3,c	;volatile
-   573   000038  EF20  F000         	goto	i1u36_21
-   574   00003C  EF24  F000         	goto	i1u36_20
-   575   000040                     i1u36_21:
+   573   000038  EF20  F000         	goto	i1u38_21
+   574   00003C  EF24  F000         	goto	i1u38_20
+   575   000040                     i1u38_21:
    576   000040  6A06               	clrf	??_LowISR^0,c
    577   000042  2A06               	incf	??_LowISR^0,f,c
-   578   000044  EF25  F000         	goto	i1u37_28
-   579   000048                     i1u36_20:
+   578   000044  EF25  F000         	goto	i1u39_28
+   579   000048                     i1u38_20:
    580   000048  6A06               	clrf	??_LowISR^0,c
-   581   00004A                     i1u37_28:
+   581   00004A                     i1u39_28:
    582   00004A  4606               	rlncf	??_LowISR^0,f,c
    583   00004C  4606               	rlncf	??_LowISR^0,f,c
    584   00004E  4606               	rlncf	??_LowISR^0,f,c
@@ -633,7 +633,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    603                           ;interrupts.c: 42:         PIR0bits.TMR0IF=0;
    604   000066  010E               	movlb	14	; () banked
    605   000068  9B33               	bcf	51,5,b	;volatile
-   606   00006A                     i1l271:
+   606   00006A                     i1l280:
    607                           
    608                           ; BSR set to: 14
    609   00006A  C009  FFE0         	movff	??_LowISR+3,bsr
@@ -703,11 +703,11 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    668                           ;interrupts.c: 52:     if(PIR4bits.RC4IF){
    669   000116  010E               	movlb	14	; () banked
    670   000118  A737               	btfss	55,3,b	;volatile
-   671   00011A  EF91  F000         	goto	i2u48_41
-   672   00011E  EF93  F000         	goto	i2u48_40
-   673   000122                     i2u48_41:
-   674   000122  EF98  F000         	goto	i2l1551
-   675   000126                     i2u48_40:
+   671   00011A  EF91  F000         	goto	i2u50_41
+   672   00011E  EF93  F000         	goto	i2u50_40
+   673   000122                     i2u50_41:
+   674   000122  EF98  F000         	goto	i2l1574
+   675   000126                     i2u50_40:
    676   000126                     
    677                           ; BSR set to: 14
    678                           ;interrupts.c: 53:         unsigned char a = RC4REG;
@@ -717,38 +717,38 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    682                           ;interrupts.c: 54:         putCharToRxBuf(a);
    683   00012A  5005               	movf	HighISR@a^0,w,c
    684   00012C  ECF6  F000         	call	_putCharToRxBuf
-   685   000130                     i2l1551:
+   685   000130                     i2l1574:
    686                           
    687                           ;interrupts.c: 58:     if(!isDataInTxBuf()){
    688   000130  EC1C  F001         	call	_isDataInTxBuf	;wreg free
    689   000134  0900               	iorlw	0
    690   000136  A4D8               	btfss	status,2,c
-   691   000138  EFA0  F000         	goto	i2u49_41
-   692   00013C  EFA2  F000         	goto	i2u49_40
-   693   000140                     i2u49_41:
-   694   000140  EFA4  F000         	goto	i2l277
-   695   000144                     i2u49_40:
+   691   000138  EFA0  F000         	goto	i2u51_41
+   692   00013C  EFA2  F000         	goto	i2u51_40
+   693   000140                     i2u51_41:
+   694   000140  EFA4  F000         	goto	i2l286
+   695   000144                     i2u51_40:
    696   000144                     
    697                           ;interrupts.c: 59:         PIE4bits.TX4IE=0;
    698   000144  010E               	movlb	14	; () banked
    699   000146  952D               	bcf	45,2,b	;volatile
-   700   000148                     i2l277:
+   700   000148                     i2l286:
    701                           
    702                           ;interrupts.c: 61:     if(PIR4bits.TX4IF){
    703   000148  010E               	movlb	14	; () banked
    704   00014A  A537               	btfss	55,2,b	;volatile
-   705   00014C  EFAA  F000         	goto	i2u50_41
-   706   000150  EFAC  F000         	goto	i2u50_40
-   707   000154                     i2u50_41:
-   708   000154  EFB0  F000         	goto	i2l279
-   709   000158                     i2u50_40:
+   705   00014C  EFAA  F000         	goto	i2u52_41
+   706   000150  EFAC  F000         	goto	i2u52_40
+   707   000154                     i2u52_41:
+   708   000154  EFB0  F000         	goto	i2l288
+   709   000158                     i2u52_40:
    710   000158                     
    711                           ; BSR set to: 14
    712                           ;interrupts.c: 62:         TX4REG = getCharFromTxBuf();
    713   000158  ECE0  F000         	call	_getCharFromTxBuf	;wreg free
    714   00015C  010E               	movlb	14	; () banked
    715   00015E  6FE4               	movwf	228,b	;volatile
-   716   000160                     i2l279:
+   716   000160                     i2l288:
    717                           
    718                           ; BSR set to: 14
    719   000160  C004  FFDA         	movff	??_HighISR+1,fsr2h
@@ -809,11 +809,11 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    769   0001F2  EFFD  F000         	goto	i2u21_41
    770   0001F6  EFFF  F000         	goto	i2u21_40
    771   0001FA                     i2u21_41:
-   772   0001FA  EF01  F001         	goto	i2l1247
+   772   0001FA  EF01  F001         	goto	i2l1256
    773   0001FE                     i2u21_40:
    774   0001FE  0E00               	movlw	0
    775   000200  6E36               	movwf	_RxBufWriteCnt^0,c	;volatile
-   776   000202                     i2l1247:
+   776   000202                     i2l1256:
    777                           
    778                           ;serial.c: 56:     EUSART4RXbuf[RxBufWriteCnt++]=byte;
    779   000202  0E1E               	movlw	low _EUSART4RXbuf
@@ -928,14 +928,14 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    878                           ;serial.c: 69:     if (TxBufReadCnt>=60) {TxBufReadCnt=0;}
    879   0001C0  0E3B               	movlw	59
    880   0001C2  6433               	cpfsgt	_TxBufReadCnt^0,c	;volatile
-   881   0001C4  EFE6  F000         	goto	i2u46_41
-   882   0001C8  EFE8  F000         	goto	i2u46_40
-   883   0001CC                     i2u46_41:
-   884   0001CC  EFEA  F000         	goto	i2l1533
-   885   0001D0                     i2u46_40:
+   881   0001C4  EFE6  F000         	goto	i2u48_41
+   882   0001C8  EFE8  F000         	goto	i2u48_40
+   883   0001CC                     i2u48_41:
+   884   0001CC  EFEA  F000         	goto	i2l1556
+   885   0001D0                     i2u48_40:
    886   0001D0  0E00               	movlw	0
    887   0001D2  6E33               	movwf	_TxBufReadCnt^0,c	;volatile
-   888   0001D4                     i2l1533:
+   888   0001D4                     i2l1556:
    889                           
    890                           ;serial.c: 70:     return EUSART4TXbuf[TxBufReadCnt++];
    891   0001D4  2A33               	incf	_TxBufReadCnt^0,f,c	;volatile
@@ -1252,6 +1252,18 @@ Pointer List with Targets:
 		 -> CCPR4H(BITBIGSFRhlllllll[1]), CCPR2H(BITBIGSFRhhhlll[1]), 
 
     turn180@mR.posDutyHighByte	PTR unsigned char  size(2) Largest target is 0
+		 -> CCPR3H(BITBIGSFRhlllllll[1]), CCPR1H(BITBIGSFRhhhlll[1]), 
+
+    turnRight135@mL.negDutyHighByte	PTR unsigned char  size(2) Largest target is 0
+		 -> CCPR4H(BITBIGSFRhlllllll[1]), CCPR2H(BITBIGSFRhhhlll[1]), 
+
+    turnRight135@mL.posDutyHighByte	PTR unsigned char  size(2) Largest target is 0
+		 -> CCPR3H(BITBIGSFRhlllllll[1]), CCPR1H(BITBIGSFRhhhlll[1]), 
+
+    turnRight135@mR.negDutyHighByte	PTR unsigned char  size(2) Largest target is 0
+		 -> CCPR4H(BITBIGSFRhlllllll[1]), CCPR2H(BITBIGSFRhhhlll[1]), 
+
+    turnRight135@mR.posDutyHighByte	PTR unsigned char  size(2) Largest target is 0
 		 -> CCPR3H(BITBIGSFRhlllllll[1]), CCPR1H(BITBIGSFRhhhlll[1]), 
 
     motorR.negDutyHighByte	PTR unsigned char  size(2) Largest target is 1
@@ -1652,51 +1664,51 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.40 build 20220703182018 
-Symbol Table                                                                                   Mon Feb 27 16:35:30 2023
+Symbol Table                                                                                   Mon Feb 27 16:41:52 2023
 
-                      bsr 000FE0                       l154 010C                       l397 01BC  
-                     wreg 000FE8                      l1511 00B8                      l1521 00F4  
-                    l1513 00DC                      l1505 007E                      l1523 00FE  
-                    l1515 00E6                      l1507 008E                      l1525 0100  
-                    l1517 00E8                      l1509 00B4                      l1527 010A  
-                    l1519 00F2                      l1571 0180                      l1581 019E  
-                    l1573 0184                      l1565 016C                      l1583 01A2  
-                    l1575 018C                      l1567 0178                      l1585 01A6  
-                    l1577 0194                      l1569 017C                      l1587 01AE  
-                    l1579 019A                      l1589 01B6              _BAUD4CONbits 000EE9  
+                      bsr 000FE0                       l154 010C                       l406 01BC  
+                     wreg 000FE8                      l1600 0194                      l1530 008E  
+                    l1610 01AE                      l1602 019A                      l1540 00E8  
+                    l1532 00B4                      l1612 01B6                      l1604 019E  
+                    l1550 010A                      l1542 00F2                      l1534 00B8  
+                    l1606 01A2                      l1544 00F4                      l1536 00DC  
+                    l1528 007E                      l1608 01A6                      l1546 00FE  
+                    l1538 00E6                      l1548 0100                      l1590 0178  
+                    l1592 017C                      l1594 0180                      l1596 0184  
+                    l1588 016C                      l1598 018C              _BAUD4CONbits 000EE9  
                     _T2PR 000FBC                      _main 016C                      fsr2h 000FDA  
                     indf2 000FDF                      fsr2l 000FD9                      btemp 0037  
                     start 007A           __end_of_HighISR 016C              ___param_bank 000000  
-                   ?_main 0001                     i1l271 006A                     i2l342 0214  
-                   i2l356 024E                     i2l349 01EA                     i2l277 0148  
-                   i2l279 0160                     _TMR0H 000FD4                     _TMR0L 000FD3  
+                   ?_main 0001                     i1l280 006A                     i2l351 0214  
+                   i2l365 024E                     i2l358 01EA                     i2l286 0148  
+                   i2l288 0160                     _TMR0H 000FD4                     _TMR0L 000FD3  
                    ttemp5 0038                     ttemp6 003B                     ttemp7 003F  
                    status 000FD8                     wtemp8 0038        putCharToRxBuf@byte 0001  
          __initialization 0216              __end_of_main 01C0                    ??_main 000C  
            __activetblptr 000000                    _CCPR1H 000FAA                    _CCPR2H 000FA6  
                   _CCPR3H 000F25                    _CCPR4H 000F21                    _RC0PPS 000E62  
-                  _RC4REG 000EE3                    i1l1401 0062                    i1l1403 0066  
-                  _RE2PPS 000E74                    i1l1393 0026                    i1l1395 0036  
-                  _RD5PPS 000E6F                    _RC7PPS 000E69                    i1l1397 005A  
-                  i1l1399 005E                    _RE4PPS 000E76                    _RD6PPS 000E70  
-                  i2l1251 0238                    i2l1243 01EE                    i2l1245 01FE  
-                  i2l1247 0202                    i2l1249 0212                    i2l1531 01D0  
-                  i2l1533 01D4                    i2l1551 0130                    i2l1529 01C0  
-                  i2l1553 0144                    i2l1545 0116                    i2l1555 0158  
-                  i2l1547 0126                    i2l1549 012A                    _RG6PPS 000E88  
+                  _RC4REG 000EE3                    i1l1420 005A                    i1l1422 005E  
+                  i1l1424 0062                    i1l1416 0026                    i1l1426 0066  
+                  i1l1418 0036                    _RE2PPS 000E74                    _RD5PPS 000E6F  
+                  _RC7PPS 000E69                    _RE4PPS 000E76                    _RD6PPS 000E70  
+                  i2l1260 0238                    i2l1252 01EE                    i2l1254 01FE  
+                  i2l1256 0202                    i2l1258 0212                    i2l1552 01C0  
+                  i2l1554 01D0                    i2l1570 0126                    i2l1556 01D4  
+                  i2l1572 012A                    i2l1574 0130                    i2l1576 0144  
+                  i2l1568 0116                    i2l1578 0158                    _RG6PPS 000E88  
                ??_HighISR 0003                    _RX4PPS 000E15                    _TX4REG 000EE4  
                   _LowISR 0018              _CCPTMRS0bits 000FAD          _getCharFromTxBuf 01C0  
                   clear_0 021C                    clear_1 0228                    isa$std 000001  
        ??_initDCmotorsPWM 000C     __end_of_isDataInTxBuf 0250                __accesstop 0060  
  __end_of__initialization 022E             ___rparam_used 000001            __pcstackCOMRAM 0001  
               __pbssBANK0 0060                   ?_LowISR 0001              _T2CLKCONbits 000FBF  
-                 _SP4BRGH 000EE6                   _SP4BRGL 000EE5                   i1u35_20 0036  
-                 i1u35_21 0032                   i1u36_20 0048                   i1u36_21 0040  
-                 i2u21_40 01FE                   i2u21_41 01FA                   i1u37_28 004A  
-                 i2u22_40 024C                   i2u22_41 0246                   i2u23_40 024E  
-                 i2u50_40 0158                   i2u50_41 0154                   i2u46_40 01D0  
-                 i2u46_41 01CC                   i2u48_40 0126                   i2u48_41 0122  
-                 i2u49_40 0144                   i2u49_41 0140                   _SSP2ADD 000ED6  
+                 _SP4BRGH 000EE6                   _SP4BRGL 000EE5                   i1u37_20 0036  
+                 i1u37_21 0032                   i2u21_40 01FE                   i2u21_41 01FA  
+                 i1u38_20 0048                   i1u38_21 0040                   i2u22_40 024C  
+                 i2u22_41 0246                   i2u23_40 024E                   i1u39_28 004A  
+                 i2u50_40 0126                   i2u50_41 0122                   i2u51_40 0144  
+                 i2u51_41 0140                   i2u52_40 0158                   i2u52_41 0154  
+                 i2u48_40 01D0                   i2u48_41 01CC                   _SSP2ADD 000ED6  
                  _SSP2BUF 000ED5                   _HighISR 0008                   __Hparam 0000  
                  __Lparam 0000                   __pcinit 0216                   __ramtop 0E00  
                  __ptext0 016C                   __ptext1 007E                   __ptext4 01EC  

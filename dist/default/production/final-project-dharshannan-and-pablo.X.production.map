@@ -2,13 +2,15 @@ Microchip MPLAB XC8 Compiler V2.40
 
 Linker command line:
 
--W-3 --edf=D:\MPLAB_COMPILER\pic\dat\20220703182018_en.msgs -cn \
+-W-3 \
+  --edf=C:\Program Files\Microchip\xc8\v2.40\pic\dat\20220703182018_en.msgs \
+  -cn \
   -h+dist/default/production\final-project-dharshannan-and-pablo.X.production.sym \
   --cmf=dist/default/production\final-project-dharshannan-and-pablo.X.production.cmf \
-  -z -Q18F67K40 -oC:\Users\User\AppData\Local\Temp\xcAsbe8.4 \
+  -z -Q18F67K40 -oC:\Users\capel\AppData\Local\Temp\xcAshus.4 \
   --defsym=__MPLAB_BUILD=1 --fixupoverflow=error \
   -Mdist/default/production/final-project-dharshannan-and-pablo.X.production.map \
-  --md=C:\Users\User\AppData\Local\Temp\xcAsbe8.dat -E1 -ver=XC8 Compiler \
+  --md=C:\Users\capel\AppData\Local\Temp\xcAshus.dat -E1 -ver=XC8 Compiler \
   --acfsm=1493 -ACODE=00h-01FFFFh -ACONST=00h-01FFFFh \
   -ASMALLCONST=0E00h-0EFFhx498 -AMEDIUMCONST=0E00h-0FFFFh,010E00h-01FFFFh \
   -ACOMRAM=01h-05Fh -AABS1=00h-0DE9h -ABIGRAM=01h-0DE9h \
@@ -28,7 +30,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\User\AppData\Local\Temp\xcAsbe8.o \
+  C:\Users\capel\AppData\Local\Temp\xcAshus.o \
   dist/default/production\final-project-dharshannan-and-pablo.X.production.o 
 
 Object code version is 3.11
@@ -38,7 +40,7 @@ Machine type is 18F67K40
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\User\AppData\Local\Temp\xcAsbe8.o
+C:\Users\capel\AppData\Local\Temp\xcAshus.o
                 idloc                            200000   200000       10        0       5
                 config                           300000   300000        C        0       4
                 init                                 7C       7C        4        C       0
@@ -785,7 +787,7 @@ _color_read_Red                text26       001CE0
 _color_writetoaddr             text22       00211A
 _dbuf                          bssBANK1     0001D0
 _dtoa                          text4        0010DA
-_dtoa$2298                     cstackCOMRAM 000037
+_dtoa$2333                     cstackCOMRAM 000037
 _flags                         bssCOMRAM    000051
 _fputc                         text7        001A08
 _fputs                         text6        001E66
@@ -796,7 +798,7 @@ _isDataInRxBuf                 text18       0021AA
 _isDataInTxBuf                 text17       002192
 _isdigit                       text14       001FCA
 _isspace                       text13       001E20
-_isspace$2347                  cstackCOMRAM 00000E
+_isspace$2382                  cstackCOMRAM 00000E
 _main                          text0        00138E
 _pad                           text5        001AD2
 _prec                          bssCOMRAM    00004F
@@ -889,6 +891,11 @@ wtemp8                         temp         000057
 MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
+C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\nf_fputc.c
+		_fputc         		CODE           	1A08	0000	202
+
+C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\nf_fputc.c estimated size: 202
+
 serial.c
 		_putCharToRxBuf		CODE           	20A2	0000	42
 		_putCharToTxBuf		CODE           	2078	0000	42
@@ -907,6 +914,11 @@ timers.c
 
 timers.c estimated size: 32
 
+C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\nf_sprintf.c
+		_sprintf       		CODE           	1C8E	0000	82
+
+C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\nf_sprintf.c estimated size: 82
+
 color.c
 		_Update_RGBC   		CODE           	1B7C	0000	94
 		_color_writetoaddr		CODE           	211A	0000	32
@@ -924,15 +936,20 @@ LED_Buttons.c
 
 LED_Buttons.c estimated size: 16
 
-D:\MPLAB_COMPILER\pic\sources\c99\common\nf_sprintf.c
-		_sprintf       		CODE           	1C8E	0000	82
-
-D:\MPLAB_COMPILER\pic\sources\c99\common\nf_sprintf.c estimated size: 82
-
-D:\MPLAB_COMPILER\pic\sources\c99\common\isspace.c
+C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\isspace.c
 		_isspace       		CODE           	1E20	0000	70
 
-D:\MPLAB_COMPILER\pic\sources\c99\common\isspace.c estimated size: 70
+C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\isspace.c estimated size: 70
+
+C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\atoi.c
+		_atoi          		CODE           	18AA	0000	350
+
+C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\atoi.c estimated size: 350
+
+C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul16.c
+		___wmul        		CODE           	20F4	0000	38
+
+C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul16.c estimated size: 38
 
 interrupts.c
 		_LowISR        		CODE           	0018	0000	100
@@ -941,10 +958,10 @@ interrupts.c
 
 interrupts.c estimated size: 216
 
-D:\MPLAB_COMPILER\pic\sources\c99\common\Umul16.c
-		___wmul        		CODE           	20F4	0000	38
+C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\abs.c
+		_abs           		CODE           	1EEC	0000	64
 
-D:\MPLAB_COMPILER\pic\sources\c99\common\Umul16.c estimated size: 38
+C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\abs.c estimated size: 64
 
 i2c.c
 		_I2C_2_Master_Start		CODE           	2200	0000	10
@@ -957,25 +974,20 @@ i2c.c
 
 i2c.c estimated size: 190
 
-D:\MPLAB_COMPILER\pic\sources\c99\common\atoi.c
-		_atoi          		CODE           	18AA	0000	350
-
-D:\MPLAB_COMPILER\pic\sources\c99\common\atoi.c estimated size: 350
-
-D:\MPLAB_COMPILER\pic\sources\c99\common\nf_fputs.c
-		_fputs         		CODE           	1E66	0000	68
-
-D:\MPLAB_COMPILER\pic\sources\c99\common\nf_fputs.c estimated size: 68
-
-D:\MPLAB_COMPILER\pic\sources\c99\common\isdigit.c
+C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\isdigit.c
 		_isdigit       		CODE           	1FCA	0000	44
 
-D:\MPLAB_COMPILER\pic\sources\c99\common\isdigit.c estimated size: 44
+C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\isdigit.c estimated size: 44
 
-D:\MPLAB_COMPILER\pic\sources\c99\common\aomod.c
+C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\nf_fputs.c
+		_fputs         		CODE           	1E66	0000	68
+
+C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\nf_fputs.c estimated size: 68
+
+C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
 		___aomod       		CODE           	1746	0000	356
 
-D:\MPLAB_COMPILER\pic\sources\c99\common\aomod.c estimated size: 356
+C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c estimated size: 356
 
 shared
 		__initialization		CODE           	1F2C	0000	48
@@ -983,36 +995,26 @@ shared
 
 shared estimated size: 72
 
-D:\MPLAB_COMPILER\pic\sources\c99\common\abs.c
-		_abs           		CODE           	1EEC	0000	64
-
-D:\MPLAB_COMPILER\pic\sources\c99\common\abs.c estimated size: 64
-
-D:\MPLAB_COMPILER\pic\sources\c99\common\putch.c
+C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\putch.c
 		_putch         		CODE           	2224	0000	2
 
-D:\MPLAB_COMPILER\pic\sources\c99\common\putch.c estimated size: 2
+C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\putch.c estimated size: 2
+
+C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\doprnt.c
+		_vfpfcnvrt     		CODE           	0E20	0000	698
+		_pad           		CODE           	1AD2	0000	170
+		_dtoa          		CODE           	10DA	0000	692
+		_vfprintf      		CODE           	1C38	0000	86
+
+C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\doprnt.c estimated size: 1646
 
 main_calibration.c
 		_main          		CODE           	138E	0000	560
 
 main_calibration.c estimated size: 560
 
-D:\MPLAB_COMPILER\pic\sources\c99\common\doprnt.c
-		_vfpfcnvrt     		CODE           	0E20	0000	698
-		_pad           		CODE           	1AD2	0000	170
-		_dtoa          		CODE           	10DA	0000	692
-		_vfprintf      		CODE           	1C38	0000	86
-
-D:\MPLAB_COMPILER\pic\sources\c99\common\doprnt.c estimated size: 1646
-
-D:\MPLAB_COMPILER\pic\sources\c99\common\nf_fputc.c
-		_fputc         		CODE           	1A08	0000	202
-
-D:\MPLAB_COMPILER\pic\sources\c99\common\nf_fputc.c estimated size: 202
-
-D:\MPLAB_COMPILER\pic\sources\c99\common\aodiv.c
+C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
 		___aodiv       		CODE           	15BE	0000	392
 
-D:\MPLAB_COMPILER\pic\sources\c99\common\aodiv.c estimated size: 392
+C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c estimated size: 392
 

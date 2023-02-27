@@ -202,3 +202,24 @@ void fullSpeedAhead(DC_motor *mL, DC_motor *mR)
     
 }
 
+void fullSpeedBackwards(DC_motor *mL, DC_motor *mR){
+     
+    // Set left motor direction to be rearwards and brakemode to be zero 
+    mL->direction = 0;
+    mL->brakemode = 0;
+    // Similar as above for right motor
+    mR->direction = 0;
+    mR->brakemode = 0;
+
+    // Check if motor power is above 100, if yes reset to 100 (saturate)
+    if(mL->power>75){mL->power=75;}
+    if(mR->power>75){mR->power=75;}
+    // Set the left and right motor powers to increment gradually 
+    ++mL->power;
+    ++mR->power;
+    // Call function for both left and right motor to setPWM
+    setMotorPWM(mL);
+    setMotorPWM(mR);
+    __delay_ms(50); // Delay the incrementation
+}
+

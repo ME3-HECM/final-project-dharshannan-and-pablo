@@ -24261,6 +24261,7 @@ void turnRight90(DC_motor *mL, DC_motor *mR);
 void turn180(DC_motor *mL, DC_motor *mR);
 void turnRight135(DC_motor *mL, DC_motor *mR);
 void turnLeft135(DC_motor *mL, DC_motor *mR);
+void yellowInstructions (DC_motor *mL, DC_motor *mR);
 # 2 "dc_motor.c" 2
 
 
@@ -24490,11 +24491,11 @@ void turnLeft90(DC_motor *mL, DC_motor *mR){
 
     unsigned char a=0;
     while(a<60){
-        turnLeft(&mL, &mR);
+        turnLeft(mL, mR);
         a++;
     }
     while(a>0){
-        stop(&mL, &mR);
+        stop(mL, mR);
         a--;
     }
 }
@@ -24503,11 +24504,11 @@ void turnRight90(DC_motor *mL, DC_motor *mR){
 
     unsigned char a=0;
     while(a<60){
-        turnRight(&mL, &mR);
+        turnRight(mL, mR);
         a++;
     }
     while(a>0){
-        stop(&mL, &mR);
+        stop(mL, mR);
         a--;
     }
 }
@@ -24516,11 +24517,11 @@ void turn180(DC_motor *mL, DC_motor *mR){
 
     unsigned char a=0;
     while(a<77){
-        turnRight(&mL, &mR);
+        turnRight(mL, mR);
         a++;
     }
     while(a>0){
-        stop(&mL, &mR);
+        stop(mL, mR);
         a--;
     }
 }
@@ -24529,11 +24530,11 @@ void turnRight135(DC_motor *mL, DC_motor *mR){
 
     unsigned char a=0;
     while(a<69){
-        turnRight(&mL, &mR);
+        turnRight(mL, mR);
         a++;
     }
     while(a>0){
-        stop(&mL, &mR);
+        stop(mL, mR);
         a--;
     }
 }
@@ -24542,11 +24543,18 @@ void turnLeft135(DC_motor *mL, DC_motor *mR){
 
     unsigned char a=0;
     while(a<69){
-        turnLeft(&mL, &mR);
+        turnLeft(mL, mR);
         a++;
     }
     while(a>0){
-        stop(&mL, &mR);
+        stop(mL, mR);
         a--;
     }
+}
+
+void yellowInstructions(DC_motor *mL, DC_motor *mR){
+
+    fullSpeedBackwards(mL, mR);
+    turnRight90(mL, mR);
+
 }

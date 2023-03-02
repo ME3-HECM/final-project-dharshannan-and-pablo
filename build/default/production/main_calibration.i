@@ -24476,9 +24476,16 @@ void WhiteLight(void);
 
 
 
+
 extern unsigned char tmr_ovf;
+extern unsigned char color_flag;
+extern unsigned int int_threshold_low;
+extern unsigned int int_threshold_high;
+
 
 void Interrupts_init(void);
+void init_colorclick_interrupts(void);
+void interrupts_clear_colorclick(void);
 void __attribute__((picinterrupt(("high_priority")))) HighISR();
 void __attribute__((picinterrupt(("low_priority")))) LowISR();
 # 14 "main_calibration.c" 2
@@ -24578,7 +24585,7 @@ void main(void){
             for(i=0;i<a;i++){
 
                 char string[40];
-                sprintf(string,"\nRGBC = %05d %05d %05d %05d\n",readingsR[i],readingsG[i],readingsB[i],readingsC[i]);
+                sprintf(string,"\n%05d %05d %05d %05d\n",readingsR[i],readingsG[i],readingsB[i],readingsC[i]);
                 TxBufferedString(string);
 
                 sendTxBuf();
@@ -24592,11 +24599,12 @@ void main(void){
         if(cont == 0x01){
 
             char string2[40];
-            sprintf(string2,"\nRGBC = %05d %05d %05d %05d\n",initial_color.R,initial_color.G,initial_color.B,initial_color.C);
+            sprintf(string2,"\n%05d %05d %05d %05d\n",initial_color.R,initial_color.G,initial_color.B,initial_color.C);
             TxBufferedString(string2);
 
             sendTxBuf();
             cont = 0x00;
+            a = 0;
         }
     }
 }

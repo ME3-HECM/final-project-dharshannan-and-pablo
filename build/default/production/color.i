@@ -24307,6 +24307,28 @@ void I2C_2_Master_Write(unsigned char data_byte);
 unsigned char I2C_2_Master_Read(unsigned char ack);
 # 3 "color.c" 2
 
+# 1 "./interrupts.h" 1
+
+
+
+
+
+
+
+
+extern unsigned char tmr_ovf;
+extern unsigned char color_flag;
+extern unsigned int int_threshold_low;
+extern unsigned int int_threshold_high;
+
+
+void Interrupts_init(void);
+void init_colorclick_interrupts(void);
+void interrupts_clear_colorclick(void);
+void __attribute__((picinterrupt(("high_priority")))) HighISR();
+void __attribute__((picinterrupt(("low_priority")))) LowISR();
+# 4 "color.c" 2
+
 
 void color_click_init(void)
 {

@@ -24239,9 +24239,16 @@ unsigned char __t3rd16on(void);
 
 
 
+
 extern unsigned char tmr_ovf;
+extern unsigned char color_flag;
+extern unsigned int int_threshold_low;
+extern unsigned int int_threshold_high;
+
 
 void Interrupts_init(void);
+void init_colorclick_interrupts(void);
+void interrupts_clear_colorclick(void);
 void __attribute__((picinterrupt(("high_priority")))) HighISR();
 void __attribute__((picinterrupt(("low_priority")))) LowISR();
 # 2 "interrupts.c" 2
@@ -24276,6 +24283,82 @@ void TxBufferedString(char *string);
 void sendTxBuf(void);
 # 3 "interrupts.c" 2
 
+# 1 "./color.h" 1
+
+
+
+
+
+
+
+
+typedef struct RGB_val {
+ unsigned int R;
+ unsigned int G;
+ unsigned int B;
+    unsigned int C;
+} RGB_val;
+
+
+
+
+void color_click_init(void);
+
+
+
+
+
+
+void color_writetoaddr(char address, char value);
+
+
+
+
+
+unsigned int color_read_Red(void);
+unsigned int color_read_Green(void);
+unsigned int color_read_Blue(void);
+unsigned int color_read_Clear(void);
+
+
+void Update_RGBC(RGB_val *tempval);
+# 4 "interrupts.c" 2
+
+# 1 "./i2c.h" 1
+# 13 "./i2c.h"
+void I2C_2_Master_Init(void);
+
+
+
+
+void I2C_2_Master_Idle(void);
+
+
+
+
+void I2C_2_Master_Start(void);
+
+
+
+
+void I2C_2_Master_RepStart(void);
+
+
+
+
+void I2C_2_Master_Stop(void);
+
+
+
+
+void I2C_2_Master_Write(unsigned char data_byte);
+
+
+
+
+unsigned char I2C_2_Master_Read(unsigned char ack);
+# 5 "interrupts.c" 2
+
 
 
 
@@ -24287,16 +24370,53 @@ void Interrupts_init(void)
 
 
 
+    TRISBbits.TRISB1 = 1;
+    ANSELBbits.ANSELB1 = 0;
+
+    PIE0bits.INT1IE = 1;
+    IPR0bits.INT1IP = 1;
+    INTCONbits.INT1EDG = 0;
+
+
     PIE0bits.TMR0IE=1;
     IPR0bits.TMR0IP = 0;
 
 
     PIE4bits.RC4IE=1;
 
+    interrupts_clear_colorclick();
 
     INTCONbits.IPEN = 1;
     INTCONbits.PEIE = 1;
     INTCONbits.GIE=1;
+}
+
+
+unsigned int int_threshold_low = 0;
+unsigned int int_threshold_high = 3250;
+
+void init_colorclick_interrupts(void)
+{
+    color_writetoaddr(0x00,0b10011);
+    _delay((unsigned long)((3)*(64000000/4000.0)));
+
+    color_writetoaddr(0x0C,0b0100);
+    color_writetoaddr(0x04,int_threshold_low & 0xFF);
+    color_writetoaddr(0x05,int_threshold_low >> 8);
+    color_writetoaddr(0x06,int_threshold_high & 0xFF);
+    color_writetoaddr(0x07,int_threshold_high >> 8);
+
+}
+
+
+void interrupts_clear_colorclick(void)
+{
+    I2C_2_Master_Start();
+    I2C_2_Master_Write(0x52 | 0x00);
+    I2C_2_Master_Write(0b11100110);
+    I2C_2_Master_Stop();
+
+    init_colorclick_interrupts();
 }
 
 
@@ -24320,8 +24440,11 @@ void __attribute__((picinterrupt(("low_priority")))) LowISR()
 
 
 
+unsigned char color_flag = 0;
 void __attribute__((picinterrupt(("high_priority")))) HighISR()
 {
+
+
 
 
     if(PIR4bits.RC4IF){
@@ -24335,5 +24458,14 @@ void __attribute__((picinterrupt(("high_priority")))) HighISR()
     }
     if(PIR4bits.TX4IF){
         TX4REG = getCharFromTxBuf();
+    }
+
+
+
+
+    if(PIR0bits.INT1IF){
+        color_flag = 1;
+        interrupts_clear_colorclick();
+        PIR0bits.INT1IF = 0;
     }
 }

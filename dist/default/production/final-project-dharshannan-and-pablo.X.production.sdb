@@ -3,19 +3,20 @@
 [d edition pro ]
 [d chip 18F67K40 ]
 [d frameptr 4065 ]
-"5 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+"6 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
 [v _color_click_init color_click_init `(v  1 e 1 0 ]
-"21
+"22
 [v _color_writetoaddr color_writetoaddr `(v  1 e 1 0 ]
-"31
+[v i2_color_writetoaddr color_writetoaddr `(v  1 e 1 0 ]
+"32
 [v _color_read_Red color_read_Red `(ui  1 e 2 0 ]
-"45
+"46
 [v _color_read_Green color_read_Green `(ui  1 e 2 0 ]
-"59
+"60
 [v _color_read_Blue color_read_Blue `(ui  1 e 2 0 ]
-"73
+"74
 [v _color_read_Clear color_read_Clear `(ui  1 e 2 0 ]
-"89
+"90
 [v _Update_RGBC Update_RGBC `(v  1 e 1 0 ]
 "1 D:\MPLAB_COMPILER\pic\sources\c99\common\abs.c
 [v _abs abs `(i  1 e 2 0 ]
@@ -79,21 +80,31 @@
 [v _I2C_2_Master_Init I2C_2_Master_Init `(v  1 e 1 0 ]
 "22
 [v _I2C_2_Master_Idle I2C_2_Master_Idle `(v  1 e 1 0 ]
+[v i2_I2C_2_Master_Idle I2C_2_Master_Idle `(v  1 e 1 0 ]
 "27
 [v _I2C_2_Master_Start I2C_2_Master_Start `(v  1 e 1 0 ]
+[v i2_I2C_2_Master_Start I2C_2_Master_Start `(v  1 e 1 0 ]
 "33
 [v _I2C_2_Master_RepStart I2C_2_Master_RepStart `(v  1 e 1 0 ]
 "39
 [v _I2C_2_Master_Stop I2C_2_Master_Stop `(v  1 e 1 0 ]
+[v i2_I2C_2_Master_Stop I2C_2_Master_Stop `(v  1 e 1 0 ]
 "45
 [v _I2C_2_Master_Write I2C_2_Master_Write `(v  1 e 1 0 ]
+[v i2_I2C_2_Master_Write I2C_2_Master_Write `(v  1 e 1 0 ]
 "51
 [v _I2C_2_Master_Read I2C_2_Master_Read `(uc  1 e 1 0 ]
-"9 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+"11 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
 [v _Interrupts_init Interrupts_init `(v  1 e 1 0 ]
-"34
+"42
+[v _init_colorclick_interrupts init_colorclick_interrupts `(v  1 e 1 0 ]
+[v i2_init_colorclick_interrupts init_colorclick_interrupts `(v  1 e 1 0 ]
+"56
+[v _interrupts_clear_colorclick interrupts_clear_colorclick `(v  1 e 1 0 ]
+[v i2_interrupts_clear_colorclick interrupts_clear_colorclick `(v  1 e 1 0 ]
+"73
 [v _LowISR LowISR `IIL(v  1 e 1 0 ]
-"48
+"88
 [v _HighISR HighISR `IIH(v  1 e 1 0 ]
 "7 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\LED_Buttons.c
 [v _LED_init LED_init `(v  1 e 1 0 ]
@@ -142,7 +153,7 @@
 [v _SSP2CLKPPS SSP2CLKPPS `VEuc  1 e 1 @3612 ]
 "3862
 [v _SSP2DATPPS SSP2DATPPS `VEuc  1 e 1 @3613 ]
-[s S1501 . 1 `uc 1 INT0IP 1 0 :1:0 
+[s S1543 . 1 `uc 1 INT0IP 1 0 :1:0 
 `uc 1 INT1IP 1 0 :1:1 
 `uc 1 INT2IP 1 0 :1:2 
 `uc 1 INT3IP 1 0 :1:3 
@@ -150,9 +161,9 @@
 `uc 1 TMR0IP 1 0 :1:5 
 ]
 "4009
-[u S1508 . 1 `S1501 1 . 1 0 ]
-[v _IPR0bits IPR0bits `VES1508  1 e 1 @3615 ]
-[s S1484 . 1 `uc 1 INT0IE 1 0 :1:0 
+[u S1550 . 1 `S1543 1 . 1 0 ]
+[v _IPR0bits IPR0bits `VES1550  1 e 1 @3615 ]
+[s S1526 . 1 `uc 1 INT0IE 1 0 :1:0 
 `uc 1 INT1IE 1 0 :1:1 
 `uc 1 INT2IE 1 0 :1:2 
 `uc 1 INT3IE 1 0 :1:3 
@@ -160,8 +171,8 @@
 `uc 1 TMR0IE 1 0 :1:5 
 ]
 "4557
-[u S1491 . 1 `S1484 1 . 1 0 ]
-[v _PIE0bits PIE0bits `VES1491  1 e 1 @3625 ]
+[u S1533 . 1 `S1526 1 . 1 0 ]
+[v _PIE0bits PIE0bits `VES1533  1 e 1 @3625 ]
 [s S1321 . 1 `uc 1 TX3IE 1 0 :1:0 
 `uc 1 RC3IE 1 0 :1:1 
 `uc 1 TX4IE 1 0 :1:2 
@@ -172,7 +183,7 @@
 "4819
 [u S1328 . 1 `S1321 1 . 1 0 ]
 [v _PIE4bits PIE4bits `VES1328  1 e 1 @3629 ]
-[s S1567 . 1 `uc 1 INT0IF 1 0 :1:0 
+[s S1619 . 1 `uc 1 INT0IF 1 0 :1:0 
 `uc 1 INT1IF 1 0 :1:1 
 `uc 1 INT2IF 1 0 :1:2 
 `uc 1 INT3IF 1 0 :1:3 
@@ -180,8 +191,8 @@
 `uc 1 TMR0IF 1 0 :1:5 
 ]
 "5102
-[u S1574 . 1 `S1567 1 . 1 0 ]
-[v _PIR0bits PIR0bits `VES1574  1 e 1 @3635 ]
+[u S1626 . 1 `S1619 1 . 1 0 ]
+[v _PIR0bits PIR0bits `VES1626  1 e 1 @3635 ]
 [s S1302 . 1 `uc 1 TX3IF 1 0 :1:0 
 `uc 1 RC3IF 1 0 :1:1 
 `uc 1 TX4IF 1 0 :1:2 
@@ -206,6 +217,18 @@
 [v _RE4PPS RE4PPS `VEuc  1 e 1 @3702 ]
 "9708
 [v _RG6PPS RG6PPS `VEuc  1 e 1 @3720 ]
+[s S1505 . 1 `uc 1 ANSELB0 1 0 :1:0 
+`uc 1 ANSELB1 1 0 :1:1 
+`uc 1 ANSELB2 1 0 :1:2 
+`uc 1 ANSELB3 1 0 :1:3 
+`uc 1 ANSELB4 1 0 :1:4 
+`uc 1 ANSELB5 1 0 :1:5 
+`uc 1 ANSELB6 1 0 :1:6 
+`uc 1 ANSELB7 1 0 :1:7 
+]
+"10769
+[u S1514 . 1 `S1505 1 . 1 0 ]
+[v _ANSELBbits ANSELBbits `VES1514  1 e 1 @3738 ]
 [s S156 . 1 `uc 1 ANSELD0 1 0 :1:0 
 `uc 1 ANSELD1 1 0 :1:1 
 `uc 1 ANSELD2 1 0 :1:2 
@@ -476,31 +499,31 @@
 ]
 [u S379 . 1 `S364 1 . 1 0 `S373 1 . 1 0 ]
 [v _LATGbits LATGbits `VES379  1 e 1 @3967 ]
-[s S1584 . 1 `uc 1 LATH0 1 0 :1:0 
+[s S1636 . 1 `uc 1 LATH0 1 0 :1:0 
 `uc 1 LATH1 1 0 :1:1 
 `uc 1 LATH2 1 0 :1:2 
 `uc 1 LATH3 1 0 :1:3 
 ]
 "29264
-[s S1589 . 1 `uc 1 LH0 1 0 :1:0 
+[s S1641 . 1 `uc 1 LH0 1 0 :1:0 
 `uc 1 LH1 1 0 :1:1 
 `uc 1 LH2 1 0 :1:2 
 `uc 1 LH3 1 0 :1:3 
 ]
-[s S1594 . 1 `uc 1 . 1 0 :4:0 
+[s S1646 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 LH4 1 0 :1:4 
 ]
-[s S1597 . 1 `uc 1 . 1 0 :5:0 
+[s S1649 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 LH5 1 0 :1:5 
 ]
-[s S1600 . 1 `uc 1 . 1 0 :6:0 
+[s S1652 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 LH6 1 0 :1:6 
 ]
-[s S1603 . 1 `uc 1 . 1 0 :7:0 
+[s S1655 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 LH7 1 0 :1:7 
 ]
-[u S1606 . 1 `S1584 1 . 1 0 `S1589 1 . 1 0 `S1594 1 . 1 0 `S1597 1 . 1 0 `S1600 1 . 1 0 `S1603 1 . 1 0 ]
-[v _LATHbits LATHbits `VES1606  1 e 1 @3968 ]
+[u S1658 . 1 `S1636 1 . 1 0 `S1641 1 . 1 0 `S1646 1 . 1 0 `S1649 1 . 1 0 `S1652 1 . 1 0 `S1655 1 . 1 0 ]
+[v _LATHbits LATHbits `VES1658  1 e 1 @3968 ]
 [s S322 . 1 `uc 1 TRISA0 1 0 :1:0 
 `uc 1 TRISA1 1 0 :1:1 
 `uc 1 TRISA2 1 0 :1:2 
@@ -513,6 +536,18 @@
 "29351
 [u S331 . 1 `S322 1 . 1 0 ]
 [v _TRISAbits TRISAbits `VES331  1 e 1 @3969 ]
+[s S1484 . 1 `uc 1 TRISB0 1 0 :1:0 
+`uc 1 TRISB1 1 0 :1:1 
+`uc 1 TRISB2 1 0 :1:2 
+`uc 1 TRISB3 1 0 :1:3 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"29473
+[u S1493 . 1 `S1484 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES1493  1 e 1 @3970 ]
 [s S629 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
@@ -781,7 +816,7 @@
 "39676
 "39676
 [v _T0CON1bits T0CON1bits `VES1420  1 e 1 @4054 ]
-[s S1528 . 1 `uc 1 INT0EDG 1 0 :1:0 
+[s S1560 . 1 `uc 1 INT0EDG 1 0 :1:0 
 `uc 1 INT1EDG 1 0 :1:1 
 `uc 1 INT2EDG 1 0 :1:2 
 `uc 1 INT3EDG 1 0 :1:3 
@@ -791,20 +826,20 @@
 `uc 1 GIE_GIEH 1 0 :1:7 
 ]
 "40499
-[s S1537 . 1 `uc 1 . 1 0 :6:0 
+[s S1569 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
 "40499
-[s S1541 . 1 `uc 1 . 1 0 :6:0 
+[s S1573 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 GIEL 1 0 :1:6 
 `uc 1 GIEH 1 0 :1:7 
 ]
 "40499
-[u S1545 . 1 `S1528 1 . 1 0 `S1537 1 . 1 0 `S1541 1 . 1 0 ]
+[u S1577 . 1 `S1560 1 . 1 0 `S1569 1 . 1 0 `S1573 1 . 1 0 ]
 "40499
 "40499
-[v _INTCONbits INTCONbits `VES1545  1 e 1 @4082 ]
+[v _INTCONbits INTCONbits `VES1577  1 e 1 @4082 ]
 "99 D:\MPLAB_COMPILER\pic\sources\c99\common\doprnt.c
 [v _prec prec `i  1 s 2 prec ]
 [v _width width `i  1 s 2 width ]
@@ -812,19 +847,25 @@
 [v _flags flags `uc  1 s 1 flags ]
 "125
 [v _dbuf dbuf `[32]uc  1 s 32 dbuf ]
-"32 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+"39 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+[v _int_threshold_low int_threshold_low `ui  1 e 2 0 ]
+"40
+[v _int_threshold_high int_threshold_high `ui  1 e 2 0 ]
+"71
 [v _tmr_ovf tmr_ovf `uc  1 e 1 0 ]
+"87
+[v _color_flag color_flag `uc  1 e 1 0 ]
 "20 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_calibration.c
 [v _main main `(v  1 e 1 0 ]
 {
 "69
-[v main@string string `[40]uc  1 a 40 51 ]
+[v main@string string `[40]uc  1 a 40 60 ]
 "83
-[v main@string2 string2 `[40]uc  1 a 40 91 ]
+[v main@string2 string2 `[40]uc  1 a 40 100 ]
 "66
-[v main@i i `uc  1 a 1 132 ]
+[v main@i i `uc  1 a 1 141 ]
 "56
-[v main@cont cont `uc  1 a 1 131 ]
+[v main@cont cont `uc  1 a 1 140 ]
 "39
 [v main@readingsC readingsC `[100]i  1 a 200 0 ]
 "38
@@ -835,105 +876,105 @@
 [v main@readingsR readingsR `[100]i  1 a 200 0 ]
 [s S62 RGB_val 8 `ui 1 R 2 0 `ui 1 G 2 2 `ui 1 B 2 4 `ui 1 C 2 6 ]
 "23
-[v main@initial_color initial_color `S62  1 a 8 200 ]
+[v main@initial_color initial_color `S62  1 a 8 143 ]
 "35
-[v main@a a `uc  1 a 1 133 ]
-"91
+[v main@a a `uc  1 a 1 142 ]
+"92
 } 0
 "9 D:\MPLAB_COMPILER\pic\sources\c99\common\nf_sprintf.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
-[u S2207 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
+[u S2281 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
 "13
-[s S2210 _IO_FILE 11 `S2207 1 . 3 0 `i 1 count 2 3 `[2]uc 1 ungetbuf 2 5 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
-[v sprintf@f f `S2210  1 a 11 38 ]
+[s S2284 _IO_FILE 11 `S2281 1 . 3 0 `i 1 count 2 3 `[2]uc 1 ungetbuf 2 5 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v sprintf@f f `S2284  1 a 11 49 ]
 "12
-[v sprintf@ap ap `[1]*.39v  1 a 2 36 ]
+[v sprintf@ap ap `[1]*.39v  1 a 2 47 ]
 "9
-[v sprintf@s s `*.39uc  1 p 2 24 ]
-[v sprintf@fmt fmt `*.32Cuc  1 p 2 26 ]
+[v sprintf@s s `*.39uc  1 p 2 35 ]
+[v sprintf@fmt fmt `*.32Cuc  1 p 2 37 ]
 "23
 } 0
 "1520 D:\MPLAB_COMPILER\pic\sources\c99\common\doprnt.c
 [v _vfprintf vfprintf `(i  1 e 2 0 ]
 {
 "1523
-[v vfprintf@cfmt cfmt `*.32uc  1 a 2 74 ]
-[s S2242 _IO_FILE 0 ]
+[v vfprintf@cfmt cfmt `*.32uc  1 a 2 66 ]
+[s S2316 _IO_FILE 0 ]
 "1520
-[v vfprintf@fp fp `*.39S2242  1 p 2 18 ]
-[v vfprintf@fmt fmt `*.32Cuc  1 p 2 20 ]
-[v vfprintf@ap ap `*.39*.39v  1 p 2 22 ]
+[v vfprintf@fp fp `*.39S2316  1 p 2 29 ]
+[v vfprintf@fmt fmt `*.32Cuc  1 p 2 31 ]
+[v vfprintf@ap ap `*.39*.39v  1 p 2 33 ]
 "1543
 } 0
 "1007
 [v _vfpfcnvrt vfpfcnvrt `(v  1 s 1 vfpfcnvrt ]
 {
-[u S2260 . 8 `o 1 ll 8 0 `uo 1 llu 8 0 `*.2v 1 vp 3 0 `d 1 f 4 0 ]
+[u S2334 . 8 `o 1 ll 8 0 `uo 1 llu 8 0 `*.2v 1 vp 3 0 `d 1 f 4 0 ]
 "1016
-[v vfpfcnvrt@convarg convarg `S2260  1 a 8 6 ]
+[v vfpfcnvrt@convarg convarg `S2334  1 a 8 17 ]
 "1009
-[v vfpfcnvrt@cp cp `*.32uc  1 a 2 16 ]
+[v vfpfcnvrt@cp cp `*.32uc  1 a 2 27 ]
 "1010
-[v vfpfcnvrt@done done `i  1 a 2 14 ]
-[s S2242 _IO_FILE 0 ]
+[v vfpfcnvrt@done done `i  1 a 2 25 ]
+[s S2316 _IO_FILE 0 ]
 "1007
-[v vfpfcnvrt@fp fp `*.39S2242  1 p 2 0 ]
-[v vfpfcnvrt@fmt fmt `*.39*.32uc  1 p 2 2 ]
-[v vfpfcnvrt@ap ap `*.39*.39v  1 p 2 4 ]
+[v vfpfcnvrt@fp fp `*.39S2316  1 p 2 57 ]
+[v vfpfcnvrt@fmt fmt `*.39*.32uc  1 p 2 59 ]
+[v vfpfcnvrt@ap ap `*.39*.39v  1 p 2 61 ]
 "1517
 } 0
 "443
 [v _dtoa dtoa `(v  1 s 1 dtoa ]
 {
 "447
-[v dtoa@n n `o  1 a 8 60 ]
+[v dtoa@n n `o  1 a 8 6 ]
 "446
-[v dtoa@i i `i  1 a 2 69 ]
-[v dtoa@w w `i  1 a 2 58 ]
-[v dtoa@p p `i  1 a 2 56 ]
+[v dtoa@i i `i  1 a 2 15 ]
+[v dtoa@w w `i  1 a 2 4 ]
+[v dtoa@p p `i  1 a 2 2 ]
 "445
-[v dtoa@s s `uc  1 a 1 68 ]
-[s S2242 _IO_FILE 0 ]
+[v dtoa@s s `uc  1 a 1 14 ]
+[s S2316 _IO_FILE 0 ]
 "443
-[v dtoa@fp fp `*.39S2242  1 p 2 36 ]
-[v dtoa@d d `o  1 p 8 38 ]
+[v dtoa@fp fp `*.39S2316  1 p 2 39 ]
+[v dtoa@d d `o  1 p 8 41 ]
 "502
 } 0
 "133
 [v _pad pad `(v  1 s 1 pad ]
 {
 "135
-[v pad@w w `i  1 a 2 34 ]
-[v pad@i i `i  1 a 2 32 ]
-[s S2242 _IO_FILE 0 ]
+[v pad@w w `i  1 a 2 37 ]
+[v pad@i i `i  1 a 2 35 ]
+[s S2316 _IO_FILE 0 ]
 "133
-[v pad@fp fp `*.39S2242  1 p 2 25 ]
-[v pad@buf buf `*.39uc  1 p 2 27 ]
-[v pad@p p `i  1 p 2 29 ]
+[v pad@fp fp `*.39S2316  1 p 2 28 ]
+[v pad@buf buf `*.39uc  1 p 2 30 ]
+[v pad@p p `i  1 p 2 32 ]
 "164
 } 0
 "8 D:\MPLAB_COMPILER\pic\sources\c99\common\nf_fputs.c
 [v _fputs fputs `(i  1 e 2 0 ]
 {
 "11
-[v fputs@i i `i  1 a 2 23 ]
+[v fputs@i i `i  1 a 2 26 ]
 "10
-[v fputs@c c `uc  1 a 1 22 ]
+[v fputs@c c `uc  1 a 1 25 ]
 "8
-[v fputs@s s `*.39Cuc  1 p 2 18 ]
-[u S2207 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
-[s S2210 _IO_FILE 11 `S2207 1 . 3 0 `i 1 count 2 3 `[2]uc 1 ungetbuf 2 5 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
-[v fputs@fp fp `*.39S2210  1 p 2 20 ]
+[v fputs@s s `*.39Cuc  1 p 2 21 ]
+[u S2281 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
+[s S2284 _IO_FILE 11 `S2281 1 . 3 0 `i 1 count 2 3 `[2]uc 1 ungetbuf 2 5 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v fputs@fp fp `*.39S2284  1 p 2 23 ]
 "19
 } 0
 "8 D:\MPLAB_COMPILER\pic\sources\c99\common\nf_fputc.c
 [v _fputc fputc `(i  1 e 2 0 ]
 {
-[v fputc@c c `i  1 p 2 9 ]
-[u S2207 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
-[s S2210 _IO_FILE 11 `S2207 1 . 3 0 `i 1 count 2 3 `[2]uc 1 ungetbuf 2 5 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
-[v fputc@fp fp `*.39S2210  1 p 2 11 ]
+[v fputc@c c `i  1 p 2 12 ]
+[u S2281 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
+[s S2284 _IO_FILE 11 `S2281 1 . 3 0 `i 1 count 2 3 `[2]uc 1 ungetbuf 2 5 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v fputc@fp fp `*.39S2284  1 p 2 14 ]
 "24
 } 0
 "7 D:\MPLAB_COMPILER\pic\sources\c99\common\putch.c
@@ -944,63 +985,63 @@
 "1 D:\MPLAB_COMPILER\pic\sources\c99\common\abs.c
 [v _abs abs `(i  1 e 2 0 ]
 {
-[v abs@a a `i  1 p 2 27 ]
+[v abs@a a `i  1 p 2 30 ]
 "4
 } 0
 "9 D:\MPLAB_COMPILER\pic\sources\c99\common\aomod.c
 [v ___aomod __aomod `(o  1 e 8 0 ]
 {
 "12
-[v ___aomod@sign sign `uc  1 a 1 26 ]
-[v ___aomod@counter counter `uc  1 a 1 25 ]
+[v ___aomod@sign sign `uc  1 a 1 29 ]
+[v ___aomod@counter counter `uc  1 a 1 28 ]
 "9
-[v ___aomod@dividend dividend `o  1 p 8 9 ]
-[v ___aomod@divisor divisor `o  1 p 8 17 ]
+[v ___aomod@dividend dividend `o  1 p 8 12 ]
+[v ___aomod@divisor divisor `o  1 p 8 20 ]
 "36
 } 0
 "9 D:\MPLAB_COMPILER\pic\sources\c99\common\aodiv.c
 [v ___aodiv __aodiv `(o  1 e 8 0 ]
 {
 "12
-[v ___aodiv@quotient quotient `o  1 a 8 27 ]
+[v ___aodiv@quotient quotient `o  1 a 8 30 ]
 "13
-[v ___aodiv@sign sign `uc  1 a 1 26 ]
-[v ___aodiv@counter counter `uc  1 a 1 25 ]
+[v ___aodiv@sign sign `uc  1 a 1 29 ]
+[v ___aodiv@counter counter `uc  1 a 1 28 ]
 "9
-[v ___aodiv@dividend dividend `o  1 p 8 9 ]
-[v ___aodiv@divisor divisor `o  1 p 8 17 ]
+[v ___aodiv@dividend dividend `o  1 p 8 12 ]
+[v ___aodiv@divisor divisor `o  1 p 8 20 ]
 "43
 } 0
 "4 D:\MPLAB_COMPILER\pic\sources\c99\common\atoi.c
 [v _atoi atoi `(i  1 e 2 0 ]
 {
 "6
-[v atoi@n n `i  1 a 2 22 ]
-[v atoi@neg neg `i  1 a 2 20 ]
+[v atoi@n n `i  1 a 2 25 ]
+[v atoi@neg neg `i  1 a 2 23 ]
 "4
-[v atoi@s s `*.32Cuc  1 p 2 15 ]
+[v atoi@s s `*.32Cuc  1 p 2 18 ]
 "16
 } 0
 "5 D:\MPLAB_COMPILER\pic\sources\c99\common\isspace.c
 [v _isspace isspace `(i  1 e 2 0 ]
 {
-[v isspace@c c `i  1 p 2 9 ]
+[v isspace@c c `i  1 p 2 12 ]
 "8
 } 0
 "5 D:\MPLAB_COMPILER\pic\sources\c99\common\isdigit.c
 [v _isdigit isdigit `(i  1 e 2 0 ]
 {
-[v isdigit@c c `i  1 p 2 9 ]
+[v isdigit@c c `i  1 p 2 12 ]
 "8
 } 0
 "15 D:\MPLAB_COMPILER\pic\sources\c99\common\Umul16.c
 [v ___wmul __wmul `(ui  1 e 2 0 ]
 {
 "17
-[v ___wmul@product product `ui  1 a 2 13 ]
+[v ___wmul@product product `ui  1 a 2 16 ]
 "15
-[v ___wmul@multiplier multiplier `ui  1 p 2 9 ]
-[v ___wmul@multiplicand multiplicand `ui  1 p 2 11 ]
+[v ___wmul@multiplier multiplier `ui  1 p 2 12 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 14 ]
 "53
 } 0
 "97 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\serial.c
@@ -1028,19 +1069,10 @@
 {
 "51
 } 0
-"5 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+"6 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
 [v _color_click_init color_click_init `(v  1 e 1 0 ]
 {
-"19
-} 0
-"21
-[v _color_writetoaddr color_writetoaddr `(v  1 e 1 0 ]
-{
-[v color_writetoaddr@address address `uc  1 a 1 wreg ]
-[v color_writetoaddr@address address `uc  1 a 1 wreg ]
-[v color_writetoaddr@value value `uc  1 p 1 11 ]
-[v color_writetoaddr@address address `uc  1 a 1 12 ]
-"27
+"20
 } 0
 "4 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
 [v _I2C_2_Master_Init I2C_2_Master_Init `(v  1 e 1 0 ]
@@ -1052,61 +1084,42 @@
 {
 "18
 } 0
-"89 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+"90 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
 [v _Update_RGBC Update_RGBC `(v  1 e 1 0 ]
 {
 [s S62 RGB_val 8 `ui 1 R 2 0 `ui 1 G 2 2 `ui 1 B 2 4 `ui 1 C 2 6 ]
-[v Update_RGBC@tempval tempval `*.39S62  1 p 2 20 ]
-"95
+[v Update_RGBC@tempval tempval `*.39S62  1 p 2 23 ]
+"96
 } 0
-"31
+"32
 [v _color_read_Red color_read_Red `(ui  1 e 2 0 ]
 {
-"33
-[v color_read_Red@tmp tmp `ui  1 a 2 18 ]
-"43
+"34
+[v color_read_Red@tmp tmp `ui  1 a 2 21 ]
+"44
 } 0
-"45
+"46
 [v _color_read_Green color_read_Green `(ui  1 e 2 0 ]
 {
-"47
-[v color_read_Green@tmp tmp `ui  1 a 2 18 ]
-"57
+"48
+[v color_read_Green@tmp tmp `ui  1 a 2 21 ]
+"58
 } 0
-"73
+"74
 [v _color_read_Clear color_read_Clear `(ui  1 e 2 0 ]
 {
-"75
-[v color_read_Clear@tmp tmp `ui  1 a 2 18 ]
-"85
+"76
+[v color_read_Clear@tmp tmp `ui  1 a 2 21 ]
+"86
 } 0
-"59
+"60
 [v _color_read_Blue color_read_Blue `(ui  1 e 2 0 ]
 {
-"61
-[v color_read_Blue@tmp tmp `ui  1 a 2 18 ]
-"71
+"62
+[v color_read_Blue@tmp tmp `ui  1 a 2 21 ]
+"72
 } 0
-"45 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-[v _I2C_2_Master_Write I2C_2_Master_Write `(v  1 e 1 0 ]
-{
-[v I2C_2_Master_Write@data_byte data_byte `uc  1 a 1 wreg ]
-[v I2C_2_Master_Write@data_byte data_byte `uc  1 a 1 wreg ]
-"47
-[v I2C_2_Master_Write@data_byte data_byte `uc  1 a 1 10 ]
-"49
-} 0
-"39
-[v _I2C_2_Master_Stop I2C_2_Master_Stop `(v  1 e 1 0 ]
-{
-"43
-} 0
-"27
-[v _I2C_2_Master_Start I2C_2_Master_Start `(v  1 e 1 0 ]
-{
-"31
-} 0
-"33
+"33 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
 [v _I2C_2_Master_RepStart I2C_2_Master_RepStart `(v  1 e 1 0 ]
 {
 "37
@@ -1116,22 +1129,17 @@
 {
 [v I2C_2_Master_Read@ack ack `uc  1 a 1 wreg ]
 "53
-[v I2C_2_Master_Read@tmp tmp `uc  1 a 1 12 ]
+[v I2C_2_Master_Read@tmp tmp `uc  1 a 1 15 ]
 "51
 [v I2C_2_Master_Read@ack ack `uc  1 a 1 wreg ]
 "54
-[v I2C_2_Master_Read@ack ack `uc  1 a 1 11 ]
+[v I2C_2_Master_Read@ack ack `uc  1 a 1 14 ]
 "62
-} 0
-"22
-[v _I2C_2_Master_Idle I2C_2_Master_Idle `(v  1 e 1 0 ]
-{
-"25
 } 0
 "87 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\serial.c
 [v _TxBufferedString TxBufferedString `(v  1 e 1 0 ]
 {
-[v TxBufferedString@string string `*.39uc  1 p 2 10 ]
+[v TxBufferedString@string string `*.39uc  1 p 2 13 ]
 "93
 } 0
 "74
@@ -1139,7 +1147,7 @@
 {
 [v putCharToTxBuf@byte byte `uc  1 a 1 wreg ]
 [v putCharToTxBuf@byte byte `uc  1 a 1 wreg ]
-[v putCharToTxBuf@byte byte `uc  1 a 1 9 ]
+[v putCharToTxBuf@byte byte `uc  1 a 1 12 ]
 "77
 } 0
 "7 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\timers.c
@@ -1152,29 +1160,115 @@
 {
 "11
 } 0
-"9 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+"11 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
 [v _Interrupts_init Interrupts_init `(v  1 e 1 0 ]
+{
+"36
+} 0
+"56
+[v _interrupts_clear_colorclick interrupts_clear_colorclick `(v  1 e 1 0 ]
+{
+"64
+} 0
+"42
+[v _init_colorclick_interrupts init_colorclick_interrupts `(v  1 e 1 0 ]
+{
+"53
+} 0
+"22 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+[v _color_writetoaddr color_writetoaddr `(v  1 e 1 0 ]
+{
+[v color_writetoaddr@address address `uc  1 a 1 wreg ]
+[v color_writetoaddr@address address `uc  1 a 1 wreg ]
+[v color_writetoaddr@value value `uc  1 p 1 14 ]
+[v color_writetoaddr@address address `uc  1 a 1 15 ]
+"28
+} 0
+"45 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+[v _I2C_2_Master_Write I2C_2_Master_Write `(v  1 e 1 0 ]
+{
+[v I2C_2_Master_Write@data_byte data_byte `uc  1 a 1 wreg ]
+[v I2C_2_Master_Write@data_byte data_byte `uc  1 a 1 wreg ]
+"47
+[v I2C_2_Master_Write@data_byte data_byte `uc  1 a 1 13 ]
+"49
+} 0
+"39
+[v _I2C_2_Master_Stop I2C_2_Master_Stop `(v  1 e 1 0 ]
+{
+"43
+} 0
+"27
+[v _I2C_2_Master_Start I2C_2_Master_Start `(v  1 e 1 0 ]
+{
+"31
+} 0
+"22
+[v _I2C_2_Master_Idle I2C_2_Master_Idle `(v  1 e 1 0 ]
 {
 "25
 } 0
-"34
+"73 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
 [v _LowISR LowISR `IIL(v  1 e 1 0 ]
 {
-"44
+"83
 } 0
-"48
+"88
 [v _HighISR HighISR `IIH(v  1 e 1 0 ]
 {
-"53
-[v HighISR@a a `uc  1 a 1 4 ]
-"64
+"95
+[v HighISR@a a `uc  1 a 1 7 ]
+"115
 } 0
 "82 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\serial.c
 [v i2_isDataInTxBuf isDataInTxBuf `(uc  1 e 1 0 ]
 {
 "84
 } 0
-"54
+"56 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+[v i2_interrupts_clear_colorclick interrupts_clear_colorclick `(v  1 e 1 0 ]
+{
+"64
+} 0
+"42
+[v i2_init_colorclick_interrupts init_colorclick_interrupts `(v  1 e 1 0 ]
+{
+"53
+} 0
+"22 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+[v i2_color_writetoaddr color_writetoaddr `(v  1 e 1 0 ]
+{
+[v i2color_writetoaddr@address address `uc  1 a 1 wreg ]
+[v i2color_writetoaddr@address address `uc  1 a 1 wreg ]
+[v i2color_writetoaddr@value value `uc  1 p 1 2 ]
+[v i2color_writetoaddr@address address `uc  1 a 1 3 ]
+"28
+} 0
+"45 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+[v i2_I2C_2_Master_Write I2C_2_Master_Write `(v  1 e 1 0 ]
+{
+[v i2I2C_2_Master_Write@data_byte data_byte `uc  1 a 1 wreg ]
+[v i2I2C_2_Master_Write@data_byte data_byte `uc  1 a 1 wreg ]
+"47
+[v i2I2C_2_Master_Write@data_byte data_byte `uc  1 a 1 1 ]
+"49
+} 0
+"39
+[v i2_I2C_2_Master_Stop I2C_2_Master_Stop `(v  1 e 1 0 ]
+{
+"43
+} 0
+"27
+[v i2_I2C_2_Master_Start I2C_2_Master_Start `(v  1 e 1 0 ]
+{
+"31
+} 0
+"22
+[v i2_I2C_2_Master_Idle I2C_2_Master_Idle `(v  1 e 1 0 ]
+{
+"25
+} 0
+"54 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\serial.c
 [v _putCharToRxBuf putCharToRxBuf `(v  1 e 1 0 ]
 {
 [v putCharToRxBuf@byte byte `uc  1 a 1 wreg ]

@@ -1,6 +1,7 @@
 #include <xc.h>
 #include "color.h"
 #include "i2c.h"
+#include "interrupts.h"
 
 void color_click_init(void)
 {   
@@ -93,3 +94,5 @@ void Update_RGBC(RGB_val *tempval){
     tempval->B = color_read_Blue();
     tempval->C = color_read_Clear();
 }
+
+// Function to detect and decide what color is sensed by light sensors based of RGBC % distribution values

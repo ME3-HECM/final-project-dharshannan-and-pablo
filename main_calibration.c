@@ -67,7 +67,7 @@ void main(void){
             for(i=0;i<a;i++){
                 // Send to PC
                 char string[40];
-                sprintf(string,"\nRGBC = %05d %05d %05d %05d\n",readingsR[i],readingsG[i],readingsB[i],readingsC[i]);
+                sprintf(string,"\n%05d %05d %05d %05d\n",readingsR[i],readingsG[i],readingsB[i],readingsC[i]);
                 TxBufferedString(string);
                 // Raise interrupt flag for transmission if buffer is not empty
                 sendTxBuf();
@@ -81,11 +81,12 @@ void main(void){
         if(cont == 0x01){
             // Send to PC
             char string2[40];
-            sprintf(string2,"\nRGBC = %05d %05d %05d %05d\n",initial_color.R,initial_color.G,initial_color.B,initial_color.C);
+            sprintf(string2,"\n%05d %05d %05d %05d\n",initial_color.R,initial_color.G,initial_color.B,initial_color.C);
             TxBufferedString(string2);
             // Raise interrupt flag for transmission if buffer is not empty
             sendTxBuf();
             cont = 0x00; // Reset cont value
+            a = 0; // Reset a also
         }
     }
 }

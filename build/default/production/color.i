@@ -24270,6 +24270,8 @@ unsigned int color_read_Clear(void);
 
 
 void Update_RGBC(RGB_val *tempval);
+
+unsigned char detect_color(RGB_val tempval);
 # 2 "color.c" 2
 
 # 1 "./i2c.h" 1
@@ -24420,4 +24422,48 @@ void Update_RGBC(RGB_val *tempval){
     tempval->G = color_read_Green();
     tempval->B = color_read_Blue();
     tempval->C = color_read_Clear();
+}
+
+
+unsigned char detect_color(RGB_val tempval)
+{
+    unsigned char color = 0;
+
+
+    unsigned char dist_R, dist_G, dist_B;
+    dist_R = ((float)(tempval.R)/(float)(tempval.R + tempval.G + tempval.B))*100;
+    dist_G = ((float)(tempval.G)/(float)(tempval.R + tempval.G + tempval.B))*100;
+    dist_B = ((float)(tempval.B)/(float)(tempval.R + tempval.G + tempval.B))*100;
+
+    if(color_flag){
+        _delay((unsigned long)((500)*(64000000/4000.0)));
+        if((72<=dist_R) && (dist_R<=78) && (8<=dist_G) && (dist_G<=14) && (11<=dist_B) && (dist_B<=17)){
+            color = 1;
+        }
+        else if((34<=dist_R) && (dist_R<=40) && (39<=dist_G) && (dist_G<=45) && (18<=dist_B) && (dist_B<=24)){
+            color = 2;
+        }
+        else if((28<=dist_R) && (dist_R<=34) && (32<=dist_G) && (dist_G<=38) && (31<=dist_B) && (dist_B<=37)){
+            color = 3;
+        }
+        else if((50<=dist_R) && (dist_R<=52) && (30<=dist_G) && (dist_G<=32) && (17<=dist_B) && (dist_B<=19)){
+            color = 4;
+        }
+        else if((48<=dist_R) && (dist_R<=50) && (28<=dist_G) && (dist_G<=30) && (21<=dist_B) && (dist_B<=23)){
+            color = 5;
+        }
+        else if((57<=dist_R) && (dist_R<=63) && (20<=dist_G) && (dist_G<=26) && (14<=dist_B) && (dist_B<=20)){
+            color = 6;
+        }
+        else if((31<=dist_R) && (dist_R<=37) && (36<=dist_G) && (dist_G<=42) && (24<=dist_B) && (dist_B<=30)){
+            color = 7;
+        }
+        else if((41<=dist_R) && (dist_R<=47) && (30<=dist_G) && (dist_G<=36) && (20<=dist_B) && (dist_B<=26)){
+            color = 8;
+        }
+
+        color_flag = 0;
+        return color;
+    }
+
 }

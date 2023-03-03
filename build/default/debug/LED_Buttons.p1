@@ -32,6 +32,48 @@ Version 4.0 HI-TECH Software Intermediate Code
 "29956
 [; ;D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h: 29956: extern volatile TRISFbits_t TRISFbits __attribute__((address(0xF86)));
 [v _TRISFbits `VS1387 ~T0 @X0 0 e@3974 ]
+"29235
+[; ;D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h: 29235:     struct {
+[s S1361 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1361 . LATH0 LATH1 LATH2 LATH3 ]
+"29241
+[; ;D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h: 29241:     struct {
+[s S1362 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1362 . LH0 LH1 LH2 LH3 ]
+"29247
+[; ;D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h: 29247:     struct {
+[s S1363 :4 `uc 1 :1 `uc 1 ]
+[n S1363 . . LH4 ]
+"29251
+[; ;D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h: 29251:     struct {
+[s S1364 :5 `uc 1 :1 `uc 1 ]
+[n S1364 . . LH5 ]
+"29255
+[; ;D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h: 29255:     struct {
+[s S1365 :6 `uc 1 :1 `uc 1 ]
+[n S1365 . . LH6 ]
+"29259
+[; ;D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h: 29259:     struct {
+[s S1366 :7 `uc 1 :1 `uc 1 ]
+[n S1366 . . LH7 ]
+"29234
+[; ;D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h: 29234: typedef union {
+[u S1360 `S1361 1 `S1362 1 `S1363 1 `S1364 1 `S1365 1 `S1366 1 ]
+[n S1360 . . . . . . . ]
+"29264
+[; ;D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h: 29264: extern volatile LATHbits_t LATHbits __attribute__((address(0xF80)));
+[v _LATHbits `VS1360 ~T0 @X0 0 e@3968 ]
+"30064
+[; ;D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h: 30064:     struct {
+[s S1392 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1392 . TRISH0 TRISH1 TRISH2 TRISH3 ]
+"30063
+[; ;D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h: 30063: typedef union {
+[u S1391 `S1392 1 ]
+[n S1391 . . ]
+"30071
+[; ;D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h: 30071: extern volatile TRISHbits_t TRISHbits __attribute__((address(0xF88)));
+[v _TRISHbits `VS1391 ~T0 @X0 0 e@3976 ]
 "29146
 [; ;D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h: 29146:     struct {
 [s S1358 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -2066,26 +2108,32 @@ Version 4.0 HI-TECH Software Intermediate Code
 "10
 [; ;LED_Buttons.c: 10:     TRISFbits.TRISF7 = 0;
 [e = . . _TRISFbits 0 7 -> -> 0 `i `uc ]
-"11
-[; ;LED_Buttons.c: 11: }
+"12
+[; ;LED_Buttons.c: 12:     LATHbits.LATH3 = 1;
+[e = . . _LATHbits 0 3 -> -> 1 `i `uc ]
+"13
+[; ;LED_Buttons.c: 13:     TRISHbits.TRISH3 = 0;
+[e = . . _TRISHbits 0 3 -> -> 0 `i `uc ]
+"14
+[; ;LED_Buttons.c: 14: }
 [e :UE 2015 ]
 }
-"14
-[; ;LED_Buttons.c: 14: void WhiteLight(void){
+"17
+[; ;LED_Buttons.c: 17: void WhiteLight(void){
 [v _WhiteLight `(v ~T0 @X0 1 ef ]
 {
 [e :U _WhiteLight ]
 [f ]
-"15
-[; ;LED_Buttons.c: 15:     LATGbits.LATG1 = 1;
-[e = . . _LATGbits 0 1 -> -> 1 `i `uc ]
-"16
-[; ;LED_Buttons.c: 16:     LATAbits.LATA4 = 1;
-[e = . . _LATAbits 0 4 -> -> 1 `i `uc ]
-"17
-[; ;LED_Buttons.c: 17:     LATFbits.LATF7 = 1;
-[e = . . _LATFbits 0 7 -> -> 1 `i `uc ]
 "18
-[; ;LED_Buttons.c: 18: }
+[; ;LED_Buttons.c: 18:     LATGbits.LATG1 = 1;
+[e = . . _LATGbits 0 1 -> -> 1 `i `uc ]
+"19
+[; ;LED_Buttons.c: 19:     LATAbits.LATA4 = 1;
+[e = . . _LATAbits 0 4 -> -> 1 `i `uc ]
+"20
+[; ;LED_Buttons.c: 20:     LATFbits.LATF7 = 1;
+[e = . . _LATFbits 0 7 -> -> 1 `i `uc ]
+"21
+[; ;LED_Buttons.c: 21: }
 [e :UE 2016 ]
 }

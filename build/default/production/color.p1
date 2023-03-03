@@ -28,6 +28,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./color.h: 9: typedef struct RGB_val {
 [s S2015 `ui 1 `ui 1 `ui 1 `ui 1 ]
 [n S2015 RGB_val R G B C ]
+"10 ./interrupts.h
+[; ;./interrupts.h: 10: extern unsigned char color_flag;
+[v _color_flag `uc ~T0 @X0 0 e ]
 "54 D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h
 [; ;D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h: 54: __asm("PPSLOCK equ 0DEFh");
 [; <" PPSLOCK equ 0DEFh ;# ">
@@ -2250,4 +2253,159 @@ Version 4.0 HI-TECH Software Intermediate Code
 "96
 [; ;color.c: 96: }
 [e :UE 2022 ]
+}
+"99
+[; ;color.c: 99: unsigned char detect_color(RGB_val tempval)
+[v _detect_color `(uc ~T0 @X0 1 ef1`S2015 ]
+"100
+[; ;color.c: 100: {
+{
+[e :U _detect_color ]
+"99
+[; ;color.c: 99: unsigned char detect_color(RGB_val tempval)
+[v _tempval `S2015 ~T0 @X0 1 r1 ]
+"100
+[; ;color.c: 100: {
+[f ]
+"101
+[; ;color.c: 101:     unsigned char color = 0;
+[v _color `uc ~T0 @X0 1 a ]
+[e = _color -> -> 0 `i `uc ]
+"104
+[; ;color.c: 104:     unsigned char dist_R, dist_G, dist_B;
+[v _dist_R `uc ~T0 @X0 1 a ]
+[v _dist_G `uc ~T0 @X0 1 a ]
+[v _dist_B `uc ~T0 @X0 1 a ]
+"105
+[; ;color.c: 105:     dist_R = ((float)(tempval.R)/(float)(tempval.R + tempval.G + tempval.B))*100;
+[e = _dist_R -> * / -> . _tempval 0 `f -> + + . _tempval 0 . _tempval 1 . _tempval 2 `f -> -> 100 `i `f `uc ]
+"106
+[; ;color.c: 106:     dist_G = ((float)(tempval.G)/(float)(tempval.R + tempval.G + tempval.B))*100;
+[e = _dist_G -> * / -> . _tempval 1 `f -> + + . _tempval 0 . _tempval 1 . _tempval 2 `f -> -> 100 `i `f `uc ]
+"107
+[; ;color.c: 107:     dist_B = ((float)(tempval.B)/(float)(tempval.R + tempval.G + tempval.B))*100;
+[e = _dist_B -> * / -> . _tempval 2 `f -> + + . _tempval 0 . _tempval 1 . _tempval 2 `f -> -> 100 `i `f `uc ]
+"109
+[; ;color.c: 109:     if(color_flag){
+[e $ ! != -> _color_flag `i -> 0 `i 2024  ]
+{
+"110
+[; ;color.c: 110:         _delay((unsigned long)((500)*(64000000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+"111
+[; ;color.c: 111:         if((72<=dist_R) && (dist_R<=78) && (8<=dist_G) && (dist_G<=14) && (11<=dist_B) && (dist_B<=17)){
+[e $ ! && && && && && <= -> 72 `i -> _dist_R `i <= -> _dist_R `i -> 78 `i <= -> 8 `i -> _dist_G `i <= -> _dist_G `i -> 14 `i <= -> 11 `i -> _dist_B `i <= -> _dist_B `i -> 17 `i 2025  ]
+{
+"112
+[; ;color.c: 112:             color = 1;
+[e = _color -> -> 1 `i `uc ]
+"113
+[; ;color.c: 113:         }
+}
+[e $U 2026  ]
+"114
+[; ;color.c: 114:         else if((34<=dist_R) && (dist_R<=40) && (39<=dist_G) && (dist_G<=45) && (18<=dist_B) && (dist_B<=24)){
+[e :U 2025 ]
+[e $ ! && && && && && <= -> 34 `i -> _dist_R `i <= -> _dist_R `i -> 40 `i <= -> 39 `i -> _dist_G `i <= -> _dist_G `i -> 45 `i <= -> 18 `i -> _dist_B `i <= -> _dist_B `i -> 24 `i 2027  ]
+{
+"115
+[; ;color.c: 115:             color = 2;
+[e = _color -> -> 2 `i `uc ]
+"116
+[; ;color.c: 116:         }
+}
+[e $U 2028  ]
+"117
+[; ;color.c: 117:         else if((28<=dist_R) && (dist_R<=34) && (32<=dist_G) && (dist_G<=38) && (31<=dist_B) && (dist_B<=37)){
+[e :U 2027 ]
+[e $ ! && && && && && <= -> 28 `i -> _dist_R `i <= -> _dist_R `i -> 34 `i <= -> 32 `i -> _dist_G `i <= -> _dist_G `i -> 38 `i <= -> 31 `i -> _dist_B `i <= -> _dist_B `i -> 37 `i 2029  ]
+{
+"118
+[; ;color.c: 118:             color = 3;
+[e = _color -> -> 3 `i `uc ]
+"119
+[; ;color.c: 119:         }
+}
+[e $U 2030  ]
+"120
+[; ;color.c: 120:         else if((50<=dist_R) && (dist_R<=52) && (30<=dist_G) && (dist_G<=32) && (17<=dist_B) && (dist_B<=19)){
+[e :U 2029 ]
+[e $ ! && && && && && <= -> 50 `i -> _dist_R `i <= -> _dist_R `i -> 52 `i <= -> 30 `i -> _dist_G `i <= -> _dist_G `i -> 32 `i <= -> 17 `i -> _dist_B `i <= -> _dist_B `i -> 19 `i 2031  ]
+{
+"121
+[; ;color.c: 121:             color = 4;
+[e = _color -> -> 4 `i `uc ]
+"122
+[; ;color.c: 122:         }
+}
+[e $U 2032  ]
+"123
+[; ;color.c: 123:         else if((48<=dist_R) && (dist_R<=50) && (28<=dist_G) && (dist_G<=30) && (21<=dist_B) && (dist_B<=23)){
+[e :U 2031 ]
+[e $ ! && && && && && <= -> 48 `i -> _dist_R `i <= -> _dist_R `i -> 50 `i <= -> 28 `i -> _dist_G `i <= -> _dist_G `i -> 30 `i <= -> 21 `i -> _dist_B `i <= -> _dist_B `i -> 23 `i 2033  ]
+{
+"124
+[; ;color.c: 124:             color = 5;
+[e = _color -> -> 5 `i `uc ]
+"125
+[; ;color.c: 125:         }
+}
+[e $U 2034  ]
+"126
+[; ;color.c: 126:         else if((57<=dist_R) && (dist_R<=63) && (20<=dist_G) && (dist_G<=26) && (14<=dist_B) && (dist_B<=20)){
+[e :U 2033 ]
+[e $ ! && && && && && <= -> 57 `i -> _dist_R `i <= -> _dist_R `i -> 63 `i <= -> 20 `i -> _dist_G `i <= -> _dist_G `i -> 26 `i <= -> 14 `i -> _dist_B `i <= -> _dist_B `i -> 20 `i 2035  ]
+{
+"127
+[; ;color.c: 127:             color = 6;
+[e = _color -> -> 6 `i `uc ]
+"128
+[; ;color.c: 128:         }
+}
+[e $U 2036  ]
+"129
+[; ;color.c: 129:         else if((31<=dist_R) && (dist_R<=37) && (36<=dist_G) && (dist_G<=42) && (24<=dist_B) && (dist_B<=30)){
+[e :U 2035 ]
+[e $ ! && && && && && <= -> 31 `i -> _dist_R `i <= -> _dist_R `i -> 37 `i <= -> 36 `i -> _dist_G `i <= -> _dist_G `i -> 42 `i <= -> 24 `i -> _dist_B `i <= -> _dist_B `i -> 30 `i 2037  ]
+{
+"130
+[; ;color.c: 130:             color = 7;
+[e = _color -> -> 7 `i `uc ]
+"131
+[; ;color.c: 131:         }
+}
+[e $U 2038  ]
+"132
+[; ;color.c: 132:         else if((41<=dist_R) && (dist_R<=47) && (30<=dist_G) && (dist_G<=36) && (20<=dist_B) && (dist_B<=26)){
+[e :U 2037 ]
+[e $ ! && && && && && <= -> 41 `i -> _dist_R `i <= -> _dist_R `i -> 47 `i <= -> 30 `i -> _dist_G `i <= -> _dist_G `i -> 36 `i <= -> 20 `i -> _dist_B `i <= -> _dist_B `i -> 26 `i 2039  ]
+{
+"133
+[; ;color.c: 133:             color = 8;
+[e = _color -> -> 8 `i `uc ]
+"134
+[; ;color.c: 134:         }
+}
+[e :U 2039 ]
+[e :U 2038 ]
+[e :U 2036 ]
+[e :U 2034 ]
+[e :U 2032 ]
+[e :U 2030 ]
+[e :U 2028 ]
+[e :U 2026 ]
+"136
+[; ;color.c: 136:         color_flag = 0;
+[e = _color_flag -> -> 0 `i `uc ]
+"137
+[; ;color.c: 137:         return color;
+[e ) _color ]
+[e $UE 2023  ]
+"138
+[; ;color.c: 138:     }
+}
+[e :U 2024 ]
+"140
+[; ;color.c: 140: }
+[e :UE 2023 ]
 }

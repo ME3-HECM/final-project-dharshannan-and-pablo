@@ -3,10 +3,11 @@
 #include "serial.h"
 #include "color.h"
 #include "i2c.h"
+#include "LED_Buttons.h"
 
 /************************************
  * Function to turn on interrupts and set if priority is used
- * Note you also need to enable peripheral interrupts in the INTCON register to use CM1IE.
+ * Note you also need to enable peripheral interrupts in the INTCON register to use INT1IE.
 ************************************/
 void Interrupts_init(void)
 {
@@ -16,10 +17,10 @@ void Interrupts_init(void)
     // Initialize color clicker interrupts
     TRISBbits.TRISB1 = 1; // Set RB1 pin as input
     ANSELBbits.ANSELB1 = 0; // Turn off analog on RB1 pin
-    //INT1PPS = 0x09 // This is incase we decide to remap RB1 for different I/0
+    INT1PPS = 0x09; // This is incase we decide to remap RB1 for different I/0
     PIE0bits.INT1IE = 1; // Enable interrupt on RB1 pin
     IPR0bits.INT1IP = 1; // high priority
-    INTCONbits.INT1EDG = 0; // Set RB1 intterrupt to trigger on falling edge
+    INTCONbits.INT1EDG = 0; // Set RB1 interrupt to trigger on falling edge
     
     // Initialize TMR0 interrupts
     PIE0bits.TMR0IE=1; 	//enable interrupt source TMR0
@@ -36,19 +37,19 @@ void Interrupts_init(void)
 }
 
 // Function to initialize the color clicker interrupt, set threshold values and persistence registers
-unsigned int int_threshold_low = 0; // Low thershold for color click interrupts
-unsigned int int_threshold_high = 3250; // High thershold for color click interrupts
+unsigned int int_threshold_low = 0; // Low threshold for color click interrupts
+unsigned int int_threshold_high = 2500; // High threshold for color click interrupts
 
 void init_colorclick_interrupts(void)
 {
     color_writetoaddr(0x00,0b10011); // Enable RGBC interrupt, RGBC ADC, and internal oscillator, refer pg 13 of TCS3471 document
     __delay_ms(3); // Delay before writing again
     // NOTE 1: A minimum interval of 2.4 ms must pass after PON is asserted before an RGBC can be initiated (pg 13 of TCS3471 document)
-    color_writetoaddr(0x0C,0b0100); // Write to enable persistance register to trigger interrupt after 5 readings outside of threshold range (pg 14 TCS3471)
-    color_writetoaddr(0x04,int_threshold_low & 0xFF); // RGBC clear channel low threshold lower byte (pg 14 TCS3471)
-    color_writetoaddr(0x05,int_threshold_low >> 8); // RGBC clear channel low threshold higher byte
-    color_writetoaddr(0x06,int_threshold_high & 0xFF); // RGBC clear channel high threshold lower byte
-    color_writetoaddr(0x07,int_threshold_high >> 8); // RGBC clear channel high threshold higher byte
+    color_writetoaddr(0x0C,0b0100); // Write to enable persistence register to trigger interrupt after 5 readings outside of threshold range (pg 14 TCS3471)
+    color_writetoaddr(0x04,(int_threshold_low & 0xFF)); // RGBC clear channel low threshold lower byte (pg 14 TCS3471)
+    color_writetoaddr(0x05,(int_threshold_low >> 8)); // RGBC clear channel low threshold higher byte
+    color_writetoaddr(0x06,(int_threshold_high & 0xFF)); // RGBC clear channel high threshold lower byte
+    color_writetoaddr(0x07,(int_threshold_high >> 8)); // RGBC clear channel high threshold higher byte
     
 }
 
@@ -74,7 +75,6 @@ void __interrupt(low_priority) LowISR()
 {
 	//add your ISR code here i.e. check the flag, do something (i.e. toggle an LED), clear the flag...
     if(PIR0bits.TMR0IF){ 	//check the interrupt source
-        LATHbits.LATH3 = !LATHbits.LATH3; // Toggle LED 2
         TMR0H = 0b11000010; // Reset timer value to 49910 (decimal) this is to accurately measure 250ms intervals
         TMR0L = 0b11110110;
         tmr_ovf = 1;
@@ -91,6 +91,7 @@ void __interrupt(high_priority) HighISR()
     /*************************************
     // Here we interrupt to receive data
     **************************************/
+    
     if(PIR4bits.RC4IF){ 	//check the interrupt source
         unsigned char a = RC4REG;
         putCharToRxBuf(a); // Receive byte from PC and add to buffer
@@ -107,11 +108,14 @@ void __interrupt(high_priority) HighISR()
     /****************************************************
     // Here we interrupt to check if color card is found
     *****************************************************/
+    
     if(PIR0bits.INT1IF){ // If the flag is raised (clear channel value is outside of threshold range)
         color_flag = 1; // Raise flag for colored card detection
+        //LATHbits.LATH3 = !LATHbits.LATH3;
         interrupts_clear_colorclick(); // Clear colorclick interrupts
         PIR0bits.INT1IF = 0; // Clear interrupt flag
     }
+    
 }
 
 

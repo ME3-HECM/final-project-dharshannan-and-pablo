@@ -24270,6 +24270,8 @@ unsigned int color_read_Clear(void);
 
 
 void Update_RGBC(RGB_val *tempval);
+
+unsigned char detect_color(RGB_val *tempval);
 # 2 "color.c" 2
 
 # 1 "./i2c.h" 1
@@ -24306,6 +24308,28 @@ void I2C_2_Master_Write(unsigned char data_byte);
 
 unsigned char I2C_2_Master_Read(unsigned char ack);
 # 3 "color.c" 2
+
+# 1 "./interrupts.h" 1
+
+
+
+
+
+
+
+
+extern unsigned char tmr_ovf;
+extern unsigned char color_flag;
+extern unsigned int int_threshold_low;
+extern unsigned int int_threshold_high;
+
+
+void Interrupts_init(void);
+void init_colorclick_interrupts(void);
+void interrupts_clear_colorclick(void);
+void __attribute__((picinterrupt(("high_priority")))) HighISR();
+void __attribute__((picinterrupt(("low_priority")))) LowISR();
+# 4 "color.c" 2
 
 
 void color_click_init(void)
@@ -24398,4 +24422,45 @@ void Update_RGBC(RGB_val *tempval){
     tempval->G = color_read_Green();
     tempval->B = color_read_Blue();
     tempval->C = color_read_Clear();
+}
+
+
+unsigned char detect_color(RGB_val *tempval)
+{
+    unsigned char color = 0;
+
+
+    unsigned char dist_R, dist_G, dist_B;
+    dist_R = ((tempval->R)/(tempval->R + tempval->G + tempval->B))*100;
+    dist_G = ((tempval->G)/(tempval->R + tempval->G + tempval->B))*100;
+    dist_B = ((tempval->B)/(tempval->R + tempval->G + tempval->B))*100;
+
+    if(color_flag==1){
+        if(72<=dist_R<=78 && 8<=dist_G<=14 && 11<=dist_B<=17){
+            color = 1;
+        }
+        else if(34<=dist_R<=40 && 39<=dist_G<=45 && 18<=dist_B<=24){
+            color = 2;
+        }
+        else if(28<=dist_R<=34 && 32<=dist_G<=38 && 31<=dist_B<=37){
+            color = 3;
+        }
+        else if(48<=dist_R<=54 && 28<=dist_G<=34 && 15<=dist_B<=21){
+            color = 4;
+        }
+        else if(46<=dist_R<=52 && 26<=dist_G<=32 && 19<=dist_B<=25){
+            color = 5;
+        }
+        else if(57<=dist_R<=63 && 20<=dist_G<=26 && 14<=dist_B<=20){
+            color = 6;
+        }
+        else if(31<=dist_R<=37 && 36<=dist_G<=42 && 24<=dist_B<=30){
+            color = 7;
+        }
+        else if(41<=dist_R<=47 && 30<=dist_G<=36 && 20<=dist_B<=26){
+            color = 8;
+        }
+        color_flag = 0;
+    }
+    return color;
 }

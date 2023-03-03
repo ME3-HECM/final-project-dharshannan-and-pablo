@@ -24425,6 +24425,8 @@ unsigned int color_read_Clear(void);
 
 
 void Update_RGBC(RGB_val *tempval);
+
+unsigned char detect_color(RGB_val tempval);
 # 11 "main_calibration.c" 2
 
 # 1 "./i2c.h" 1
@@ -24551,25 +24553,17 @@ void main(void){
     Timer0_init();
 
     char a = 0;
-    int readingsR[100];
-    int readingsG[100];
-    int readingsB[100];
-    int readingsC[100];
+
+
+
+
 
     while(1){
         WhiteLight();
         Update_RGBC(&initial_color);
-
-
-        while(tmr_ovf==1 && a<100){
-            readingsR[a] = initial_color.R;
-            readingsG[a] = initial_color.G;
-            readingsB[a] = initial_color.B;
-            readingsC[a] = initial_color.C;
-            a++;
-            tmr_ovf = 0;
-        }
-
+# 100 "main_calibration.c"
+        unsigned char color_detected;
+        color_detected = detect_color(initial_color);
 
         char cont = 0x00;
 
@@ -24578,33 +24572,15 @@ void main(void){
             cont = getCharFromRxBuf();
         }
 
-
-
-        if(cont == 0x10){
-            unsigned char i;
-            for(i=0;i<a;i++){
-
-                char string[40];
-                sprintf(string,"\n%05d %05d %05d %05d\n",readingsR[i],readingsG[i],readingsB[i],readingsC[i]);
-                TxBufferedString(string);
-
-                sendTxBuf();
-                _delay((unsigned long)((250)*(64000000/4000.0)));
-            }
-            cont = 0x00;
-            a = 0;
-        }
-
-
         if(cont == 0x01){
 
             char string2[40];
-            sprintf(string2,"\n%05d %05d %05d %05d\n",initial_color.R,initial_color.G,initial_color.B,initial_color.C);
+            sprintf(string2,"\nColor Detected = %02d %05d %05d %05d\n",color_detected,initial_color.R,initial_color.G,initial_color.B);
             TxBufferedString(string2);
 
             sendTxBuf();
             cont = 0x00;
-            a = 0;
         }
+        _delay((unsigned long)((100)*(64000000/4000.0)));
     }
 }

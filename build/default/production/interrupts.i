@@ -24322,6 +24322,8 @@ unsigned int color_read_Clear(void);
 
 
 void Update_RGBC(RGB_val *tempval);
+
+unsigned char detect_color(RGB_val tempval);
 # 4 "interrupts.c" 2
 
 # 1 "./i2c.h" 1
@@ -24359,6 +24361,12 @@ void I2C_2_Master_Write(unsigned char data_byte);
 unsigned char I2C_2_Master_Read(unsigned char ack);
 # 5 "interrupts.c" 2
 
+# 1 "./LED_Buttons.h" 1
+# 20 "./LED_Buttons.h"
+void LED_init(void);
+void WhiteLight(void);
+# 6 "interrupts.c" 2
+
 
 
 
@@ -24372,7 +24380,7 @@ void Interrupts_init(void)
 
     TRISBbits.TRISB1 = 1;
     ANSELBbits.ANSELB1 = 0;
-
+    INT1PPS = 0x09;
     PIE0bits.INT1IE = 1;
     IPR0bits.INT1IP = 1;
     INTCONbits.INT1EDG = 0;
@@ -24393,7 +24401,7 @@ void Interrupts_init(void)
 
 
 unsigned int int_threshold_low = 0;
-unsigned int int_threshold_high = 3250;
+unsigned int int_threshold_high = 2500;
 
 void init_colorclick_interrupts(void)
 {
@@ -24401,10 +24409,10 @@ void init_colorclick_interrupts(void)
     _delay((unsigned long)((3)*(64000000/4000.0)));
 
     color_writetoaddr(0x0C,0b0100);
-    color_writetoaddr(0x04,int_threshold_low & 0xFF);
-    color_writetoaddr(0x05,int_threshold_low >> 8);
-    color_writetoaddr(0x06,int_threshold_high & 0xFF);
-    color_writetoaddr(0x07,int_threshold_high >> 8);
+    color_writetoaddr(0x04,(int_threshold_low & 0xFF));
+    color_writetoaddr(0x05,(int_threshold_low >> 8));
+    color_writetoaddr(0x06,(int_threshold_high & 0xFF));
+    color_writetoaddr(0x07,(int_threshold_high >> 8));
 
 }
 
@@ -24430,7 +24438,6 @@ void __attribute__((picinterrupt(("low_priority")))) LowISR()
 {
 
     if(PIR0bits.TMR0IF){
-        LATHbits.LATH3 = !LATHbits.LATH3;
         TMR0H = 0b11000010;
         TMR0L = 0b11110110;
         tmr_ovf = 1;
@@ -24443,6 +24450,7 @@ void __attribute__((picinterrupt(("low_priority")))) LowISR()
 unsigned char color_flag = 0;
 void __attribute__((picinterrupt(("high_priority")))) HighISR()
 {
+
 
 
 
@@ -24463,9 +24471,12 @@ void __attribute__((picinterrupt(("high_priority")))) HighISR()
 
 
 
+
     if(PIR0bits.INT1IF){
         color_flag = 1;
+
         interrupts_clear_colorclick();
         PIR0bits.INT1IF = 0;
     }
+
 }

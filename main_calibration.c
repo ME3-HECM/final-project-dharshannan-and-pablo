@@ -98,7 +98,7 @@ void main(void){
          * This section we will send the decided color via serial for testing
         ***********************************************/
         unsigned char color_detected;
-        color_detected = detect_color(initial_color);
+        color_detected = detect_color(&initial_color);
         // Define a control character which will be received from the PC
         char cont = 0x00; // 0 is initial control value
         // Get control value from PC

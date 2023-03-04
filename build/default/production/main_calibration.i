@@ -24426,7 +24426,7 @@ unsigned int color_read_Clear(void);
 
 void Update_RGBC(RGB_val *tempval);
 
-unsigned char detect_color(RGB_val tempval);
+unsigned char detect_color(RGB_val *tempval);
 # 11 "main_calibration.c" 2
 
 # 1 "./i2c.h" 1
@@ -24563,7 +24563,7 @@ void main(void){
         Update_RGBC(&initial_color);
 # 100 "main_calibration.c"
         unsigned char color_detected;
-        color_detected = detect_color(initial_color);
+        color_detected = detect_color(&initial_color);
 
         char cont = 0x00;
 

@@ -26,8 +26,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./color.h: 38: void Update_RGBC(RGB_val *tempval);
 [v _Update_RGBC `(v ~T0 @X0 0 ef1`*S2017 ]
 "40
-[; ;./color.h: 40: unsigned char detect_color(RGB_val tempval);
-[v _detect_color `(uc ~T0 @X0 0 ef1`S2017 ]
+[; ;./color.h: 40: unsigned char detect_color(RGB_val *tempval);
+[v _detect_color `(uc ~T0 @X0 0 ef1`*S2017 ]
 "29 ./serial.h
 [; ;./serial.h: 29: char getCharFromRxBuf(void);
 [v _getCharFromRxBuf `(uc ~T0 @X0 0 ef ]
@@ -2114,8 +2114,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main_calibration.c: 100:         unsigned char color_detected;
 [v _color_detected `uc ~T0 @X0 1 a ]
 "101
-[; ;main_calibration.c: 101:         color_detected = detect_color(initial_color);
-[e = _color_detected ( _detect_color (1 _initial_color ]
+[; ;main_calibration.c: 101:         color_detected = detect_color(&initial_color);
+[e = _color_detected ( _detect_color (1 &U _initial_color ]
 "103
 [; ;main_calibration.c: 103:         char cont = 0x00;
 [v _cont `uc ~T0 @X0 1 a ]

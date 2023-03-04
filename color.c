@@ -96,15 +96,15 @@ void Update_RGBC(RGB_val *tempval){
 }
 
 // Function to detect and decide what color is sensed by light sensors based of RGBC % distribution values
-unsigned char detect_color(RGB_val tempval)
+unsigned char detect_color(RGB_val *tempval)
 {
     unsigned char color = 0; // Initialize color detected, 1:red, 2:green, 3:blue, 4:yellow, 5:pink
     // 6:orange, 7:light blue, 8:white
     // Calculate % dist of RGB values
     unsigned char dist_R, dist_G, dist_B; // Variables to hold % dist for red, green and blue
-    dist_R = ((float)(tempval.R)/(float)(tempval.R + tempval.G + tempval.B))*100;
-    dist_G = ((float)(tempval.G)/(float)(tempval.R + tempval.G + tempval.B))*100;
-    dist_B = ((float)(tempval.B)/(float)(tempval.R + tempval.G + tempval.B))*100;
+    dist_R = ((float)(tempval->R)/(float)(tempval->R + tempval->G + tempval->B))*100;
+    dist_G = ((float)(tempval->G)/(float)(tempval->R + tempval->G + tempval->B))*100;
+    dist_B = ((float)(tempval->B)/(float)(tempval->R + tempval->G + tempval->B))*100;
     
     if(color_flag){ // If color flag is 1 (flagged) check % dist for RGB values and decide color (use a confidence interval of 3%)
         __delay_ms(500); // Delay to allow readings to stabilize

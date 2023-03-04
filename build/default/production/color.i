@@ -24271,7 +24271,7 @@ unsigned int color_read_Clear(void);
 
 void Update_RGBC(RGB_val *tempval);
 
-unsigned char detect_color(RGB_val tempval);
+unsigned char detect_color(RGB_val *tempval);
 # 2 "color.c" 2
 
 # 1 "./i2c.h" 1
@@ -24425,15 +24425,15 @@ void Update_RGBC(RGB_val *tempval){
 }
 
 
-unsigned char detect_color(RGB_val tempval)
+unsigned char detect_color(RGB_val *tempval)
 {
     unsigned char color = 0;
 
 
     unsigned char dist_R, dist_G, dist_B;
-    dist_R = ((float)(tempval.R)/(float)(tempval.R + tempval.G + tempval.B))*100;
-    dist_G = ((float)(tempval.G)/(float)(tempval.R + tempval.G + tempval.B))*100;
-    dist_B = ((float)(tempval.B)/(float)(tempval.R + tempval.G + tempval.B))*100;
+    dist_R = ((float)(tempval->R)/(float)(tempval->R + tempval->G + tempval->B))*100;
+    dist_G = ((float)(tempval->G)/(float)(tempval->R + tempval->G + tempval->B))*100;
+    dist_B = ((float)(tempval->B)/(float)(tempval->R + tempval->G + tempval->B))*100;
 
     if(color_flag){
         _delay((unsigned long)((500)*(64000000/4000.0)));

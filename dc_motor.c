@@ -294,3 +294,10 @@ void yellowInstructions(DC_motor *mL, DC_motor *mR){
     turnRight90(mL, mR);
     
 }
+
+void pinkInstructions(DC_motor *mL, DC_motor *mR){
+    
+    fullSpeedBackwards(mL, mR);
+    turnRight90(mL, mR);
+    
+}

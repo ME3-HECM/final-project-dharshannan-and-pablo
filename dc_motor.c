@@ -288,32 +288,3 @@ void turnLeft135(DC_motor *mL, DC_motor *mR){
     }
 }
 
-void yellowInstructions(DC_motor *mL, DC_motor *mR){
-    
-    unsigned char a=0;
-    while (a<60){
-        fullSpeedBackwards(mL, mR);
-        a++;
-    }
-    while (a>0){
-        stop(mL, mR);
-        a--;
-    }
-    __delay_ms(500);
-    turnRight90(mL, mR);
-}
-
-void pinkInstructions(DC_motor *mL, DC_motor *mR){
-    unsigned char a=0;
-    while (a<60){
-        fullSpeedBackwards(mL, mR);
-        a++;
-    }
-    while (a>0){
-        stop(mL, mR);
-        a--;
-    }
-    __delay_ms(500);
-    turnRight90(mL, mR);
-    
-}

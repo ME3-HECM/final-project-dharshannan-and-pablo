@@ -11,6 +11,7 @@
       <itemPath>interrupts.h</itemPath>
       <itemPath>serial.h</itemPath>
       <itemPath>timers.h</itemPath>
+      <itemPath>color_instructions.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -27,6 +28,7 @@
       <itemPath>serial.c</itemPath>
       <itemPath>timers.c</itemPath>
       <itemPath>main_motor.c</itemPath>
+      <itemPath>color_instructions.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

@@ -28,5 +28,6 @@ void turn180(DC_motor *mL, DC_motor *mR);
 void turnRight135(DC_motor *mL, DC_motor *mR);
 void turnLeft135(DC_motor *mL, DC_motor *mR);
 void yellowInstructions (DC_motor *mL, DC_motor *mR);
+void pinkInstructions(DC_motor *mL, DC_motor *mR);
 
 #endif

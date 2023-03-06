@@ -24271,6 +24271,7 @@ void turn180(DC_motor *mL, DC_motor *mR);
 void turnRight135(DC_motor *mL, DC_motor *mR);
 void turnLeft135(DC_motor *mL, DC_motor *mR);
 void yellowInstructions (DC_motor *mL, DC_motor *mR);
+void pinkInstructions(DC_motor *mL, DC_motor *mR);
 # 10 "main_motor.c" 2
 
 
@@ -24295,5 +24296,12 @@ void main(void) {
     motorR.posDutyHighByte=(unsigned char *)(&CCPR3H);
     motorR.negDutyHighByte=(unsigned char *)(&CCPR4H);
     motorR.PWMperiod= T2PR;
+
+
+    while (1){
+        yellowInstructions(&motorL, &motorR);
+        _delay((unsigned long)((500)*(64000000/4000.0)));
+
+    }
 
 }

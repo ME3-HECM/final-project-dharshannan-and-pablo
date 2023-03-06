@@ -3122,9 +3122,33 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;dc_motor.c: 293:     fullSpeedBackwards(mL, mR);
 [e ( _fullSpeedBackwards (2 , _mL _mR ]
 "294
-[; ;dc_motor.c: 294:     turnRight90(mL, mR);
+[; ;dc_motor.c: 294:     _delay((unsigned long)((500)*(64000000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+"295
+[; ;dc_motor.c: 295:     turnRight90(mL, mR);
 [e ( _turnRight90 (2 , _mL _mR ]
-"296
-[; ;dc_motor.c: 296: }
+"297
+[; ;dc_motor.c: 297: }
 [e :UE 2079 ]
+}
+"299
+[; ;dc_motor.c: 299: void pinkInstructions(DC_motor *mL, DC_motor *mR){
+[v _pinkInstructions `(v ~T0 @X0 1 ef2`*S2015`*S2015 ]
+{
+[e :U _pinkInstructions ]
+[v _mL `*S2015 ~T0 @X0 1 r1 ]
+[v _mR `*S2015 ~T0 @X0 1 r2 ]
+[f ]
+"301
+[; ;dc_motor.c: 301:     fullSpeedBackwards(mL, mR);
+[e ( _fullSpeedBackwards (2 , _mL _mR ]
+"302
+[; ;dc_motor.c: 302:     _delay((unsigned long)((500)*(64000000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+"303
+[; ;dc_motor.c: 303:     turnRight90(mL, mR);
+[e ( _turnRight90 (2 , _mL _mR ]
+"305
+[; ;dc_motor.c: 305: }
+[e :UE 2080 ]
 }

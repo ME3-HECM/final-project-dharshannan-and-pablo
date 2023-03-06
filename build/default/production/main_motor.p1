@@ -22,6 +22,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 "21098
 [; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h: 21098: extern volatile unsigned char CCPR4H __attribute__((address(0xF21)));
 [v _CCPR4H `Vuc ~T0 @X0 0 e@3873 ]
+"30 ./dc_motor.h
+[; ;./dc_motor.h: 30: void yellowInstructions (DC_motor *mL, DC_motor *mR);
+[v _yellowInstructions `(v ~T0 @X0 0 ef2`*S2015`*S2015 ]
+[v F192 `(v ~T0 @X0 1 tf1`ul ]
+"12 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\builtins.h
+[v __delay `JF192 ~T0 @X0 0 e ]
+[p i __delay ]
 "2 main_motor.c
 [p x FEXTOSC  =  HS      ]
 "3
@@ -2054,7 +2061,23 @@ Version 4.0 HI-TECH Software Intermediate Code
 "32
 [; ;main_motor.c: 32:     motorR.PWMperiod= T2PR;
 [e = . _motorR 3 -> _T2PR `ui ]
-"34
-[; ;main_motor.c: 34: }
+"35
+[; ;main_motor.c: 35:     while (1){
+[e :U 2018 ]
+{
+"36
+[; ;main_motor.c: 36:         yellowInstructions(&motorL, &motorR);
+[e ( _yellowInstructions (2 , &U _motorL &U _motorR ]
+"37
+[; ;main_motor.c: 37:         _delay((unsigned long)((500)*(64000000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+"39
+[; ;main_motor.c: 39:     }
+}
+[e :U 2017 ]
+[e $U 2018  ]
+[e :U 2019 ]
+"41
+[; ;main_motor.c: 41: }
 [e :UE 2016 ]
 }

@@ -24262,6 +24262,7 @@ void turn180(DC_motor *mL, DC_motor *mR);
 void turnRight135(DC_motor *mL, DC_motor *mR);
 void turnLeft135(DC_motor *mL, DC_motor *mR);
 void yellowInstructions (DC_motor *mL, DC_motor *mR);
+void pinkInstructions(DC_motor *mL, DC_motor *mR);
 # 2 "dc_motor.c" 2
 
 
@@ -24555,6 +24556,15 @@ void turnLeft135(DC_motor *mL, DC_motor *mR){
 void yellowInstructions(DC_motor *mL, DC_motor *mR){
 
     fullSpeedBackwards(mL, mR);
+    _delay((unsigned long)((500)*(64000000/4000.0)));
+    turnRight90(mL, mR);
+
+}
+
+void pinkInstructions(DC_motor *mL, DC_motor *mR){
+
+    fullSpeedBackwards(mL, mR);
+    _delay((unsigned long)((500)*(64000000/4000.0)));
     turnRight90(mL, mR);
 
 }

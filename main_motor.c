@@ -30,5 +30,12 @@ void main(void) {
     motorR.posDutyHighByte=(unsigned char *)(&CCPR3H);  //store address of CCP3 duty high byte
     motorR.negDutyHighByte=(unsigned char *)(&CCPR4H);  //store address of CCP4 duty high byte
     motorR.PWMperiod= T2PR; 			//store PWMperiod for motor (value of T2PR in this case)
+    
+    
+    while (1){
+        yellowInstructions(&motorL, &motorR);
+        __delay_ms(500);
+        
+    }
  
 }

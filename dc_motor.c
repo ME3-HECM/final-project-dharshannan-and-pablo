@@ -291,6 +291,7 @@ void turnLeft135(DC_motor *mL, DC_motor *mR){
 void yellowInstructions(DC_motor *mL, DC_motor *mR){
     
     fullSpeedBackwards(mL, mR);
+    __delay_ms(500);
     turnRight90(mL, mR);
     
 }
@@ -298,6 +299,7 @@ void yellowInstructions(DC_motor *mL, DC_motor *mR){
 void pinkInstructions(DC_motor *mL, DC_motor *mR){
     
     fullSpeedBackwards(mL, mR);
+    __delay_ms(500);
     turnRight90(mL, mR);
     
 }

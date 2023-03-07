@@ -1,4 +1,7 @@
 build/default/production/interrupts.p1:  \
 interrupts.c  \
 interrupts.h  \
-serial.h 
+serial.h  \
+color.h  \
+i2c.h  \
+LED_Buttons.h 

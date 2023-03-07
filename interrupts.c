@@ -88,10 +88,12 @@ unsigned char color_flag = 0;
 void __interrupt(high_priority) HighISR()
 {
 	//add your ISR code here i.e. check the flag, do something (i.e. toggle an LED), clear the flag...
-    /*************************************
-    // Here we interrupt to receive data
-    **************************************/
     
+    /*******************************************************
+    // Here we interrupt to send and receive via serial comm
+    ********************************************************/
+    // Here we interrupt to receive data (uncomment this section to use serial comms)
+    /*
     if(PIR4bits.RC4IF){ 	//check the interrupt source
         unsigned char a = RC4REG;
         putCharToRxBuf(a); // Receive byte from PC and add to buffer
@@ -104,6 +106,7 @@ void __interrupt(high_priority) HighISR()
     if(PIR4bits.TX4IF){
         TX4REG = getCharFromTxBuf(); // Transmit character to PC
     }
+    */
     
     /****************************************************
     // Here we interrupt to check if color card is found
@@ -111,7 +114,7 @@ void __interrupt(high_priority) HighISR()
     
     if(PIR0bits.INT1IF){ // If the flag is raised (clear channel value is outside of threshold range)
         color_flag = 1; // Raise flag for colored card detection
-        //LATHbits.LATH3 = !LATHbits.LATH3;
+        //LATHbits.LATH3 = !LATHbits.LATH3; // Turn ON and OFF LED for debugging purposes
         interrupts_clear_colorclick(); // Clear colorclick interrupts
         PIR0bits.INT1IF = 0; // Clear interrupt flag
     }

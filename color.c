@@ -108,13 +108,13 @@ unsigned char detect_color(RGB_val *tempval)
     
     if(color_flag){ // If color flag is 1 (flagged) check % dist for RGB values and decide color (use a confidence interval of 3%) except for Yellow and Pink due to very similar RGB % dist values
         __delay_ms(500); // Delay to allow readings to stabilize
-        if((72<=dist_R) && (dist_R<=78) && (8<=dist_G) && (dist_G<=14) && (11<=dist_B) && (dist_B<=17)){ // Distribution of RGB values for RED
+        if((74<=dist_R) && (dist_R<=76) && (10<=dist_G) && (dist_G<=12) && (13<=dist_B) && (dist_B<=15)){ // Distribution of RGB values for RED
             color = 1; // Set color to RED
         }
-        else if((34<=dist_R) && (dist_R<=40) && (39<=dist_G) && (dist_G<=45) && (18<=dist_B) && (dist_B<=24)){ // Dist for GREEN
+        else if((36<=dist_R) && (dist_R<=38) && (41<=dist_G) && (dist_G<=43) && (20<=dist_B) && (dist_B<=22)){ // Dist for GREEN
             color = 2; // Set color to GREEN
         }
-        else if((28<=dist_R) && (dist_R<=34) && (32<=dist_G) && (dist_G<=38) && (31<=dist_B) && (dist_B<=37)){ // Dist for BLUE
+        else if((30<=dist_R) && (dist_R<=32) && (34<=dist_G) && (dist_G<=36) && (33<=dist_B) && (dist_B<=35)){ // Dist for BLUE
             color = 3; // Set color to BLUE
         }
         else if((50<=dist_R) && (dist_R<=52) && (30<=dist_G) && (dist_G<=32) && (17<=dist_B) && (dist_B<=19)){ // Dist for YELLOW (confidence interval of 1%)
@@ -123,18 +123,17 @@ unsigned char detect_color(RGB_val *tempval)
         else if((48<=dist_R) && (dist_R<=50) && (28<=dist_G) && (dist_G<=30) && (21<=dist_B) && (dist_B<=23)){ // Dist for PINK (confidence interval of 1%)
             color = 5; // Set color to PINK
         }
-        else if((57<=dist_R) && (dist_R<=63) && (20<=dist_G) && (dist_G<=26) && (14<=dist_B) && (dist_B<=20)){ // Dist for ORANGE
+        else if((59<=dist_R) && (dist_R<=61) && (22<=dist_G) && (dist_G<=24) && (16<=dist_B) && (dist_B<=18)){ // Dist for ORANGE
             color = 6; // Set color to ORANGE
         }
-        else if((31<=dist_R) && (dist_R<=37) && (36<=dist_G) && (dist_G<=42) && (24<=dist_B) && (dist_B<=30)){ // Dist for LIGHT BLUE
+        else if((33<=dist_R) && (dist_R<=35) && (38<=dist_G) && (dist_G<=40) && (26<=dist_B) && (dist_B<=28)){ // Dist for LIGHT BLUE
             color = 7; // Set color to LIGHT BLUE
         }
-        else if((41<=dist_R) && (dist_R<=47) && (30<=dist_G) && (dist_G<=36) && (20<=dist_B) && (dist_B<=26)){ // Dist for WHITE
+        else if((43<=dist_R) && (dist_R<=45) && (32<=dist_G) && (dist_G<=34) && (22<=dist_B) && (dist_B<=24)){ // Dist for WHITE
             color = 8; // Set color to WHITE
         }
         
         color_flag = 0; // Reset color flag
-        return color; // Return the value of the decided color
     }
-    //return color;
+    return color; // Return the value of the decided color
 }

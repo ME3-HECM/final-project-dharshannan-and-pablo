@@ -1,4 +1,4 @@
-# 1 "dc_motor.c"
+# 1 "color_instructions.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,7 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "dc_motor.c" 2
+# 1 "color_instructions.c" 2
 # 1 "D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\\pic\\include\\xc.h" 1 3
 # 18 "D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -24229,7 +24229,7 @@ __attribute__((__unsupported__("The READTIMER" "0" "() macro is not available wi
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\\pic\\include\\xc.h" 2 3
-# 1 "dc_motor.c" 2
+# 1 "color_instructions.c" 2
 
 # 1 "./dc_motor.h" 1
 
@@ -24261,261 +24261,139 @@ void turnRight90(DC_motor *mL, DC_motor *mR);
 void turn180(DC_motor *mL, DC_motor *mR);
 void turnRight135(DC_motor *mL, DC_motor *mR);
 void turnLeft135(DC_motor *mL, DC_motor *mR);
-# 2 "dc_motor.c" 2
+# 2 "color_instructions.c" 2
 
 
 
-void initDCmotorsPWM(unsigned int PWMperiod){
 
-    LATEbits.LATE2 = 0;
-    TRISEbits.TRISE2 = 0;
-    LATEbits.LATE4 = 0;
-    TRISEbits.TRISE4 = 0;
-    LATCbits.LATC7 = 0;
-    TRISCbits.TRISC7 = 0;
-    LATGbits.LATG6 = 0;
-    TRISGbits.TRISG6 = 0;
 
 
-    RE2PPS=0x05;
-    RE4PPS=0x06;
-    RC7PPS=0x07;
-    RG6PPS=0x08;
-
-
-    T2CONbits.CKPS=0b100;
-    T2HLTbits.MODE=0b00000;
-    T2CLKCONbits.CS=0b0001;
-
-
-
-    T2PR=PWMperiod;
-    T2CONbits.ON=1;
-
-
-
-    CCPR1H=0;
-    CCPR2H=0;
-    CCPR3H=0;
-    CCPR4H=0;
-
-
-    CCPTMRS0bits.C1TSEL=0;
-    CCPTMRS0bits.C2TSEL=0;
-    CCPTMRS0bits.C3TSEL=0;
-    CCPTMRS0bits.C4TSEL=0;
-
-
-    CCP1CONbits.FMT=1;
-    CCP1CONbits.CCP1MODE=0b1100;
-    CCP1CONbits.EN=1;
-
-    CCP2CONbits.FMT=1;
-    CCP2CONbits.CCP2MODE=0b1100;
-    CCP2CONbits.EN=1;
-
-    CCP3CONbits.FMT=1;
-    CCP3CONbits.CCP3MODE=0b1100;
-    CCP3CONbits.EN=1;
-
-    CCP4CONbits.FMT=1;
-    CCP4CONbits.CCP4MODE=0b1100;
-    CCP4CONbits.EN=1;
-}
-
-
-void setMotorPWM(DC_motor *m)
-{
-    unsigned char posDuty, negDuty;
-
-    if(m->brakemode) {
-        posDuty=m->PWMperiod - ((unsigned int)(m->power)*(m->PWMperiod))/100;
-        negDuty=m->PWMperiod;
-    }
-    else {
-        posDuty=0;
-  negDuty=((unsigned int)(m->power)*(m->PWMperiod))/100;
-    }
-
-    if (m->direction) {
-        *(m->posDutyHighByte)=posDuty;
-        *(m->negDutyHighByte)=negDuty;
-    } else {
-        *(m->posDutyHighByte)=negDuty;
-        *(m->negDutyHighByte)=posDuty;
-    }
-}
-
-
-void stop(DC_motor *mL, DC_motor *mR)
-{
-# 154 "dc_motor.c"
-    mL->brakemode = 1;
-    mR->brakemode = 1;
-
-    if(mL->power<0){mL->power=0;}
-    if(mR->power<0){mR->power=0;}
-
-    mL->power = mL->power - 5 ;
-    mR->power = mR->power - 5;
-
-    mL->power = 0;
-    mR->power = 0;
-    setMotorPWM(mL);
-    setMotorPWM(mR);
-    _delay((unsigned long)((10)*(64000000/4000.0)));
-}
-
-
-void turnLeft(DC_motor *mL, DC_motor *mR)
-{
-
-    mL->direction = 0;
-    mL->brakemode = 0;
-
-    mR->direction = 1;
-    mR->brakemode = 0;
-
-
-    if(mL->power>75){mL->power=75;}
-    if(mR->power>75){mR->power=75;}
-
-    mL->power = mL->power + 5 ;
-    mR->power = mR->power + 5;
-
-    setMotorPWM(mL);
-    setMotorPWM(mR);
-    _delay((unsigned long)((50)*(64000000/4000.0)));
-}
-
-
-void turnRight(DC_motor *mL, DC_motor *mR)
-{
-
-    mL->direction = 1;
-    mL->brakemode = 0;
-
-    mR->direction = 0;
-    mR->brakemode = 0;
-
-
-    if(mL->power>75){mL->power=75;}
-    if(mR->power>75){mR->power=75;}
-
-    mL->power = mL->power + 5 ;
-    mR->power = mR->power + 5;
-
-    setMotorPWM(mL);
-    setMotorPWM(mR);
-    _delay((unsigned long)((50)*(64000000/4000.0)));
-}
-
-
-void fullSpeedAhead(DC_motor *mL, DC_motor *mR)
-{
-
-    mL->direction = 1;
-    mL->brakemode = 0;
-
-    mR->direction = 1;
-    mR->brakemode = 0;
-
-
-
-    if(mL->power>50){mL->power=50;}
-    if(mR->power>50){mR->power=50;}
-
-    ++mL->power;
-    ++mR->power;
-
-    setMotorPWM(mL);
-    setMotorPWM(mR);
-    _delay((unsigned long)((50)*(64000000/4000.0)));
-
-}
-
-void fullSpeedBackwards(DC_motor *mL, DC_motor *mR){
-
-
-    mL->direction = 0;
-    mL->brakemode = 0;
-
-    mR->direction = 0;
-    mR->brakemode = 0;
-
-
-    if(mL->power>50){mL->power=50;}
-    if(mR->power>50){mR->power=50;}
-
-    ++mL->power;
-    ++mR->power;
-
-    setMotorPWM(mL);
-    setMotorPWM(mR);
-    _delay((unsigned long)((50)*(64000000/4000.0)));
-}
-
-void turnLeft90(DC_motor *mL, DC_motor *mR){
+void RedInstructions(DC_motor *mL, DC_motor *mR){
 
     unsigned char a=0;
-    while(a<19){
-        turnLeft(mL, mR);
+    while (a<8){
+        fullSpeedBackwards(mL, mR);
         a++;
     }
-    while(a>0){
+    while (a>0){
         stop(mL, mR);
         a--;
     }
+    _delay((unsigned long)((250)*(64000000/4000.0)));
+    turnRight90(mL, mR);
 }
 
-void turnRight90(DC_motor *mL, DC_motor *mR){
-
+void GreenInstructions(DC_motor *mL, DC_motor *mR){
     unsigned char a=0;
-    while(a<19){
-        turnRight(mL, mR);
+    while (a<8){
+        fullSpeedBackwards(mL, mR);
         a++;
     }
-    while(a>0){
+    while (a>0){
         stop(mL, mR);
         a--;
     }
+    _delay((unsigned long)((250)*(64000000/4000.0)));
+    turnLeft90(mL, mR);
 }
 
-void turn180(DC_motor *mL, DC_motor *mR){
-
+void BlueInstructions(DC_motor *mL, DC_motor *mR){
     unsigned char a=0;
-    while(a<17){
-        turnRight(mL, mR);
+    while (a<2){
+        fullSpeedBackwards(mL, mR);
         a++;
     }
-    while(a>0){
+    while (a>0){
         stop(mL, mR);
         a--;
     }
+    _delay((unsigned long)((500)*(64000000/4000.0)));
+
+    turn180(mL, mR);
 }
 
-void turnRight135(DC_motor *mL, DC_motor *mR){
+
+void YellowInstructions(DC_motor *mL, DC_motor *mR){
 
     unsigned char a=0;
-    while(a<69){
-        turnRight(mL, mR);
+    while (a<20){
+        fullSpeedBackwards(mL, mR);
         a++;
     }
-    while(a>0){
+    while (a>0){
         stop(mL, mR);
         a--;
     }
+    _delay((unsigned long)((500)*(64000000/4000.0)));
+    turnRight90(mL, mR);
 }
 
-void turnLeft135(DC_motor *mL, DC_motor *mR){
-
+void PinkInstructions(DC_motor *mL, DC_motor *mR){
     unsigned char a=0;
-    while(a<69){
-        turnLeft(mL, mR);
+    while (a<20){
+        fullSpeedBackwards(mL, mR);
         a++;
     }
-    while(a>0){
+    while (a>0){
         stop(mL, mR);
         a--;
+    }
+    _delay((unsigned long)((500)*(64000000/4000.0)));
+    turnLeft90(mL, mR);
+
+}
+
+void OrangeInstructions(DC_motor *mL, DC_motor *mR){
+    unsigned char a=0;
+    while (a<30){
+        fullSpeedBackwards(mL, mR);
+        a++;
+    }
+    while (a>0){
+        stop(mL, mR);
+        a--;
+    }
+    _delay((unsigned long)((500)*(64000000/4000.0)));
+
+    turnRight135(mL, mR);
+}
+
+void LightBlueInstructions(DC_motor *mL, DC_motor *mR){
+    unsigned char a=0;
+    while (a<30){
+        fullSpeedBackwards(mL, mR);
+        a++;
+    }
+    while (a>0){
+        stop(mL, mR);
+        a--;
+    }
+    _delay((unsigned long)((500)*(64000000/4000.0)));
+
+    turnLeft135(mL, mR);
+}
+
+
+void MoveBuggy(unsigned char color_detected, DC_motor *mL, DC_motor *mR){
+    if (color_detected==1){
+        RedInstructions(mL, mR);
+    }
+    else if (color_detected==2){
+        GreenInstructions(mL, mR);
+    }
+    else if (color_detected==3){
+        BlueInstructions(mL, mR);
+    }
+    else if (color_detected==4){
+        YellowInstructions(mL, mR);
+    }
+    else if (color_detected==5){
+        PinkInstructions(mL, mR);
+    }
+    else if (color_detected==6){
+        OrangeInstructions(mL, mR);
+    }
+    else if (color_detected==7){
+        LightBlueInstructions(mL, mR);
     }
 }

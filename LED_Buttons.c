@@ -9,7 +9,7 @@ void LED_init(void){
     TRISAbits.TRISA4 = 0; // green LED
     TRISFbits.TRISF7 = 0; // blue LED
     
-    LATHbits.LATH3 = 0;
+    LATHbits.LATH3 = 0; // Clicker board LED for debugging
     TRISHbits.TRISH3 = 0;
 }
 

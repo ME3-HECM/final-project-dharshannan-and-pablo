@@ -85,7 +85,7 @@ void setMotorPWM(DC_motor *m)
 
 //function to stop the robot gradually 
 void stop(DC_motor *mL, DC_motor *mR)
-{
+{   /*
     if(mL->direction==1 && mR->direction==1){ // Check if the Buggy is moving forward
         // Set the brake mode for both left and right motors to be 1 (so here we will slow decay)
         mL->brakemode = 1;
@@ -133,24 +133,56 @@ void stop(DC_motor *mL, DC_motor *mR)
         setMotorPWM(mR);
         __delay_ms(10); // Delay the decrementation of power
     }
+    
+    if(mL->direction==0 && mR->direction==0){ // Check if the Buggy is moving backwards
+        // Set the brake mode for both left and right motors to be 1 (so here we will slow decay)
+        mL->brakemode = 1;
+        mR->brakemode = 1;
+        // Check if motor power is below 0, if yes reset to 0 (saturate)
+        if(mL->power<0){mL->power=0;}
+        if(mR->power<0){mR->power=0;}
+        // Set the left and right motor powers to decrement gradually 
+        --mL->power;
+        --mR->power;
+        // Call function for both left and right motor to setPWM
+        setMotorPWM(mL);
+        setMotorPWM(mR);
+        __delay_ms(10); // Delay the decrementation of power
+    }
+    */
+    // Set the brake mode for both left and right motors to be 1 (so here we will slow decay)
+    mL->brakemode = 1;
+    mR->brakemode = 1;
+    // Check if motor power is below 0, if yes reset to 0 (saturate)
+    if(mL->power<0){mL->power=0;}
+    if(mR->power<0){mR->power=0;}
+    // Set the left and right motor powers to decrement gradually 
+    mL->power = mL->power - 5 ;
+    mR->power = mR->power - 5;
+    // Call function for both left and right motor to setPWM
+    mL->power = 0;
+    mR->power = 0;
+    setMotorPWM(mL);
+    setMotorPWM(mR);
+    __delay_ms(10); // Delay the decrementation of power
 }
 
 //function to make the robot turn left (*from the front of the Buggy)
 void turnLeft(DC_motor *mL, DC_motor *mR)
 {
     // Set left motor direction to be forward and brakemode to be zero 
-    mL->direction = 1;
+    mL->direction = 0;
     mL->brakemode = 0;
     // Similar as above for right motor but make right move backwards
-    mR->direction = 0;
+    mR->direction = 1;
     mR->brakemode = 0;
     
     // Check if motor power is above 100, if yes reset to 100 (saturate)
     if(mL->power>75){mL->power=75;}
     if(mR->power>75){mR->power=75;}
     // Set the left and right motor powers to increment gradually 
-    ++mL->power;
-    ++mR->power;
+    mL->power = mL->power + 5 ;
+    mR->power = mR->power + 5;
     // Call function for both left and right motor to setPWM
     setMotorPWM(mL);
     setMotorPWM(mR);
@@ -161,18 +193,18 @@ void turnLeft(DC_motor *mL, DC_motor *mR)
 void turnRight(DC_motor *mL, DC_motor *mR) 
 {
     // Set left motor direction to be backwards and brakemode to be zero 
-    mL->direction = 0;
+    mL->direction = 1;
     mL->brakemode = 0;
     // Similar as above for right motor but make right move forwards
-    mR->direction = 1;
+    mR->direction = 0;
     mR->brakemode = 0;
     
     // Check if motor power is above 100, if yes reset to 100 (saturate)
     if(mL->power>75){mL->power=75;}
     if(mR->power>75){mR->power=75;}
     // Set the left and right motor powers to increment gradually 
-    ++mL->power;
-    ++mR->power;
+    mL->power = mL->power + 5 ;
+    mR->power = mR->power + 5;
     // Call function for both left and right motor to setPWM
     setMotorPWM(mL);
     setMotorPWM(mR);
@@ -190,8 +222,9 @@ void fullSpeedAhead(DC_motor *mL, DC_motor *mR)
     mR->brakemode = 0;
 
     // Check if motor power is above 100, if yes reset to 100 (saturate)
-    if(mL->power>75){mL->power=75;}
-    if(mR->power>75){mR->power=75;}
+    // For maze navigation lets move a little slower (initially 75% power), lets only have it at 50%
+    if(mL->power>50){mL->power=50;}
+    if(mR->power>50){mR->power=50;}
     // Set the left and right motor powers to increment gradually 
     ++mL->power;
     ++mR->power;
@@ -212,8 +245,8 @@ void fullSpeedBackwards(DC_motor *mL, DC_motor *mR){
     mR->brakemode = 0;
 
     // Check if motor power is above 100, if yes reset to 100 (saturate)
-    if(mL->power>75){mL->power=75;}
-    if(mR->power>75){mR->power=75;}
+    if(mL->power>50){mL->power=50;}
+    if(mR->power>50){mR->power=50;}
     // Set the left and right motor powers to increment gradually 
     ++mL->power;
     ++mR->power;
@@ -223,10 +256,15 @@ void fullSpeedBackwards(DC_motor *mL, DC_motor *mR){
     __delay_ms(50); // Delay the incrementation
 }
 
+/*****************************************************
+ Campus Mechspace floors (19 gives 90deg)
+ * Needs more calibration for 135deg and 180deg turns
+******************************************************/
+
 void turnLeft90(DC_motor *mL, DC_motor *mR){
     
     unsigned char a=0;
-    while(a<60){ // (Calibration of 77 gives 180 deg turn but may differ for different surfaces and buggy acceleration)
+    while(a<19){ // (Calibration of 19 gives 90 deg turn but may differ for different surfaces and buggy acceleration)
         turnLeft(mL, mR); // Make the Buggy turn left
         a++;
     }
@@ -239,7 +277,7 @@ void turnLeft90(DC_motor *mL, DC_motor *mR){
 void turnRight90(DC_motor *mL, DC_motor *mR){
     
     unsigned char a=0;
-    while(a<60){ // (Calibration of 77 gives 180 deg turn but may differ for different surfaces and buggy acceleration)
+    while(a<19){ // (Calibration of 19 gives 90 deg turn but may differ for different surfaces and buggy acceleration)
         turnRight(mL, mR); // Make the Buggy turn right
         a++;
     }
@@ -252,7 +290,7 @@ void turnRight90(DC_motor *mL, DC_motor *mR){
 void turn180(DC_motor *mL, DC_motor *mR){
     
     unsigned char a=0;
-    while(a<77){ // (Calibration of 77 gives 180 deg turn but may differ for different surfaces and buggy acceleration)
+    while(a<17){ // (Calibration of 77 gives 180 deg turn but may differ for different surfaces and buggy acceleration)
         turnRight(mL, mR); // Make the Buggy turn right
         a++;
     }

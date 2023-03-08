@@ -107,14 +107,13 @@ unsigned char detect_color(RGB_val *tempval)
     dist_B = ((float)(tempval->B)/(float)(tempval->R + tempval->G + tempval->B))*100;
     
     if(color_flag){ // If color flag is 1 (flagged) check % dist for RGB values and decide color (use a confidence interval of 3%) except for Yellow and Pink due to very similar RGB % dist values
-        __delay_ms(500); // Delay to allow readings to stabilize
         if((74<=dist_R) && (dist_R<=76) && (10<=dist_G) && (dist_G<=12) && (13<=dist_B) && (dist_B<=15)){ // Distribution of RGB values for RED
             color = 1; // Set color to RED
         }
         else if((36<=dist_R) && (dist_R<=38) && (41<=dist_G) && (dist_G<=43) && (20<=dist_B) && (dist_B<=22)){ // Dist for GREEN
             color = 2; // Set color to GREEN
         }
-        else if((30<=dist_R) && (dist_R<=32) && (34<=dist_G) && (dist_G<=36) && (33<=dist_B) && (dist_B<=35)){ // Dist for BLUE
+        else if((29<=dist_R) && (dist_R<=34) && (32<=dist_G) && (dist_G<=38) && (31<=dist_B) && (dist_B<=37)){ // Dist for BLUE (3% CF)
             color = 3; // Set color to BLUE
         }
         else if((50<=dist_R) && (dist_R<=52) && (30<=dist_G) && (dist_G<=32) && (17<=dist_B) && (dist_B<=19)){ // Dist for YELLOW (confidence interval of 1%)
@@ -132,8 +131,10 @@ unsigned char detect_color(RGB_val *tempval)
         else if((43<=dist_R) && (dist_R<=45) && (32<=dist_G) && (dist_G<=34) && (22<=dist_B) && (dist_B<=24)){ // Dist for WHITE
             color = 8; // Set color to WHITE
         }
-        
-        color_flag = 0; // Reset color flag
+        else if (tempval->C < 0){ // If a shadow is detected
+            color = 0; // If none of the above reset color to 0
+        }
     }
+    color_flag = 0; // Reset color flag
     return color; // Return the value of the decided color
 }

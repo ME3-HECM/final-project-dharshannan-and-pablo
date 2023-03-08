@@ -24437,7 +24437,7 @@ void PinkInstructions(DC_motor *mL, DC_motor *mR);
 void OrangeInstructions(DC_motor *mL, DC_motor *mR);
 void LightBlueInstructions(DC_motor *mL, DC_motor *mR);
 
-void MoveBuggy(unsigned char color_detected, DC_motor *mL, DC_motor *mR);
+void MoveBuggy(unsigned char *color_detected, DC_motor *mL, DC_motor *mR);
 # 17 "main_motor.c" 2
 
 
@@ -24479,13 +24479,10 @@ void main(void) {
 
 
     unsigned char color_detected = 0;
-
+    WhiteLight();
     while (1){
-        WhiteLight();
         Update_RGBC(&initial_color);
-
         color_detected = detect_color(&initial_color);
-
 
         unsigned char b = 0;
         if(color_detected == 0){
@@ -24495,6 +24492,7 @@ void main(void) {
 
         else if(color_detected != 0){
             LATHbits.LATH3 = 1;
+
             while(b>0){
                 stop(&motorL,&motorR);
                 b--;

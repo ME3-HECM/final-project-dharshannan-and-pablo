@@ -36,7 +36,7 @@ void GreenInstructions(DC_motor *mL, DC_motor *mR){
 
 void BlueInstructions(DC_motor *mL, DC_motor *mR){
     unsigned char a=0;
-    while (a<2){
+    while (a<8){
         fullSpeedBackwards(mL, mR);
         a++;
     }
@@ -46,7 +46,9 @@ void BlueInstructions(DC_motor *mL, DC_motor *mR){
     }
     __delay_ms(500);
     
-    turn180(mL, mR);
+    turnLeft90(mL, mR);
+    __delay_ms(50);
+    turnLeft90(mL, mR);
 }
 
 
@@ -111,7 +113,7 @@ void LightBlueInstructions(DC_motor *mL, DC_motor *mR){
 }
 
 // Function to call the above functions based on detected color
-void MoveBuggy(unsigned char color_detected, DC_motor *mL, DC_motor *mR){
+void MoveBuggy(unsigned char *color_detected, DC_motor *mL, DC_motor *mR){
     if (color_detected==1){
         RedInstructions(mL, mR);
     }

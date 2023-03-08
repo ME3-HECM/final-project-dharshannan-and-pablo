@@ -2290,103 +2290,113 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! != -> _color_flag `i -> 0 `i 2024  ]
 {
 "110
-[; ;color.c: 110:         _delay((unsigned long)((500)*(64000000/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
-"111
-[; ;color.c: 111:         if((74<=dist_R) && (dist_R<=76) && (10<=dist_G) && (dist_G<=12) && (13<=dist_B) && (dist_B<=15)){
+[; ;color.c: 110:         if((74<=dist_R) && (dist_R<=76) && (10<=dist_G) && (dist_G<=12) && (13<=dist_B) && (dist_B<=15)){
 [e $ ! && && && && && <= -> 74 `i -> _dist_R `i <= -> _dist_R `i -> 76 `i <= -> 10 `i -> _dist_G `i <= -> _dist_G `i -> 12 `i <= -> 13 `i -> _dist_B `i <= -> _dist_B `i -> 15 `i 2025  ]
 {
-"112
-[; ;color.c: 112:             color = 1;
+"111
+[; ;color.c: 111:             color = 1;
 [e = _color -> -> 1 `i `uc ]
-"113
-[; ;color.c: 113:         }
+"112
+[; ;color.c: 112:         }
 }
 [e $U 2026  ]
-"114
-[; ;color.c: 114:         else if((36<=dist_R) && (dist_R<=38) && (41<=dist_G) && (dist_G<=43) && (20<=dist_B) && (dist_B<=22)){
+"113
+[; ;color.c: 113:         else if((36<=dist_R) && (dist_R<=38) && (41<=dist_G) && (dist_G<=43) && (20<=dist_B) && (dist_B<=22)){
 [e :U 2025 ]
 [e $ ! && && && && && <= -> 36 `i -> _dist_R `i <= -> _dist_R `i -> 38 `i <= -> 41 `i -> _dist_G `i <= -> _dist_G `i -> 43 `i <= -> 20 `i -> _dist_B `i <= -> _dist_B `i -> 22 `i 2027  ]
 {
-"115
-[; ;color.c: 115:             color = 2;
+"114
+[; ;color.c: 114:             color = 2;
 [e = _color -> -> 2 `i `uc ]
-"116
-[; ;color.c: 116:         }
+"115
+[; ;color.c: 115:         }
 }
 [e $U 2028  ]
-"117
-[; ;color.c: 117:         else if((30<=dist_R) && (dist_R<=32) && (34<=dist_G) && (dist_G<=36) && (33<=dist_B) && (dist_B<=35)){
+"116
+[; ;color.c: 116:         else if((29<=dist_R) && (dist_R<=34) && (32<=dist_G) && (dist_G<=38) && (31<=dist_B) && (dist_B<=37)){
 [e :U 2027 ]
-[e $ ! && && && && && <= -> 30 `i -> _dist_R `i <= -> _dist_R `i -> 32 `i <= -> 34 `i -> _dist_G `i <= -> _dist_G `i -> 36 `i <= -> 33 `i -> _dist_B `i <= -> _dist_B `i -> 35 `i 2029  ]
+[e $ ! && && && && && <= -> 29 `i -> _dist_R `i <= -> _dist_R `i -> 34 `i <= -> 32 `i -> _dist_G `i <= -> _dist_G `i -> 38 `i <= -> 31 `i -> _dist_B `i <= -> _dist_B `i -> 37 `i 2029  ]
 {
-"118
-[; ;color.c: 118:             color = 3;
+"117
+[; ;color.c: 117:             color = 3;
 [e = _color -> -> 3 `i `uc ]
-"119
-[; ;color.c: 119:         }
+"118
+[; ;color.c: 118:         }
 }
 [e $U 2030  ]
-"120
-[; ;color.c: 120:         else if((50<=dist_R) && (dist_R<=52) && (30<=dist_G) && (dist_G<=32) && (17<=dist_B) && (dist_B<=19)){
+"119
+[; ;color.c: 119:         else if((50<=dist_R) && (dist_R<=52) && (30<=dist_G) && (dist_G<=32) && (17<=dist_B) && (dist_B<=19)){
 [e :U 2029 ]
 [e $ ! && && && && && <= -> 50 `i -> _dist_R `i <= -> _dist_R `i -> 52 `i <= -> 30 `i -> _dist_G `i <= -> _dist_G `i -> 32 `i <= -> 17 `i -> _dist_B `i <= -> _dist_B `i -> 19 `i 2031  ]
 {
-"121
-[; ;color.c: 121:             color = 4;
+"120
+[; ;color.c: 120:             color = 4;
 [e = _color -> -> 4 `i `uc ]
-"122
-[; ;color.c: 122:         }
+"121
+[; ;color.c: 121:         }
 }
 [e $U 2032  ]
-"123
-[; ;color.c: 123:         else if((48<=dist_R) && (dist_R<=50) && (28<=dist_G) && (dist_G<=30) && (21<=dist_B) && (dist_B<=23)){
+"122
+[; ;color.c: 122:         else if((48<=dist_R) && (dist_R<=50) && (28<=dist_G) && (dist_G<=30) && (21<=dist_B) && (dist_B<=23)){
 [e :U 2031 ]
 [e $ ! && && && && && <= -> 48 `i -> _dist_R `i <= -> _dist_R `i -> 50 `i <= -> 28 `i -> _dist_G `i <= -> _dist_G `i -> 30 `i <= -> 21 `i -> _dist_B `i <= -> _dist_B `i -> 23 `i 2033  ]
 {
-"124
-[; ;color.c: 124:             color = 5;
+"123
+[; ;color.c: 123:             color = 5;
 [e = _color -> -> 5 `i `uc ]
-"125
-[; ;color.c: 125:         }
+"124
+[; ;color.c: 124:         }
 }
 [e $U 2034  ]
-"126
-[; ;color.c: 126:         else if((59<=dist_R) && (dist_R<=61) && (22<=dist_G) && (dist_G<=24) && (16<=dist_B) && (dist_B<=18)){
+"125
+[; ;color.c: 125:         else if((59<=dist_R) && (dist_R<=61) && (22<=dist_G) && (dist_G<=24) && (16<=dist_B) && (dist_B<=18)){
 [e :U 2033 ]
 [e $ ! && && && && && <= -> 59 `i -> _dist_R `i <= -> _dist_R `i -> 61 `i <= -> 22 `i -> _dist_G `i <= -> _dist_G `i -> 24 `i <= -> 16 `i -> _dist_B `i <= -> _dist_B `i -> 18 `i 2035  ]
 {
-"127
-[; ;color.c: 127:             color = 6;
+"126
+[; ;color.c: 126:             color = 6;
 [e = _color -> -> 6 `i `uc ]
-"128
-[; ;color.c: 128:         }
+"127
+[; ;color.c: 127:         }
 }
 [e $U 2036  ]
-"129
-[; ;color.c: 129:         else if((33<=dist_R) && (dist_R<=35) && (38<=dist_G) && (dist_G<=40) && (26<=dist_B) && (dist_B<=28)){
+"128
+[; ;color.c: 128:         else if((33<=dist_R) && (dist_R<=35) && (38<=dist_G) && (dist_G<=40) && (26<=dist_B) && (dist_B<=28)){
 [e :U 2035 ]
 [e $ ! && && && && && <= -> 33 `i -> _dist_R `i <= -> _dist_R `i -> 35 `i <= -> 38 `i -> _dist_G `i <= -> _dist_G `i -> 40 `i <= -> 26 `i -> _dist_B `i <= -> _dist_B `i -> 28 `i 2037  ]
 {
-"130
-[; ;color.c: 130:             color = 7;
+"129
+[; ;color.c: 129:             color = 7;
 [e = _color -> -> 7 `i `uc ]
-"131
-[; ;color.c: 131:         }
+"130
+[; ;color.c: 130:         }
 }
 [e $U 2038  ]
-"132
-[; ;color.c: 132:         else if((43<=dist_R) && (dist_R<=45) && (32<=dist_G) && (dist_G<=34) && (22<=dist_B) && (dist_B<=24)){
+"131
+[; ;color.c: 131:         else if((43<=dist_R) && (dist_R<=45) && (32<=dist_G) && (dist_G<=34) && (22<=dist_B) && (dist_B<=24)){
 [e :U 2037 ]
 [e $ ! && && && && && <= -> 43 `i -> _dist_R `i <= -> _dist_R `i -> 45 `i <= -> 32 `i -> _dist_G `i <= -> _dist_G `i -> 34 `i <= -> 22 `i -> _dist_B `i <= -> _dist_B `i -> 24 `i 2039  ]
 {
-"133
-[; ;color.c: 133:             color = 8;
+"132
+[; ;color.c: 132:             color = 8;
 [e = _color -> -> 8 `i `uc ]
-"134
-[; ;color.c: 134:         }
+"133
+[; ;color.c: 133:         }
 }
+[e $U 2040  ]
+"134
+[; ;color.c: 134:         else if (tempval->C < 0){
 [e :U 2039 ]
+[e $ ! < . *U _tempval 3 -> -> 0 `i `ui 2041  ]
+{
+"135
+[; ;color.c: 135:             color = 0;
+[e = _color -> -> 0 `i `uc ]
+"136
+[; ;color.c: 136:         }
+}
+[e :U 2041 ]
+[e :U 2040 ]
 [e :U 2038 ]
 [e :U 2036 ]
 [e :U 2034 ]
@@ -2394,18 +2404,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 2030 ]
 [e :U 2028 ]
 [e :U 2026 ]
-"136
-[; ;color.c: 136:         color_flag = 0;
-[e = _color_flag -> -> 0 `i `uc ]
 "137
 [; ;color.c: 137:     }
 }
 [e :U 2024 ]
 "138
-[; ;color.c: 138:     return color;
+[; ;color.c: 138:     color_flag = 0;
+[e = _color_flag -> -> 0 `i `uc ]
+"139
+[; ;color.c: 139:     return color;
 [e ) _color ]
 [e $UE 2023  ]
-"139
-[; ;color.c: 139: }
+"140
+[; ;color.c: 140: }
 [e :UE 2023 ]
 }

@@ -54,13 +54,10 @@ void main(void) {
     
     // Initialize color detected variable
     unsigned char color_detected = 0;
-    
+    WhiteLight(); // Turn on the white light
     while (1){
-        WhiteLight(); // Turn on the white light
         Update_RGBC(&initial_color); // Update the RGBC values
-       
         color_detected = detect_color(&initial_color); // Pass initial color values into detect color function
-        
         // If statement to continue moving Buggy forward while color detected is null (0)
         unsigned char b = 0;
         if(color_detected == 0){
@@ -69,13 +66,14 @@ void main(void) {
         }  
         // If color detected is no longer null, stop Buggy and decide the movement of the Buggy
         else if(color_detected != 0){
-            LATHbits.LATH3 = 1;
+            LATHbits.LATH3 = 1; // Turn ON LED to indicate a color has been detected
+            // Stop motor
             while(b>0){
                 stop(&motorL,&motorR);
                 b--;
             }
-            __delay_ms(500);
-            LATHbits.LATH3 = 0;
+            __delay_ms(500); // Delay before movement execution
+            LATHbits.LATH3 = 0; // Turn OFF LED
             // Check the color detected and determine the instruction for the buggy
             MoveBuggy(color_detected,&motorL,&motorR);
             color_detected = 0; // Set color detected back to zero after movement is executed

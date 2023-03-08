@@ -24436,14 +24436,13 @@ unsigned char detect_color(RGB_val *tempval)
     dist_B = ((float)(tempval->B)/(float)(tempval->R + tempval->G + tempval->B))*100;
 
     if(color_flag){
-        _delay((unsigned long)((500)*(64000000/4000.0)));
         if((74<=dist_R) && (dist_R<=76) && (10<=dist_G) && (dist_G<=12) && (13<=dist_B) && (dist_B<=15)){
             color = 1;
         }
         else if((36<=dist_R) && (dist_R<=38) && (41<=dist_G) && (dist_G<=43) && (20<=dist_B) && (dist_B<=22)){
             color = 2;
         }
-        else if((30<=dist_R) && (dist_R<=32) && (34<=dist_G) && (dist_G<=36) && (33<=dist_B) && (dist_B<=35)){
+        else if((29<=dist_R) && (dist_R<=34) && (32<=dist_G) && (dist_G<=38) && (31<=dist_B) && (dist_B<=37)){
             color = 3;
         }
         else if((50<=dist_R) && (dist_R<=52) && (30<=dist_G) && (dist_G<=32) && (17<=dist_B) && (dist_B<=19)){
@@ -24461,8 +24460,10 @@ unsigned char detect_color(RGB_val *tempval)
         else if((43<=dist_R) && (dist_R<=45) && (32<=dist_G) && (dist_G<=34) && (22<=dist_B) && (dist_B<=24)){
             color = 8;
         }
-
-        color_flag = 0;
+        else if (tempval->C < 0){
+            color = 0;
+        }
     }
+    color_flag = 0;
     return color;
 }

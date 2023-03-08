@@ -24299,7 +24299,7 @@ void GreenInstructions(DC_motor *mL, DC_motor *mR){
 
 void BlueInstructions(DC_motor *mL, DC_motor *mR){
     unsigned char a=0;
-    while (a<2){
+    while (a<8){
         fullSpeedBackwards(mL, mR);
         a++;
     }
@@ -24309,7 +24309,9 @@ void BlueInstructions(DC_motor *mL, DC_motor *mR){
     }
     _delay((unsigned long)((500)*(64000000/4000.0)));
 
-    turn180(mL, mR);
+    turnLeft90(mL, mR);
+    _delay((unsigned long)((50)*(64000000/4000.0)));
+    turnLeft90(mL, mR);
 }
 
 
@@ -24374,7 +24376,7 @@ void LightBlueInstructions(DC_motor *mL, DC_motor *mR){
 }
 
 
-void MoveBuggy(unsigned char color_detected, DC_motor *mL, DC_motor *mR){
+void MoveBuggy(unsigned char *color_detected, DC_motor *mL, DC_motor *mR){
     if (color_detected==1){
         RedInstructions(mL, mR);
     }

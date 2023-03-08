@@ -26,15 +26,15 @@
 [v _GreenInstructions GreenInstructions `(v  1 e 1 0 ]
 "37
 [v _BlueInstructions BlueInstructions `(v  1 e 1 0 ]
-"53
+"55
 [v _YellowInstructions YellowInstructions `(v  1 e 1 0 ]
-"68
+"70
 [v _PinkInstructions PinkInstructions `(v  1 e 1 0 ]
-"83
+"85
 [v _OrangeInstructions OrangeInstructions `(v  1 e 1 0 ]
-"98
+"100
 [v _LightBlueInstructions LightBlueInstructions `(v  1 e 1 0 ]
-"114
+"116
 [v _MoveBuggy MoveBuggy `(v  1 e 1 0 ]
 "4 D:\MPLAB_COMPILER\pic\sources\c99\common\fleq.c
 [v ___fleq __fleq `(b  1 e 0 0 ]
@@ -82,15 +82,13 @@
 [v _fullSpeedAhead fullSpeedAhead `(v  1 e 1 0 ]
 "238
 [v _fullSpeedBackwards fullSpeedBackwards `(v  1 e 1 0 ]
-"259
+"264
 [v _turnLeft90 turnLeft90 `(v  1 e 1 0 ]
-"272
+"277
 [v _turnRight90 turnRight90 `(v  1 e 1 0 ]
-"285
-[v _turn180 turn180 `(v  1 e 1 0 ]
-"298
+"303
 [v _turnRight135 turnRight135 `(v  1 e 1 0 ]
-"311
+"316
 [v _turnLeft135 turnLeft135 `(v  1 e 1 0 ]
 "4 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
 [v _I2C_2_Master_Init I2C_2_Master_Init `(v  1 e 1 0 ]
@@ -862,7 +860,7 @@
 "21 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
 [v _main main `(v  1 e 1 0 ]
 {
-"65
+"62
 [v main@b b `uc  1 a 1 24 ]
 [s S1153 DC_motor 9 `c 1 power 1 0 `uc 1 direction 1 1 `uc 1 brakemode 1 2 `ui 1 PWMperiod 2 3 `*.39uc 1 posDutyHighByte 2 5 `*.39uc 1 negDutyHighByte 2 7 ]
 "39
@@ -873,7 +871,7 @@
 [v main@initial_color initial_color `S62  1 a 8 26 ]
 "56
 [v main@color_detected color_detected `uc  1 a 1 25 ]
-"86
+"84
 } 0
 "5 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
 [v _initDCmotorsPWM initDCmotorsPWM `(v  1 e 1 0 ]
@@ -901,7 +899,7 @@
 [s S62 RGB_val 8 `ui 1 R 2 0 `ui 1 G 2 2 `ui 1 B 2 4 `ui 1 C 2 6 ]
 "99
 [v detect_color@tempval tempval `*.39S62  1 p 2 4 ]
-"139
+"140
 } 0
 "10 D:\MPLAB_COMPILER\pic\sources\c99\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
@@ -931,17 +929,17 @@
 "8 D:\MPLAB_COMPILER\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S2300 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S2299 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S2305 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
-[u S2308 . 4 `l 1 i 4 0 `d 1 f 4 0 `S2300 1 fAsBytes 4 0 `S2305 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S2308  1 a 4 66 ]
+[s S2304 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S2307 . 4 `l 1 i 4 0 `d 1 f 4 0 `S2299 1 fAsBytes 4 0 `S2304 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S2307  1 a 4 66 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 60 ]
-[s S2376 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S2375 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S2379 . 2 `s 1 i 2 0 `us 1 n 2 0 `S2376 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S2379  1 a 2 70 ]
+[u S2378 . 2 `s 1 i 2 0 `us 1 n 2 0 `S2375 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S2378  1 a 2 70 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 65 ]
 "11
@@ -1045,27 +1043,25 @@
 {
 "18
 } 0
-"114 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+"116 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
 [v _MoveBuggy MoveBuggy `(v  1 e 1 0 ]
 {
-[v MoveBuggy@color_detected color_detected `uc  1 a 1 wreg ]
-[v MoveBuggy@color_detected color_detected `uc  1 a 1 wreg ]
+[v MoveBuggy@color_detected color_detected `*.39uc  1 p 2 45 ]
 [s S1153 DC_motor 9 `c 1 power 1 0 `uc 1 direction 1 1 `uc 1 brakemode 1 2 `ui 1 PWMperiod 2 3 `*.39uc 1 posDutyHighByte 2 5 `*.39uc 1 negDutyHighByte 2 7 ]
-[v MoveBuggy@mL mL `*.39S1153  1 p 2 45 ]
-[v MoveBuggy@mR mR `*.39S1153  1 p 2 47 ]
-[v MoveBuggy@color_detected color_detected `uc  1 a 1 49 ]
-"136
+[v MoveBuggy@mL mL `*.39S1153  1 p 2 47 ]
+[v MoveBuggy@mR mR `*.39S1153  1 p 2 49 ]
+"138
 } 0
-"53
+"55
 [v _YellowInstructions YellowInstructions `(v  1 e 1 0 ]
 {
-"55
+"57
 [v YellowInstructions@a a `uc  1 a 1 44 ]
 [s S1153 DC_motor 9 `c 1 power 1 0 `uc 1 direction 1 1 `uc 1 brakemode 1 2 `ui 1 PWMperiod 2 3 `*.39uc 1 posDutyHighByte 2 5 `*.39uc 1 negDutyHighByte 2 7 ]
-"53
+"55
 [v YellowInstructions@mL mL `*.39S1153  1 p 2 38 ]
 [v YellowInstructions@mR mR `*.39S1153  1 p 2 40 ]
-"66
+"68
 } 0
 "8
 [v _RedInstructions RedInstructions `(v  1 e 1 0 ]
@@ -1078,71 +1074,79 @@
 [v RedInstructions@mR mR `*.39S1153  1 p 2 40 ]
 "21
 } 0
-"272 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+"277 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
 [v _turnRight90 turnRight90 `(v  1 e 1 0 ]
 {
-"274
+"279
 [v turnRight90@a a `uc  1 a 1 37 ]
 [s S1153 DC_motor 9 `c 1 power 1 0 `uc 1 direction 1 1 `uc 1 brakemode 1 2 `ui 1 PWMperiod 2 3 `*.39uc 1 posDutyHighByte 2 5 `*.39uc 1 negDutyHighByte 2 7 ]
-"272
+"277
 [v turnRight90@mL mL `*.39S1153  1 p 2 33 ]
 [v turnRight90@mR mR `*.39S1153  1 p 2 35 ]
-"283
+"288
 } 0
-"68 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+"70 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
 [v _PinkInstructions PinkInstructions `(v  1 e 1 0 ]
 {
-"69
+"71
 [v PinkInstructions@a a `uc  1 a 1 44 ]
 [s S1153 DC_motor 9 `c 1 power 1 0 `uc 1 direction 1 1 `uc 1 brakemode 1 2 `ui 1 PWMperiod 2 3 `*.39uc 1 posDutyHighByte 2 5 `*.39uc 1 negDutyHighByte 2 7 ]
-"68
+"70
 [v PinkInstructions@mL mL `*.39S1153  1 p 2 38 ]
 [v PinkInstructions@mR mR `*.39S1153  1 p 2 40 ]
-"81
-} 0
 "83
+} 0
+"85
 [v _OrangeInstructions OrangeInstructions `(v  1 e 1 0 ]
 {
-"84
+"86
 [v OrangeInstructions@a a `uc  1 a 1 44 ]
 [s S1153 DC_motor 9 `c 1 power 1 0 `uc 1 direction 1 1 `uc 1 brakemode 1 2 `ui 1 PWMperiod 2 3 `*.39uc 1 posDutyHighByte 2 5 `*.39uc 1 negDutyHighByte 2 7 ]
-"83
+"85
 [v OrangeInstructions@mL mL `*.39S1153  1 p 2 38 ]
 [v OrangeInstructions@mR mR `*.39S1153  1 p 2 40 ]
-"96
+"98
 } 0
-"298 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+"303 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
 [v _turnRight135 turnRight135 `(v  1 e 1 0 ]
 {
-"300
+"305
 [v turnRight135@a a `uc  1 a 1 37 ]
 [s S1153 DC_motor 9 `c 1 power 1 0 `uc 1 direction 1 1 `uc 1 brakemode 1 2 `ui 1 PWMperiod 2 3 `*.39uc 1 posDutyHighByte 2 5 `*.39uc 1 negDutyHighByte 2 7 ]
-"298
+"303
 [v turnRight135@mL mL `*.39S1153  1 p 2 33 ]
 [v turnRight135@mR mR `*.39S1153  1 p 2 35 ]
-"309
+"314
 } 0
-"98 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+"193
+[v _turnRight turnRight `(v  1 e 1 0 ]
+{
+[s S1153 DC_motor 9 `c 1 power 1 0 `uc 1 direction 1 1 `uc 1 brakemode 1 2 `ui 1 PWMperiod 2 3 `*.39uc 1 posDutyHighByte 2 5 `*.39uc 1 negDutyHighByte 2 7 ]
+[v turnRight@mL mL `*.39S1153  1 p 2 27 ]
+[v turnRight@mR mR `*.39S1153  1 p 2 29 ]
+"212
+} 0
+"100 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
 [v _LightBlueInstructions LightBlueInstructions `(v  1 e 1 0 ]
 {
-"99
+"101
 [v LightBlueInstructions@a a `uc  1 a 1 44 ]
 [s S1153 DC_motor 9 `c 1 power 1 0 `uc 1 direction 1 1 `uc 1 brakemode 1 2 `ui 1 PWMperiod 2 3 `*.39uc 1 posDutyHighByte 2 5 `*.39uc 1 negDutyHighByte 2 7 ]
-"98
+"100
 [v LightBlueInstructions@mL mL `*.39S1153  1 p 2 38 ]
 [v LightBlueInstructions@mR mR `*.39S1153  1 p 2 40 ]
-"111
+"113
 } 0
-"311 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+"316 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
 [v _turnLeft135 turnLeft135 `(v  1 e 1 0 ]
 {
-"313
+"318
 [v turnLeft135@a a `uc  1 a 1 37 ]
 [s S1153 DC_motor 9 `c 1 power 1 0 `uc 1 direction 1 1 `uc 1 brakemode 1 2 `ui 1 PWMperiod 2 3 `*.39uc 1 posDutyHighByte 2 5 `*.39uc 1 negDutyHighByte 2 7 ]
-"311
+"316
 [v turnLeft135@mL mL `*.39S1153  1 p 2 33 ]
 [v turnLeft135@mR mR `*.39S1153  1 p 2 35 ]
-"322
+"327
 } 0
 "23 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
 [v _GreenInstructions GreenInstructions `(v  1 e 1 0 ]
@@ -1155,26 +1159,7 @@
 [v GreenInstructions@mR mR `*.39S1153  1 p 2 40 ]
 "35
 } 0
-"259 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-[v _turnLeft90 turnLeft90 `(v  1 e 1 0 ]
-{
-"261
-[v turnLeft90@a a `uc  1 a 1 37 ]
-[s S1153 DC_motor 9 `c 1 power 1 0 `uc 1 direction 1 1 `uc 1 brakemode 1 2 `ui 1 PWMperiod 2 3 `*.39uc 1 posDutyHighByte 2 5 `*.39uc 1 negDutyHighByte 2 7 ]
-"259
-[v turnLeft90@mL mL `*.39S1153  1 p 2 33 ]
-[v turnLeft90@mR mR `*.39S1153  1 p 2 35 ]
-"270
-} 0
-"171
-[v _turnLeft turnLeft `(v  1 e 1 0 ]
-{
-[s S1153 DC_motor 9 `c 1 power 1 0 `uc 1 direction 1 1 `uc 1 brakemode 1 2 `ui 1 PWMperiod 2 3 `*.39uc 1 posDutyHighByte 2 5 `*.39uc 1 negDutyHighByte 2 7 ]
-[v turnLeft@mL mL `*.39S1153  1 p 2 27 ]
-[v turnLeft@mR mR `*.39S1153  1 p 2 29 ]
-"190
-} 0
-"37 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+"37
 [v _BlueInstructions BlueInstructions `(v  1 e 1 0 ]
 {
 "38
@@ -1183,26 +1168,26 @@
 "37
 [v BlueInstructions@mL mL `*.39S1153  1 p 2 38 ]
 [v BlueInstructions@mR mR `*.39S1153  1 p 2 40 ]
-"50
+"52
 } 0
-"285 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-[v _turn180 turn180 `(v  1 e 1 0 ]
+"264 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+[v _turnLeft90 turnLeft90 `(v  1 e 1 0 ]
 {
-"287
-[v turn180@a a `uc  1 a 1 37 ]
+"266
+[v turnLeft90@a a `uc  1 a 1 37 ]
 [s S1153 DC_motor 9 `c 1 power 1 0 `uc 1 direction 1 1 `uc 1 brakemode 1 2 `ui 1 PWMperiod 2 3 `*.39uc 1 posDutyHighByte 2 5 `*.39uc 1 negDutyHighByte 2 7 ]
-"285
-[v turn180@mL mL `*.39S1153  1 p 2 33 ]
-[v turn180@mR mR `*.39S1153  1 p 2 35 ]
-"296
+"264
+[v turnLeft90@mL mL `*.39S1153  1 p 2 33 ]
+[v turnLeft90@mR mR `*.39S1153  1 p 2 35 ]
+"275
 } 0
-"193
-[v _turnRight turnRight `(v  1 e 1 0 ]
+"171
+[v _turnLeft turnLeft `(v  1 e 1 0 ]
 {
 [s S1153 DC_motor 9 `c 1 power 1 0 `uc 1 direction 1 1 `uc 1 brakemode 1 2 `ui 1 PWMperiod 2 3 `*.39uc 1 posDutyHighByte 2 5 `*.39uc 1 negDutyHighByte 2 7 ]
-[v turnRight@mL mL `*.39S1153  1 p 2 27 ]
-[v turnRight@mR mR `*.39S1153  1 p 2 29 ]
-"212
+[v turnLeft@mL mL `*.39S1153  1 p 2 27 ]
+[v turnLeft@mR mR `*.39S1153  1 p 2 29 ]
+"190
 } 0
 "87
 [v _stop stop `(v  1 e 1 0 ]

@@ -85,71 +85,7 @@ void setMotorPWM(DC_motor *m)
 
 //function to stop the robot gradually 
 void stop(DC_motor *mL, DC_motor *mR)
-{   /*
-    if(mL->direction==1 && mR->direction==1){ // Check if the Buggy is moving forward
-        // Set the brake mode for both left and right motors to be 1 (so here we will slow decay)
-        mL->brakemode = 1;
-        mR->brakemode = 1;
-        // Check if motor power is below 0, if yes reset to 0 (saturate)
-        if(mL->power<0){mL->power=0;}
-        if(mR->power<0){mR->power=0;}
-        // Set the left and right motor powers to decrement gradually 
-        --mL->power;
-        --mR->power;
-        // Call function for both left and right motor to setPWM
-        setMotorPWM(mL);
-        setMotorPWM(mR);
-        __delay_ms(10); // Delay the decrementation of power
-    }
-    
-    if(mL->direction==1 && mR->direction==0){ // Check if the Buggy is turning left
-        // Set the brake mode for both left and right motors to be 1 (so here we will slow decay)
-        mL->brakemode = 1;
-        mR->brakemode = 1;
-        // Check if motor power is below 0, if yes reset to 0 (saturate)
-        if(mL->power<0){mL->power=0;}
-        if(mR->power<0){mR->power=0;}
-        // Set the left and right motor powers to decrement gradually 
-        --mL->power;
-        --mR->power;
-        // Call function for both left and right motor to setPWM
-        setMotorPWM(mL);
-        setMotorPWM(mR);
-        __delay_ms(10); // Delay the decrementation of power
-    }
-    
-    if(mL->direction==0 && mR->direction==1){ // Check if the Buggy is turning right
-        // Set the brake mode for both left and right motors to be 1 (so here we will slow decay)
-        mL->brakemode = 1;
-        mR->brakemode = 1;
-        // Check if motor power is below 0, if yes reset to 0 (saturate)
-        if(mL->power<0){mL->power=0;}
-        if(mR->power<0){mR->power=0;}
-        // Set the left and right motor powers to decrement gradually 
-        --mL->power;
-        --mR->power;
-        // Call function for both left and right motor to setPWM
-        setMotorPWM(mL);
-        setMotorPWM(mR);
-        __delay_ms(10); // Delay the decrementation of power
-    }
-    
-    if(mL->direction==0 && mR->direction==0){ // Check if the Buggy is moving backwards
-        // Set the brake mode for both left and right motors to be 1 (so here we will slow decay)
-        mL->brakemode = 1;
-        mR->brakemode = 1;
-        // Check if motor power is below 0, if yes reset to 0 (saturate)
-        if(mL->power<0){mL->power=0;}
-        if(mR->power<0){mR->power=0;}
-        // Set the left and right motor powers to decrement gradually 
-        --mL->power;
-        --mR->power;
-        // Call function for both left and right motor to setPWM
-        setMotorPWM(mL);
-        setMotorPWM(mR);
-        __delay_ms(10); // Delay the decrementation of power
-    }
-    */
+{   
     // Set the brake mode for both left and right motors to be 1 (so here we will slow decay)
     mL->brakemode = 1;
     mR->brakemode = 1;
@@ -287,6 +223,7 @@ void turnRight90(DC_motor *mL, DC_motor *mR){
     }
 }
 
+// 180deg function not used (instead call 90deg twice)
 void turn180(DC_motor *mL, DC_motor *mR){
     
     unsigned char a=0;
@@ -303,7 +240,7 @@ void turn180(DC_motor *mL, DC_motor *mR){
 void turnRight135(DC_motor *mL, DC_motor *mR){
     
     unsigned char a=0;
-    while(a<69){ // (Calibration of 77 gives 180 deg turn but may differ for different surfaces and buggy acceleration)
+    while(a<21){ // (Calibration of 77 gives 180 deg turn but may differ for different surfaces and buggy acceleration)
         turnRight(mL, mR); // Make the Buggy turn right
         a++;
     }
@@ -316,7 +253,7 @@ void turnRight135(DC_motor *mL, DC_motor *mR){
 void turnLeft135(DC_motor *mL, DC_motor *mR){
     
     unsigned char a=0;
-    while(a<69){ // (Calibration of 77 gives 180 deg turn but may differ for different surfaces and buggy acceleration)
+    while(a<21){ // (Calibration of 77 gives 180 deg turn but may differ for different surfaces and buggy acceleration)
         turnLeft(mL, mR); // Make the Buggy turn left
         a++;
     }

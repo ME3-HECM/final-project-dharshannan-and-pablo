@@ -46,6 +46,7 @@ void BlueInstructions(DC_motor *mL, DC_motor *mR){
     }
     __delay_ms(500);
     
+    // Turn 180 deg in 2 bursts of 90deg
     turnLeft90(mL, mR);
     __delay_ms(50);
     turnLeft90(mL, mR);
@@ -84,7 +85,7 @@ void PinkInstructions(DC_motor *mL, DC_motor *mR){
 
 void OrangeInstructions(DC_motor *mL, DC_motor *mR){
     unsigned char a=0;
-    while (a<30){
+    while (a<20){
         fullSpeedBackwards(mL, mR);
         a++;
     }
@@ -99,7 +100,7 @@ void OrangeInstructions(DC_motor *mL, DC_motor *mR){
 
 void LightBlueInstructions(DC_motor *mL, DC_motor *mR){
     unsigned char a=0;
-    while (a<30){
+    while (a<20){
         fullSpeedBackwards(mL, mR);
         a++;
     }

@@ -106,7 +106,7 @@ unsigned char detect_color(RGB_val *tempval)
     dist_G = ((float)(tempval->G)/(float)(tempval->R + tempval->G + tempval->B))*100;
     dist_B = ((float)(tempval->B)/(float)(tempval->R + tempval->G + tempval->B))*100;
     
-    if(color_flag){ // If color flag is 1 (flagged) check % dist for RGB values and decide color (use a confidence interval of 3%) except for Yellow and Pink due to very similar RGB % dist values
+    if(color_flag){ // If color flag is 1 (flagged) check % dist for RGB values and decide color (use a confidence interval of 1%) except for Blue (3%)
         if((74<=dist_R) && (dist_R<=76) && (10<=dist_G) && (dist_G<=12) && (13<=dist_B) && (dist_B<=15)){ // Distribution of RGB values for RED
             color = 1; // Set color to RED
         }
@@ -116,10 +116,10 @@ unsigned char detect_color(RGB_val *tempval)
         else if((29<=dist_R) && (dist_R<=34) && (32<=dist_G) && (dist_G<=38) && (31<=dist_B) && (dist_B<=37)){ // Dist for BLUE (3% CF)
             color = 3; // Set color to BLUE
         }
-        else if((50<=dist_R) && (dist_R<=52) && (30<=dist_G) && (dist_G<=32) && (17<=dist_B) && (dist_B<=19)){ // Dist for YELLOW (confidence interval of 1%)
+        else if((50<=dist_R) && (dist_R<=52) && (30<=dist_G) && (dist_G<=32) && (17<=dist_B) && (dist_B<=19)){ // Dist for YELLOW 
             color = 4; // Set color to YELLOW
         }
-        else if((48<=dist_R) && (dist_R<=50) && (28<=dist_G) && (dist_G<=30) && (21<=dist_B) && (dist_B<=23)){ // Dist for PINK (confidence interval of 1%)
+        else if((48<=dist_R) && (dist_R<=50) && (28<=dist_G) && (dist_G<=30) && (21<=dist_B) && (dist_B<=23)){ // Dist for PINK 
             color = 5; // Set color to PINK
         }
         else if((59<=dist_R) && (dist_R<=61) && (22<=dist_G) && (dist_G<=24) && (16<=dist_B) && (dist_B<=18)){ // Dist for ORANGE

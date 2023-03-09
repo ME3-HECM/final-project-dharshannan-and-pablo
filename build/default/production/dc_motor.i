@@ -24349,7 +24349,7 @@ void setMotorPWM(DC_motor *m)
 
 void stop(DC_motor *mL, DC_motor *mR)
 {
-# 154 "dc_motor.c"
+
     mL->brakemode = 1;
     mR->brakemode = 1;
 
@@ -24486,6 +24486,7 @@ void turnRight90(DC_motor *mL, DC_motor *mR){
     }
 }
 
+
 void turn180(DC_motor *mL, DC_motor *mR){
 
     unsigned char a=0;
@@ -24502,7 +24503,7 @@ void turn180(DC_motor *mL, DC_motor *mR){
 void turnRight135(DC_motor *mL, DC_motor *mR){
 
     unsigned char a=0;
-    while(a<69){
+    while(a<21){
         turnRight(mL, mR);
         a++;
     }
@@ -24515,7 +24516,7 @@ void turnRight135(DC_motor *mL, DC_motor *mR){
 void turnLeft135(DC_motor *mL, DC_motor *mR){
 
     unsigned char a=0;
-    while(a<69){
+    while(a<21){
         turnLeft(mL, mR);
         a++;
     }

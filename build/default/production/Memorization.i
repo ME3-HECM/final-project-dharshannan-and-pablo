@@ -1,4 +1,4 @@
-# 1 "color_instructions.c"
+# 1 "Memorization.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,7 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "color_instructions.c" 2
+# 1 "Memorization.c" 2
 # 1 "D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\\pic\\include\\xc.h" 1 3
 # 18 "D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -24229,174 +24229,57 @@ __attribute__((__unsupported__("The READTIMER" "0" "() macro is not available wi
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\\pic\\include\\xc.h" 2 3
-# 1 "color_instructions.c" 2
+# 1 "Memorization.c" 2
 
-# 1 "./dc_motor.h" 1
-
-
-
-
-
-
-
-typedef struct DC_motor {
-    signed char power;
-    char direction;
-    char brakemode;
-    unsigned int PWMperiod;
-    unsigned char *posDutyHighByte;
-    unsigned char *negDutyHighByte;
-} DC_motor;
-
-
-void initDCmotorsPWM(unsigned int PWMperiod);
-void setMotorPWM(DC_motor *m);
-void stop(DC_motor *mL, DC_motor *mR);
-void turnLeft(DC_motor *mL, DC_motor *mR);
-void turnRight(DC_motor *mL, DC_motor *mR);
-void fullSpeedAhead(DC_motor *mL, DC_motor *mR);
-void fullSpeedBackwards(DC_motor *mL, DC_motor *mR);
-void turnLeft90(DC_motor *mL, DC_motor *mR);
-void turnRight90(DC_motor *mL, DC_motor *mR);
-void turn180(DC_motor *mL, DC_motor *mR);
-void turnRight135(DC_motor *mL, DC_motor *mR);
-void turnLeft135(DC_motor *mL, DC_motor *mR);
-# 2 "color_instructions.c" 2
+# 1 "./Memorization.h" 1
 
 
 
 
 
 
-void RedInstructions(DC_motor *mL, DC_motor *mR){
+extern unsigned char moves_index;
+extern unsigned char time_index0;
 
-    unsigned char a=0;
-    while (a<8){
-        fullSpeedBackwards(mL, mR);
-        a++;
-    }
-    while (a>0){
-        stop(mL, mR);
-        a--;
-    }
-    _delay((unsigned long)((250)*(64000000/4000.0)));
-    turnRight90(mL, mR);
-}
-
-void GreenInstructions(DC_motor *mL, DC_motor *mR){
-    unsigned char a=0;
-    while (a<8){
-        fullSpeedBackwards(mL, mR);
-        a++;
-    }
-    while (a>0){
-        stop(mL, mR);
-        a--;
-    }
-    _delay((unsigned long)((250)*(64000000/4000.0)));
-    turnLeft90(mL, mR);
-}
-
-void BlueInstructions(DC_motor *mL, DC_motor *mR){
-    unsigned char a=0;
-    while (a<8){
-        fullSpeedBackwards(mL, mR);
-        a++;
-    }
-    while (a>0){
-        stop(mL, mR);
-        a--;
-    }
-    _delay((unsigned long)((500)*(64000000/4000.0)));
+extern unsigned char anti_moves_array[40];
+extern unsigned char time_array[40];
 
 
-    turnLeft90(mL, mR);
-    _delay((unsigned long)((50)*(64000000/4000.0)));
-    turnLeft90(mL, mR);
+void AppendMoves(unsigned char temp, unsigned char *moves_index, unsigned char *anti_moves_array);
+void AppendTime(unsigned char temp, unsigned char *time_index, unsigned char *time_array);
+unsigned char Return_Anti_Moves(unsigned char *moves_index, unsigned char *anti_moves_array);
+# 2 "Memorization.c" 2
+
+
+
+
+
+unsigned char moves_index = 0;
+unsigned char time_index = 0;
+
+unsigned char anti_moves_array[40];
+unsigned char time_array[40];
+
+
+
+
+void AppendMoves(unsigned char temp, unsigned char *moves_index, unsigned char *anti_moves_array){
+
+    anti_moves_array[(*moves_index)++] = temp;
 }
 
 
-void YellowInstructions(DC_motor *mL, DC_motor *mR){
+void AppendTime(unsigned char temp, unsigned char *time_index, unsigned char *time_array){
 
-    unsigned char a=0;
-    while (a<20){
-        fullSpeedBackwards(mL, mR);
-        a++;
-    }
-    while (a>0){
-        stop(mL, mR);
-        a--;
-    }
-    _delay((unsigned long)((500)*(64000000/4000.0)));
-    turnRight90(mL, mR);
-}
-
-void PinkInstructions(DC_motor *mL, DC_motor *mR){
-    unsigned char a=0;
-    while (a<20){
-        fullSpeedBackwards(mL, mR);
-        a++;
-    }
-    while (a>0){
-        stop(mL, mR);
-        a--;
-    }
-    _delay((unsigned long)((500)*(64000000/4000.0)));
-    turnLeft90(mL, mR);
-
-}
-
-void OrangeInstructions(DC_motor *mL, DC_motor *mR){
-    unsigned char a=0;
-    while (a<20){
-        fullSpeedBackwards(mL, mR);
-        a++;
-    }
-    while (a>0){
-        stop(mL, mR);
-        a--;
-    }
-    _delay((unsigned long)((500)*(64000000/4000.0)));
-
-    turnRight135(mL, mR);
-}
-
-void LightBlueInstructions(DC_motor *mL, DC_motor *mR){
-    unsigned char a=0;
-    while (a<20){
-        fullSpeedBackwards(mL, mR);
-        a++;
-    }
-    while (a>0){
-        stop(mL, mR);
-        a--;
-    }
-    _delay((unsigned long)((500)*(64000000/4000.0)));
-
-    turnLeft135(mL, mR);
+    time_array[(*time_index)++] = temp;
 }
 
 
-void MoveBuggy(unsigned char *color_detected, DC_motor *mL, DC_motor *mR){
-    if (color_detected==1){
-        RedInstructions(mL, mR);
-    }
-    else if (color_detected==2){
-        GreenInstructions(mL, mR);
-    }
-    else if (color_detected==3){
-        BlueInstructions(mL, mR);
-    }
-    else if (color_detected==4){
-        YellowInstructions(mL, mR);
-    }
-    else if (color_detected==5){
-        PinkInstructions(mL, mR);
-    }
-    else if (color_detected==6){
-        OrangeInstructions(mL, mR);
-    }
-    else if (color_detected==7){
-        LightBlueInstructions(mL, mR);
-    }
+
+
+unsigned char Return_Anti_Moves(unsigned char *moves_index, unsigned char *anti_moves_array){
+    unsigned char temp;
+
+    temp = anti_moves_array[(*moves_index)--];
+    return temp;
 }

@@ -32,7 +32,7 @@ void AppendTime(unsigned char temp, unsigned char *time_index, unsigned char *ti
 unsigned char Return_Anti_Moves(unsigned char *moves_index, unsigned char *anti_moves_array){
     unsigned char temp; // Temp variable to return indexed function value
     // Traverse the array backwards and set temp to the indexed value (decrement index value)
-    temp = anti_moves_array[(*moves_index)--];
+    temp = anti_moves_array[--(*moves_index)];
     return temp; // Return color associated with anti-move
 }
 
@@ -40,7 +40,7 @@ unsigned char Return_Anti_Moves(unsigned char *moves_index, unsigned char *anti_
 unsigned char Return_Time(unsigned char *time_index, unsigned char *time_array){
     unsigned char temp; // Temp variable to return the indexed time for forward movement
     // Traverse the array backwards and set temp to the indexed value (decrement index value)
-    temp = time_array[(*time_index)++];
+    temp = time_array[--(*time_index)];
     return temp; // Return the time for forward movement
 }
 

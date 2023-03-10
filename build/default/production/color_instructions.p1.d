@@ -1,3 +1,5 @@
 build/default/production/color_instructions.p1:  \
 color_instructions.c  \
-dc_motor.h 
+color_instructions.h  \
+dc_motor.h  \
+Memorization.h 

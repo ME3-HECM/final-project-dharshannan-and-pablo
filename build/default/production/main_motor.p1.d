@@ -7,4 +7,5 @@ LED_Buttons.h  \
 interrupts.h  \
 serial.h  \
 timers.h  \
-color_instructions.h 
+color_instructions.h  \
+Memorization.h 

@@ -20,21 +20,21 @@
 [v _Update_RGBC Update_RGBC `(v  1 e 1 0 ]
 "99
 [v _detect_color detect_color `(uc  1 e 1 0 ]
-"8 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+"10 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
 [v _RedInstructions RedInstructions `(v  1 e 1 0 ]
-"23
+"25
 [v _GreenInstructions GreenInstructions `(v  1 e 1 0 ]
-"37
+"39
 [v _BlueInstructions BlueInstructions `(v  1 e 1 0 ]
-"56
+"58
 [v _YellowInstructions YellowInstructions `(v  1 e 1 0 ]
-"71
+"73
 [v _PinkInstructions PinkInstructions `(v  1 e 1 0 ]
-"86
+"88
 [v _OrangeInstructions OrangeInstructions `(v  1 e 1 0 ]
-"101
+"103
 [v _LightBlueInstructions LightBlueInstructions `(v  1 e 1 0 ]
-"117
+"143
 [v _MoveBuggy MoveBuggy `(v  1 e 1 0 ]
 "4 D:\MPLAB_COMPILER\pic\sources\c99\common\fleq.c
 [v ___fleq __fleq `(b  1 e 0 0 ]
@@ -124,8 +124,16 @@
 [v _LED_init LED_init `(v  1 e 1 0 ]
 "17
 [v _WhiteLight WhiteLight `(v  1 e 1 0 ]
-"21 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
+"22 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
 [v _main main `(v  1 e 1 0 ]
+"17 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\Memorization.c
+[v _AppendMoves AppendMoves `(v  1 e 1 0 ]
+"23
+[v _AppendTime AppendTime `(v  1 e 1 0 ]
+"32
+[v _Return_Anti_Moves Return_Anti_Moves `(uc  1 e 1 0 ]
+"40
+[v _Return_Time Return_Time `(uc  1 e 1 0 ]
 "29 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\serial.c
 [v _sendCharSerial4 sendCharSerial4 `(v  1 e 1 0 ]
 "74
@@ -857,21 +865,29 @@
 [v _tmr_ovf tmr_ovf `uc  1 e 1 0 ]
 "87
 [v _color_flag color_flag `uc  1 e 1 0 ]
-"21 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
+"7 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\Memorization.c
+[v _moves_index moves_index `uc  1 e 1 0 ]
+"8
+[v _time_index time_index `uc  1 e 1 0 ]
+"10
+[v _anti_moves_array anti_moves_array `[40]uc  1 e 40 0 ]
+"11
+[v _time_array time_array `[40]uc  1 e 40 0 ]
+"22 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
 [v _main main `(v  1 e 1 0 ]
 {
-"62
+"63
 [v main@b b `uc  1 a 1 24 ]
 [s S1153 DC_motor 9 `c 1 power 1 0 `uc 1 direction 1 1 `uc 1 brakemode 1 2 `ui 1 PWMperiod 2 3 `*.39uc 1 posDutyHighByte 2 5 `*.39uc 1 negDutyHighByte 2 7 ]
-"39
+"40
 [v main@motorR motorR `S1153  1 a 9 43 ]
 [v main@motorL motorL `S1153  1 a 9 34 ]
 [s S62 RGB_val 8 `ui 1 R 2 0 `ui 1 G 2 2 `ui 1 B 2 4 `ui 1 C 2 6 ]
-"24
+"25
 [v main@initial_color initial_color `S62  1 a 8 26 ]
-"56
+"57
 [v main@color_detected color_detected `uc  1 a 1 25 ]
-"84
+"86
 } 0
 "5 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
 [v _initDCmotorsPWM initDCmotorsPWM `(v  1 e 1 0 ]
@@ -929,17 +945,17 @@
 "8 D:\MPLAB_COMPILER\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S2315 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S2358 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S2320 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
-[u S2323 . 4 `l 1 i 4 0 `d 1 f 4 0 `S2315 1 fAsBytes 4 0 `S2320 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S2323  1 a 4 66 ]
+[s S2363 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S2366 . 4 `l 1 i 4 0 `d 1 f 4 0 `S2358 1 fAsBytes 4 0 `S2363 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S2366  1 a 4 66 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 60 ]
-[s S2391 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S2434 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S2394 . 2 `s 1 i 2 0 `us 1 n 2 0 `S2391 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S2394  1 a 2 70 ]
+[u S2437 . 2 `s 1 i 2 0 `us 1 n 2 0 `S2434 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S2437  1 a 2 70 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 65 ]
 "11
@@ -1043,36 +1059,36 @@
 {
 "18
 } 0
-"117 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+"143 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
 [v _MoveBuggy MoveBuggy `(v  1 e 1 0 ]
 {
 [v MoveBuggy@color_detected color_detected `*.39uc  1 p 2 45 ]
 [s S1153 DC_motor 9 `c 1 power 1 0 `uc 1 direction 1 1 `uc 1 brakemode 1 2 `ui 1 PWMperiod 2 3 `*.39uc 1 posDutyHighByte 2 5 `*.39uc 1 negDutyHighByte 2 7 ]
 [v MoveBuggy@mL mL `*.39S1153  1 p 2 47 ]
 [v MoveBuggy@mR mR `*.39S1153  1 p 2 49 ]
-"139
+"173
 } 0
-"56
+"58
 [v _YellowInstructions YellowInstructions `(v  1 e 1 0 ]
 {
-"58
+"60
 [v YellowInstructions@a a `uc  1 a 1 44 ]
 [s S1153 DC_motor 9 `c 1 power 1 0 `uc 1 direction 1 1 `uc 1 brakemode 1 2 `ui 1 PWMperiod 2 3 `*.39uc 1 posDutyHighByte 2 5 `*.39uc 1 negDutyHighByte 2 7 ]
-"56
+"58
 [v YellowInstructions@mL mL `*.39S1153  1 p 2 38 ]
 [v YellowInstructions@mR mR `*.39S1153  1 p 2 40 ]
-"69
+"71
 } 0
-"8
+"10
 [v _RedInstructions RedInstructions `(v  1 e 1 0 ]
 {
-"10
+"12
 [v RedInstructions@a a `uc  1 a 1 44 ]
 [s S1153 DC_motor 9 `c 1 power 1 0 `uc 1 direction 1 1 `uc 1 brakemode 1 2 `ui 1 PWMperiod 2 3 `*.39uc 1 posDutyHighByte 2 5 `*.39uc 1 negDutyHighByte 2 7 ]
-"8
+"10
 [v RedInstructions@mL mL `*.39S1153  1 p 2 38 ]
 [v RedInstructions@mR mR `*.39S1153  1 p 2 40 ]
-"21
+"23
 } 0
 "213 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
 [v _turnRight90 turnRight90 `(v  1 e 1 0 ]
@@ -1085,27 +1101,27 @@
 [v turnRight90@mR mR `*.39S1153  1 p 2 35 ]
 "224
 } 0
-"71 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+"73 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
 [v _PinkInstructions PinkInstructions `(v  1 e 1 0 ]
 {
-"72
+"74
 [v PinkInstructions@a a `uc  1 a 1 44 ]
 [s S1153 DC_motor 9 `c 1 power 1 0 `uc 1 direction 1 1 `uc 1 brakemode 1 2 `ui 1 PWMperiod 2 3 `*.39uc 1 posDutyHighByte 2 5 `*.39uc 1 negDutyHighByte 2 7 ]
-"71
+"73
 [v PinkInstructions@mL mL `*.39S1153  1 p 2 38 ]
 [v PinkInstructions@mR mR `*.39S1153  1 p 2 40 ]
-"84
-} 0
 "86
+} 0
+"88
 [v _OrangeInstructions OrangeInstructions `(v  1 e 1 0 ]
 {
-"87
+"89
 [v OrangeInstructions@a a `uc  1 a 1 44 ]
 [s S1153 DC_motor 9 `c 1 power 1 0 `uc 1 direction 1 1 `uc 1 brakemode 1 2 `ui 1 PWMperiod 2 3 `*.39uc 1 posDutyHighByte 2 5 `*.39uc 1 negDutyHighByte 2 7 ]
-"86
+"88
 [v OrangeInstructions@mL mL `*.39S1153  1 p 2 38 ]
 [v OrangeInstructions@mR mR `*.39S1153  1 p 2 40 ]
-"99
+"101
 } 0
 "240 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
 [v _turnRight135 turnRight135 `(v  1 e 1 0 ]
@@ -1126,16 +1142,16 @@
 [v turnRight@mR mR `*.39S1153  1 p 2 29 ]
 "148
 } 0
-"101 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+"103 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
 [v _LightBlueInstructions LightBlueInstructions `(v  1 e 1 0 ]
 {
-"102
+"104
 [v LightBlueInstructions@a a `uc  1 a 1 44 ]
 [s S1153 DC_motor 9 `c 1 power 1 0 `uc 1 direction 1 1 `uc 1 brakemode 1 2 `ui 1 PWMperiod 2 3 `*.39uc 1 posDutyHighByte 2 5 `*.39uc 1 negDutyHighByte 2 7 ]
-"101
+"103
 [v LightBlueInstructions@mL mL `*.39S1153  1 p 2 38 ]
 [v LightBlueInstructions@mR mR `*.39S1153  1 p 2 40 ]
-"114
+"116
 } 0
 "253 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
 [v _turnLeft135 turnLeft135 `(v  1 e 1 0 ]
@@ -1148,27 +1164,27 @@
 [v turnLeft135@mR mR `*.39S1153  1 p 2 35 ]
 "264
 } 0
-"23 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+"25 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
 [v _GreenInstructions GreenInstructions `(v  1 e 1 0 ]
 {
-"24
+"26
 [v GreenInstructions@a a `uc  1 a 1 44 ]
 [s S1153 DC_motor 9 `c 1 power 1 0 `uc 1 direction 1 1 `uc 1 brakemode 1 2 `ui 1 PWMperiod 2 3 `*.39uc 1 posDutyHighByte 2 5 `*.39uc 1 negDutyHighByte 2 7 ]
-"23
+"25
 [v GreenInstructions@mL mL `*.39S1153  1 p 2 38 ]
 [v GreenInstructions@mR mR `*.39S1153  1 p 2 40 ]
-"35
-} 0
 "37
+} 0
+"39
 [v _BlueInstructions BlueInstructions `(v  1 e 1 0 ]
 {
-"38
+"40
 [v BlueInstructions@a a `uc  1 a 1 44 ]
 [s S1153 DC_motor 9 `c 1 power 1 0 `uc 1 direction 1 1 `uc 1 brakemode 1 2 `ui 1 PWMperiod 2 3 `*.39uc 1 posDutyHighByte 2 5 `*.39uc 1 negDutyHighByte 2 7 ]
-"37
+"39
 [v BlueInstructions@mL mL `*.39S1153  1 p 2 38 ]
 [v BlueInstructions@mR mR `*.39S1153  1 p 2 40 ]
-"53
+"55
 } 0
 "200 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
 [v _turnLeft90 turnLeft90 `(v  1 e 1 0 ]
@@ -1238,6 +1254,17 @@
 [v ___lwdiv@divisor divisor `ui  1 p 2 16 ]
 "30
 } 0
+"17 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\Memorization.c
+[v _AppendMoves AppendMoves `(v  1 e 1 0 ]
+{
+[v AppendMoves@temp temp `uc  1 a 1 wreg ]
+[v AppendMoves@temp temp `uc  1 a 1 wreg ]
+[v AppendMoves@moves_index moves_index `*.39uc  1 p 2 8 ]
+[v AppendMoves@anti_moves_array anti_moves_array `*.39uc  1 p 2 10 ]
+"19
+[v AppendMoves@temp temp `uc  1 a 1 13 ]
+"20
+} 0
 "7 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\LED_Buttons.c
 [v _LED_init LED_init `(v  1 e 1 0 ]
 {
@@ -1290,6 +1317,17 @@
 [v _I2C_2_Master_Idle I2C_2_Master_Idle `(v  1 e 1 0 ]
 {
 "25
+} 0
+"23 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\Memorization.c
+[v _AppendTime AppendTime `(v  1 e 1 0 ]
+{
+[v AppendTime@temp temp `uc  1 a 1 wreg ]
+[v AppendTime@temp temp `uc  1 a 1 wreg ]
+[v AppendTime@time_index time_index `*.39uc  1 p 2 8 ]
+[v AppendTime@time_array time_array `*.39uc  1 p 2 10 ]
+"25
+[v AppendTime@temp temp `uc  1 a 1 13 ]
+"26
 } 0
 "74 D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
 [v _LowISR LowISR `IIL(v  1 e 1 0 ]

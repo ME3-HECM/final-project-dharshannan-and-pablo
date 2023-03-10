@@ -24231,6 +24231,11 @@ unsigned char __t3rd16on(void);
 # 34 "D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\\pic\\include\\xc.h" 2 3
 # 1 "color_instructions.c" 2
 
+# 1 "./color_instructions.h" 1
+
+
+
+
 # 1 "./dc_motor.h" 1
 
 
@@ -24261,7 +24266,43 @@ void turnRight90(DC_motor *mL, DC_motor *mR);
 void turn180(DC_motor *mL, DC_motor *mR);
 void turnRight135(DC_motor *mL, DC_motor *mR);
 void turnLeft135(DC_motor *mL, DC_motor *mR);
+# 5 "./color_instructions.h" 2
+
+
+
+
+
+void RedInstructions(DC_motor *mL, DC_motor *mR);
+void GreenInstructions(DC_motor *mL, DC_motor *mR);
+void BlueInstructions(DC_motor *mL, DC_motor *mR);
+void YellowInstructions (DC_motor *mL, DC_motor *mR);
+void PinkInstructions(DC_motor *mL, DC_motor *mR);
+void OrangeInstructions(DC_motor *mL, DC_motor *mR);
+void LightBlueInstructions(DC_motor *mL, DC_motor *mR);
+void WhiteInstructions(DC_motor *mL, DC_motor *mR);
+void MoveBuggy(unsigned char *color_detected, DC_motor *mL, DC_motor *mR);
 # 2 "color_instructions.c" 2
+
+
+# 1 "./Memorization.h" 1
+
+
+
+
+
+
+extern unsigned char moves_index;
+extern unsigned char time_index;
+
+extern unsigned char anti_moves_array[40];
+extern unsigned char time_array[40];
+
+
+void AppendMoves(unsigned char temp, unsigned char *moves_index, unsigned char *anti_moves_array);
+void AppendTime(unsigned char temp, unsigned char *time_index, unsigned char *time_array);
+unsigned char Return_Anti_Moves(unsigned char *moves_index, unsigned char *anti_moves_array);
+unsigned char Return_Time(unsigned char *time_index, unsigned char *time_array);
+# 4 "color_instructions.c" 2
 
 
 
@@ -24327,7 +24368,7 @@ void YellowInstructions(DC_motor *mL, DC_motor *mR){
         stop(mL, mR);
         a--;
     }
-    _delay((unsigned long)((500)*(64000000/4000.0)));
+    _delay((unsigned long)((250)*(64000000/4000.0)));
     turnRight90(mL, mR);
 }
 
@@ -24341,7 +24382,7 @@ void PinkInstructions(DC_motor *mL, DC_motor *mR){
         stop(mL, mR);
         a--;
     }
-    _delay((unsigned long)((500)*(64000000/4000.0)));
+    _delay((unsigned long)((250)*(64000000/4000.0)));
     turnLeft90(mL, mR);
 
 }
@@ -24356,7 +24397,7 @@ void OrangeInstructions(DC_motor *mL, DC_motor *mR){
         stop(mL, mR);
         a--;
     }
-    _delay((unsigned long)((500)*(64000000/4000.0)));
+    _delay((unsigned long)((250)*(64000000/4000.0)));
 
     turnRight135(mL, mR);
 }
@@ -24371,32 +24412,64 @@ void LightBlueInstructions(DC_motor *mL, DC_motor *mR){
         stop(mL, mR);
         a--;
     }
-    _delay((unsigned long)((500)*(64000000/4000.0)));
+    _delay((unsigned long)((250)*(64000000/4000.0)));
 
     turnLeft135(mL, mR);
 }
 
 
+void WhiteInstructions(DC_motor *mL, DC_motor *mR){
+
+    BlueInstructions(mL,mR);
+
+    while(time_index>0){
+
+        unsigned char a = 0;
+        while(a<Return_Time(&time_index,time_array)){
+            fullSpeedAhead(mL,mR);
+            a++;
+        }
+
+        while(a>0){
+            stop(mL,mR);
+            a--;
+        }
+
+        unsigned char anticolor = Return_Anti_Moves(&moves_index, anti_moves_array);
+        MoveBuggy(anticolor,mL,mR);
+    }
+}
+
+
+
 void MoveBuggy(unsigned char *color_detected, DC_motor *mL, DC_motor *mR){
     if (color_detected==1){
         RedInstructions(mL, mR);
+        AppendMoves(2,&moves_index,anti_moves_array);
     }
     else if (color_detected==2){
         GreenInstructions(mL, mR);
+        AppendMoves(1,&moves_index,anti_moves_array);
     }
     else if (color_detected==3){
         BlueInstructions(mL, mR);
+        AppendMoves(3,&moves_index,anti_moves_array);
     }
     else if (color_detected==4){
         YellowInstructions(mL, mR);
+
     }
     else if (color_detected==5){
         PinkInstructions(mL, mR);
+
     }
     else if (color_detected==6){
         OrangeInstructions(mL, mR);
+        AppendMoves(7,&moves_index,anti_moves_array);
     }
     else if (color_detected==7){
         LightBlueInstructions(mL, mR);
+        AppendMoves(6,&moves_index,anti_moves_array);
     }
+
 }

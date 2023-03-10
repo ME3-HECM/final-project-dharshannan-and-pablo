@@ -24421,14 +24421,7 @@ unsigned int get16bitTMR0val(void);
 # 16 "main_motor.c" 2
 
 # 1 "./color_instructions.h" 1
-
-
-
-
-
-
-
-
+# 10 "./color_instructions.h"
 void RedInstructions(DC_motor *mL, DC_motor *mR);
 void GreenInstructions(DC_motor *mL, DC_motor *mR);
 void BlueInstructions(DC_motor *mL, DC_motor *mR);
@@ -24436,9 +24429,29 @@ void YellowInstructions (DC_motor *mL, DC_motor *mR);
 void PinkInstructions(DC_motor *mL, DC_motor *mR);
 void OrangeInstructions(DC_motor *mL, DC_motor *mR);
 void LightBlueInstructions(DC_motor *mL, DC_motor *mR);
-
+void WhiteInstructions(DC_motor *mL, DC_motor *mR);
 void MoveBuggy(unsigned char *color_detected, DC_motor *mL, DC_motor *mR);
 # 17 "main_motor.c" 2
+
+# 1 "./Memorization.h" 1
+
+
+
+
+
+
+extern unsigned char moves_index;
+extern unsigned char time_index;
+
+extern unsigned char anti_moves_array[40];
+extern unsigned char time_array[40];
+
+
+void AppendMoves(unsigned char temp, unsigned char *moves_index, unsigned char *anti_moves_array);
+void AppendTime(unsigned char temp, unsigned char *time_index, unsigned char *time_array);
+unsigned char Return_Anti_Moves(unsigned char *moves_index, unsigned char *anti_moves_array);
+unsigned char Return_Time(unsigned char *time_index, unsigned char *time_array);
+# 18 "main_motor.c" 2
 
 
 
@@ -24491,6 +24504,7 @@ void main(void) {
         }
 
         else if(color_detected != 0){
+            AppendTime(b,&time_index,time_array);
             LATHbits.LATH3 = 1;
 
             while(b>0){

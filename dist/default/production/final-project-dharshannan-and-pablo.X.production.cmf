@@ -13,74 +13,76 @@
 %PSECTS
 $dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 intcodelo CODE 0 18 18 40 1 2
-cinit CODE 0 21CA 21CA 46 1 2
+cinit CODE 0 2254 2254 46 1 2
 idloc IDLOC 5 200000 200000 10 1 1
-intcode_body CODE 0 234C 234C 22 1 2
-text0 CODE 0 115C 115C 15A 1 2
-text1 CODE 0 1A00 1A00 90 1 2
-text2 CODE 0 16CE 16CE D6 1 2
+intcode_body CODE 0 245E 245E 20 1 2
+text0 CODE 0 1192 1192 172 1 2
+text1 CODE 0 1A86 1A86 90 1 2
+text2 CODE 0 1754 1754 D6 1 2
 text3 CODE 0 5C 5C 61C 1 2
 text4 CODE 0 E3C E3C 1B4 1 2
-text5 CODE 0 13EA 13EA 108 1 2
+text5 CODE 0 1470 1470 108 1 2
 text6 CODE 0 678 678 42A 1 2
 text7 CODE 0 AA2 AA2 39A 1 2
-text8 CODE 0 2252 2252 34 1 2
-text9 CODE 0 2286 2286 2A 1 2
-text10 CODE 0 2458 2458 8 1 2
-text11 CODE 0 1E28 1E28 5E 1 2
-text12 CODE 0 1FEE 1FEE 50 1 2
-text13 CODE 0 203E 203E 50 1 2
-text14 CODE 0 208E 208E 50 1 2
-text15 CODE 0 20DE 20DE 50 1 2
-text16 CODE 0 2426 2426 A 1 2
-text17 CODE 0 2210 2210 42 1 2
-text18 CODE 0 236E 236E 20 1 2
-text19 CODE 0 12B6 12B6 134 1 2
-text20 CODE 0 1A90 1A90 86 1 2
-text21 CODE 0 1B16 1B16 86 1 2
-text22 CODE 0 1E86 1E86 5A 1 2
-text23 CODE 0 1B9C 1B9C 86 1 2
-text24 CODE 0 1C22 1C22 86 1 2
-text25 CODE 0 1EE0 1EE0 5A 1 2
-text26 CODE 0 14F2 14F2 EE 1 2
-text27 CODE 0 1CA8 1CA8 86 1 2
-text28 CODE 0 1F3A 1F3A 5A 1 2
-text29 CODE 0 1D2E 1D2E 86 1 2
-text30 CODE 0 194E 194E B2 1 2
-text31 CODE 0 1F94 1F94 5A 1 2
-text32 CODE 0 15E0 15E0 EE 1 2
-text33 CODE 0 187A 187A D4 1 2
-text34 CODE 0 17A4 17A4 D6 1 2
-text35 CODE 0 FF0 FF0 16C 1 2
-text36 CODE 0 2300 2300 26 1 2
-text37 CODE 0 1DB4 1DB4 74 1 2
-text38 CODE 0 2402 2402 C 1 2
-text39 CODE 0 2326 2326 26 1 2
-text40 CODE 0 23CE 23CE 1A 1 2
-text41 CODE 0 212E 212E 4E 1 2
-text42 CODE 0 238E 238E 20 1 2
-text43 CODE 0 240E 240E C 1 2
-text44 CODE 0 2430 2430 A 1 2
-text45 CODE 0 243A 243A A 1 2
-text46 CODE 0 22B0 22B0 28 1 2
-text49 CODE 0 23E8 23E8 1A 1 2
-text50 CODE 0 217C 217C 4E 1 2
-text51 CODE 0 23AE 23AE 20 1 2
-text52 CODE 0 241A 241A C 1 2
-text53 CODE 0 2444 2444 A 1 2
-text54 CODE 0 244E 244E A 1 2
-text55 CODE 0 22D8 22D8 28 1 2
-idataCOMRAM CODE 0 2460 2460 2 1 1
+text8 CODE 0 22DC 22DC 34 1 2
+text9 CODE 0 2310 2310 2A 1 2
+text10 CODE 0 2528 2528 8 1 2
+text11 CODE 0 1EAE 1EAE 5E 1 2
+text12 CODE 0 2074 2074 50 1 2
+text13 CODE 0 20C4 20C4 50 1 2
+text14 CODE 0 2114 2114 50 1 2
+text15 CODE 0 2164 2164 50 1 2
+text16 CODE 0 24F6 24F6 A 1 2
+text17 CODE 0 229A 229A 42 1 2
+text18 CODE 0 241E 241E 20 1 2
+text19 CODE 0 FF0 FF0 1A2 1 2
+text20 CODE 0 1B16 1B16 86 1 2
+text21 CODE 0 1B9C 1B9C 86 1 2
+text22 CODE 0 1F0C 1F0C 5A 1 2
+text23 CODE 0 1C22 1C22 86 1 2
+text24 CODE 0 1CA8 1CA8 86 1 2
+text25 CODE 0 1F66 1F66 5A 1 2
+text26 CODE 0 1578 1578 EE 1 2
+text27 CODE 0 1D2E 1D2E 86 1 2
+text28 CODE 0 1FC0 1FC0 5A 1 2
+text29 CODE 0 1DB4 1DB4 86 1 2
+text30 CODE 0 19D4 19D4 B2 1 2
+text31 CODE 0 201A 201A 5A 1 2
+text32 CODE 0 1666 1666 EE 1 2
+text33 CODE 0 1900 1900 D4 1 2
+text34 CODE 0 182A 182A D6 1 2
+text35 CODE 0 1304 1304 16C 1 2
+text36 CODE 0 238A 238A 26 1 2
+text37 CODE 0 1E3A 1E3A 74 1 2
+text38 CODE 0 23D6 23D6 24 1 2
+text39 CODE 0 24D2 24D2 C 1 2
+text40 CODE 0 23B0 23B0 26 1 2
+text41 CODE 0 249E 249E 1A 1 2
+text42 CODE 0 21B4 21B4 50 1 2
+text43 CODE 0 243E 243E 20 1 2
+text44 CODE 0 24DE 24DE C 1 2
+text45 CODE 0 2500 2500 A 1 2
+text46 CODE 0 250A 250A A 1 2
+text47 CODE 0 233A 233A 28 1 2
+text48 CODE 0 23FA 23FA 24 1 2
+text51 CODE 0 24B8 24B8 1A 1 2
+text52 CODE 0 2204 2204 50 1 2
+text53 CODE 0 247E 247E 20 1 2
+text54 CODE 0 24EA 24EA C 1 2
+text55 CODE 0 2514 2514 A 1 2
+text56 CODE 0 251E 251E A 1 2
+text57 CODE 0 2362 2362 28 1 2
 cstackCOMRAM COMRAM 1 1 1 4E 1 1
-cstackBANK0 BANK0 1 B4 B4 34 1 1
+cstackBANK0 BANK0 1 C6 C6 34 1 1
 temp COMRAM 1 57 57 1 1 1
-bssBANK0 BANK0 1 60 60 54 1 1
-bssBANK1 BANK1 1 100 100 50 1 1
+bssBANK0 BANK0 1 60 60 66 1 1
+bssBANK1 BANK1 1 100 100 3C 1 1
 intcode CODE 0 8 8 6 1 2
-dataCOMRAM COMRAM 1 55 55 2 1 1
-bssCOMRAM COMRAM 1 4F 4F 6 1 1
+idataBANK0 CODE 0 2530 2530 2 1 1
+dataBANK0 BANK0 1 FA FA 2 1 1
+bssCOMRAM COMRAM 1 4F 4F 8 1 1
 config CONFIG 4 300000 300000 C 1 1
-$C:\Users\User\AppData\Local\Temp\xcAsi94.o
+$C:\Users\User\AppData\Local\Temp\xcAs1j0.o
 idloc IDLOC 5 200000 200000 10 1 1
 init CODE 0 58 58 4 1 2
 reset_vec CODE 0 0 0 4 1 2
@@ -91,11 +93,11 @@ config CONFIG 4 300000 300000 C 1 1
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM E8-FF 1
-RAM 150-DE9 1
+RAM FC-FF 1
+RAM 13C-DE9 1
 SFR DEF-FFF 1
-BANK0 E8-FF 1
-BANK1 150-1FF 1
+BANK0 FC-FF 1
+BANK1 13C-1FF 1
 BANK2 200-2FF 1
 BANK3 300-3FF 1
 BANK4 400-4FF 1
@@ -106,22 +108,22 @@ BANK8 800-8FF 1
 BANK9 900-9FF 1
 CONST 4-7 1
 CONST E-17 1
-CONST 2462-1FFFF 1
-SMALLCONST 2462-1FFFF 1
+CONST 2532-1FFFF 1
+SMALLCONST 2532-1FFFF 1
 CODE 4-7 1
 CODE E-17 1
-CODE 2462-1FFFF 1
+CODE 2532-1FFFF 1
 BANK10 A00-AFF 1
 BANK11 B00-BFF 1
 BANK12 C00-CFF 1
 BANK13 D00-DE9 1
 BIGRAM 58-5F 1
-BIGRAM E8-FF 1
-BIGRAM 150-DE9 1
+BIGRAM FC-FF 1
+BIGRAM 13C-DE9 1
 BIGSFR DEF-FFF 1
 COMRAM 58-5F 1
 EEDATA 310000-3103FF 1
-MEDIUMCONST 2462-FFFF 1
+MEDIUMCONST 2532-FFFF 1
 MEDIUMCONST 10E00-1FFFF 1
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -137,7 +139,7 @@ MEDIUMCONST 10E00-1FFFF 1
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-18 intcodelo CODE >23759:C:\Users\User\AppData\Local\Temp\xcAsi94.s
+18 intcodelo CODE >24057:C:\Users\User\AppData\Local\Temp\xcAs1j0.s
 18 intcodelo CODE >74:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
 26 intcodelo CODE >77:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
 36 intcodelo CODE >78:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
@@ -145,448 +147,459 @@ $dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 3E intcodelo CODE >80:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
 44 intcodelo CODE >81:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
 48 intcodelo CODE >83:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-8 intcode CODE >23854:C:\Users\User\AppData\Local\Temp\xcAsi94.s
+8 intcode CODE >24151:C:\Users\User\AppData\Local\Temp\xcAs1j0.s
 8 intcode CODE >88:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-22D8 text55 CODE >22:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-22D8 text55 CODE >24:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-22FE text55 CODE >25:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-244E text54 CODE >27:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-244E text54 CODE >29:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-2452 text54 CODE >30:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-2456 text54 CODE >31:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-2444 text53 CODE >39:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-2444 text53 CODE >41:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-2448 text53 CODE >42:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-244C text53 CODE >43:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-241A text52 CODE >45:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-241C text52 CODE >47:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-2420 text52 CODE >48:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-2424 text52 CODE >49:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-23AE text51 CODE >22:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-23B0 text51 CODE >23:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-23B4 text51 CODE >24:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-23BA text51 CODE >25:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-23C2 text51 CODE >26:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-23C8 text51 CODE >27:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-23CC text51 CODE >28:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-217C text50 CODE >43:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-217C text50 CODE >45:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-2186 text50 CODE >46:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-2196 text50 CODE >48:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-21A0 text50 CODE >49:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-21AA text50 CODE >50:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-21B4 text50 CODE >51:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-21BE text50 CODE >52:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-21C8 text50 CODE >54:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-23E8 text49 CODE >57:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-23E8 text49 CODE >59:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-23EC text49 CODE >60:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-23F2 text49 CODE >61:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-23F8 text49 CODE >62:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-23FC text49 CODE >64:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-2400 text49 CODE >65:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-234C intcode_body CODE >88:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-234C intcode_body CODE >115:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-235C intcode_body CODE >116:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-2362 intcode_body CODE >118:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-2366 intcode_body CODE >119:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-236A intcode_body CODE >122:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-22B0 text46 CODE >22:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-22B0 text46 CODE >24:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-22D6 text46 CODE >25:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-243A text45 CODE >27:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-243A text45 CODE >29:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-243E text45 CODE >30:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-2442 text45 CODE >31:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-2430 text44 CODE >39:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-2430 text44 CODE >41:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-2434 text44 CODE >42:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-2438 text44 CODE >43:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-240E text43 CODE >45:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-2410 text43 CODE >47:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-2414 text43 CODE >48:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-2418 text43 CODE >49:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-238E text42 CODE >22:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-2390 text42 CODE >23:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-2394 text42 CODE >24:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-239A text42 CODE >25:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-23A2 text42 CODE >26:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-23A8 text42 CODE >27:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-23AC text42 CODE >28:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-212E text41 CODE >43:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-212E text41 CODE >45:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-2138 text41 CODE >46:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-2148 text41 CODE >48:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-2152 text41 CODE >49:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-215C text41 CODE >50:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-2166 text41 CODE >51:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-2170 text41 CODE >52:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-217A text41 CODE >54:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-23CE text40 CODE >57:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-23CE text40 CODE >59:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-23D2 text40 CODE >60:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-23D8 text40 CODE >61:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-23DE text40 CODE >62:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-23E2 text40 CODE >64:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-23E6 text40 CODE >65:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-2326 text39 CODE >12:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-2326 text39 CODE >18:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-2328 text39 CODE >19:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-232C text39 CODE >20:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-2332 text39 CODE >21:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-2336 text39 CODE >22:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-2338 text39 CODE >23:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-233A text39 CODE >26:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-233C text39 CODE >27:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-233E text39 CODE >30:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-2340 text39 CODE >32:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-2344 text39 CODE >34:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-2346 text39 CODE >35:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-2348 text39 CODE >36:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-234A text39 CODE >37:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
-2402 text38 CODE >7:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\LED_Buttons.c
-2402 text38 CODE >8:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\LED_Buttons.c
-2404 text38 CODE >9:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\LED_Buttons.c
-2406 text38 CODE >10:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\LED_Buttons.c
-2408 text38 CODE >12:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\LED_Buttons.c
-240A text38 CODE >13:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\LED_Buttons.c
-240C text38 CODE >14:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\LED_Buttons.c
-1DB4 text37 CODE >7:D:\MPLAB_COMPILER\pic\sources\c99\common\lwdiv.c
-1DB4 text37 CODE >13:D:\MPLAB_COMPILER\pic\sources\c99\common\lwdiv.c
-1DBC text37 CODE >14:D:\MPLAB_COMPILER\pic\sources\c99\common\lwdiv.c
-1DCE text37 CODE >15:D:\MPLAB_COMPILER\pic\sources\c99\common\lwdiv.c
-1DD2 text37 CODE >16:D:\MPLAB_COMPILER\pic\sources\c99\common\lwdiv.c
-1DD6 text37 CODE >17:D:\MPLAB_COMPILER\pic\sources\c99\common\lwdiv.c
-1DDC text37 CODE >18:D:\MPLAB_COMPILER\pic\sources\c99\common\lwdiv.c
-1DDE text37 CODE >16:D:\MPLAB_COMPILER\pic\sources\c99\common\lwdiv.c
-1DEC text37 CODE >21:D:\MPLAB_COMPILER\pic\sources\c99\common\lwdiv.c
-1DF2 text37 CODE >22:D:\MPLAB_COMPILER\pic\sources\c99\common\lwdiv.c
-1E08 text37 CODE >23:D:\MPLAB_COMPILER\pic\sources\c99\common\lwdiv.c
-1E10 text37 CODE >24:D:\MPLAB_COMPILER\pic\sources\c99\common\lwdiv.c
-1E12 text37 CODE >26:D:\MPLAB_COMPILER\pic\sources\c99\common\lwdiv.c
-1E18 text37 CODE >27:D:\MPLAB_COMPILER\pic\sources\c99\common\lwdiv.c
-1E1E text37 CODE >28:D:\MPLAB_COMPILER\pic\sources\c99\common\lwdiv.c
-1E1E text37 CODE >29:D:\MPLAB_COMPILER\pic\sources\c99\common\lwdiv.c
-1E26 text37 CODE >30:D:\MPLAB_COMPILER\pic\sources\c99\common\lwdiv.c
-2300 text36 CODE >15:D:\MPLAB_COMPILER\pic\sources\c99\common\Umul16.c
-2300 text36 CODE >37:D:\MPLAB_COMPILER\pic\sources\c99\common\Umul16.c
-230C text36 CODE >38:D:\MPLAB_COMPILER\pic\sources\c99\common\Umul16.c
-2314 text36 CODE >39:D:\MPLAB_COMPILER\pic\sources\c99\common\Umul16.c
-231C text36 CODE >52:D:\MPLAB_COMPILER\pic\sources\c99\common\Umul16.c
-2324 text36 CODE >53:D:\MPLAB_COMPILER\pic\sources\c99\common\Umul16.c
-FF0 text35 CODE >64:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-FF0 text35 CODE >68:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-100C text35 CODE >69:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1060 text35 CODE >70:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1070 text35 CODE >71:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1074 text35 CODE >73:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1078 text35 CODE >74:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-10BA text35 CODE >77:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-10D6 text35 CODE >78:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-10F6 text35 CODE >79:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1116 text35 CODE >80:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-111A text35 CODE >81:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-113A text35 CODE >82:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-115A text35 CODE >84:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-17A4 text34 CODE >174:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-17A4 text34 CODE >177:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-17B4 text34 CODE >178:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-17C4 text34 CODE >180:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-17D4 text34 CODE >181:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-17E4 text34 CODE >184:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-180C text34 CODE >185:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1834 text34 CODE >187:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-183E text34 CODE >188:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1848 text34 CODE >190:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1854 text34 CODE >191:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1860 text34 CODE >192:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1878 text34 CODE >193:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-187A text33 CODE >87:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-187A text33 CODE >90:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-188A text33 CODE >91:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-189A text33 CODE >93:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-18BE text33 CODE >94:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-18E2 text33 CODE >96:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-18F8 text33 CODE >97:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-190E text33 CODE >99:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-191A text33 CODE >100:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1926 text33 CODE >101:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1932 text33 CODE >102:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-193E text33 CODE >103:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-194C text33 CODE >104:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-15E0 text32 CODE >107:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-15E0 text32 CODE >110:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-15F0 text32 CODE >111:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1600 text32 CODE >113:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1610 text32 CODE >114:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1620 text32 CODE >117:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1648 text32 CODE >118:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1670 text32 CODE >120:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1686 text32 CODE >121:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-169C text32 CODE >123:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-16A8 text32 CODE >124:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-16B4 text32 CODE >125:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-16CC text32 CODE >126:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1F94 text31 CODE >200:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1F94 text31 CODE >202:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1F98 text31 CODE >203:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1F9C text31 CODE >204:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1FB0 text31 CODE >205:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1FB2 text31 CODE >203:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1FC6 text31 CODE >208:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1FDA text31 CODE >209:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1FDC text31 CODE >207:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1FEC text31 CODE >211:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-194E text30 CODE >37:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-194E text30 CODE >38:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1952 text30 CODE >39:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1956 text30 CODE >40:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-196A text30 CODE >41:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-196C text30 CODE >39:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1980 text30 CODE >44:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1994 text30 CODE >45:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1996 text30 CODE >43:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-19A6 text30 CODE >47:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-19BE text30 CODE >50:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-19D2 text30 CODE >51:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-19EA text30 CODE >52:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-19FE text30 CODE >53:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1D2E text29 CODE >23:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1D2E text29 CODE >24:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1D32 text29 CODE >25:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1D36 text29 CODE >26:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1D4A text29 CODE >27:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1D4C text29 CODE >25:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1D60 text29 CODE >30:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1D74 text29 CODE >31:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1D76 text29 CODE >29:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1D86 text29 CODE >33:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1D9E text29 CODE >34:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1DB2 text29 CODE >35:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1F3A text28 CODE >253:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1F3A text28 CODE >255:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1F3E text28 CODE >256:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1F42 text28 CODE >257:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1F56 text28 CODE >258:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1F58 text28 CODE >256:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1F6C text28 CODE >261:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1F80 text28 CODE >262:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1F82 text28 CODE >260:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1F92 text28 CODE >264:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1CA8 text27 CODE >101:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1CA8 text27 CODE >102:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1CAC text27 CODE >103:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1CB0 text27 CODE >104:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1CC4 text27 CODE >105:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1CC6 text27 CODE >103:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1CDA text27 CODE >108:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1CEE text27 CODE >109:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1CF0 text27 CODE >107:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1D00 text27 CODE >111:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1D18 text27 CODE >113:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1D2C text27 CODE >114:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-14F2 text26 CODE >129:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-14F2 text26 CODE >132:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1502 text26 CODE >133:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1512 text26 CODE >135:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1522 text26 CODE >136:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1532 text26 CODE >139:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-155A text26 CODE >140:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1582 text26 CODE >142:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1598 text26 CODE >143:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-15AE text26 CODE >145:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-15BA text26 CODE >146:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-15C6 text26 CODE >147:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-15DE text26 CODE >148:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1EE0 text25 CODE >240:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1EE0 text25 CODE >242:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1EE4 text25 CODE >243:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1EE8 text25 CODE >244:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1EFC text25 CODE >245:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1EFE text25 CODE >243:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1F12 text25 CODE >248:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1F26 text25 CODE >249:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1F28 text25 CODE >247:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1F38 text25 CODE >251:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1C22 text24 CODE >86:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1C22 text24 CODE >87:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1C26 text24 CODE >88:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1C2A text24 CODE >89:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1C3E text24 CODE >90:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1C40 text24 CODE >88:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1C54 text24 CODE >93:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1C68 text24 CODE >94:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1C6A text24 CODE >92:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1C7A text24 CODE >96:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1C92 text24 CODE >98:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1CA6 text24 CODE >99:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1B9C text23 CODE >71:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1B9C text23 CODE >72:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1BA0 text23 CODE >73:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1BA4 text23 CODE >74:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1BB8 text23 CODE >75:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1BBA text23 CODE >73:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1BCE text23 CODE >78:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1BE2 text23 CODE >79:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1BE4 text23 CODE >77:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1BF4 text23 CODE >81:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1C0C text23 CODE >82:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1C20 text23 CODE >84:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1E86 text22 CODE >213:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1E86 text22 CODE >215:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1E8A text22 CODE >216:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1E8E text22 CODE >217:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1EA2 text22 CODE >218:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1EA4 text22 CODE >216:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1EB8 text22 CODE >221:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1ECC text22 CODE >222:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1ECE text22 CODE >220:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1EDE text22 CODE >224:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1B16 text21 CODE >8:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1B16 text21 CODE >10:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1B1A text21 CODE >11:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1B1E text21 CODE >12:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1B32 text21 CODE >13:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1B34 text21 CODE >11:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1B48 text21 CODE >16:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1B5C text21 CODE >17:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1B5E text21 CODE >15:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1B6E text21 CODE >19:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1B86 text21 CODE >20:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1B9A text21 CODE >21:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1A90 text20 CODE >56:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1A90 text20 CODE >58:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1A94 text20 CODE >59:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1A98 text20 CODE >60:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1AAC text20 CODE >61:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1AAE text20 CODE >59:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1AC2 text20 CODE >64:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1AD6 text20 CODE >65:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1AD8 text20 CODE >63:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1AE8 text20 CODE >67:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1B00 text20 CODE >68:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1B14 text20 CODE >69:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-12B6 text19 CODE >117:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-12B6 text19 CODE >118:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-12C8 text19 CODE >119:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-12DC text19 CODE >120:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-12E0 text19 CODE >121:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-12F4 text19 CODE >122:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1308 text19 CODE >123:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-130C text19 CODE >124:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1320 text19 CODE >125:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1334 text19 CODE >126:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1338 text19 CODE >127:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-134C text19 CODE >128:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1360 text19 CODE >129:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1364 text19 CODE >130:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1378 text19 CODE >131:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-138C text19 CODE >132:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-1390 text19 CODE >133:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-13A4 text19 CODE >134:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-13B8 text19 CODE >135:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-13BC text19 CODE >136:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-13D0 text19 CODE >137:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-13E8 text19 CODE >138:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-13E8 text19 CODE >139:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
-236E text18 CODE >7:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\timers.c
-236E text18 CODE >9:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\timers.c
-2376 text18 CODE >10:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\timers.c
-2378 text18 CODE >11:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\timers.c
-2380 text18 CODE >12:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\timers.c
-2382 text18 CODE >15:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\timers.c
-2386 text18 CODE >16:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\timers.c
-238A text18 CODE >17:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\timers.c
-238C text18 CODE >18:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\timers.c
-2210 text17 CODE >51:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-2212 text17 CODE >54:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-2216 text17 CODE >55:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-221A text17 CODE >56:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-221E text17 CODE >57:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-2222 text17 CODE >58:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-2226 text17 CODE >59:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-224C text17 CODE >60:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-224E text17 CODE >61:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-2250 text17 CODE >62:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-2426 text16 CODE >33:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-2426 text16 CODE >35:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-242A text16 CODE >36:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-242E text16 CODE >37:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-20DE text15 CODE >60:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-20DE text15 CODE >63:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-20E2 text15 CODE >64:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-20E8 text15 CODE >65:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-20EE text15 CODE >66:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-20F2 text15 CODE >67:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-20F8 text15 CODE >68:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-2106 text15 CODE >69:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-2120 text15 CODE >70:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-2124 text15 CODE >71:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-212C text15 CODE >72:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-208E text14 CODE >74:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-208E text14 CODE >77:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-2092 text14 CODE >78:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-2098 text14 CODE >79:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-209E text14 CODE >80:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-20A2 text14 CODE >81:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-20A8 text14 CODE >82:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-20B6 text14 CODE >83:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-20D0 text14 CODE >84:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-20D4 text14 CODE >85:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-20DC text14 CODE >86:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-203E text13 CODE >46:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-203E text13 CODE >49:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-2042 text13 CODE >50:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-2048 text13 CODE >51:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-204E text13 CODE >52:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-2052 text13 CODE >53:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-2058 text13 CODE >54:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-2066 text13 CODE >55:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-2080 text13 CODE >56:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-2084 text13 CODE >57:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-208C text13 CODE >58:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-1FEE text12 CODE >32:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-1FEE text12 CODE >35:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-1FF2 text12 CODE >36:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-1FF8 text12 CODE >37:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-1FFE text12 CODE >38:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-2002 text12 CODE >39:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-2008 text12 CODE >40:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-2016 text12 CODE >41:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-2030 text12 CODE >42:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-2034 text12 CODE >43:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-203C text12 CODE >44:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-1E28 text11 CODE >90:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-1E28 text11 CODE >92:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-1E3C text11 CODE >93:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-1E54 text11 CODE >94:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-1E6C text11 CODE >95:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-1E84 text11 CODE >96:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-2458 text10 CODE >17:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\LED_Buttons.c
-2458 text10 CODE >18:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\LED_Buttons.c
-245A text10 CODE >19:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\LED_Buttons.c
-245C text10 CODE >20:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\LED_Buttons.c
-245E text10 CODE >21:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\LED_Buttons.c
-2286 text9 CODE >4:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-2286 text9 CODE >7:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-2290 text9 CODE >8:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-2292 text9 CODE >9:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-2296 text9 CODE >12:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-2298 text9 CODE >13:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-229A text9 CODE >14:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-229C text9 CODE >15:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-229E text9 CODE >16:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-22A2 text9 CODE >17:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-22A6 text9 CODE >18:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-22AA text9 CODE >19:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-22AE text9 CODE >20:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
-2252 text8 CODE >6:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-2252 text8 CODE >9:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-2256 text8 CODE >12:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-2260 text8 CODE >13:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-2270 text8 CODE >16:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-227A text8 CODE >19:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-2284 text8 CODE >20:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+2362 text57 CODE >22:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+2362 text57 CODE >24:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+2388 text57 CODE >25:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+251E text56 CODE >27:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+251E text56 CODE >29:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+2522 text56 CODE >30:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+2526 text56 CODE >31:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+2514 text55 CODE >39:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+2514 text55 CODE >41:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+2518 text55 CODE >42:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+251C text55 CODE >43:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+24EA text54 CODE >45:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+24EC text54 CODE >47:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+24F0 text54 CODE >48:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+24F4 text54 CODE >49:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+247E text53 CODE >22:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+2480 text53 CODE >23:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+2484 text53 CODE >24:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+248A text53 CODE >25:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+2492 text53 CODE >26:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+2498 text53 CODE >27:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+249C text53 CODE >28:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+2204 text52 CODE >43:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+2204 text52 CODE >45:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+220E text52 CODE >46:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+221E text52 CODE >48:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+2228 text52 CODE >49:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+2232 text52 CODE >50:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+223C text52 CODE >51:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+2246 text52 CODE >52:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+2252 text52 CODE >54:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+24B8 text51 CODE >57:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+24B8 text51 CODE >59:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+24BC text51 CODE >60:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+24C2 text51 CODE >61:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+24C8 text51 CODE >62:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+24CC text51 CODE >64:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+24D0 text51 CODE >65:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+245E intcode_body CODE >88:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+245E intcode_body CODE >115:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+246E intcode_body CODE >116:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+2472 intcode_body CODE >118:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+2476 intcode_body CODE >119:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+247A intcode_body CODE >122:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+23FA text48 CODE >23:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\Memorization.c
+23FC text48 CODE >25:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\Memorization.c
+241C text48 CODE >26:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\Memorization.c
+233A text47 CODE >22:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+233A text47 CODE >24:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+2360 text47 CODE >25:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+250A text46 CODE >27:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+250A text46 CODE >29:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+250E text46 CODE >30:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+2512 text46 CODE >31:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+2500 text45 CODE >39:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+2500 text45 CODE >41:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+2504 text45 CODE >42:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+2508 text45 CODE >43:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+24DE text44 CODE >45:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+24E0 text44 CODE >47:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+24E4 text44 CODE >48:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+24E8 text44 CODE >49:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+243E text43 CODE >22:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+2440 text43 CODE >23:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+2444 text43 CODE >24:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+244A text43 CODE >25:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+2452 text43 CODE >26:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+2458 text43 CODE >27:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+245C text43 CODE >28:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+21B4 text42 CODE >43:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+21B4 text42 CODE >45:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+21BE text42 CODE >46:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+21CE text42 CODE >48:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+21D8 text42 CODE >49:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+21E2 text42 CODE >50:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+21EC text42 CODE >51:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+21F6 text42 CODE >52:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+2202 text42 CODE >54:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+249E text41 CODE >57:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+249E text41 CODE >59:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+24A2 text41 CODE >60:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+24A8 text41 CODE >61:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+24AE text41 CODE >62:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+24B2 text41 CODE >64:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+24B6 text41 CODE >65:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+23B0 text40 CODE >12:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+23B0 text40 CODE >18:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+23B2 text40 CODE >19:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+23B6 text40 CODE >20:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+23BC text40 CODE >21:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+23C0 text40 CODE >22:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+23C2 text40 CODE >23:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+23C4 text40 CODE >26:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+23C6 text40 CODE >27:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+23C8 text40 CODE >30:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+23CA text40 CODE >32:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+23CE text40 CODE >34:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+23D0 text40 CODE >35:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+23D2 text40 CODE >36:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+23D4 text40 CODE >37:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\interrupts.c
+24D2 text39 CODE >7:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\LED_Buttons.c
+24D2 text39 CODE >8:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\LED_Buttons.c
+24D4 text39 CODE >9:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\LED_Buttons.c
+24D6 text39 CODE >10:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\LED_Buttons.c
+24D8 text39 CODE >12:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\LED_Buttons.c
+24DA text39 CODE >13:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\LED_Buttons.c
+24DC text39 CODE >14:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\LED_Buttons.c
+23D6 text38 CODE >17:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\Memorization.c
+23D8 text38 CODE >19:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\Memorization.c
+23F8 text38 CODE >20:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\Memorization.c
+1E3A text37 CODE >7:D:\MPLAB_COMPILER\pic\sources\c99\common\lwdiv.c
+1E3A text37 CODE >13:D:\MPLAB_COMPILER\pic\sources\c99\common\lwdiv.c
+1E42 text37 CODE >14:D:\MPLAB_COMPILER\pic\sources\c99\common\lwdiv.c
+1E54 text37 CODE >15:D:\MPLAB_COMPILER\pic\sources\c99\common\lwdiv.c
+1E58 text37 CODE >16:D:\MPLAB_COMPILER\pic\sources\c99\common\lwdiv.c
+1E5C text37 CODE >17:D:\MPLAB_COMPILER\pic\sources\c99\common\lwdiv.c
+1E62 text37 CODE >18:D:\MPLAB_COMPILER\pic\sources\c99\common\lwdiv.c
+1E64 text37 CODE >16:D:\MPLAB_COMPILER\pic\sources\c99\common\lwdiv.c
+1E72 text37 CODE >21:D:\MPLAB_COMPILER\pic\sources\c99\common\lwdiv.c
+1E78 text37 CODE >22:D:\MPLAB_COMPILER\pic\sources\c99\common\lwdiv.c
+1E8E text37 CODE >23:D:\MPLAB_COMPILER\pic\sources\c99\common\lwdiv.c
+1E96 text37 CODE >24:D:\MPLAB_COMPILER\pic\sources\c99\common\lwdiv.c
+1E98 text37 CODE >26:D:\MPLAB_COMPILER\pic\sources\c99\common\lwdiv.c
+1E9E text37 CODE >27:D:\MPLAB_COMPILER\pic\sources\c99\common\lwdiv.c
+1EA4 text37 CODE >28:D:\MPLAB_COMPILER\pic\sources\c99\common\lwdiv.c
+1EA4 text37 CODE >29:D:\MPLAB_COMPILER\pic\sources\c99\common\lwdiv.c
+1EAC text37 CODE >30:D:\MPLAB_COMPILER\pic\sources\c99\common\lwdiv.c
+238A text36 CODE >15:D:\MPLAB_COMPILER\pic\sources\c99\common\Umul16.c
+238A text36 CODE >37:D:\MPLAB_COMPILER\pic\sources\c99\common\Umul16.c
+2396 text36 CODE >38:D:\MPLAB_COMPILER\pic\sources\c99\common\Umul16.c
+239E text36 CODE >39:D:\MPLAB_COMPILER\pic\sources\c99\common\Umul16.c
+23A6 text36 CODE >52:D:\MPLAB_COMPILER\pic\sources\c99\common\Umul16.c
+23AE text36 CODE >53:D:\MPLAB_COMPILER\pic\sources\c99\common\Umul16.c
+1304 text35 CODE >64:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1304 text35 CODE >68:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1320 text35 CODE >69:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1374 text35 CODE >70:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1384 text35 CODE >71:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1388 text35 CODE >73:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+138C text35 CODE >74:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+13CE text35 CODE >77:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+13EA text35 CODE >78:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+140A text35 CODE >79:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+142A text35 CODE >80:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+142E text35 CODE >81:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+144E text35 CODE >82:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+146E text35 CODE >84:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+182A text34 CODE >174:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+182A text34 CODE >177:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+183A text34 CODE >178:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+184A text34 CODE >180:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+185A text34 CODE >181:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+186A text34 CODE >184:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1892 text34 CODE >185:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+18BA text34 CODE >187:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+18C4 text34 CODE >188:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+18CE text34 CODE >190:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+18DA text34 CODE >191:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+18E6 text34 CODE >192:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+18FE text34 CODE >193:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1900 text33 CODE >87:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1900 text33 CODE >90:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1910 text33 CODE >91:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1920 text33 CODE >93:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1944 text33 CODE >94:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1968 text33 CODE >96:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+197E text33 CODE >97:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1994 text33 CODE >99:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+19A0 text33 CODE >100:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+19AC text33 CODE >101:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+19B8 text33 CODE >102:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+19C4 text33 CODE >103:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+19D2 text33 CODE >104:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1666 text32 CODE >107:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1666 text32 CODE >110:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1676 text32 CODE >111:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1686 text32 CODE >113:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1696 text32 CODE >114:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+16A6 text32 CODE >117:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+16CE text32 CODE >118:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+16F6 text32 CODE >120:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+170C text32 CODE >121:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1722 text32 CODE >123:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+172E text32 CODE >124:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+173A text32 CODE >125:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1752 text32 CODE >126:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+201A text31 CODE >200:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+201A text31 CODE >202:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+201E text31 CODE >203:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+2022 text31 CODE >204:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+2036 text31 CODE >205:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+2038 text31 CODE >203:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+204C text31 CODE >208:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+2060 text31 CODE >209:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+2062 text31 CODE >207:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+2072 text31 CODE >211:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+19D4 text30 CODE >39:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+19D4 text30 CODE >40:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+19D8 text30 CODE >41:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+19DC text30 CODE >42:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+19F0 text30 CODE >43:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+19F2 text30 CODE >41:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1A06 text30 CODE >46:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1A1A text30 CODE >47:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1A1C text30 CODE >45:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1A2C text30 CODE >49:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1A44 text30 CODE >52:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1A58 text30 CODE >53:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1A70 text30 CODE >54:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1A84 text30 CODE >55:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1DB4 text29 CODE >25:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1DB4 text29 CODE >26:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1DB8 text29 CODE >27:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1DBC text29 CODE >28:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1DD0 text29 CODE >29:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1DD2 text29 CODE >27:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1DE6 text29 CODE >32:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1DFA text29 CODE >33:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1DFC text29 CODE >31:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1E0C text29 CODE >35:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1E24 text29 CODE >36:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1E38 text29 CODE >37:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1FC0 text28 CODE >253:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1FC0 text28 CODE >255:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1FC4 text28 CODE >256:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1FC8 text28 CODE >257:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1FDC text28 CODE >258:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1FDE text28 CODE >256:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1FF2 text28 CODE >261:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+2006 text28 CODE >262:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+2008 text28 CODE >260:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+2018 text28 CODE >264:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1D2E text27 CODE >103:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1D2E text27 CODE >104:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1D32 text27 CODE >105:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1D36 text27 CODE >106:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1D4A text27 CODE >107:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1D4C text27 CODE >105:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1D60 text27 CODE >110:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1D74 text27 CODE >111:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1D76 text27 CODE >109:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1D86 text27 CODE >113:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1D9E text27 CODE >115:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1DB2 text27 CODE >116:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1578 text26 CODE >129:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1578 text26 CODE >132:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1588 text26 CODE >133:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1598 text26 CODE >135:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+15A8 text26 CODE >136:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+15B8 text26 CODE >139:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+15E0 text26 CODE >140:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1608 text26 CODE >142:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+161E text26 CODE >143:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1634 text26 CODE >145:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1640 text26 CODE >146:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+164C text26 CODE >147:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1664 text26 CODE >148:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1F66 text25 CODE >240:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1F66 text25 CODE >242:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1F6A text25 CODE >243:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1F6E text25 CODE >244:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1F82 text25 CODE >245:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1F84 text25 CODE >243:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1F98 text25 CODE >248:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1FAC text25 CODE >249:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1FAE text25 CODE >247:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1FBE text25 CODE >251:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1CA8 text24 CODE >88:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1CA8 text24 CODE >89:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1CAC text24 CODE >90:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1CB0 text24 CODE >91:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1CC4 text24 CODE >92:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1CC6 text24 CODE >90:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1CDA text24 CODE >95:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1CEE text24 CODE >96:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1CF0 text24 CODE >94:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1D00 text24 CODE >98:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1D18 text24 CODE >100:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1D2C text24 CODE >101:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1C22 text23 CODE >73:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1C22 text23 CODE >74:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1C26 text23 CODE >75:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1C2A text23 CODE >76:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1C3E text23 CODE >77:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1C40 text23 CODE >75:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1C54 text23 CODE >80:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1C68 text23 CODE >81:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1C6A text23 CODE >79:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1C7A text23 CODE >83:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1C92 text23 CODE >84:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1CA6 text23 CODE >86:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1F0C text22 CODE >213:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1F0C text22 CODE >215:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1F10 text22 CODE >216:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1F14 text22 CODE >217:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1F28 text22 CODE >218:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1F2A text22 CODE >216:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1F3E text22 CODE >221:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1F52 text22 CODE >222:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1F54 text22 CODE >220:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1F64 text22 CODE >224:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1B9C text21 CODE >10:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1B9C text21 CODE >12:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1BA0 text21 CODE >13:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1BA4 text21 CODE >14:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1BB8 text21 CODE >15:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1BBA text21 CODE >13:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1BCE text21 CODE >18:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1BE2 text21 CODE >19:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1BE4 text21 CODE >17:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1BF4 text21 CODE >21:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1C0C text21 CODE >22:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1C20 text21 CODE >23:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1B16 text20 CODE >58:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1B16 text20 CODE >60:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1B1A text20 CODE >61:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1B1E text20 CODE >62:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1B32 text20 CODE >63:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1B34 text20 CODE >61:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1B48 text20 CODE >66:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1B5C text20 CODE >67:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1B5E text20 CODE >65:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1B6E text20 CODE >69:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1B86 text20 CODE >70:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1B9A text20 CODE >71:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+FF0 text19 CODE >143:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+FF0 text19 CODE >144:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1002 text19 CODE >145:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1016 text19 CODE >146:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+102C text19 CODE >147:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1030 text19 CODE >148:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1044 text19 CODE >149:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1058 text19 CODE >150:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+106E text19 CODE >151:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1072 text19 CODE >152:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1086 text19 CODE >153:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+109A text19 CODE >154:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+10B0 text19 CODE >155:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+10B4 text19 CODE >156:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+10C8 text19 CODE >157:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+10DC text19 CODE >159:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+10E0 text19 CODE >160:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+10F4 text19 CODE >161:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1108 text19 CODE >163:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+110C text19 CODE >164:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1120 text19 CODE >165:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1134 text19 CODE >166:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+114A text19 CODE >167:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+114E text19 CODE >168:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1162 text19 CODE >169:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1176 text19 CODE >170:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1190 text19 CODE >171:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+1190 text19 CODE >173:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color_instructions.c
+241E text18 CODE >7:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\timers.c
+241E text18 CODE >9:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\timers.c
+2426 text18 CODE >10:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\timers.c
+2428 text18 CODE >11:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\timers.c
+2430 text18 CODE >12:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\timers.c
+2432 text18 CODE >15:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\timers.c
+2436 text18 CODE >16:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\timers.c
+243A text18 CODE >17:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\timers.c
+243C text18 CODE >18:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\timers.c
+229A text17 CODE >51:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+229C text17 CODE >54:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+22A0 text17 CODE >55:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+22A4 text17 CODE >56:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+22A8 text17 CODE >57:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+22AC text17 CODE >58:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+22B0 text17 CODE >59:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+22D6 text17 CODE >60:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+22D8 text17 CODE >61:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+22DA text17 CODE >62:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+24F6 text16 CODE >33:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+24F6 text16 CODE >35:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+24FA text16 CODE >36:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+24FE text16 CODE >37:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+2164 text15 CODE >60:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+2164 text15 CODE >63:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+2168 text15 CODE >64:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+216E text15 CODE >65:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+2174 text15 CODE >66:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+2178 text15 CODE >67:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+217E text15 CODE >68:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+218C text15 CODE >69:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+21A6 text15 CODE >70:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+21AA text15 CODE >71:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+21B2 text15 CODE >72:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+2114 text14 CODE >74:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+2114 text14 CODE >77:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+2118 text14 CODE >78:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+211E text14 CODE >79:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+2124 text14 CODE >80:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+2128 text14 CODE >81:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+212E text14 CODE >82:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+213C text14 CODE >83:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+2156 text14 CODE >84:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+215A text14 CODE >85:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+2162 text14 CODE >86:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+20C4 text13 CODE >46:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+20C4 text13 CODE >49:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+20C8 text13 CODE >50:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+20CE text13 CODE >51:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+20D4 text13 CODE >52:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+20D8 text13 CODE >53:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+20DE text13 CODE >54:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+20EC text13 CODE >55:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+2106 text13 CODE >56:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+210A text13 CODE >57:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+2112 text13 CODE >58:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+2074 text12 CODE >32:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+2074 text12 CODE >35:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+2078 text12 CODE >36:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+207E text12 CODE >37:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+2084 text12 CODE >38:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+2088 text12 CODE >39:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+208E text12 CODE >40:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+209C text12 CODE >41:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+20B6 text12 CODE >42:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+20BA text12 CODE >43:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+20C2 text12 CODE >44:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+1EAE text11 CODE >90:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+1EAE text11 CODE >92:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+1EC2 text11 CODE >93:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+1EDA text11 CODE >94:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+1EF2 text11 CODE >95:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+1F0A text11 CODE >96:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+2528 text10 CODE >17:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\LED_Buttons.c
+2528 text10 CODE >18:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\LED_Buttons.c
+252A text10 CODE >19:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\LED_Buttons.c
+252C text10 CODE >20:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\LED_Buttons.c
+252E text10 CODE >21:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\LED_Buttons.c
+2310 text9 CODE >4:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+2310 text9 CODE >7:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+231A text9 CODE >8:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+231C text9 CODE >9:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+2320 text9 CODE >12:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+2322 text9 CODE >13:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+2324 text9 CODE >14:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+2326 text9 CODE >15:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+2328 text9 CODE >16:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+232C text9 CODE >17:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+2330 text9 CODE >18:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+2334 text9 CODE >19:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+2338 text9 CODE >20:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\i2c.c
+22DC text8 CODE >6:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+22DC text8 CODE >9:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+22E0 text8 CODE >12:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+22EA text8 CODE >13:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+22FA text8 CODE >16:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+2304 text8 CODE >19:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
+230E text8 CODE >20:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
 AA2 text7 CODE >11:D:\MPLAB_COMPILER\pic\sources\c99\common\sprcdiv.c
 AA2 text7 CODE >26:D:\MPLAB_COMPILER\pic\sources\c99\common\sprcdiv.c
 AA8 text7 CODE >27:D:\MPLAB_COMPILER\pic\sources\c99\common\sprcdiv.c
@@ -760,24 +773,24 @@ A86 text6 CODE >199:D:\MPLAB_COMPILER\pic\sources\c99\common\sprcmul.c
 A8C text6 CODE >201:D:\MPLAB_COMPILER\pic\sources\c99\common\sprcmul.c
 A90 text6 CODE >203:D:\MPLAB_COMPILER\pic\sources\c99\common\sprcmul.c
 AA0 text6 CODE >205:D:\MPLAB_COMPILER\pic\sources\c99\common\sprcmul.c
-13EA text5 CODE >43:D:\MPLAB_COMPILER\pic\sources\c99\common\fltol.c
-13EA text5 CODE >47:D:\MPLAB_COMPILER\pic\sources\c99\common\fltol.c
-1400 text5 CODE >48:D:\MPLAB_COMPILER\pic\sources\c99\common\fltol.c
-1414 text5 CODE >49:D:\MPLAB_COMPILER\pic\sources\c99\common\fltol.c
-1440 text5 CODE >50:D:\MPLAB_COMPILER\pic\sources\c99\common\fltol.c
-1442 text5 CODE >51:D:\MPLAB_COMPILER\pic\sources\c99\common\fltol.c
-1452 text5 CODE >52:D:\MPLAB_COMPILER\pic\sources\c99\common\fltol.c
-1456 text5 CODE >53:D:\MPLAB_COMPILER\pic\sources\c99\common\fltol.c
-1464 text5 CODE >54:D:\MPLAB_COMPILER\pic\sources\c99\common\fltol.c
-147C text5 CODE >57:D:\MPLAB_COMPILER\pic\sources\c99\common\fltol.c
-1490 text5 CODE >60:D:\MPLAB_COMPILER\pic\sources\c99\common\fltol.c
-14A4 text5 CODE >63:D:\MPLAB_COMPILER\pic\sources\c99\common\fltol.c
-14AE text5 CODE >64:D:\MPLAB_COMPILER\pic\sources\c99\common\fltol.c
-14B0 text5 CODE >62:D:\MPLAB_COMPILER\pic\sources\c99\common\fltol.c
-14C0 text5 CODE >67:D:\MPLAB_COMPILER\pic\sources\c99\common\fltol.c
-14D0 text5 CODE >68:D:\MPLAB_COMPILER\pic\sources\c99\common\fltol.c
-14E0 text5 CODE >69:D:\MPLAB_COMPILER\pic\sources\c99\common\fltol.c
-14F0 text5 CODE >70:D:\MPLAB_COMPILER\pic\sources\c99\common\fltol.c
+1470 text5 CODE >43:D:\MPLAB_COMPILER\pic\sources\c99\common\fltol.c
+1470 text5 CODE >47:D:\MPLAB_COMPILER\pic\sources\c99\common\fltol.c
+1486 text5 CODE >48:D:\MPLAB_COMPILER\pic\sources\c99\common\fltol.c
+149A text5 CODE >49:D:\MPLAB_COMPILER\pic\sources\c99\common\fltol.c
+14C6 text5 CODE >50:D:\MPLAB_COMPILER\pic\sources\c99\common\fltol.c
+14C8 text5 CODE >51:D:\MPLAB_COMPILER\pic\sources\c99\common\fltol.c
+14D8 text5 CODE >52:D:\MPLAB_COMPILER\pic\sources\c99\common\fltol.c
+14DC text5 CODE >53:D:\MPLAB_COMPILER\pic\sources\c99\common\fltol.c
+14EA text5 CODE >54:D:\MPLAB_COMPILER\pic\sources\c99\common\fltol.c
+1502 text5 CODE >57:D:\MPLAB_COMPILER\pic\sources\c99\common\fltol.c
+1516 text5 CODE >60:D:\MPLAB_COMPILER\pic\sources\c99\common\fltol.c
+152A text5 CODE >63:D:\MPLAB_COMPILER\pic\sources\c99\common\fltol.c
+1534 text5 CODE >64:D:\MPLAB_COMPILER\pic\sources\c99\common\fltol.c
+1536 text5 CODE >62:D:\MPLAB_COMPILER\pic\sources\c99\common\fltol.c
+1546 text5 CODE >67:D:\MPLAB_COMPILER\pic\sources\c99\common\fltol.c
+1556 text5 CODE >68:D:\MPLAB_COMPILER\pic\sources\c99\common\fltol.c
+1566 text5 CODE >69:D:\MPLAB_COMPILER\pic\sources\c99\common\fltol.c
+1576 text5 CODE >70:D:\MPLAB_COMPILER\pic\sources\c99\common\fltol.c
 E3C text4 CODE >10:D:\MPLAB_COMPILER\pic\sources\c99\common\xxtofl.c
 E3E text4 CODE >15:D:\MPLAB_COMPILER\pic\sources\c99\common\xxtofl.c
 E5C text4 CODE >16:D:\MPLAB_COMPILER\pic\sources\c99\common\xxtofl.c
@@ -842,135 +855,136 @@ FEE text4 CODE >44:D:\MPLAB_COMPILER\pic\sources\c99\common\xxtofl.c
 670 text3 CODE >138:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
 674 text3 CODE >139:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
 676 text3 CODE >140:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\color.c
-16CE text2 CODE >151:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-16CE text2 CODE >154:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-16DE text2 CODE >155:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-16EE text2 CODE >157:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-16FE text2 CODE >158:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-170E text2 CODE >162:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1736 text2 CODE >163:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-175E text2 CODE >165:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1768 text2 CODE >166:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1772 text2 CODE >168:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-177E text2 CODE >169:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-178A text2 CODE >170:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-17A2 text2 CODE >172:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1A00 text1 CODE >5:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1A00 text1 CODE >7:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1A02 text1 CODE >8:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1A04 text1 CODE >9:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1A06 text1 CODE >10:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1A08 text1 CODE >11:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1A0A text1 CODE >12:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1A0C text1 CODE >13:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1A0E text1 CODE >14:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1A10 text1 CODE >17:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1A16 text1 CODE >18:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1A1A text1 CODE >19:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1A1E text1 CODE >20:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1A22 text1 CODE >23:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1A2A text1 CODE >24:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1A2E text1 CODE >25:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1A36 text1 CODE >29:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1A3A text1 CODE >30:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1A3C text1 CODE >34:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1A40 text1 CODE >35:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1A44 text1 CODE >36:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1A4A text1 CODE >37:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1A4E text1 CODE >40:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1A52 text1 CODE >41:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1A56 text1 CODE >42:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1A5A text1 CODE >43:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1A5E text1 CODE >46:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1A60 text1 CODE >47:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1A68 text1 CODE >48:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1A6A text1 CODE >50:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1A6C text1 CODE >51:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1A74 text1 CODE >52:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1A76 text1 CODE >54:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1A78 text1 CODE >55:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1A80 text1 CODE >56:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1A82 text1 CODE >58:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1A84 text1 CODE >59:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1A8C text1 CODE >60:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-1A8E text1 CODE >61:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
-115C text0 CODE >21:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
-115C text0 CODE >25:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
-1166 text0 CODE >26:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
-116E text0 CODE >27:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
-1176 text0 CODE >28:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
-117E text0 CODE >30:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
-1182 text0 CODE >31:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
-1186 text0 CODE >32:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
-118A text0 CODE >34:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
-118E text0 CODE >37:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
-119A text0 CODE >41:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
-11A0 text0 CODE >42:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
-11A4 text0 CODE >43:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
-11A8 text0 CODE >44:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
-11B0 text0 CODE >45:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
-11B8 text0 CODE >46:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
-11BE text0 CODE >48:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
-11C2 text0 CODE >49:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
-11C6 text0 CODE >50:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
-11CA text0 CODE >51:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
-11D2 text0 CODE >52:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
-11DA text0 CODE >53:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
-11E0 text0 CODE >56:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
-11E0 text0 CODE >57:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
-11E4 text0 CODE >59:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
-11F0 text0 CODE >60:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
-1202 text0 CODE >62:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
-1206 text0 CODE >63:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
-1216 text0 CODE >64:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
-122A text0 CODE >65:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
-122E text0 CODE >66:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
-1232 text0 CODE >68:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
-1242 text0 CODE >69:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
-1244 text0 CODE >71:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
-1248 text0 CODE >72:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
-125C text0 CODE >73:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
-1260 text0 CODE >71:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
-1270 text0 CODE >75:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
-1288 text0 CODE >76:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
-128A text0 CODE >78:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
-12AE text0 CODE >79:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
-21CA cinit CODE >13544:C:\Users\User\AppData\Local\Temp\xcAsi94.s
-21CA cinit CODE >13546:C:\Users\User\AppData\Local\Temp\xcAsi94.s
-21CA cinit CODE >13549:C:\Users\User\AppData\Local\Temp\xcAsi94.s
-21CA cinit CODE >13616:C:\Users\User\AppData\Local\Temp\xcAsi94.s
-21CC cinit CODE >13617:C:\Users\User\AppData\Local\Temp\xcAsi94.s
-21CE cinit CODE >13618:C:\Users\User\AppData\Local\Temp\xcAsi94.s
-21D0 cinit CODE >13619:C:\Users\User\AppData\Local\Temp\xcAsi94.s
-21D2 cinit CODE >13620:C:\Users\User\AppData\Local\Temp\xcAsi94.s
-21D4 cinit CODE >13621:C:\Users\User\AppData\Local\Temp\xcAsi94.s
-21D6 cinit CODE >13622:C:\Users\User\AppData\Local\Temp\xcAsi94.s
-21D8 cinit CODE >13623:C:\Users\User\AppData\Local\Temp\xcAsi94.s
-21DC cinit CODE >13624:C:\Users\User\AppData\Local\Temp\xcAsi94.s
-21DE cinit CODE >13625:C:\Users\User\AppData\Local\Temp\xcAsi94.s
-21E2 cinit CODE >13629:C:\Users\User\AppData\Local\Temp\xcAsi94.s
-21E6 cinit CODE >13630:C:\Users\User\AppData\Local\Temp\xcAsi94.s
-21E8 cinit CODE >13631:C:\Users\User\AppData\Local\Temp\xcAsi94.s
-21E8 cinit CODE >13632:C:\Users\User\AppData\Local\Temp\xcAsi94.s
-21EA cinit CODE >13633:C:\Users\User\AppData\Local\Temp\xcAsi94.s
-21EC cinit CODE >13634:C:\Users\User\AppData\Local\Temp\xcAsi94.s
-21EE cinit CODE >13637:C:\Users\User\AppData\Local\Temp\xcAsi94.s
-21F2 cinit CODE >13638:C:\Users\User\AppData\Local\Temp\xcAsi94.s
-21F4 cinit CODE >13639:C:\Users\User\AppData\Local\Temp\xcAsi94.s
-21F4 cinit CODE >13640:C:\Users\User\AppData\Local\Temp\xcAsi94.s
-21F6 cinit CODE >13641:C:\Users\User\AppData\Local\Temp\xcAsi94.s
-21F8 cinit CODE >13642:C:\Users\User\AppData\Local\Temp\xcAsi94.s
-21FA cinit CODE >13645:C:\Users\User\AppData\Local\Temp\xcAsi94.s
-21FC cinit CODE >13646:C:\Users\User\AppData\Local\Temp\xcAsi94.s
-21FE cinit CODE >13647:C:\Users\User\AppData\Local\Temp\xcAsi94.s
-2200 cinit CODE >13648:C:\Users\User\AppData\Local\Temp\xcAsi94.s
-2202 cinit CODE >13649:C:\Users\User\AppData\Local\Temp\xcAsi94.s
-2204 cinit CODE >13650:C:\Users\User\AppData\Local\Temp\xcAsi94.s
-2206 cinit CODE >13656:C:\Users\User\AppData\Local\Temp\xcAsi94.s
-2206 cinit CODE >13658:C:\Users\User\AppData\Local\Temp\xcAsi94.s
-2208 cinit CODE >13659:C:\Users\User\AppData\Local\Temp\xcAsi94.s
-220A cinit CODE >13660:C:\Users\User\AppData\Local\Temp\xcAsi94.s
-220C cinit CODE >13661:C:\Users\User\AppData\Local\Temp\xcAsi94.s
+1754 text2 CODE >151:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1754 text2 CODE >154:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1764 text2 CODE >155:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1774 text2 CODE >157:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1784 text2 CODE >158:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1794 text2 CODE >162:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+17BC text2 CODE >163:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+17E4 text2 CODE >165:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+17EE text2 CODE >166:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+17F8 text2 CODE >168:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1804 text2 CODE >169:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1810 text2 CODE >170:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1828 text2 CODE >172:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1A86 text1 CODE >5:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1A86 text1 CODE >7:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1A88 text1 CODE >8:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1A8A text1 CODE >9:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1A8C text1 CODE >10:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1A8E text1 CODE >11:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1A90 text1 CODE >12:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1A92 text1 CODE >13:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1A94 text1 CODE >14:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1A96 text1 CODE >17:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1A9C text1 CODE >18:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1AA0 text1 CODE >19:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1AA4 text1 CODE >20:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1AA8 text1 CODE >23:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1AB0 text1 CODE >24:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1AB4 text1 CODE >25:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1ABC text1 CODE >29:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1AC0 text1 CODE >30:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1AC2 text1 CODE >34:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1AC6 text1 CODE >35:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1ACA text1 CODE >36:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1AD0 text1 CODE >37:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1AD4 text1 CODE >40:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1AD8 text1 CODE >41:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1ADC text1 CODE >42:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1AE0 text1 CODE >43:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1AE4 text1 CODE >46:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1AE6 text1 CODE >47:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1AEE text1 CODE >48:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1AF0 text1 CODE >50:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1AF2 text1 CODE >51:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1AFA text1 CODE >52:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1AFC text1 CODE >54:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1AFE text1 CODE >55:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1B06 text1 CODE >56:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1B08 text1 CODE >58:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1B0A text1 CODE >59:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1B12 text1 CODE >60:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1B14 text1 CODE >61:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\dc_motor.c
+1192 text0 CODE >22:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
+1192 text0 CODE >26:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
+119C text0 CODE >27:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
+11A4 text0 CODE >28:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
+11AC text0 CODE >29:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
+11B4 text0 CODE >31:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
+11B8 text0 CODE >32:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
+11BC text0 CODE >33:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
+11C0 text0 CODE >35:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
+11C4 text0 CODE >38:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
+11D0 text0 CODE >42:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
+11D6 text0 CODE >43:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
+11DA text0 CODE >44:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
+11DE text0 CODE >45:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
+11E6 text0 CODE >46:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
+11EE text0 CODE >47:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
+11F4 text0 CODE >49:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
+11F8 text0 CODE >50:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
+11FC text0 CODE >51:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
+1200 text0 CODE >52:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
+1208 text0 CODE >53:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
+1210 text0 CODE >54:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
+1216 text0 CODE >57:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
+1216 text0 CODE >58:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
+121A text0 CODE >60:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
+1226 text0 CODE >61:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
+1238 text0 CODE >63:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
+123C text0 CODE >64:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
+124C text0 CODE >65:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
+1260 text0 CODE >66:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
+1264 text0 CODE >67:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
+1268 text0 CODE >69:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
+1278 text0 CODE >70:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
+128E text0 CODE >71:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
+1290 text0 CODE >73:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
+1294 text0 CODE >74:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
+12A8 text0 CODE >75:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
+12AC text0 CODE >73:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
+12BE text0 CODE >77:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
+12D6 text0 CODE >78:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
+12D8 text0 CODE >80:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
+12FC text0 CODE >81:D:\ECM_Projects\final-project-dharshannan-and-pablo.X\main_motor.c
+2254 cinit CODE >13550:C:\Users\User\AppData\Local\Temp\xcAs1j0.s
+2254 cinit CODE >13552:C:\Users\User\AppData\Local\Temp\xcAs1j0.s
+2254 cinit CODE >13555:C:\Users\User\AppData\Local\Temp\xcAs1j0.s
+2254 cinit CODE >13618:C:\Users\User\AppData\Local\Temp\xcAs1j0.s
+2256 cinit CODE >13619:C:\Users\User\AppData\Local\Temp\xcAs1j0.s
+2258 cinit CODE >13620:C:\Users\User\AppData\Local\Temp\xcAs1j0.s
+225A cinit CODE >13621:C:\Users\User\AppData\Local\Temp\xcAs1j0.s
+225C cinit CODE >13622:C:\Users\User\AppData\Local\Temp\xcAs1j0.s
+225E cinit CODE >13623:C:\Users\User\AppData\Local\Temp\xcAs1j0.s
+2260 cinit CODE >13624:C:\Users\User\AppData\Local\Temp\xcAs1j0.s
+2262 cinit CODE >13625:C:\Users\User\AppData\Local\Temp\xcAs1j0.s
+2266 cinit CODE >13626:C:\Users\User\AppData\Local\Temp\xcAs1j0.s
+2268 cinit CODE >13627:C:\Users\User\AppData\Local\Temp\xcAs1j0.s
+226C cinit CODE >13631:C:\Users\User\AppData\Local\Temp\xcAs1j0.s
+2270 cinit CODE >13632:C:\Users\User\AppData\Local\Temp\xcAs1j0.s
+2272 cinit CODE >13633:C:\Users\User\AppData\Local\Temp\xcAs1j0.s
+2272 cinit CODE >13634:C:\Users\User\AppData\Local\Temp\xcAs1j0.s
+2274 cinit CODE >13635:C:\Users\User\AppData\Local\Temp\xcAs1j0.s
+2276 cinit CODE >13636:C:\Users\User\AppData\Local\Temp\xcAs1j0.s
+2278 cinit CODE >13639:C:\Users\User\AppData\Local\Temp\xcAs1j0.s
+227C cinit CODE >13640:C:\Users\User\AppData\Local\Temp\xcAs1j0.s
+227E cinit CODE >13641:C:\Users\User\AppData\Local\Temp\xcAs1j0.s
+227E cinit CODE >13642:C:\Users\User\AppData\Local\Temp\xcAs1j0.s
+2280 cinit CODE >13643:C:\Users\User\AppData\Local\Temp\xcAs1j0.s
+2282 cinit CODE >13644:C:\Users\User\AppData\Local\Temp\xcAs1j0.s
+2284 cinit CODE >13647:C:\Users\User\AppData\Local\Temp\xcAs1j0.s
+2288 cinit CODE >13648:C:\Users\User\AppData\Local\Temp\xcAs1j0.s
+228A cinit CODE >13649:C:\Users\User\AppData\Local\Temp\xcAs1j0.s
+228A cinit CODE >13650:C:\Users\User\AppData\Local\Temp\xcAs1j0.s
+228C cinit CODE >13651:C:\Users\User\AppData\Local\Temp\xcAs1j0.s
+228E cinit CODE >13652:C:\Users\User\AppData\Local\Temp\xcAs1j0.s
+2290 cinit CODE >13658:C:\Users\User\AppData\Local\Temp\xcAs1j0.s
+2290 cinit CODE >13660:C:\Users\User\AppData\Local\Temp\xcAs1j0.s
+2292 cinit CODE >13661:C:\Users\User\AppData\Local\Temp\xcAs1j0.s
+2294 cinit CODE >13662:C:\Users\User\AppData\Local\Temp\xcAs1j0.s
+2296 cinit CODE >13663:C:\Users\User\AppData\Local\Temp\xcAs1j0.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -983,85 +997,90 @@ FEE text4 CODE >44:D:\MPLAB_COMPILER\pic\sources\c99\common\xxtofl.c
 # was defined in a psect then <psect> will be "-". File-name
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
+__LdataBANK0 0 0 ABS 0 dataBANK0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__Hspace_0 2462 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__Hspace_1 150 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__Hspace_0 2532 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__Hspace_1 13C 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Hspace_2 0 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Hspace_4 60000C 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 color_writetoaddr@address C 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_of_RedInstructions 1B9C 0 CODE 0 text21 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__HidataBANK0 0 0 ABS 0 idataBANK0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of_RedInstructions 1C22 0 CODE 0 text21 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\User\AppData\Local\Temp\xcAsi94.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\User\AppData\Local\Temp\xcAs1j0.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 setMotorPWM@m 16 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_of_interrupts_clear_colorclick 23E8 0 CODE 0 text40 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of_interrupts_clear_colorclick 24B8 0 CODE 0 text41 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __end_of_LowISR 58 0 CODE 0 intcodelo dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-main@b CC 0 BANK0 1 cstackBANK0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+main@b DE 0 BANK0 1 cstackBANK0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 turnRight90@a 26 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Lsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _T2PR FBC 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\User\AppData\Local\Temp\xcAsi94.o
-_main 115C 0 CODE 0 text0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-_stop 187A 0 CODE 0 text33 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\User\AppData\Local\Temp\xcAs1j0.o
+_main 1192 0 CODE 0 text0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_stop 1900 0 CODE 0 text33 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 btemp 57 0 COMRAM 1 temp dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-_tmr_ovf B2 0 BANK0 1 bssBANK0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-start 58 0 CODE 0 init C:\Users\User\AppData\Local\Temp\xcAsi94.o
+_tmr_ovf 74 0 BANK0 1 bssBANK0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+start 58 0 CODE 0 init C:\Users\User\AppData\Local\Temp\xcAs1j0.o
 ___flmul@aexp 41 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 ___flmul@bexp 42 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 ___flmul@prod 43 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 ___flmul@sign 3C 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 ___flmul@temp 47 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-_turnRight135 1EE0 0 CODE 0 text25 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_turnRight135 1F66 0 CODE 0 text25 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 ?___wmul 9 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _RxBufReadCnt 53 0 COMRAM 1 bssCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__LidataBANK0 0 0 ABS 0 idataBANK0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 color_read_Green@tmp 12 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-detect_color@color C6 0 BANK0 1 cstackBANK0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+detect_color@color D8 0 BANK0 1 cstackBANK0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+AppendMoves@moves_index 9 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Hpowerup 58 0 CODE 0 powerup dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 ttemp5 58 0 COMRAM 1 temp dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 ttemp6 5B 0 COMRAM 1 temp dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 ttemp7 5F 0 COMRAM 1 temp dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 PinkInstructions@mL 27 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 PinkInstructions@mR 29 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__accesstop 60 0 ABS 0 - C:\Users\User\AppData\Local\Temp\xcAsi94.o
-intlevel0 0 0 CODE 0 text C:\Users\User\AppData\Local\Temp\xcAsi94.o
-intlevel1 0 0 CODE 0 text C:\Users\User\AppData\Local\Temp\xcAsi94.o
-intlevel2 0 0 CODE 0 text C:\Users\User\AppData\Local\Temp\xcAsi94.o
-intlevel3 0 0 CODE 0 text C:\Users\User\AppData\Local\Temp\xcAsi94.o
+__accesstop 60 0 ABS 0 - C:\Users\User\AppData\Local\Temp\xcAs1j0.o
+intlevel0 0 0 CODE 0 text C:\Users\User\AppData\Local\Temp\xcAs1j0.o
+intlevel1 0 0 CODE 0 text C:\Users\User\AppData\Local\Temp\xcAs1j0.o
+intlevel2 0 0 CODE 0 text C:\Users\User\AppData\Local\Temp\xcAs1j0.o
+intlevel3 0 0 CODE 0 text C:\Users\User\AppData\Local\Temp\xcAs1j0.o
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-_RedInstructions 1B16 0 CODE 0 text21 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_RedInstructions 1B9C 0 CODE 0 text21 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 RedInstructions@mL 27 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 RedInstructions@mR 29 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 wtemp8 58 0 COMRAM 1 temp dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-main@initial_color CE 0 BANK0 1 cstackBANK0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+main@initial_color E0 0 BANK0 1 cstackBANK0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Hifardata 0 0 CODE 0 ifardata dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_AppendTime 23FA 0 CODE 0 text48 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Hclrtext 0 0 ABS 0 clrtext dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__pidataCOMRAM 2460 0 CODE 0 idataCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 PinkInstructions@a 2D 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 ___wmul@multiplicand B 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_of_Interrupts_init 234C 0 CODE 0 text39 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\User\AppData\Local\Temp\xcAsi94.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\User\AppData\Local\Temp\xcAsi94.o
-_int_threshold_high 55 0 COMRAM 1 dataCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of_Interrupts_init 23D6 0 CODE 0 text40 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\User\AppData\Local\Temp\xcAs1j0.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\User\AppData\Local\Temp\xcAs1j0.o
+_int_threshold_high FA 0 BANK0 1 dataBANK0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 I2C_2_Master_Read@ack B 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 I2C_2_Master_Read@tmp C 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _CCPR1H FAA 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _CCPR2H FA6 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _CCPR3H F25 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _CCPR4H F21 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 color_writetoaddr@value B 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Hintcode_body 0 0 ABS 0 intcode_body dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_of_turnRight90 1EE0 0 CODE 0 text22 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_of___wmul 2326 0 CODE 0 text36 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-_anti_moves_array 128 0 BANK1 1 bssBANK1 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of_turnRight90 1F66 0 CODE 0 text22 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of___wmul 23B0 0 CODE 0 text36 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_anti_moves_array 75 0 BANK0 1 bssBANK0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _TxBufWriteCnt 52 0 COMRAM 1 bssCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+AppendMoves@anti_moves_array B 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 fullSpeedBackwards@mL 1C 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 fullSpeedBackwards@mR 1E 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_of_turnRight135 1F3A 0 CODE 0 text25 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+AppendTime@time_array B 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+AppendTime@time_index 9 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of_turnRight135 1FC0 0 CODE 0 text25 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 ___fldiv@aexp 2F 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 ___fldiv@bexp 2E 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 ___fldiv@sign 27 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
@@ -1072,28 +1091,29 @@ LightBlueInstructions@mL 27 0 COMRAM 1 cstackCOMRAM dist/default/production\fina
 LightBlueInstructions@mR 29 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __end_of___fldiv E3C 0 CODE 0 text7 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __end_of___flmul AA2 0 CODE 0 text6 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_of___fltol 14F2 0 CODE 0 text5 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_of___lwdiv 1E28 0 CODE 0 text37 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_of_YellowInstructions 1B16 0 CODE 0 text20 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of___fltol 1578 0 CODE 0 text5 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of___lwdiv 1EAE 0 CODE 0 text37 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of_YellowInstructions 1B9C 0 CODE 0 text20 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 ___lwdiv@quotient 13 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__LidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 ___fldiv@a 1B 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 ___fldiv@b 17 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of_AppendTime 241E 0 CODE 0 text48 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 ___flmul@a 34 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 ___flmul@b 30 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 YellowInstructions@mL 27 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 YellowInstructions@mR 29 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _LowISR 18 0 CODE 0 intcodelo dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Lintcodelo 18 0 CODE 0 intcodelo dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-_Interrupts_init 2326 0 CODE 0 text39 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_ofi2_I2C_2_Master_Start 2458 0 CODE 0 text54 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_ofi2_I2C_2_Master_Write 2426 0 CODE 0 text52 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_Interrupts_init 23B0 0 CODE 0 text40 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_ofi2_I2C_2_Master_Start 2528 0 CODE 0 text56 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_ofi2_I2C_2_Master_Write 24F6 0 CODE 0 text54 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _SSP2CON1bits ED9 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-start_initialization 21CA 0 CODE 0 cinit dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+start_initialization 2254 0 CODE 0 cinit dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _SSP2CON2bits EDA 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 OrangeInstructions@mL 27 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 OrangeInstructions@mR 29 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-_setMotorPWM FF0 0 CODE 0 text35 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_AppendMoves 23D6 0 CODE 0 text38 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_setMotorPWM 1304 0 CODE 0 text35 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _TRISAbits F81 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _TRISBbits F82 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
@@ -1103,9 +1123,9 @@ _TRISEbits F85 0 ABS 0 - dist/default/production\final-project-dharshannan-and-p
 _TRISFbits F86 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _TRISGbits F87 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _TRISHbits F88 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_ofi2_interrupts_clear_colorclick 2402 0 CODE 0 text49 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_ofi2_interrupts_clear_colorclick 24D2 0 CODE 0 text51 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 ___rparam_used 1 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-_YellowInstructions 1A90 0 CODE 0 text20 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_YellowInstructions 1B16 0 CODE 0 text20 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _RC0PPS E62 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _RC4REG EE3 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _RC7PPS E69 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
@@ -1115,21 +1135,21 @@ _RE2PPS E74 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pabl
 _RE4PPS E76 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _RG6PPS E88 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _RX4PPS E15 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__pcstackBANK0 B4 0 BANK0 1 cstackBANK0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__pcstackBANK0 C6 0 BANK0 1 cstackBANK0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _IPR0bits E1F 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_of_I2C_2_Master_Start 2444 0 CODE 0 text45 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_of_I2C_2_Master_Write 241A 0 CODE 0 text43 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of_I2C_2_Master_Start 2514 0 CODE 0 text46 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of_I2C_2_Master_Write 24EA 0 CODE 0 text44 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _TX4REG EE4 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 LightBlueInstructions@a 2D 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_of_turnLeft135 1F94 0 CODE 0 text28 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-detect_color@dist_B C9 0 BANK0 1 cstackBANK0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-detect_color@dist_G C8 0 BANK0 1 cstackBANK0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-detect_color@dist_R C7 0 BANK0 1 cstackBANK0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of_turnLeft135 201A 0 CODE 0 text28 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+detect_color@dist_B DB 0 BANK0 1 cstackBANK0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+detect_color@dist_G DA 0 BANK0 1 cstackBANK0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+detect_color@dist_R D9 0 BANK0 1 cstackBANK0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 I2C_2_Master_Write@data_byte A 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-isa$xinst 0 0 ABS 0 - C:\Users\User\AppData\Local\Temp\xcAsi94.o
-detect_color@tempval B8 0 BANK0 1 cstackBANK0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-i2_I2C_2_Master_Idle 22D8 0 CODE 0 text55 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-i2_I2C_2_Master_Stop 2444 0 CODE 0 text53 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+isa$xinst 0 0 ABS 0 - C:\Users\User\AppData\Local\Temp\xcAs1j0.o
+detect_color@tempval CA 0 BANK0 1 cstackBANK0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+i2_I2C_2_Master_Idle 2362 0 CODE 0 text57 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+i2_I2C_2_Master_Stop 2514 0 CODE 0 text55 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 turnLeft@mL 1C 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 turnLeft@mR 1E 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 BlueInstructions@a 2D 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
@@ -1147,13 +1167,13 @@ __Hcinit 0 0 ABS 0 cinit dist/default/production\final-project-dharshannan-and-p
 __Hconst 0 0 CONST 0 const dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Hidata 0 0 CODE 0 idata dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Hidloc 200010 0 IDLOC 5 idloc dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-_color_read_Clear 208E 0 CODE 0 text14 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-_Update_RGBC 1E28 0 CODE 0 text11 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_color_read_Clear 2114 0 CODE 0 text14 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_Update_RGBC 1EAE 0 CODE 0 text11 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Hnvbit 0 0 COMRAM 1 nvbit dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-_color_read_Green 203E 0 CODE 0 text13 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_color_read_Green 20C4 0 CODE 0 text13 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Hparam 0 0 COMRAM 1 rparam dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Hrdata 0 0 COMRAM 1 rdata dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-i2_init_colorclick_interrupts 217C 0 CODE 0 text50 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+i2_init_colorclick_interrupts 2204 0 CODE 0 text52 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Hstack 0 0 STACK 2 stack dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Htext0 0 0 ABS 0 text0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Htext1 0 0 ABS 0 text1 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
@@ -1173,15 +1193,15 @@ __Hbank13 0 0 ABS 0 bank13 dist/default/production\final-project-dharshannan-and
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Hbigram 0 0 ABS 0 bigram dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Hbigsfr 0 0 ABS 0 bigsfr dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\User\AppData\Local\Temp\xcAsi94.o
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\User\AppData\Local\Temp\xcAs1j0.o
 turnLeft135@a 26 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 ___xxtofl@arg 13 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 ___xxtofl@exp 12 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 ___xxtofl@val 9 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 turnLeft90@mL 22 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 turnLeft90@mR 24 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-_moves_index B1 0 BANK0 1 bssBANK0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_of_HighISR 236E 0 CODE 0 intcode_body dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_moves_index 56 0 COMRAM 1 bssCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of_HighISR 247E 0 CODE 0 intcode_body dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Hcomram 0 0 ABS 0 comram dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Hconfig 30000C 0 CONFIG 4 config dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _T2HLTbits FBE 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
@@ -1213,9 +1233,9 @@ __Ltext6 0 0 ABS 0 text6 dist/default/production\final-project-dharshannan-and-p
 __Ltext7 0 0 ABS 0 text7 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Ltext8 0 0 ABS 0 text8 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Ltext9 0 0 ABS 0 text9 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-_I2C_2_Master_Start 243A 0 CODE 0 text45 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_I2C_2_Master_Start 250A 0 CODE 0 text46 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 initDCmotorsPWM@PWMperiod 9 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-_I2C_2_Master_Write 240E 0 CODE 0 text43 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_I2C_2_Master_Write 24DE 0 CODE 0 text44 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Hfarbss 0 0 FARRAM 0 farbss dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 ___flmul@grs 3D 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Lintcode_body 0 0 ABS 0 intcode_body dist/default/production\final-project-dharshannan-and-pablo.X.production.o
@@ -1238,48 +1258,48 @@ __Ltemp 57 0 COMRAM 1 temp dist/default/production\final-project-dharshannan-and
 __Ltext 0 0 ABS 0 text dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _SSP2CON2 EDA 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _SSP2STAT ED8 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-___wmul 2300 0 CODE 0 text36 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+___wmul 238A 0 CODE 0 text36 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _TxBufReadCnt 51 0 COMRAM 1 bssCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_of_init_colorclick_interrupts 217C 0 CODE 0 text41 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of_init_colorclick_interrupts 2204 0 CODE 0 text42 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 int$flags 57 0 COMRAM 1 temp dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-_turnLeft 15E0 0 CODE 0 text32 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_turnLeft 1666 0 CODE 0 text32 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-_Timer0_init 236E 0 CODE 0 text18 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-_turnLeft90 1F94 0 CODE 0 text31 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_Timer0_init 241E 0 CODE 0 text18 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_turnLeft90 201A 0 CODE 0 text31 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Hintret 0 0 ABS 0 intret dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Hirdata 0 0 CODE 0 irdata dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__S0 2462 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__S1 150 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__S0 2532 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__S1 13C 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __S4 0 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __S5 0 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-_interrupts_clear_colorclick 23CE 0 CODE 0 text40 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_interrupts_clear_colorclick 249E 0 CODE 0 text41 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 fullSpeedAhead@mL 1C 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 fullSpeedAhead@mR 1E 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_of_turnLeft 16CE 0 CODE 0 text32 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of_turnLeft 1754 0 CODE 0 text32 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _TX4STAbits EE8 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-_color_read_Red 1FEE 0 CODE 0 text12 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_color_read_Red 2074 0 CODE 0 text12 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 setMotorPWM@posDuty 1A 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _BAUD4CONbits EE9 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-i2_color_writetoaddr 23AE 0 CODE 0 text51 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__HidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_of_fullSpeedBackwards 187A 0 CODE 0 text34 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+i2_color_writetoaddr 247E 0 CODE 0 text53 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of_fullSpeedBackwards 1900 0 CODE 0 text34 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Hnvrram 0 0 COMRAM 1 nvrram dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 ___xxtofl E3C 0 CODE 0 text4 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _detect_color 5C 0 CODE 0 text3 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-int_func 234C 0 CODE 0 intcode_body dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+int_func 245E 0 CODE 0 intcode_body dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 turnRight@mL 1C 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 turnRight@mR 1E 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_of_MoveBuggy 13EA 0 CODE 0 text19 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of_MoveBuggy 1192 0 CODE 0 text19 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Lintentry 0 0 ABS 0 intentry dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-_color_click_init 2252 0 CODE 0 text8 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_color_click_init 22DC 0 CODE 0 text8 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Hramtop E00 0 RAM 0 ramtop dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-_PinkInstructions 1B9C 0 CODE 0 text23 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_PinkInstructions 1C22 0 CODE 0 text23 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Hrparam 0 0 COMRAM 1 rparam dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _CCPTMRS0bits FAD 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __end_of___xxtofl FF0 0 CODE 0 text4 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-_BlueInstructions 194E 0 CODE 0 text30 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_BlueInstructions 19D4 0 CODE 0 text30 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__pdataBANK0 FA 0 BANK0 1 dataBANK0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __activetblptr 0 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Hstruct 0 0 COMRAM 1 struct dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
@@ -1321,76 +1341,80 @@ __Htext43 0 0 ABS 0 text43 dist/default/production\final-project-dharshannan-and
 __Htext44 0 0 ABS 0 text44 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Htext45 0 0 ABS 0 text45 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Htext46 0 0 ABS 0 text46 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__Htext49 0 0 ABS 0 text49 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__Htext50 0 0 ABS 0 text50 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__Htext47 0 0 ABS 0 text47 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__Htext48 0 0 ABS 0 text48 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Htext51 0 0 ABS 0 text51 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Htext52 0 0 ABS 0 text52 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Htext53 0 0 ABS 0 text53 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Htext54 0 0 ABS 0 text54 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Htext55 0 0 ABS 0 text55 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_ofi2_I2C_2_Master_Idle 2300 0 CODE 0 text55 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_ofi2_I2C_2_Master_Stop 244E 0 CODE 0 text53 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_of_color_read_Clear 20DE 0 CODE 0 text14 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_of_color_read_Green 208E 0 CODE 0 text13 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-main@color_detected CD 0 BANK0 1 cstackBANK0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-_color_flag B3 0 BANK0 1 bssBANK0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__Htext56 0 0 ABS 0 text56 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__Htext57 0 0 ABS 0 text57 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_ofi2_I2C_2_Master_Idle 238A 0 CODE 0 text57 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_ofi2_I2C_2_Master_Stop 251E 0 CODE 0 text55 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of_color_read_Clear 2164 0 CODE 0 text14 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of_color_read_Green 2114 0 CODE 0 text13 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+main@color_detected DF 0 BANK0 1 cstackBANK0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_color_flag 55 0 COMRAM 1 bssCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _PIE0bits E29 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _PIE4bits E2D 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 turnRight135@mL 22 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 turnRight135@mR 24 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _RxBufWriteCnt 54 0 COMRAM 1 bssCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-_MoveBuggy 12B6 0 CODE 0 text19 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext10 2458 0 CODE 0 text10 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext11 1E28 0 CODE 0 text11 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext12 1FEE 0 CODE 0 text12 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext13 203E 0 CODE 0 text13 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext14 208E 0 CODE 0 text14 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext15 20DE 0 CODE 0 text15 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext16 2426 0 CODE 0 text16 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext17 2210 0 CODE 0 text17 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext18 236E 0 CODE 0 text18 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext19 12B6 0 CODE 0 text19 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext20 1A90 0 CODE 0 text20 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext21 1B16 0 CODE 0 text21 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext22 1E86 0 CODE 0 text22 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext23 1B9C 0 CODE 0 text23 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext24 1C22 0 CODE 0 text24 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext25 1EE0 0 CODE 0 text25 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext26 14F2 0 CODE 0 text26 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext27 1CA8 0 CODE 0 text27 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext28 1F3A 0 CODE 0 text28 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext29 1D2E 0 CODE 0 text29 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext30 194E 0 CODE 0 text30 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext31 1F94 0 CODE 0 text31 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext32 15E0 0 CODE 0 text32 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext33 187A 0 CODE 0 text33 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext34 17A4 0 CODE 0 text34 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext35 FF0 0 CODE 0 text35 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext36 2300 0 CODE 0 text36 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext37 1DB4 0 CODE 0 text37 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext38 2402 0 CODE 0 text38 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext39 2326 0 CODE 0 text39 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext40 23CE 0 CODE 0 text40 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext41 212E 0 CODE 0 text41 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext42 238E 0 CODE 0 text42 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext43 240E 0 CODE 0 text43 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext44 2430 0 CODE 0 text44 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext45 243A 0 CODE 0 text45 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext46 22B0 0 CODE 0 text46 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext49 23E8 0 CODE 0 text49 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext50 217C 0 CODE 0 text50 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext51 23AE 0 CODE 0 text51 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext52 241A 0 CODE 0 text52 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext53 2444 0 CODE 0 text53 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext54 244E 0 CODE 0 text54 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext55 22D8 0 CODE 0 text55 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-_fullSpeedBackwards 17A4 0 CODE 0 text34 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_MoveBuggy FF0 0 CODE 0 text19 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext10 2528 0 CODE 0 text10 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext11 1EAE 0 CODE 0 text11 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext12 2074 0 CODE 0 text12 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext13 20C4 0 CODE 0 text13 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext14 2114 0 CODE 0 text14 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext15 2164 0 CODE 0 text15 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext16 24F6 0 CODE 0 text16 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext17 229A 0 CODE 0 text17 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext18 241E 0 CODE 0 text18 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext19 FF0 0 CODE 0 text19 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext20 1B16 0 CODE 0 text20 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext21 1B9C 0 CODE 0 text21 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext22 1F0C 0 CODE 0 text22 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext23 1C22 0 CODE 0 text23 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext24 1CA8 0 CODE 0 text24 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext25 1F66 0 CODE 0 text25 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext26 1578 0 CODE 0 text26 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext27 1D2E 0 CODE 0 text27 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext28 1FC0 0 CODE 0 text28 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext29 1DB4 0 CODE 0 text29 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext30 19D4 0 CODE 0 text30 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext31 201A 0 CODE 0 text31 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext32 1666 0 CODE 0 text32 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext33 1900 0 CODE 0 text33 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext34 182A 0 CODE 0 text34 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext35 1304 0 CODE 0 text35 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext36 238A 0 CODE 0 text36 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext37 1E3A 0 CODE 0 text37 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext38 23D6 0 CODE 0 text38 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext39 24D2 0 CODE 0 text39 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext40 23B0 0 CODE 0 text40 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext41 249E 0 CODE 0 text41 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext42 21B4 0 CODE 0 text42 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext43 243E 0 CODE 0 text43 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext44 24DE 0 CODE 0 text44 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext45 2500 0 CODE 0 text45 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext46 250A 0 CODE 0 text46 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext47 233A 0 CODE 0 text47 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext48 23FA 0 CODE 0 text48 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext51 24B8 0 CODE 0 text51 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext52 2204 0 CODE 0 text52 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext53 247E 0 CODE 0 text53 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext54 24EA 0 CODE 0 text54 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext55 2514 0 CODE 0 text55 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext56 251E 0 CODE 0 text56 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext57 2362 0 CODE 0 text57 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_fullSpeedBackwards 182A 0 CODE 0 text34 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 ___fldiv AA2 0 CODE 0 text7 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 ___flmul 678 0 CODE 0 text6 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-___fltol 13EA 0 CODE 0 text5 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_of_turnLeft90 1FEE 0 CODE 0 text31 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__pintcode_body 234C 0 CODE 0 intcode_body dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-___lwdiv 1DB4 0 CODE 0 text37 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+___fltol 1470 0 CODE 0 text5 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of_turnLeft90 2074 0 CODE 0 text31 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__pintcode_body 245E 0 CODE 0 intcode_body dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+___lwdiv 1E3A 0 CODE 0 text37 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Lbank10 0 0 ABS 0 bank10 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Lbank11 0 0 ABS 0 bank11 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Lbank12 0 0 ABS 0 bank12 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
@@ -1399,10 +1423,10 @@ __Lbigbss 0 0 BIGRAM 1 bigbss dist/default/production\final-project-dharshannan-
 __Lbigram 0 0 ABS 0 bigram dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Lbigsfr 0 0 ABS 0 bigsfr dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 color_read_Red@tmp 12 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_of_color_read_Red 203E 0 CODE 0 text12 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of_color_read_Red 20C4 0 CODE 0 text12 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Lcomram 0 0 ABS 0 comram dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Lconfig 0 0 CONFIG 4 config dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_of_LightBlueInstructions 1D2E 0 CODE 0 text27 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of_LightBlueInstructions 1DB4 0 CODE 0 text27 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 ___wmul@multiplier 9 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _LATAbits F79 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _LATCbits F7B 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
@@ -1412,27 +1436,28 @@ _LATGbits F7F 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pa
 _LATHbits F80 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 ___fldiv@grs 2A 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 ___fldiv@rem 23 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_of_I2C_2_Master_Idle 22D8 0 CODE 0 text46 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_of_I2C_2_Master_Init 22B0 0 CODE 0 text9 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_of_I2C_2_Master_Read 2252 0 CODE 0 text17 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_of_I2C_2_Master_Stop 243A 0 CODE 0 text44 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of_I2C_2_Master_Idle 2362 0 CODE 0 text47 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of_I2C_2_Master_Init 233A 0 CODE 0 text9 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of_I2C_2_Master_Read 22DC 0 CODE 0 text17 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of_I2C_2_Master_Stop 250A 0 CODE 0 text45 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 ___lwdiv@divisor 11 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 ?_color_read_Red D 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-isa$std 1 0 ABS 0 - C:\Users\User\AppData\Local\Temp\xcAsi94.o
+isa$std 1 0 ABS 0 - C:\Users\User\AppData\Local\Temp\xcAs1j0.o
 ___fldiv@new_exp 28 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-_EUSART4RXbuf 9C 0 BANK0 1 bssBANK0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-_EUSART4TXbuf 60 0 BANK0 1 bssBANK0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_EUSART4RXbuf 60 0 BANK0 1 bssBANK0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_EUSART4TXbuf 100 0 BANK1 1 bssBANK1 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 YellowInstructions@a 2D 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-stackhi 0 0 ABS 0 - C:\Users\User\AppData\Local\Temp\xcAsi94.o
-stacklo 0 0 ABS 0 - C:\Users\User\AppData\Local\Temp\xcAsi94.o
+stackhi 0 0 ABS 0 - C:\Users\User\AppData\Local\Temp\xcAs1j0.o
+stacklo 0 0 ABS 0 - C:\Users\User\AppData\Local\Temp\xcAs1j0.o
 stop@mL 1C 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 stop@mR 1E 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Lintcode 8 0 CODE 0 intcode dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Lintret 0 0 ABS 0 intret dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Lirdata 0 0 CODE 0 irdata dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-_LightBlueInstructions 1CA8 0 CODE 0 text27 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_LightBlueInstructions 1D2E 0 CODE 0 text27 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+AppendMoves@temp E 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _int_threshold_low 4F 0 COMRAM 1 bssCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Lspace_0 0 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Lspace_1 0 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
@@ -1440,35 +1465,37 @@ __Lspace_2 0 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pab
 __Lspace_4 0 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __end_of_detect_color 678 0 CODE 0 text3 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __pbssCOMRAM 4F 0 COMRAM 1 bssCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-_LED_init 2402 0 CODE 0 text38 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_LED_init 24D2 0 CODE 0 text39 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 color_read_Clear@tmp 12 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _PIR0bits E33 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _PIR4bits E37 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_of_turnRight 15E0 0 CODE 0 text26 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of_turnRight 1666 0 CODE 0 text26 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 ___fltol@exp1 4E 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_of_setMotorPWM 115C 0 CODE 0 text35 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_ofi2_init_colorclick_interrupts 21CA 0 CODE 0 text50 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_ofi2_color_writetoaddr 23CE 0 CODE 0 text51 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-end_of_initialization 2206 0 CODE 0 cinit dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_of_color_click_init 2286 0 CODE 0 text8 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of_AppendMoves 23FA 0 CODE 0 text38 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of_setMotorPWM 1470 0 CODE 0 text35 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_ofi2_init_colorclick_interrupts 2254 0 CODE 0 text52 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_ofi2_color_writetoaddr 249E 0 CODE 0 text53 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+end_of_initialization 2290 0 CODE 0 cinit dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of_color_click_init 2310 0 CODE 0 text8 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _T2CLKCONbits FBF 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_of_LED_init 240E 0 CODE 0 text38 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of_LED_init 24DE 0 CODE 0 text39 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Lnvrram 0 0 COMRAM 1 nvrram dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Hintentry 0 0 ABS 0 intentry dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_of_OrangeInstructions 1CA8 0 CODE 0 text24 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of_OrangeInstructions 1D2E 0 CODE 0 text24 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 OrangeInstructions@a 2D 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+AppendTime@temp E 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 MoveBuggy@color_detected 2E 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-i2_I2C_2_Master_Start 244E 0 CODE 0 text54 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-i2_I2C_2_Master_Write 241A 0 CODE 0 text52 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_of_PinkInstructions 1C22 0 CODE 0 text23 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+i2_I2C_2_Master_Start 251E 0 CODE 0 text56 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+i2_I2C_2_Master_Write 24EA 0 CODE 0 text54 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of_PinkInstructions 1CA8 0 CODE 0 text23 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 turnRight135@a 26 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 ___lwdiv@dividend F 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 ?___fldiv 17 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 ?___flmul 30 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 ?___fltol 49 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_of_BlueInstructions 1A00 0 CODE 0 text30 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of_BlueInstructions 1A86 0 CODE 0 text30 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 turnRight90@mL 22 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 turnRight90@mR 24 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 ?___lwdiv F 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
@@ -1477,26 +1504,26 @@ __Hreset_vec 4 0 CODE 0 reset_vec dist/default/production\final-project-dharshan
 ?_color_read_Blue D 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __HbssBANK0 0 0 ABS 0 bssBANK0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __HbssBANK1 0 0 ABS 0 bssBANK1 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_of_initDCmotorsPWM 1A90 0 CODE 0 text1 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of_initDCmotorsPWM 1B16 0 CODE 0 text1 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Lramtop E00 0 RAM 0 ramtop dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Lrparam 0 0 COMRAM 1 rparam dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-_fullSpeedAhead 16CE 0 CODE 0 text2 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__pcinit 21CA 0 CODE 0 cinit dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-_turnRight 14F2 0 CODE 0 text26 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_fullSpeedAhead 1754 0 CODE 0 text2 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__pcinit 2254 0 CODE 0 cinit dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_turnRight 1578 0 CODE 0 text26 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 MoveBuggy@mL 30 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 MoveBuggy@mR 32 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_of_color_read_Blue 212E 0 CODE 0 text15 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext0 115C 0 CODE 0 text0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext1 1A00 0 CODE 0 text1 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext2 16CE 0 CODE 0 text2 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of_color_read_Blue 21B4 0 CODE 0 text15 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext0 1192 0 CODE 0 text0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext1 1A86 0 CODE 0 text1 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext2 1754 0 CODE 0 text2 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __ptext3 5C 0 CODE 0 text3 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __ptext4 E3C 0 CODE 0 text4 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext5 13EA 0 CODE 0 text5 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext5 1470 0 CODE 0 text5 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __ptext6 678 0 CODE 0 text6 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __ptext7 AA2 0 CODE 0 text7 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext8 2252 0 CODE 0 text8 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ptext9 2286 0 CODE 0 text9 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_of_I2C_2_Master_RepStart 2430 0 CODE 0 text16 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext8 22DC 0 CODE 0 text8 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__ptext9 2310 0 CODE 0 text9 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of_I2C_2_Master_RepStart 2500 0 CODE 0 text16 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Lstruct 0 0 COMRAM 1 struct dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Ltext10 0 0 ABS 0 text10 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Ltext11 0 0 ABS 0 text11 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
@@ -1535,71 +1562,74 @@ __Ltext43 0 0 ABS 0 text43 dist/default/production\final-project-dharshannan-and
 __Ltext44 0 0 ABS 0 text44 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Ltext45 0 0 ABS 0 text45 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Ltext46 0 0 ABS 0 text46 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__Ltext49 0 0 ABS 0 text49 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__Ltext50 0 0 ABS 0 text50 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__Ltext47 0 0 ABS 0 text47 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__Ltext48 0 0 ABS 0 text48 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Ltext51 0 0 ABS 0 text51 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Ltext52 0 0 ABS 0 text52 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Ltext53 0 0 ABS 0 text53 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Ltext54 0 0 ABS 0 text54 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Ltext55 0 0 ABS 0 text55 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__Ltext56 0 0 ABS 0 text56 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__Ltext57 0 0 ABS 0 text57 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 i2color_writetoaddr@value 3 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_of_GreenInstructions 1DB4 0 CODE 0 text29 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_of_color_writetoaddr 23AE 0 CODE 0 text42 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of_GreenInstructions 1E3A 0 CODE 0 text29 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of_color_writetoaddr 245E 0 CODE 0 text43 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 i2color_writetoaddr@address 4 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__ramtop E00 0 RAM 0 ramtop C:\Users\User\AppData\Local\Temp\xcAsi94.o
+__ramtop E00 0 RAM 0 ramtop C:\Users\User\AppData\Local\Temp\xcAs1j0.o
 RedInstructions@a 2D 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _HighISR 8 0 CODE 0 intcode dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-main@motorL D6 0 BANK0 1 cstackBANK0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-main@motorR DF 0 BANK0 1 cstackBANK0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+main@motorL E8 0 BANK0 1 cstackBANK0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+main@motorR F1 0 BANK0 1 cstackBANK0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Lpowerup 58 0 CODE 0 powerup dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 ?___xxtofl 9 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 turnLeft90@a 26 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_of_Update_RGBC 1E86 0 CODE 0 text11 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of_Update_RGBC 1F0C 0 CODE 0 text11 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 ___fltol@sign1 4D 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Lreset_vec 0 0 CODE 0 reset_vec dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-_OrangeInstructions 1C22 0 CODE 0 text24 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-_turnRight90 1E86 0 CODE 0 text22 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_OrangeInstructions 1CA8 0 CODE 0 text24 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_turnRight90 1F0C 0 CODE 0 text22 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 setMotorPWM@negDuty 1B 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-_I2C_2_Master_RepStart 2426 0 CODE 0 text16 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_I2C_2_Master_RepStart 24F6 0 CODE 0 text16 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _CCP3CONbits F26 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-_WhiteLight 2458 0 CODE 0 text10 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-___heap_hi 0 0 ABS 0 - C:\Users\User\AppData\Local\Temp\xcAsi94.o
-___heap_lo 0 0 ABS 0 - C:\Users\User\AppData\Local\Temp\xcAsi94.o
-_I2C_2_Master_Idle 22B0 0 CODE 0 text46 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-_I2C_2_Master_Init 2286 0 CODE 0 text9 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-_I2C_2_Master_Read 2210 0 CODE 0 text17 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-_I2C_2_Master_Stop 2430 0 CODE 0 text44 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_WhiteLight 2528 0 CODE 0 text10 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+___heap_hi 0 0 ABS 0 - C:\Users\User\AppData\Local\Temp\xcAs1j0.o
+___heap_lo 0 0 ABS 0 - C:\Users\User\AppData\Local\Temp\xcAs1j0.o
+_I2C_2_Master_Idle 233A 0 CODE 0 text47 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_I2C_2_Master_Init 2310 0 CODE 0 text9 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_I2C_2_Master_Read 229A 0 CODE 0 text17 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_I2C_2_Master_Stop 2500 0 CODE 0 text45 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 ___fltol@f1 49 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 ___param_bank 0 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_of__initialization 2206 0 CODE 0 cinit dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of__initialization 2290 0 CODE 0 cinit dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _INT1PPS DF1 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Libigdata 0 0 CODE 0 ibigdata dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-_init_colorclick_interrupts 212E 0 CODE 0 text41 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_init_colorclick_interrupts 21B4 0 CODE 0 text42 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__pidataBANK0 2530 0 CODE 0 idataBANK0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _SP4BRGH EE6 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _SP4BRGL EE5 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Lclrtext 0 0 ABS 0 clrtext dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 i2I2C_2_Master_Write@data_byte 2 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-_time_array 100 0 BANK1 1 bssBANK1 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_time_array 9D 0 BANK0 1 bssBANK0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 GreenInstructions@a 2D 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-_time_index B0 0 BANK0 1 bssBANK0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_time_index C5 0 BANK0 1 bssBANK0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __pintcodelo 18 0 CODE 0 intcodelo dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_of_Timer0_init 238E 0 CODE 0 text18 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-_initDCmotorsPWM 1A00 0 CODE 0 text1 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of_Timer0_init 243E 0 CODE 0 text18 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_initDCmotorsPWM 1A86 0 CODE 0 text1 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __pcstackCOMRAM 1 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_of_fullSpeedAhead 17A4 0 CODE 0 text2 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of_fullSpeedAhead 182A 0 CODE 0 text2 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _T0CON0bits FD5 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _T0CON1bits FD6 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-_color_read_Blue 20DE 0 CODE 0 text15 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_color_read_Blue 2164 0 CODE 0 text15 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _SSP2ADD ED6 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _SSP2BUF ED5 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 ?_color_read_Clear D 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 ?_color_read_Green D 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 turnLeft135@mL 22 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 turnLeft135@mR 24 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_of_main 12B6 0 CODE 0 text0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_of_stop 194E 0 CODE 0 text33 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of_main 1304 0 CODE 0 text0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of_stop 19D4 0 CODE 0 text33 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _CCP2CONbits FA7 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __pintcode 8 0 CODE 0 intcode dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _TMR0H FD4 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
@@ -1613,24 +1643,24 @@ __LRAM 1 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X
 __Lbss 0 0 RAM 1 bss dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Lram 0 0 ABS 0 ram dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Lsfr 0 0 ABS 0 sfr dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__HdataBANK0 0 0 ABS 0 dataBANK0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 GreenInstructions@mL 27 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 GreenInstructions@mR 29 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__initialization 21CA 0 CODE 0 cinit dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__initialization 2254 0 CODE 0 cinit dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 ___xxtofl@sign 11 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __pbssBANK0 60 0 BANK0 1 bssBANK0 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __pbssBANK1 100 0 BANK1 1 bssBANK1 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__pdataCOMRAM 55 0 COMRAM 1 dataCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-__end_of_WhiteLight 2460 0 CODE 0 text10 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+__end_of_WhiteLight 2530 0 CODE 0 text10 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _T2CONbits FBD 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Hfardata 0 0 FARRAM 0 fardata dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 ___wmul@product D 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-_GreenInstructions 1D2E 0 CODE 0 text29 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-_color_writetoaddr 238E 0 CODE 0 text42 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_GreenInstructions 1DB4 0 CODE 0 text29 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_color_writetoaddr 243E 0 CODE 0 text43 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Hsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 BlueInstructions@mL 27 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 BlueInstructions@mR 29 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-i2_interrupts_clear_colorclick 23E8 0 CODE 0 text49 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-_turnLeft135 1F3A 0 CODE 0 text28 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+i2_interrupts_clear_colorclick 24B8 0 CODE 0 text51 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
+_turnLeft135 1FC0 0 CODE 0 text28 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 __Lifardata 0 0 CODE 0 ifardata dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 Update_RGBC@tempval 14 0 COMRAM 1 cstackCOMRAM dist/default/production\final-project-dharshannan-and-pablo.X.production.o
 _SSP2CLKPPS E1C 0 ABS 0 - dist/default/production\final-project-dharshannan-and-pablo.X.production.o
@@ -1664,11 +1694,11 @@ __Hintcode E 0 CODE 0 intcode dist/default/production\final-project-dharshannan-
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-intcodelo 0 18 18 244A 1
+intcodelo 0 18 18 251A 1
 cstackCOMRAM 1 1 1 57 1
 reset_vec 0 0 0 4 1
-bssBANK0 1 60 60 88 1
-bssBANK1 1 100 100 50 1
+bssBANK0 1 60 60 9C 1
+bssBANK1 1 100 100 3C 1
 intcode 0 8 8 6 1
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section

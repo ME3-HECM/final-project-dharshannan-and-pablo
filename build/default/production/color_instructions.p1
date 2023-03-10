@@ -25,6 +25,33 @@ Version 4.0 HI-TECH Software Intermediate Code
 "29
 [; ;./dc_motor.h: 29: void turnLeft135(DC_motor *mL, DC_motor *mR);
 [v _turnLeft135 `(v ~T0 @X0 0 ef2`*S2015`*S2015 ]
+"23
+[; ;./dc_motor.h: 23: void fullSpeedAhead(DC_motor *mL, DC_motor *mR);
+[v _fullSpeedAhead `(v ~T0 @X0 0 ef2`*S2015`*S2015 ]
+"17 ./Memorization.h
+[; ;./Memorization.h: 17: unsigned char Return_Time(unsigned char *time_index, unsigned char *time_array);
+[v _Return_Time `(uc ~T0 @X0 0 ef2`*uc`*uc ]
+"8
+[; ;./Memorization.h: 8: extern unsigned char time_index;
+[v _time_index `uc ~T0 @X0 0 e ]
+"11
+[; ;./Memorization.h: 11: extern unsigned char time_array[40];
+[v _time_array `uc ~T0 @X0 -> 0 `x e ]
+"16
+[; ;./Memorization.h: 16: unsigned char Return_Anti_Moves(unsigned char *moves_index, unsigned char *anti_moves_array);
+[v _Return_Anti_Moves `(uc ~T0 @X0 0 ef2`*uc`*uc ]
+"7
+[; ;./Memorization.h: 7: extern unsigned char moves_index;
+[v _moves_index `uc ~T0 @X0 0 e ]
+"10
+[; ;./Memorization.h: 10: extern unsigned char anti_moves_array[40];
+[v _anti_moves_array `uc ~T0 @X0 -> 0 `x e ]
+"18 ./color_instructions.h
+[; ;./color_instructions.h: 18: void MoveBuggy(unsigned char *color_detected, DC_motor *mL, DC_motor *mR);
+[v _MoveBuggy `(v ~T0 @X0 0 ef3`*uc`*S2015`*S2015 ]
+"14 ./Memorization.h
+[; ;./Memorization.h: 14: void AppendMoves(unsigned char temp, unsigned char *moves_index, unsigned char *anti_moves_array);
+[v _AppendMoves `(v ~T0 @X0 0 ef3`uc`*uc`*uc ]
 "54 D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h
 [; ;D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h: 54: __asm("PPSLOCK equ 0DEFh");
 [; <" PPSLOCK equ 0DEFh ;# ">
@@ -1999,434 +2026,511 @@ Version 4.0 HI-TECH Software Intermediate Code
 "40927
 [; ;D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h: 40927: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"8 color_instructions.c
-[; ;color_instructions.c: 8: void RedInstructions(DC_motor *mL, DC_motor *mR){
+"10 color_instructions.c
+[; ;color_instructions.c: 10: void RedInstructions(DC_motor *mL, DC_motor *mR){
 [v _RedInstructions `(v ~T0 @X0 1 ef2`*S2015`*S2015 ]
 {
 [e :U _RedInstructions ]
 [v _mL `*S2015 ~T0 @X0 1 r1 ]
 [v _mR `*S2015 ~T0 @X0 1 r2 ]
 [f ]
-"10
-[; ;color_instructions.c: 10:     unsigned char a=0;
+"12
+[; ;color_instructions.c: 12:     unsigned char a=0;
 [v _a `uc ~T0 @X0 1 a ]
 [e = _a -> -> 0 `i `uc ]
-"11
-[; ;color_instructions.c: 11:     while (a<8){
+"13
+[; ;color_instructions.c: 13:     while (a<8){
 [e $U 2017  ]
 [e :U 2018 ]
 {
-"12
-[; ;color_instructions.c: 12:         fullSpeedBackwards(mL, mR);
-[e ( _fullSpeedBackwards (2 , _mL _mR ]
-"13
-[; ;color_instructions.c: 13:         a++;
-[e ++ _a -> -> 1 `i `uc ]
 "14
-[; ;color_instructions.c: 14:     }
+[; ;color_instructions.c: 14:         fullSpeedBackwards(mL, mR);
+[e ( _fullSpeedBackwards (2 , _mL _mR ]
+"15
+[; ;color_instructions.c: 15:         a++;
+[e ++ _a -> -> 1 `i `uc ]
+"16
+[; ;color_instructions.c: 16:     }
 }
 [e :U 2017 ]
-"11
-[; ;color_instructions.c: 11:     while (a<8){
+"13
+[; ;color_instructions.c: 13:     while (a<8){
 [e $ < -> _a `i -> 8 `i 2018  ]
 [e :U 2019 ]
-"15
-[; ;color_instructions.c: 15:     while (a>0){
+"17
+[; ;color_instructions.c: 17:     while (a>0){
 [e $U 2020  ]
 [e :U 2021 ]
 {
-"16
-[; ;color_instructions.c: 16:         stop(mL, mR);
-[e ( _stop (2 , _mL _mR ]
-"17
-[; ;color_instructions.c: 17:         a--;
-[e -- _a -> -> 1 `i `uc ]
 "18
-[; ;color_instructions.c: 18:     }
+[; ;color_instructions.c: 18:         stop(mL, mR);
+[e ( _stop (2 , _mL _mR ]
+"19
+[; ;color_instructions.c: 19:         a--;
+[e -- _a -> -> 1 `i `uc ]
+"20
+[; ;color_instructions.c: 20:     }
 }
 [e :U 2020 ]
-"15
-[; ;color_instructions.c: 15:     while (a>0){
+"17
+[; ;color_instructions.c: 17:     while (a>0){
 [e $ > -> _a `i -> 0 `i 2021  ]
 [e :U 2022 ]
-"19
-[; ;color_instructions.c: 19:     _delay((unsigned long)((250)*(64000000/4000.0)));
-[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
-"20
-[; ;color_instructions.c: 20:     turnRight90(mL, mR);
-[e ( _turnRight90 (2 , _mL _mR ]
 "21
-[; ;color_instructions.c: 21: }
+[; ;color_instructions.c: 21:     _delay((unsigned long)((250)*(64000000/4000.0)));
+[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+"22
+[; ;color_instructions.c: 22:     turnRight90(mL, mR);
+[e ( _turnRight90 (2 , _mL _mR ]
+"23
+[; ;color_instructions.c: 23: }
 [e :UE 2016 ]
 }
-"23
-[; ;color_instructions.c: 23: void GreenInstructions(DC_motor *mL, DC_motor *mR){
+"25
+[; ;color_instructions.c: 25: void GreenInstructions(DC_motor *mL, DC_motor *mR){
 [v _GreenInstructions `(v ~T0 @X0 1 ef2`*S2015`*S2015 ]
 {
 [e :U _GreenInstructions ]
 [v _mL `*S2015 ~T0 @X0 1 r1 ]
 [v _mR `*S2015 ~T0 @X0 1 r2 ]
 [f ]
-"24
-[; ;color_instructions.c: 24:     unsigned char a=0;
+"26
+[; ;color_instructions.c: 26:     unsigned char a=0;
 [v _a `uc ~T0 @X0 1 a ]
 [e = _a -> -> 0 `i `uc ]
-"25
-[; ;color_instructions.c: 25:     while (a<8){
+"27
+[; ;color_instructions.c: 27:     while (a<8){
 [e $U 2024  ]
 [e :U 2025 ]
 {
-"26
-[; ;color_instructions.c: 26:         fullSpeedBackwards(mL, mR);
-[e ( _fullSpeedBackwards (2 , _mL _mR ]
-"27
-[; ;color_instructions.c: 27:         a++;
-[e ++ _a -> -> 1 `i `uc ]
 "28
-[; ;color_instructions.c: 28:     }
+[; ;color_instructions.c: 28:         fullSpeedBackwards(mL, mR);
+[e ( _fullSpeedBackwards (2 , _mL _mR ]
+"29
+[; ;color_instructions.c: 29:         a++;
+[e ++ _a -> -> 1 `i `uc ]
+"30
+[; ;color_instructions.c: 30:     }
 }
 [e :U 2024 ]
-"25
-[; ;color_instructions.c: 25:     while (a<8){
+"27
+[; ;color_instructions.c: 27:     while (a<8){
 [e $ < -> _a `i -> 8 `i 2025  ]
 [e :U 2026 ]
-"29
-[; ;color_instructions.c: 29:     while (a>0){
+"31
+[; ;color_instructions.c: 31:     while (a>0){
 [e $U 2027  ]
 [e :U 2028 ]
 {
-"30
-[; ;color_instructions.c: 30:         stop(mL, mR);
-[e ( _stop (2 , _mL _mR ]
-"31
-[; ;color_instructions.c: 31:         a--;
-[e -- _a -> -> 1 `i `uc ]
 "32
-[; ;color_instructions.c: 32:     }
+[; ;color_instructions.c: 32:         stop(mL, mR);
+[e ( _stop (2 , _mL _mR ]
+"33
+[; ;color_instructions.c: 33:         a--;
+[e -- _a -> -> 1 `i `uc ]
+"34
+[; ;color_instructions.c: 34:     }
 }
 [e :U 2027 ]
-"29
-[; ;color_instructions.c: 29:     while (a>0){
+"31
+[; ;color_instructions.c: 31:     while (a>0){
 [e $ > -> _a `i -> 0 `i 2028  ]
 [e :U 2029 ]
-"33
-[; ;color_instructions.c: 33:     _delay((unsigned long)((250)*(64000000/4000.0)));
-[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
-"34
-[; ;color_instructions.c: 34:     turnLeft90(mL, mR);
-[e ( _turnLeft90 (2 , _mL _mR ]
 "35
-[; ;color_instructions.c: 35: }
+[; ;color_instructions.c: 35:     _delay((unsigned long)((250)*(64000000/4000.0)));
+[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+"36
+[; ;color_instructions.c: 36:     turnLeft90(mL, mR);
+[e ( _turnLeft90 (2 , _mL _mR ]
+"37
+[; ;color_instructions.c: 37: }
 [e :UE 2023 ]
 }
-"37
-[; ;color_instructions.c: 37: void BlueInstructions(DC_motor *mL, DC_motor *mR){
+"39
+[; ;color_instructions.c: 39: void BlueInstructions(DC_motor *mL, DC_motor *mR){
 [v _BlueInstructions `(v ~T0 @X0 1 ef2`*S2015`*S2015 ]
 {
 [e :U _BlueInstructions ]
 [v _mL `*S2015 ~T0 @X0 1 r1 ]
 [v _mR `*S2015 ~T0 @X0 1 r2 ]
 [f ]
-"38
-[; ;color_instructions.c: 38:     unsigned char a=0;
+"40
+[; ;color_instructions.c: 40:     unsigned char a=0;
 [v _a `uc ~T0 @X0 1 a ]
 [e = _a -> -> 0 `i `uc ]
-"39
-[; ;color_instructions.c: 39:     while (a<8){
+"41
+[; ;color_instructions.c: 41:     while (a<8){
 [e $U 2031  ]
 [e :U 2032 ]
 {
-"40
-[; ;color_instructions.c: 40:         fullSpeedBackwards(mL, mR);
-[e ( _fullSpeedBackwards (2 , _mL _mR ]
-"41
-[; ;color_instructions.c: 41:         a++;
-[e ++ _a -> -> 1 `i `uc ]
 "42
-[; ;color_instructions.c: 42:     }
+[; ;color_instructions.c: 42:         fullSpeedBackwards(mL, mR);
+[e ( _fullSpeedBackwards (2 , _mL _mR ]
+"43
+[; ;color_instructions.c: 43:         a++;
+[e ++ _a -> -> 1 `i `uc ]
+"44
+[; ;color_instructions.c: 44:     }
 }
 [e :U 2031 ]
-"39
-[; ;color_instructions.c: 39:     while (a<8){
+"41
+[; ;color_instructions.c: 41:     while (a<8){
 [e $ < -> _a `i -> 8 `i 2032  ]
 [e :U 2033 ]
-"43
-[; ;color_instructions.c: 43:     while (a>0){
+"45
+[; ;color_instructions.c: 45:     while (a>0){
 [e $U 2034  ]
 [e :U 2035 ]
 {
-"44
-[; ;color_instructions.c: 44:         stop(mL, mR);
-[e ( _stop (2 , _mL _mR ]
-"45
-[; ;color_instructions.c: 45:         a--;
-[e -- _a -> -> 1 `i `uc ]
 "46
-[; ;color_instructions.c: 46:     }
+[; ;color_instructions.c: 46:         stop(mL, mR);
+[e ( _stop (2 , _mL _mR ]
+"47
+[; ;color_instructions.c: 47:         a--;
+[e -- _a -> -> 1 `i `uc ]
+"48
+[; ;color_instructions.c: 48:     }
 }
 [e :U 2034 ]
-"43
-[; ;color_instructions.c: 43:     while (a>0){
+"45
+[; ;color_instructions.c: 45:     while (a>0){
 [e $ > -> _a `i -> 0 `i 2035  ]
 [e :U 2036 ]
-"47
-[; ;color_instructions.c: 47:     _delay((unsigned long)((500)*(64000000/4000.0)));
+"49
+[; ;color_instructions.c: 49:     _delay((unsigned long)((500)*(64000000/4000.0)));
 [e ( __delay (1 -> * -> -> 500 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
-"50
-[; ;color_instructions.c: 50:     turnLeft90(mL, mR);
-[e ( _turnLeft90 (2 , _mL _mR ]
-"51
-[; ;color_instructions.c: 51:     _delay((unsigned long)((50)*(64000000/4000.0)));
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
 "52
 [; ;color_instructions.c: 52:     turnLeft90(mL, mR);
 [e ( _turnLeft90 (2 , _mL _mR ]
 "53
-[; ;color_instructions.c: 53: }
+[; ;color_instructions.c: 53:     _delay((unsigned long)((50)*(64000000/4000.0)));
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+"54
+[; ;color_instructions.c: 54:     turnLeft90(mL, mR);
+[e ( _turnLeft90 (2 , _mL _mR ]
+"55
+[; ;color_instructions.c: 55: }
 [e :UE 2030 ]
 }
-"56
-[; ;color_instructions.c: 56: void YellowInstructions(DC_motor *mL, DC_motor *mR){
+"58
+[; ;color_instructions.c: 58: void YellowInstructions(DC_motor *mL, DC_motor *mR){
 [v _YellowInstructions `(v ~T0 @X0 1 ef2`*S2015`*S2015 ]
 {
 [e :U _YellowInstructions ]
 [v _mL `*S2015 ~T0 @X0 1 r1 ]
 [v _mR `*S2015 ~T0 @X0 1 r2 ]
 [f ]
-"58
-[; ;color_instructions.c: 58:     unsigned char a=0;
+"60
+[; ;color_instructions.c: 60:     unsigned char a=0;
 [v _a `uc ~T0 @X0 1 a ]
 [e = _a -> -> 0 `i `uc ]
-"59
-[; ;color_instructions.c: 59:     while (a<20){
+"61
+[; ;color_instructions.c: 61:     while (a<20){
 [e $U 2038  ]
 [e :U 2039 ]
 {
-"60
-[; ;color_instructions.c: 60:         fullSpeedBackwards(mL, mR);
-[e ( _fullSpeedBackwards (2 , _mL _mR ]
-"61
-[; ;color_instructions.c: 61:         a++;
-[e ++ _a -> -> 1 `i `uc ]
 "62
-[; ;color_instructions.c: 62:     }
+[; ;color_instructions.c: 62:         fullSpeedBackwards(mL, mR);
+[e ( _fullSpeedBackwards (2 , _mL _mR ]
+"63
+[; ;color_instructions.c: 63:         a++;
+[e ++ _a -> -> 1 `i `uc ]
+"64
+[; ;color_instructions.c: 64:     }
 }
 [e :U 2038 ]
-"59
-[; ;color_instructions.c: 59:     while (a<20){
+"61
+[; ;color_instructions.c: 61:     while (a<20){
 [e $ < -> _a `i -> 20 `i 2039  ]
 [e :U 2040 ]
-"63
-[; ;color_instructions.c: 63:     while (a>0){
+"65
+[; ;color_instructions.c: 65:     while (a>0){
 [e $U 2041  ]
 [e :U 2042 ]
 {
-"64
-[; ;color_instructions.c: 64:         stop(mL, mR);
-[e ( _stop (2 , _mL _mR ]
-"65
-[; ;color_instructions.c: 65:         a--;
-[e -- _a -> -> 1 `i `uc ]
 "66
-[; ;color_instructions.c: 66:     }
+[; ;color_instructions.c: 66:         stop(mL, mR);
+[e ( _stop (2 , _mL _mR ]
+"67
+[; ;color_instructions.c: 67:         a--;
+[e -- _a -> -> 1 `i `uc ]
+"68
+[; ;color_instructions.c: 68:     }
 }
 [e :U 2041 ]
-"63
-[; ;color_instructions.c: 63:     while (a>0){
+"65
+[; ;color_instructions.c: 65:     while (a>0){
 [e $ > -> _a `i -> 0 `i 2042  ]
 [e :U 2043 ]
-"67
-[; ;color_instructions.c: 67:     _delay((unsigned long)((500)*(64000000/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
-"68
-[; ;color_instructions.c: 68:     turnRight90(mL, mR);
-[e ( _turnRight90 (2 , _mL _mR ]
 "69
-[; ;color_instructions.c: 69: }
+[; ;color_instructions.c: 69:     _delay((unsigned long)((250)*(64000000/4000.0)));
+[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+"70
+[; ;color_instructions.c: 70:     turnRight90(mL, mR);
+[e ( _turnRight90 (2 , _mL _mR ]
+"71
+[; ;color_instructions.c: 71: }
 [e :UE 2037 ]
 }
-"71
-[; ;color_instructions.c: 71: void PinkInstructions(DC_motor *mL, DC_motor *mR){
+"73
+[; ;color_instructions.c: 73: void PinkInstructions(DC_motor *mL, DC_motor *mR){
 [v _PinkInstructions `(v ~T0 @X0 1 ef2`*S2015`*S2015 ]
 {
 [e :U _PinkInstructions ]
 [v _mL `*S2015 ~T0 @X0 1 r1 ]
 [v _mR `*S2015 ~T0 @X0 1 r2 ]
 [f ]
-"72
-[; ;color_instructions.c: 72:     unsigned char a=0;
+"74
+[; ;color_instructions.c: 74:     unsigned char a=0;
 [v _a `uc ~T0 @X0 1 a ]
 [e = _a -> -> 0 `i `uc ]
-"73
-[; ;color_instructions.c: 73:     while (a<20){
+"75
+[; ;color_instructions.c: 75:     while (a<20){
 [e $U 2045  ]
 [e :U 2046 ]
 {
-"74
-[; ;color_instructions.c: 74:         fullSpeedBackwards(mL, mR);
-[e ( _fullSpeedBackwards (2 , _mL _mR ]
-"75
-[; ;color_instructions.c: 75:         a++;
-[e ++ _a -> -> 1 `i `uc ]
 "76
-[; ;color_instructions.c: 76:     }
+[; ;color_instructions.c: 76:         fullSpeedBackwards(mL, mR);
+[e ( _fullSpeedBackwards (2 , _mL _mR ]
+"77
+[; ;color_instructions.c: 77:         a++;
+[e ++ _a -> -> 1 `i `uc ]
+"78
+[; ;color_instructions.c: 78:     }
 }
 [e :U 2045 ]
-"73
-[; ;color_instructions.c: 73:     while (a<20){
+"75
+[; ;color_instructions.c: 75:     while (a<20){
 [e $ < -> _a `i -> 20 `i 2046  ]
 [e :U 2047 ]
-"77
-[; ;color_instructions.c: 77:     while (a>0){
+"79
+[; ;color_instructions.c: 79:     while (a>0){
 [e $U 2048  ]
 [e :U 2049 ]
 {
-"78
-[; ;color_instructions.c: 78:         stop(mL, mR);
-[e ( _stop (2 , _mL _mR ]
-"79
-[; ;color_instructions.c: 79:         a--;
-[e -- _a -> -> 1 `i `uc ]
 "80
-[; ;color_instructions.c: 80:     }
+[; ;color_instructions.c: 80:         stop(mL, mR);
+[e ( _stop (2 , _mL _mR ]
+"81
+[; ;color_instructions.c: 81:         a--;
+[e -- _a -> -> 1 `i `uc ]
+"82
+[; ;color_instructions.c: 82:     }
 }
 [e :U 2048 ]
-"77
-[; ;color_instructions.c: 77:     while (a>0){
+"79
+[; ;color_instructions.c: 79:     while (a>0){
 [e $ > -> _a `i -> 0 `i 2049  ]
 [e :U 2050 ]
-"81
-[; ;color_instructions.c: 81:     _delay((unsigned long)((500)*(64000000/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
-"82
-[; ;color_instructions.c: 82:     turnLeft90(mL, mR);
-[e ( _turnLeft90 (2 , _mL _mR ]
+"83
+[; ;color_instructions.c: 83:     _delay((unsigned long)((250)*(64000000/4000.0)));
+[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
 "84
-[; ;color_instructions.c: 84: }
+[; ;color_instructions.c: 84:     turnLeft90(mL, mR);
+[e ( _turnLeft90 (2 , _mL _mR ]
+"86
+[; ;color_instructions.c: 86: }
 [e :UE 2044 ]
 }
-"86
-[; ;color_instructions.c: 86: void OrangeInstructions(DC_motor *mL, DC_motor *mR){
+"88
+[; ;color_instructions.c: 88: void OrangeInstructions(DC_motor *mL, DC_motor *mR){
 [v _OrangeInstructions `(v ~T0 @X0 1 ef2`*S2015`*S2015 ]
 {
 [e :U _OrangeInstructions ]
 [v _mL `*S2015 ~T0 @X0 1 r1 ]
 [v _mR `*S2015 ~T0 @X0 1 r2 ]
 [f ]
-"87
-[; ;color_instructions.c: 87:     unsigned char a=0;
+"89
+[; ;color_instructions.c: 89:     unsigned char a=0;
 [v _a `uc ~T0 @X0 1 a ]
 [e = _a -> -> 0 `i `uc ]
-"88
-[; ;color_instructions.c: 88:     while (a<20){
+"90
+[; ;color_instructions.c: 90:     while (a<20){
 [e $U 2052  ]
 [e :U 2053 ]
 {
-"89
-[; ;color_instructions.c: 89:         fullSpeedBackwards(mL, mR);
-[e ( _fullSpeedBackwards (2 , _mL _mR ]
-"90
-[; ;color_instructions.c: 90:         a++;
-[e ++ _a -> -> 1 `i `uc ]
 "91
-[; ;color_instructions.c: 91:     }
+[; ;color_instructions.c: 91:         fullSpeedBackwards(mL, mR);
+[e ( _fullSpeedBackwards (2 , _mL _mR ]
+"92
+[; ;color_instructions.c: 92:         a++;
+[e ++ _a -> -> 1 `i `uc ]
+"93
+[; ;color_instructions.c: 93:     }
 }
 [e :U 2052 ]
-"88
-[; ;color_instructions.c: 88:     while (a<20){
+"90
+[; ;color_instructions.c: 90:     while (a<20){
 [e $ < -> _a `i -> 20 `i 2053  ]
 [e :U 2054 ]
-"92
-[; ;color_instructions.c: 92:     while (a>0){
+"94
+[; ;color_instructions.c: 94:     while (a>0){
 [e $U 2055  ]
 [e :U 2056 ]
 {
-"93
-[; ;color_instructions.c: 93:         stop(mL, mR);
-[e ( _stop (2 , _mL _mR ]
-"94
-[; ;color_instructions.c: 94:         a--;
-[e -- _a -> -> 1 `i `uc ]
 "95
-[; ;color_instructions.c: 95:     }
+[; ;color_instructions.c: 95:         stop(mL, mR);
+[e ( _stop (2 , _mL _mR ]
+"96
+[; ;color_instructions.c: 96:         a--;
+[e -- _a -> -> 1 `i `uc ]
+"97
+[; ;color_instructions.c: 97:     }
 }
 [e :U 2055 ]
-"92
-[; ;color_instructions.c: 92:     while (a>0){
+"94
+[; ;color_instructions.c: 94:     while (a>0){
 [e $ > -> _a `i -> 0 `i 2056  ]
 [e :U 2057 ]
-"96
-[; ;color_instructions.c: 96:     _delay((unsigned long)((500)*(64000000/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
 "98
-[; ;color_instructions.c: 98:     turnRight135(mL, mR);
+[; ;color_instructions.c: 98:     _delay((unsigned long)((250)*(64000000/4000.0)));
+[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+"100
+[; ;color_instructions.c: 100:     turnRight135(mL, mR);
 [e ( _turnRight135 (2 , _mL _mR ]
-"99
-[; ;color_instructions.c: 99: }
+"101
+[; ;color_instructions.c: 101: }
 [e :UE 2051 ]
 }
-"101
-[; ;color_instructions.c: 101: void LightBlueInstructions(DC_motor *mL, DC_motor *mR){
+"103
+[; ;color_instructions.c: 103: void LightBlueInstructions(DC_motor *mL, DC_motor *mR){
 [v _LightBlueInstructions `(v ~T0 @X0 1 ef2`*S2015`*S2015 ]
 {
 [e :U _LightBlueInstructions ]
 [v _mL `*S2015 ~T0 @X0 1 r1 ]
 [v _mR `*S2015 ~T0 @X0 1 r2 ]
 [f ]
-"102
-[; ;color_instructions.c: 102:     unsigned char a=0;
+"104
+[; ;color_instructions.c: 104:     unsigned char a=0;
 [v _a `uc ~T0 @X0 1 a ]
 [e = _a -> -> 0 `i `uc ]
-"103
-[; ;color_instructions.c: 103:     while (a<20){
+"105
+[; ;color_instructions.c: 105:     while (a<20){
 [e $U 2059  ]
 [e :U 2060 ]
 {
-"104
-[; ;color_instructions.c: 104:         fullSpeedBackwards(mL, mR);
-[e ( _fullSpeedBackwards (2 , _mL _mR ]
-"105
-[; ;color_instructions.c: 105:         a++;
-[e ++ _a -> -> 1 `i `uc ]
 "106
-[; ;color_instructions.c: 106:     }
+[; ;color_instructions.c: 106:         fullSpeedBackwards(mL, mR);
+[e ( _fullSpeedBackwards (2 , _mL _mR ]
+"107
+[; ;color_instructions.c: 107:         a++;
+[e ++ _a -> -> 1 `i `uc ]
+"108
+[; ;color_instructions.c: 108:     }
 }
 [e :U 2059 ]
-"103
-[; ;color_instructions.c: 103:     while (a<20){
+"105
+[; ;color_instructions.c: 105:     while (a<20){
 [e $ < -> _a `i -> 20 `i 2060  ]
 [e :U 2061 ]
-"107
-[; ;color_instructions.c: 107:     while (a>0){
+"109
+[; ;color_instructions.c: 109:     while (a>0){
 [e $U 2062  ]
 [e :U 2063 ]
 {
-"108
-[; ;color_instructions.c: 108:         stop(mL, mR);
-[e ( _stop (2 , _mL _mR ]
-"109
-[; ;color_instructions.c: 109:         a--;
-[e -- _a -> -> 1 `i `uc ]
 "110
-[; ;color_instructions.c: 110:     }
+[; ;color_instructions.c: 110:         stop(mL, mR);
+[e ( _stop (2 , _mL _mR ]
+"111
+[; ;color_instructions.c: 111:         a--;
+[e -- _a -> -> 1 `i `uc ]
+"112
+[; ;color_instructions.c: 112:     }
 }
 [e :U 2062 ]
-"107
-[; ;color_instructions.c: 107:     while (a>0){
+"109
+[; ;color_instructions.c: 109:     while (a>0){
 [e $ > -> _a `i -> 0 `i 2063  ]
 [e :U 2064 ]
-"111
-[; ;color_instructions.c: 111:     _delay((unsigned long)((500)*(64000000/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
 "113
-[; ;color_instructions.c: 113:     turnLeft135(mL, mR);
+[; ;color_instructions.c: 113:     _delay((unsigned long)((250)*(64000000/4000.0)));
+[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+"115
+[; ;color_instructions.c: 115:     turnLeft135(mL, mR);
 [e ( _turnLeft135 (2 , _mL _mR ]
-"114
-[; ;color_instructions.c: 114: }
+"116
+[; ;color_instructions.c: 116: }
 [e :UE 2058 ]
 }
-"117
-[; ;color_instructions.c: 117: void MoveBuggy(unsigned char *color_detected, DC_motor *mL, DC_motor *mR){
+"119
+[; ;color_instructions.c: 119: void WhiteInstructions(DC_motor *mL, DC_motor *mR){
+[v _WhiteInstructions `(v ~T0 @X0 1 ef2`*S2015`*S2015 ]
+{
+[e :U _WhiteInstructions ]
+[v _mL `*S2015 ~T0 @X0 1 r1 ]
+[v _mR `*S2015 ~T0 @X0 1 r2 ]
+[f ]
+"121
+[; ;color_instructions.c: 121:     BlueInstructions(mL,mR);
+[e ( _BlueInstructions (2 , _mL _mR ]
+"123
+[; ;color_instructions.c: 123:     while(time_index>0){
+[e $U 2066  ]
+[e :U 2067 ]
+{
+"125
+[; ;color_instructions.c: 125:         unsigned char a = 0;
+[v _a `uc ~T0 @X0 1 a ]
+[e = _a -> -> 0 `i `uc ]
+"126
+[; ;color_instructions.c: 126:         while(a<Return_Time(&time_index,time_array)){
+[e $U 2069  ]
+[e :U 2070 ]
+{
+"127
+[; ;color_instructions.c: 127:             fullSpeedAhead(mL,mR);
+[e ( _fullSpeedAhead (2 , _mL _mR ]
+"128
+[; ;color_instructions.c: 128:             a++;
+[e ++ _a -> -> 1 `i `uc ]
+"129
+[; ;color_instructions.c: 129:         }
+}
+[e :U 2069 ]
+"126
+[; ;color_instructions.c: 126:         while(a<Return_Time(&time_index,time_array)){
+[e $ < -> _a `i -> ( _Return_Time (2 , &U _time_index &U _time_array `i 2070  ]
+[e :U 2071 ]
+"131
+[; ;color_instructions.c: 131:         while(a>0){
+[e $U 2072  ]
+[e :U 2073 ]
+{
+"132
+[; ;color_instructions.c: 132:             stop(mL,mR);
+[e ( _stop (2 , _mL _mR ]
+"133
+[; ;color_instructions.c: 133:             a--;
+[e -- _a -> -> 1 `i `uc ]
+"134
+[; ;color_instructions.c: 134:         }
+}
+[e :U 2072 ]
+"131
+[; ;color_instructions.c: 131:         while(a>0){
+[e $ > -> _a `i -> 0 `i 2073  ]
+[e :U 2074 ]
+"136
+[; ;color_instructions.c: 136:         unsigned char anticolor = Return_Anti_Moves(&moves_index, anti_moves_array);
+[v _anticolor `uc ~T0 @X0 1 a ]
+[e = _anticolor ( _Return_Anti_Moves (2 , &U _moves_index &U _anti_moves_array ]
+"137
+[; ;color_instructions.c: 137:         MoveBuggy(anticolor,mL,mR);
+[e ( _MoveBuggy (3 , , -> _anticolor `*uc _mL _mR ]
+"138
+[; ;color_instructions.c: 138:     }
+}
+[e :U 2066 ]
+"123
+[; ;color_instructions.c: 123:     while(time_index>0){
+[e $ > -> _time_index `i -> 0 `i 2067  ]
+[e :U 2068 ]
+"139
+[; ;color_instructions.c: 139: }
+[e :UE 2065 ]
+}
+"143
+[; ;color_instructions.c: 143: void MoveBuggy(unsigned char *color_detected, DC_motor *mL, DC_motor *mR){
 [v _MoveBuggy `(v ~T0 @X0 1 ef3`*uc`*S2015`*S2015 ]
 {
 [e :U _MoveBuggy ]
@@ -2434,96 +2538,111 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _mL `*S2015 ~T0 @X0 1 r2 ]
 [v _mR `*S2015 ~T0 @X0 1 r3 ]
 [f ]
-"118
-[; ;color_instructions.c: 118:     if (color_detected==1){
-[e $ ! == _color_detected -> -> 1 `i `*uc 2066  ]
+"144
+[; ;color_instructions.c: 144:     if (color_detected==1){
+[e $ ! == _color_detected -> -> 1 `i `*uc 2076  ]
 {
-"119
-[; ;color_instructions.c: 119:         RedInstructions(mL, mR);
+"145
+[; ;color_instructions.c: 145:         RedInstructions(mL, mR);
 [e ( _RedInstructions (2 , _mL _mR ]
-"120
-[; ;color_instructions.c: 120:     }
-}
-[e $U 2067  ]
-"121
-[; ;color_instructions.c: 121:     else if (color_detected==2){
-[e :U 2066 ]
-[e $ ! == _color_detected -> -> 2 `i `*uc 2068  ]
-{
-"122
-[; ;color_instructions.c: 122:         GreenInstructions(mL, mR);
-[e ( _GreenInstructions (2 , _mL _mR ]
-"123
-[; ;color_instructions.c: 123:     }
-}
-[e $U 2069  ]
-"124
-[; ;color_instructions.c: 124:     else if (color_detected==3){
-[e :U 2068 ]
-[e $ ! == _color_detected -> -> 3 `i `*uc 2070  ]
-{
-"125
-[; ;color_instructions.c: 125:         BlueInstructions(mL, mR);
-[e ( _BlueInstructions (2 , _mL _mR ]
-"126
-[; ;color_instructions.c: 126:     }
-}
-[e $U 2071  ]
-"127
-[; ;color_instructions.c: 127:     else if (color_detected==4){
-[e :U 2070 ]
-[e $ ! == _color_detected -> -> 4 `i `*uc 2072  ]
-{
-"128
-[; ;color_instructions.c: 128:         YellowInstructions(mL, mR);
-[e ( _YellowInstructions (2 , _mL _mR ]
-"129
-[; ;color_instructions.c: 129:     }
-}
-[e $U 2073  ]
-"130
-[; ;color_instructions.c: 130:     else if (color_detected==5){
-[e :U 2072 ]
-[e $ ! == _color_detected -> -> 5 `i `*uc 2074  ]
-{
-"131
-[; ;color_instructions.c: 131:         PinkInstructions(mL, mR);
-[e ( _PinkInstructions (2 , _mL _mR ]
-"132
-[; ;color_instructions.c: 132:     }
-}
-[e $U 2075  ]
-"133
-[; ;color_instructions.c: 133:     else if (color_detected==6){
-[e :U 2074 ]
-[e $ ! == _color_detected -> -> 6 `i `*uc 2076  ]
-{
-"134
-[; ;color_instructions.c: 134:         OrangeInstructions(mL, mR);
-[e ( _OrangeInstructions (2 , _mL _mR ]
-"135
-[; ;color_instructions.c: 135:     }
+"146
+[; ;color_instructions.c: 146:         AppendMoves(2,&moves_index,anti_moves_array);
+[e ( _AppendMoves (3 , , -> -> 2 `i `uc &U _moves_index &U _anti_moves_array ]
+"147
+[; ;color_instructions.c: 147:     }
 }
 [e $U 2077  ]
-"136
-[; ;color_instructions.c: 136:     else if (color_detected==7){
+"148
+[; ;color_instructions.c: 148:     else if (color_detected==2){
 [e :U 2076 ]
-[e $ ! == _color_detected -> -> 7 `i `*uc 2078  ]
+[e $ ! == _color_detected -> -> 2 `i `*uc 2078  ]
 {
-"137
-[; ;color_instructions.c: 137:         LightBlueInstructions(mL, mR);
-[e ( _LightBlueInstructions (2 , _mL _mR ]
-"138
-[; ;color_instructions.c: 138:     }
+"149
+[; ;color_instructions.c: 149:         GreenInstructions(mL, mR);
+[e ( _GreenInstructions (2 , _mL _mR ]
+"150
+[; ;color_instructions.c: 150:         AppendMoves(1,&moves_index,anti_moves_array);
+[e ( _AppendMoves (3 , , -> -> 1 `i `uc &U _moves_index &U _anti_moves_array ]
+"151
+[; ;color_instructions.c: 151:     }
 }
+[e $U 2079  ]
+"152
+[; ;color_instructions.c: 152:     else if (color_detected==3){
 [e :U 2078 ]
+[e $ ! == _color_detected -> -> 3 `i `*uc 2080  ]
+{
+"153
+[; ;color_instructions.c: 153:         BlueInstructions(mL, mR);
+[e ( _BlueInstructions (2 , _mL _mR ]
+"154
+[; ;color_instructions.c: 154:         AppendMoves(3,&moves_index,anti_moves_array);
+[e ( _AppendMoves (3 , , -> -> 3 `i `uc &U _moves_index &U _anti_moves_array ]
+"155
+[; ;color_instructions.c: 155:     }
+}
+[e $U 2081  ]
+"156
+[; ;color_instructions.c: 156:     else if (color_detected==4){
+[e :U 2080 ]
+[e $ ! == _color_detected -> -> 4 `i `*uc 2082  ]
+{
+"157
+[; ;color_instructions.c: 157:         YellowInstructions(mL, mR);
+[e ( _YellowInstructions (2 , _mL _mR ]
+"159
+[; ;color_instructions.c: 159:     }
+}
+[e $U 2083  ]
+"160
+[; ;color_instructions.c: 160:     else if (color_detected==5){
+[e :U 2082 ]
+[e $ ! == _color_detected -> -> 5 `i `*uc 2084  ]
+{
+"161
+[; ;color_instructions.c: 161:         PinkInstructions(mL, mR);
+[e ( _PinkInstructions (2 , _mL _mR ]
+"163
+[; ;color_instructions.c: 163:     }
+}
+[e $U 2085  ]
+"164
+[; ;color_instructions.c: 164:     else if (color_detected==6){
+[e :U 2084 ]
+[e $ ! == _color_detected -> -> 6 `i `*uc 2086  ]
+{
+"165
+[; ;color_instructions.c: 165:         OrangeInstructions(mL, mR);
+[e ( _OrangeInstructions (2 , _mL _mR ]
+"166
+[; ;color_instructions.c: 166:         AppendMoves(7,&moves_index,anti_moves_array);
+[e ( _AppendMoves (3 , , -> -> 7 `i `uc &U _moves_index &U _anti_moves_array ]
+"167
+[; ;color_instructions.c: 167:     }
+}
+[e $U 2087  ]
+"168
+[; ;color_instructions.c: 168:     else if (color_detected==7){
+[e :U 2086 ]
+[e $ ! == _color_detected -> -> 7 `i `*uc 2088  ]
+{
+"169
+[; ;color_instructions.c: 169:         LightBlueInstructions(mL, mR);
+[e ( _LightBlueInstructions (2 , _mL _mR ]
+"170
+[; ;color_instructions.c: 170:         AppendMoves(6,&moves_index,anti_moves_array);
+[e ( _AppendMoves (3 , , -> -> 6 `i `uc &U _moves_index &U _anti_moves_array ]
+"171
+[; ;color_instructions.c: 171:     }
+}
+[e :U 2088 ]
+[e :U 2087 ]
+[e :U 2085 ]
+[e :U 2083 ]
+[e :U 2081 ]
+[e :U 2079 ]
 [e :U 2077 ]
-[e :U 2075 ]
-[e :U 2073 ]
-[e :U 2071 ]
-[e :U 2069 ]
-[e :U 2067 ]
-"139
-[; ;color_instructions.c: 139: }
-[e :UE 2065 ]
+"173
+[; ;color_instructions.c: 173: }
+[e :UE 2075 ]
 }

@@ -20,7 +20,7 @@ void initDCmotorsPWM(unsigned int PWMperiod){
     RG6PPS=0x08; //CCP4 on RG6
 
     // timer 2 config
-    T2CONbits.CKPS=0b100; // 1:??? prescaler
+    T2CONbits.CKPS=0b100; // 1:16 prescaler
     T2HLTbits.MODE=0b00000; // Free Running Mode, software gate only
     T2CLKCONbits.CS=0b0001; // Fosc/4
 

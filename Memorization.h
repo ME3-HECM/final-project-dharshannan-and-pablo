@@ -5,7 +5,7 @@
 
 // Initialize index and arrays to be global variables
 extern unsigned char moves_index; // Initialize move index for move memorization array
-extern unsigned char time_index0; // Initialize time index for time memorization array
+extern unsigned char time_index; // Initialize time index for time memorization array
 
 extern unsigned char anti_moves_array[40]; // Array holding the anti moves of executed movements
 extern unsigned char time_array[40]; // Array holding the time for forward movement of Buggy

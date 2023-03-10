@@ -24239,7 +24239,7 @@ unsigned char __t3rd16on(void);
 
 
 extern unsigned char moves_index;
-extern unsigned char time_index0;
+extern unsigned char time_index;
 
 extern unsigned char anti_moves_array[40];
 extern unsigned char time_array[40];
@@ -24248,6 +24248,7 @@ extern unsigned char time_array[40];
 void AppendMoves(unsigned char temp, unsigned char *moves_index, unsigned char *anti_moves_array);
 void AppendTime(unsigned char temp, unsigned char *time_index, unsigned char *time_array);
 unsigned char Return_Anti_Moves(unsigned char *moves_index, unsigned char *anti_moves_array);
+unsigned char Return_Time(unsigned char *time_index, unsigned char *time_array);
 # 2 "Memorization.c" 2
 
 
@@ -24259,6 +24260,7 @@ unsigned char time_index = 0;
 
 unsigned char anti_moves_array[40];
 unsigned char time_array[40];
+
 
 
 
@@ -24277,9 +24279,18 @@ void AppendTime(unsigned char temp, unsigned char *time_index, unsigned char *ti
 
 
 
+
 unsigned char Return_Anti_Moves(unsigned char *moves_index, unsigned char *anti_moves_array){
     unsigned char temp;
 
-    temp = anti_moves_array[(*moves_index)--];
+    temp = anti_moves_array[--(*moves_index)];
+    return temp;
+}
+
+
+unsigned char Return_Time(unsigned char *time_index, unsigned char *time_array){
+    unsigned char temp;
+
+    temp = time_array[--(*time_index)];
     return temp;
 }

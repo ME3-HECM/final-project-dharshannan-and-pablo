@@ -15,6 +15,7 @@
 #include "serial.h"
 #include "timers.h"
 #include "color_instructions.h"
+#include "Memorization.h"
 
 #define _XTAL_FREQ 64000000 //note intrinsic _delay function is 62.5ns at 64,000,000Hz  
 
@@ -66,6 +67,7 @@ void main(void) {
         }  
         // If color detected is no longer null, stop Buggy and decide the movement of the Buggy
         else if(color_detected != 0){
+            AppendTime(b,&time_index,time_array); // Append the value of b (forward incrementation variable) to the time array
             LATHbits.LATH3 = 1; // Turn ON LED to indicate a color has been detected
             // Stop motor
             while(b>0){

@@ -25,19 +25,19 @@ Version 4.0 HI-TECH Software Intermediate Code
 "29
 [; ;./dc_motor.h: 29: void turnLeft135(DC_motor *mL, DC_motor *mR);
 [v _turnLeft135 `(v ~T0 @X0 0 ef2`*S2015`*S2015 ]
-"23
-[; ;./dc_motor.h: 23: void fullSpeedAhead(DC_motor *mL, DC_motor *mR);
-[v _fullSpeedAhead `(v ~T0 @X0 0 ef2`*S2015`*S2015 ]
 "17 ./Memorization.h
-[; ;./Memorization.h: 17: unsigned char Return_Time(unsigned char *time_index, unsigned char *time_array);
-[v _Return_Time `(uc ~T0 @X0 0 ef2`*uc`*uc ]
+[; ;./Memorization.h: 17: unsigned int Return_Time(unsigned char *time_index, unsigned int *time_array);
+[v _Return_Time `(ui ~T0 @X0 0 ef2`*uc`*ui ]
 "8
 [; ;./Memorization.h: 8: extern unsigned char time_index;
 [v _time_index `uc ~T0 @X0 0 e ]
 "11
-[; ;./Memorization.h: 11: extern unsigned char time_array[40];
-[v _time_array `uc ~T0 @X0 -> 0 `x e ]
-"16
+[; ;./Memorization.h: 11: extern unsigned int time_array[40];
+[v _time_array `ui ~T0 @X0 -> 0 `x e ]
+"23 ./dc_motor.h
+[; ;./dc_motor.h: 23: void fullSpeedAhead(DC_motor *mL, DC_motor *mR);
+[v _fullSpeedAhead `(v ~T0 @X0 0 ef2`*S2015`*S2015 ]
+"16 ./Memorization.h
 [; ;./Memorization.h: 16: unsigned char Return_Anti_Moves(unsigned char *moves_index, unsigned char *anti_moves_array);
 [v _Return_Anti_Moves `(uc ~T0 @X0 0 ef2`*uc`*uc ]
 "7
@@ -46,9 +46,24 @@ Version 4.0 HI-TECH Software Intermediate Code
 "10
 [; ;./Memorization.h: 10: extern unsigned char anti_moves_array[40];
 [v _anti_moves_array `uc ~T0 @X0 -> 0 `x e ]
-"18 ./color_instructions.h
-[; ;./color_instructions.h: 18: void MoveBuggy(unsigned char *color_detected, DC_motor *mL, DC_motor *mR);
+"19 ./color_instructions.h
+[; ;./color_instructions.h: 19: void MoveBuggy(unsigned char *color_detected, DC_motor *mL, DC_motor *mR);
 [v _MoveBuggy `(v ~T0 @X0 0 ef3`*uc`*S2015`*S2015 ]
+"28810 D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h
+[; ;D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h: 28810:     struct {
+[s S1349 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1349 . LATD0 LATD1 LATD2 LATD3 LATD4 LATD5 LATD6 LATD7 ]
+"28820
+[; ;D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h: 28820:     struct {
+[s S1350 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1350 . LD0 LD1 LD2 LD3 LD4 LD5 LD6 LD7 ]
+"28809
+[; ;D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h: 28809: typedef union {
+[u S1348 `S1349 1 `S1350 1 ]
+[n S1348 . . . ]
+"28831
+[; ;D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h: 28831: extern volatile LATDbits_t LATDbits __attribute__((address(0xF7C)));
+[v _LATDbits `VS1348 ~T0 @X0 0 e@3964 ]
 "14 ./Memorization.h
 [; ;./Memorization.h: 14: void AppendMoves(unsigned char temp, unsigned char *moves_index, unsigned char *anti_moves_array);
 [v _AppendMoves `(v ~T0 @X0 0 ef3`uc`*uc`*uc ]
@@ -2039,7 +2054,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _a `uc ~T0 @X0 1 a ]
 [e = _a -> -> 0 `i `uc ]
 "13
-[; ;color_instructions.c: 13:     while (a<8){
+[; ;color_instructions.c: 13:     while (a<15){
 [e $U 2017  ]
 [e :U 2018 ]
 {
@@ -2054,8 +2069,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 2017 ]
 "13
-[; ;color_instructions.c: 13:     while (a<8){
-[e $ < -> _a `i -> 8 `i 2018  ]
+[; ;color_instructions.c: 13:     while (a<15){
+[e $ < -> _a `i -> 15 `i 2018  ]
 [e :U 2019 ]
 "17
 [; ;color_instructions.c: 17:     while (a>0){
@@ -2077,8 +2092,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ > -> _a `i -> 0 `i 2021  ]
 [e :U 2022 ]
 "21
-[; ;color_instructions.c: 21:     _delay((unsigned long)((250)*(64000000/4000.0)));
-[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+[; ;color_instructions.c: 21:     _delay((unsigned long)((100)*(64000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
 "22
 [; ;color_instructions.c: 22:     turnRight90(mL, mR);
 [e ( _turnRight90 (2 , _mL _mR ]
@@ -2099,7 +2114,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _a `uc ~T0 @X0 1 a ]
 [e = _a -> -> 0 `i `uc ]
 "27
-[; ;color_instructions.c: 27:     while (a<8){
+[; ;color_instructions.c: 27:     while (a<15){
 [e $U 2024  ]
 [e :U 2025 ]
 {
@@ -2114,8 +2129,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 2024 ]
 "27
-[; ;color_instructions.c: 27:     while (a<8){
-[e $ < -> _a `i -> 8 `i 2025  ]
+[; ;color_instructions.c: 27:     while (a<15){
+[e $ < -> _a `i -> 15 `i 2025  ]
 [e :U 2026 ]
 "31
 [; ;color_instructions.c: 31:     while (a>0){
@@ -2137,8 +2152,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ > -> _a `i -> 0 `i 2028  ]
 [e :U 2029 ]
 "35
-[; ;color_instructions.c: 35:     _delay((unsigned long)((250)*(64000000/4000.0)));
-[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+[; ;color_instructions.c: 35:     _delay((unsigned long)((100)*(64000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
 "36
 [; ;color_instructions.c: 36:     turnLeft90(mL, mR);
 [e ( _turnLeft90 (2 , _mL _mR ]
@@ -2159,7 +2174,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _a `uc ~T0 @X0 1 a ]
 [e = _a -> -> 0 `i `uc ]
 "41
-[; ;color_instructions.c: 41:     while (a<8){
+[; ;color_instructions.c: 41:     while (a<15){
 [e $U 2031  ]
 [e :U 2032 ]
 {
@@ -2174,8 +2189,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 2031 ]
 "41
-[; ;color_instructions.c: 41:     while (a<8){
-[e $ < -> _a `i -> 8 `i 2032  ]
+[; ;color_instructions.c: 41:     while (a<15){
+[e $ < -> _a `i -> 15 `i 2032  ]
 [e :U 2033 ]
 "45
 [; ;color_instructions.c: 45:     while (a>0){
@@ -2197,8 +2212,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ > -> _a `i -> 0 `i 2035  ]
 [e :U 2036 ]
 "49
-[; ;color_instructions.c: 49:     _delay((unsigned long)((500)*(64000000/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+[; ;color_instructions.c: 49:     _delay((unsigned long)((100)*(64000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
 "52
 [; ;color_instructions.c: 52:     turnLeft90(mL, mR);
 [e ( _turnLeft90 (2 , _mL _mR ]
@@ -2225,7 +2240,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _a `uc ~T0 @X0 1 a ]
 [e = _a -> -> 0 `i `uc ]
 "61
-[; ;color_instructions.c: 61:     while (a<20){
+[; ;color_instructions.c: 61:     while (a<28){
 [e $U 2038  ]
 [e :U 2039 ]
 {
@@ -2240,8 +2255,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 2038 ]
 "61
-[; ;color_instructions.c: 61:     while (a<20){
-[e $ < -> _a `i -> 20 `i 2039  ]
+[; ;color_instructions.c: 61:     while (a<28){
+[e $ < -> _a `i -> 28 `i 2039  ]
 [e :U 2040 ]
 "65
 [; ;color_instructions.c: 65:     while (a>0){
@@ -2263,8 +2278,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ > -> _a `i -> 0 `i 2042  ]
 [e :U 2043 ]
 "69
-[; ;color_instructions.c: 69:     _delay((unsigned long)((250)*(64000000/4000.0)));
-[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+[; ;color_instructions.c: 69:     _delay((unsigned long)((100)*(64000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
 "70
 [; ;color_instructions.c: 70:     turnRight90(mL, mR);
 [e ( _turnRight90 (2 , _mL _mR ]
@@ -2285,7 +2300,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _a `uc ~T0 @X0 1 a ]
 [e = _a -> -> 0 `i `uc ]
 "75
-[; ;color_instructions.c: 75:     while (a<20){
+[; ;color_instructions.c: 75:     while (a<28){
 [e $U 2045  ]
 [e :U 2046 ]
 {
@@ -2300,8 +2315,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 2045 ]
 "75
-[; ;color_instructions.c: 75:     while (a<20){
-[e $ < -> _a `i -> 20 `i 2046  ]
+[; ;color_instructions.c: 75:     while (a<28){
+[e $ < -> _a `i -> 28 `i 2046  ]
 [e :U 2047 ]
 "79
 [; ;color_instructions.c: 79:     while (a>0){
@@ -2323,8 +2338,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ > -> _a `i -> 0 `i 2049  ]
 [e :U 2050 ]
 "83
-[; ;color_instructions.c: 83:     _delay((unsigned long)((250)*(64000000/4000.0)));
-[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+[; ;color_instructions.c: 83:     _delay((unsigned long)((100)*(64000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
 "84
 [; ;color_instructions.c: 84:     turnLeft90(mL, mR);
 [e ( _turnLeft90 (2 , _mL _mR ]
@@ -2345,7 +2360,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _a `uc ~T0 @X0 1 a ]
 [e = _a -> -> 0 `i `uc ]
 "90
-[; ;color_instructions.c: 90:     while (a<20){
+[; ;color_instructions.c: 90:     while (a<15){
 [e $U 2052  ]
 [e :U 2053 ]
 {
@@ -2360,8 +2375,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 2052 ]
 "90
-[; ;color_instructions.c: 90:     while (a<20){
-[e $ < -> _a `i -> 20 `i 2053  ]
+[; ;color_instructions.c: 90:     while (a<15){
+[e $ < -> _a `i -> 15 `i 2053  ]
 [e :U 2054 ]
 "94
 [; ;color_instructions.c: 94:     while (a>0){
@@ -2383,8 +2398,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ > -> _a `i -> 0 `i 2056  ]
 [e :U 2057 ]
 "98
-[; ;color_instructions.c: 98:     _delay((unsigned long)((250)*(64000000/4000.0)));
-[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+[; ;color_instructions.c: 98:     _delay((unsigned long)((100)*(64000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
 "100
 [; ;color_instructions.c: 100:     turnRight135(mL, mR);
 [e ( _turnRight135 (2 , _mL _mR ]
@@ -2405,7 +2420,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _a `uc ~T0 @X0 1 a ]
 [e = _a -> -> 0 `i `uc ]
 "105
-[; ;color_instructions.c: 105:     while (a<20){
+[; ;color_instructions.c: 105:     while (a<15){
 [e $U 2059  ]
 [e :U 2060 ]
 {
@@ -2420,8 +2435,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 2059 ]
 "105
-[; ;color_instructions.c: 105:     while (a<20){
-[e $ < -> _a `i -> 20 `i 2060  ]
+[; ;color_instructions.c: 105:     while (a<15){
+[e $ < -> _a `i -> 15 `i 2060  ]
 [e :U 2061 ]
 "109
 [; ;color_instructions.c: 109:     while (a>0){
@@ -2443,8 +2458,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ > -> _a `i -> 0 `i 2063  ]
 [e :U 2064 ]
 "113
-[; ;color_instructions.c: 113:     _delay((unsigned long)((250)*(64000000/4000.0)));
-[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+[; ;color_instructions.c: 113:     _delay((unsigned long)((100)*(64000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
 "115
 [; ;color_instructions.c: 115:     turnLeft135(mL, mR);
 [e ( _turnLeft135 (2 , _mL _mR ]
@@ -2469,68 +2484,72 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 2067 ]
 {
 "125
-[; ;color_instructions.c: 125:         unsigned char a = 0;
-[v _a `uc ~T0 @X0 1 a ]
-[e = _a -> -> 0 `i `uc ]
+[; ;color_instructions.c: 125:         unsigned int a = 0;
+[v _a `ui ~T0 @X0 1 a ]
+[e = _a -> -> 0 `i `ui ]
 "126
-[; ;color_instructions.c: 126:         while(a<Return_Time(&time_index,time_array)){
+[; ;color_instructions.c: 126:         unsigned int c = Return_Time(&time_index,time_array);
+[v _c `ui ~T0 @X0 1 a ]
+[e = _c ( _Return_Time (2 , &U _time_index &U _time_array ]
+"127
+[; ;color_instructions.c: 127:         while(a<c){
 [e $U 2069  ]
 [e :U 2070 ]
 {
-"127
-[; ;color_instructions.c: 127:             fullSpeedAhead(mL,mR);
-[e ( _fullSpeedAhead (2 , _mL _mR ]
 "128
-[; ;color_instructions.c: 128:             a++;
-[e ++ _a -> -> 1 `i `uc ]
+[; ;color_instructions.c: 128:             fullSpeedAhead(mL,mR);
+[e ( _fullSpeedAhead (2 , _mL _mR ]
 "129
-[; ;color_instructions.c: 129:         }
+[; ;color_instructions.c: 129:             a++;
+[e ++ _a -> -> 1 `i `ui ]
+"130
+[; ;color_instructions.c: 130:         }
 }
 [e :U 2069 ]
-"126
-[; ;color_instructions.c: 126:         while(a<Return_Time(&time_index,time_array)){
-[e $ < -> _a `i -> ( _Return_Time (2 , &U _time_index &U _time_array `i 2070  ]
+"127
+[; ;color_instructions.c: 127:         while(a<c){
+[e $ < _a _c 2070  ]
 [e :U 2071 ]
-"131
-[; ;color_instructions.c: 131:         while(a>0){
+"132
+[; ;color_instructions.c: 132:         while(a>0){
 [e $U 2072  ]
 [e :U 2073 ]
 {
-"132
-[; ;color_instructions.c: 132:             stop(mL,mR);
-[e ( _stop (2 , _mL _mR ]
 "133
-[; ;color_instructions.c: 133:             a--;
-[e -- _a -> -> 1 `i `uc ]
+[; ;color_instructions.c: 133:             stop(mL,mR);
+[e ( _stop (2 , _mL _mR ]
 "134
-[; ;color_instructions.c: 134:         }
+[; ;color_instructions.c: 134:             a--;
+[e -- _a -> -> 1 `i `ui ]
+"135
+[; ;color_instructions.c: 135:         }
 }
 [e :U 2072 ]
-"131
-[; ;color_instructions.c: 131:         while(a>0){
-[e $ > -> _a `i -> 0 `i 2073  ]
+"132
+[; ;color_instructions.c: 132:         while(a>0){
+[e $ > _a -> -> 0 `i `ui 2073  ]
 [e :U 2074 ]
-"136
-[; ;color_instructions.c: 136:         unsigned char anticolor = Return_Anti_Moves(&moves_index, anti_moves_array);
+"137
+[; ;color_instructions.c: 137:         unsigned char anticolor = Return_Anti_Moves(&moves_index, anti_moves_array);
 [v _anticolor `uc ~T0 @X0 1 a ]
 [e = _anticolor ( _Return_Anti_Moves (2 , &U _moves_index &U _anti_moves_array ]
-"137
-[; ;color_instructions.c: 137:         MoveBuggy(anticolor,mL,mR);
-[e ( _MoveBuggy (3 , , -> _anticolor `*uc _mL _mR ]
 "138
-[; ;color_instructions.c: 138:     }
+[; ;color_instructions.c: 138:         MoveBuggy(anticolor,mL,mR);
+[e ( _MoveBuggy (3 , , -> _anticolor `*uc _mL _mR ]
+"139
+[; ;color_instructions.c: 139:     }
 }
 [e :U 2066 ]
 "123
 [; ;color_instructions.c: 123:     while(time_index>0){
 [e $ > -> _time_index `i -> 0 `i 2067  ]
 [e :U 2068 ]
-"139
-[; ;color_instructions.c: 139: }
+"140
+[; ;color_instructions.c: 140: }
 [e :UE 2065 ]
 }
-"143
-[; ;color_instructions.c: 143: void MoveBuggy(unsigned char *color_detected, DC_motor *mL, DC_motor *mR){
+"144
+[; ;color_instructions.c: 144: void MoveBuggy(unsigned char *color_detected, DC_motor *mL, DC_motor *mR){
 [v _MoveBuggy `(v ~T0 @X0 1 ef3`*uc`*S2015`*S2015 ]
 {
 [e :U _MoveBuggy ]
@@ -2538,111 +2557,151 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _mL `*S2015 ~T0 @X0 1 r2 ]
 [v _mR `*S2015 ~T0 @X0 1 r3 ]
 [f ]
-"144
-[; ;color_instructions.c: 144:     if (color_detected==1){
+"145
+[; ;color_instructions.c: 145:     if (color_detected==1){
 [e $ ! == _color_detected -> -> 1 `i `*uc 2076  ]
 {
-"145
-[; ;color_instructions.c: 145:         RedInstructions(mL, mR);
-[e ( _RedInstructions (2 , _mL _mR ]
 "146
-[; ;color_instructions.c: 146:         AppendMoves(2,&moves_index,anti_moves_array);
-[e ( _AppendMoves (3 , , -> -> 2 `i `uc &U _moves_index &U _anti_moves_array ]
+[; ;color_instructions.c: 146:         RedInstructions(mL, mR);
+[e ( _RedInstructions (2 , _mL _mR ]
 "147
-[; ;color_instructions.c: 147:     }
-}
-[e $U 2077  ]
+[; ;color_instructions.c: 147:         if(LATDbits.LATD7 != 1){
+[e $ ! != -> . . _LATDbits 0 7 `i -> 1 `i 2077  ]
+{
 "148
-[; ;color_instructions.c: 148:     else if (color_detected==2){
-[e :U 2076 ]
-[e $ ! == _color_detected -> -> 2 `i `*uc 2078  ]
-{
+[; ;color_instructions.c: 148:             AppendMoves(2,&moves_index,anti_moves_array);
+[e ( _AppendMoves (3 , , -> -> 2 `i `uc &U _moves_index &U _anti_moves_array ]
 "149
-[; ;color_instructions.c: 149:         GreenInstructions(mL, mR);
-[e ( _GreenInstructions (2 , _mL _mR ]
-"150
-[; ;color_instructions.c: 150:         AppendMoves(1,&moves_index,anti_moves_array);
-[e ( _AppendMoves (3 , , -> -> 1 `i `uc &U _moves_index &U _anti_moves_array ]
-"151
-[; ;color_instructions.c: 151:     }
+[; ;color_instructions.c: 149:         }
 }
-[e $U 2079  ]
-"152
-[; ;color_instructions.c: 152:     else if (color_detected==3){
-[e :U 2078 ]
-[e $ ! == _color_detected -> -> 3 `i `*uc 2080  ]
+[e :U 2077 ]
+"150
+[; ;color_instructions.c: 150:     }
+}
+[e $U 2078  ]
+"151
+[; ;color_instructions.c: 151:     else if (color_detected==2){
+[e :U 2076 ]
+[e $ ! == _color_detected -> -> 2 `i `*uc 2079  ]
 {
+"152
+[; ;color_instructions.c: 152:         GreenInstructions(mL, mR);
+[e ( _GreenInstructions (2 , _mL _mR ]
 "153
-[; ;color_instructions.c: 153:         BlueInstructions(mL, mR);
-[e ( _BlueInstructions (2 , _mL _mR ]
+[; ;color_instructions.c: 153:         if(LATDbits.LATD7 != 1){
+[e $ ! != -> . . _LATDbits 0 7 `i -> 1 `i 2080  ]
+{
 "154
-[; ;color_instructions.c: 154:         AppendMoves(3,&moves_index,anti_moves_array);
-[e ( _AppendMoves (3 , , -> -> 3 `i `uc &U _moves_index &U _anti_moves_array ]
+[; ;color_instructions.c: 154:             AppendMoves(1,&moves_index,anti_moves_array);
+[e ( _AppendMoves (3 , , -> -> 1 `i `uc &U _moves_index &U _anti_moves_array ]
 "155
-[; ;color_instructions.c: 155:     }
+[; ;color_instructions.c: 155:         }
+}
+[e :U 2080 ]
+"156
+[; ;color_instructions.c: 156:     }
 }
 [e $U 2081  ]
-"156
-[; ;color_instructions.c: 156:     else if (color_detected==4){
-[e :U 2080 ]
-[e $ ! == _color_detected -> -> 4 `i `*uc 2082  ]
-{
 "157
-[; ;color_instructions.c: 157:         YellowInstructions(mL, mR);
-[e ( _YellowInstructions (2 , _mL _mR ]
-"159
-[; ;color_instructions.c: 159:     }
-}
-[e $U 2083  ]
-"160
-[; ;color_instructions.c: 160:     else if (color_detected==5){
-[e :U 2082 ]
-[e $ ! == _color_detected -> -> 5 `i `*uc 2084  ]
-{
-"161
-[; ;color_instructions.c: 161:         PinkInstructions(mL, mR);
-[e ( _PinkInstructions (2 , _mL _mR ]
-"163
-[; ;color_instructions.c: 163:     }
-}
-[e $U 2085  ]
-"164
-[; ;color_instructions.c: 164:     else if (color_detected==6){
-[e :U 2084 ]
-[e $ ! == _color_detected -> -> 6 `i `*uc 2086  ]
-{
-"165
-[; ;color_instructions.c: 165:         OrangeInstructions(mL, mR);
-[e ( _OrangeInstructions (2 , _mL _mR ]
-"166
-[; ;color_instructions.c: 166:         AppendMoves(7,&moves_index,anti_moves_array);
-[e ( _AppendMoves (3 , , -> -> 7 `i `uc &U _moves_index &U _anti_moves_array ]
-"167
-[; ;color_instructions.c: 167:     }
-}
-[e $U 2087  ]
-"168
-[; ;color_instructions.c: 168:     else if (color_detected==7){
-[e :U 2086 ]
-[e $ ! == _color_detected -> -> 7 `i `*uc 2088  ]
-{
-"169
-[; ;color_instructions.c: 169:         LightBlueInstructions(mL, mR);
-[e ( _LightBlueInstructions (2 , _mL _mR ]
-"170
-[; ;color_instructions.c: 170:         AppendMoves(6,&moves_index,anti_moves_array);
-[e ( _AppendMoves (3 , , -> -> 6 `i `uc &U _moves_index &U _anti_moves_array ]
-"171
-[; ;color_instructions.c: 171:     }
-}
-[e :U 2088 ]
-[e :U 2087 ]
-[e :U 2085 ]
-[e :U 2083 ]
-[e :U 2081 ]
+[; ;color_instructions.c: 157:     else if (color_detected==3){
 [e :U 2079 ]
-[e :U 2077 ]
+[e $ ! == _color_detected -> -> 3 `i `*uc 2082  ]
+{
+"158
+[; ;color_instructions.c: 158:         BlueInstructions(mL, mR);
+[e ( _BlueInstructions (2 , _mL _mR ]
+"159
+[; ;color_instructions.c: 159:         if(LATDbits.LATD7 != 1){
+[e $ ! != -> . . _LATDbits 0 7 `i -> 1 `i 2083  ]
+{
+"160
+[; ;color_instructions.c: 160:             AppendMoves(3,&moves_index,anti_moves_array);
+[e ( _AppendMoves (3 , , -> -> 3 `i `uc &U _moves_index &U _anti_moves_array ]
+"161
+[; ;color_instructions.c: 161:         }
+}
+[e :U 2083 ]
+"162
+[; ;color_instructions.c: 162:     }
+}
+[e $U 2084  ]
+"163
+[; ;color_instructions.c: 163:     else if (color_detected==4){
+[e :U 2082 ]
+[e $ ! == _color_detected -> -> 4 `i `*uc 2085  ]
+{
+"164
+[; ;color_instructions.c: 164:         YellowInstructions(mL, mR);
+[e ( _YellowInstructions (2 , _mL _mR ]
+"166
+[; ;color_instructions.c: 166:     }
+}
+[e $U 2086  ]
+"167
+[; ;color_instructions.c: 167:     else if (color_detected==5){
+[e :U 2085 ]
+[e $ ! == _color_detected -> -> 5 `i `*uc 2087  ]
+{
+"168
+[; ;color_instructions.c: 168:         PinkInstructions(mL, mR);
+[e ( _PinkInstructions (2 , _mL _mR ]
+"170
+[; ;color_instructions.c: 170:     }
+}
+[e $U 2088  ]
+"171
+[; ;color_instructions.c: 171:     else if (color_detected==6){
+[e :U 2087 ]
+[e $ ! == _color_detected -> -> 6 `i `*uc 2089  ]
+{
+"172
+[; ;color_instructions.c: 172:         OrangeInstructions(mL, mR);
+[e ( _OrangeInstructions (2 , _mL _mR ]
 "173
-[; ;color_instructions.c: 173: }
+[; ;color_instructions.c: 173:         if(LATDbits.LATD7 != 1){
+[e $ ! != -> . . _LATDbits 0 7 `i -> 1 `i 2090  ]
+{
+"174
+[; ;color_instructions.c: 174:             AppendMoves(7,&moves_index,anti_moves_array);
+[e ( _AppendMoves (3 , , -> -> 7 `i `uc &U _moves_index &U _anti_moves_array ]
+"175
+[; ;color_instructions.c: 175:         }
+}
+[e :U 2090 ]
+"176
+[; ;color_instructions.c: 176:     }
+}
+[e $U 2091  ]
+"177
+[; ;color_instructions.c: 177:     else if (color_detected==7){
+[e :U 2089 ]
+[e $ ! == _color_detected -> -> 7 `i `*uc 2092  ]
+{
+"178
+[; ;color_instructions.c: 178:         LightBlueInstructions(mL, mR);
+[e ( _LightBlueInstructions (2 , _mL _mR ]
+"179
+[; ;color_instructions.c: 179:         if(LATDbits.LATD7 != 1){
+[e $ ! != -> . . _LATDbits 0 7 `i -> 1 `i 2093  ]
+{
+"180
+[; ;color_instructions.c: 180:             AppendMoves(6,&moves_index,anti_moves_array);
+[e ( _AppendMoves (3 , , -> -> 6 `i `uc &U _moves_index &U _anti_moves_array ]
+"181
+[; ;color_instructions.c: 181:         }
+}
+[e :U 2093 ]
+"182
+[; ;color_instructions.c: 182:     }
+}
+[e :U 2092 ]
+[e :U 2091 ]
+[e :U 2088 ]
+[e :U 2086 ]
+[e :U 2084 ]
+[e :U 2081 ]
+[e :U 2078 ]
+"185
+[; ;color_instructions.c: 185: }
 [e :UE 2075 ]
 }

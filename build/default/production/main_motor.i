@@ -24421,17 +24421,10 @@ unsigned int get16bitTMR0val(void);
 # 16 "main_motor.c" 2
 
 # 1 "./color_instructions.h" 1
-# 10 "./color_instructions.h"
-void RedInstructions(DC_motor *mL, DC_motor *mR);
-void GreenInstructions(DC_motor *mL, DC_motor *mR);
-void BlueInstructions(DC_motor *mL, DC_motor *mR);
-void YellowInstructions (DC_motor *mL, DC_motor *mR);
-void PinkInstructions(DC_motor *mL, DC_motor *mR);
-void OrangeInstructions(DC_motor *mL, DC_motor *mR);
-void LightBlueInstructions(DC_motor *mL, DC_motor *mR);
-void WhiteInstructions(DC_motor *mL, DC_motor *mR);
-void MoveBuggy(unsigned char *color_detected, DC_motor *mL, DC_motor *mR);
-# 17 "main_motor.c" 2
+
+
+
+
 
 # 1 "./Memorization.h" 1
 
@@ -24444,14 +24437,30 @@ extern unsigned char moves_index;
 extern unsigned char time_index;
 
 extern unsigned char anti_moves_array[40];
-extern unsigned char time_array[40];
+extern unsigned int time_array[40];
 
 
 void AppendMoves(unsigned char temp, unsigned char *moves_index, unsigned char *anti_moves_array);
-void AppendTime(unsigned char temp, unsigned char *time_index, unsigned char *time_array);
+void AppendTime(unsigned int temp, unsigned char *time_index, unsigned int *time_array);
 unsigned char Return_Anti_Moves(unsigned char *moves_index, unsigned char *anti_moves_array);
-unsigned char Return_Time(unsigned char *time_index, unsigned char *time_array);
-# 18 "main_motor.c" 2
+unsigned int Return_Time(unsigned char *time_index, unsigned int *time_array);
+# 6 "./color_instructions.h" 2
+
+
+
+
+
+void RedInstructions(DC_motor *mL, DC_motor *mR);
+void GreenInstructions(DC_motor *mL, DC_motor *mR);
+void BlueInstructions(DC_motor *mL, DC_motor *mR);
+void YellowInstructions (DC_motor *mL, DC_motor *mR);
+void PinkInstructions(DC_motor *mL, DC_motor *mR);
+void OrangeInstructions(DC_motor *mL, DC_motor *mR);
+void LightBlueInstructions(DC_motor *mL, DC_motor *mR);
+void WhiteInstructions(DC_motor *mL, DC_motor *mR);
+void MoveBuggy(unsigned char *color_detected, DC_motor *mL, DC_motor *mR);
+# 17 "main_motor.c" 2
+
 
 
 
@@ -24497,27 +24506,41 @@ void main(void) {
         Update_RGBC(&initial_color);
         color_detected = detect_color(&initial_color);
 
-        unsigned char b = 0;
-        if(color_detected == 0){
+        unsigned int b = 0;
+        while(color_detected == 0){
             fullSpeedAhead(&motorL,&motorR);
+            Update_RGBC(&initial_color);
+            color_detected = detect_color(&initial_color);
             b++;
         }
 
-        else if(color_detected != 0){
-            AppendTime(b,&time_index,time_array);
+        if(color_detected != 0 && color_detected != 8){
+            AppendTime((b-9),&time_index,time_array);
             LATHbits.LATH3 = 1;
 
             while(b>0){
                 stop(&motorL,&motorR);
                 b--;
             }
-            _delay((unsigned long)((500)*(64000000/4000.0)));
+            _delay((unsigned long)((100)*(64000000/4000.0)));
             LATHbits.LATH3 = 0;
 
             MoveBuggy(color_detected,&motorL,&motorR);
             color_detected = 0;
         }
 
-    }
 
+        else if(color_detected == 8){
+            AppendTime((b-9),&time_index,time_array);
+            LATDbits.LATD7 = 1;
+
+            while(b>0){
+                stop(&motorL,&motorR);
+                b--;
+            }
+            _delay((unsigned long)((100)*(64000000/4000.0)));
+            WhiteInstructions(&motorL,&motorR);
+            LATDbits.LATD7 = 0;
+        }
+    }
 }

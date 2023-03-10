@@ -24242,13 +24242,13 @@ extern unsigned char moves_index;
 extern unsigned char time_index;
 
 extern unsigned char anti_moves_array[40];
-extern unsigned char time_array[40];
+extern unsigned int time_array[40];
 
 
 void AppendMoves(unsigned char temp, unsigned char *moves_index, unsigned char *anti_moves_array);
-void AppendTime(unsigned char temp, unsigned char *time_index, unsigned char *time_array);
+void AppendTime(unsigned int temp, unsigned char *time_index, unsigned int *time_array);
 unsigned char Return_Anti_Moves(unsigned char *moves_index, unsigned char *anti_moves_array);
-unsigned char Return_Time(unsigned char *time_index, unsigned char *time_array);
+unsigned int Return_Time(unsigned char *time_index, unsigned int *time_array);
 # 2 "Memorization.c" 2
 
 
@@ -24259,7 +24259,7 @@ unsigned char moves_index = 0;
 unsigned char time_index = 0;
 
 unsigned char anti_moves_array[40];
-unsigned char time_array[40];
+unsigned int time_array[40];
 
 
 
@@ -24271,7 +24271,7 @@ void AppendMoves(unsigned char temp, unsigned char *moves_index, unsigned char *
 }
 
 
-void AppendTime(unsigned char temp, unsigned char *time_index, unsigned char *time_array){
+void AppendTime(unsigned int temp, unsigned char *time_index, unsigned int *time_array){
 
     time_array[(*time_index)++] = temp;
 }
@@ -24288,8 +24288,8 @@ unsigned char Return_Anti_Moves(unsigned char *moves_index, unsigned char *anti_
 }
 
 
-unsigned char Return_Time(unsigned char *time_index, unsigned char *time_array){
-    unsigned char temp;
+unsigned int Return_Time(unsigned char *time_index, unsigned int *time_array){
+    unsigned int temp;
 
     temp = time_array[--(*time_index)];
     return temp;

@@ -9,8 +9,11 @@ void LED_init(void){
     TRISAbits.TRISA4 = 0; // green LED
     TRISFbits.TRISF7 = 0; // blue LED
     
-    LATHbits.LATH3 = 0; // Clicker board LED for debugging
+    LATHbits.LATH3 = 0; // Clicker board LED for debugging (ON when color card is detected except White)
     TRISHbits.TRISH3 = 0;
+    
+    LATDbits.LATD7 = 0; // Clicker board LED for debugging (ON when white card is detected and ON throughout track back sequence)
+    TRISDbits.TRISD7 = 0;
 }
 
 // Turn all all the red, green and blue LEDs to produce white light on color click

@@ -24423,10 +24423,10 @@ void fullSpeedAhead(DC_motor *mL, DC_motor *mR)
 
 
     if(mL->power>50){mL->power=50;}
-    if(mR->power>50){mR->power=50;}
+    if(mR->power>55){mR->power=55;}
 
-    ++mL->power;
-    ++mR->power;
+    mL->power = mL->power + 5 ;
+    mR->power = mR->power + 10;
 
     setMotorPWM(mL);
     setMotorPWM(mR);
@@ -24447,8 +24447,8 @@ void fullSpeedBackwards(DC_motor *mL, DC_motor *mR){
     if(mL->power>50){mL->power=50;}
     if(mR->power>50){mR->power=50;}
 
-    ++mL->power;
-    ++mR->power;
+    mL->power = mL->power + 5 ;
+    mR->power = mR->power + 5;
 
     setMotorPWM(mL);
     setMotorPWM(mR);

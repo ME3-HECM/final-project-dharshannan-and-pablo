@@ -8,7 +8,7 @@ unsigned char moves_index = 0; // Initialize move index for move memorization ar
 unsigned char time_index = 0; // Initialize time index for time memorization array
 
 unsigned char anti_moves_array[40]; // Array holding the anti moves of executed movements
-unsigned char time_array[40]; // Array holding timer values for forward movement of Buggy
+unsigned int time_array[40]; // Array holding timer values for forward movement of Buggy
 
 /*******************************************************************************
 // Functions to append antimoves and timer values to each of the above arrays
@@ -20,7 +20,7 @@ void AppendMoves(unsigned char temp, unsigned char *moves_index, unsigned char *
 }
 
 // Append Time Function
-void AppendTime(unsigned char temp, unsigned char *time_index, unsigned char *time_array){ // Similar to AppendMoves function above
+void AppendTime(unsigned int temp, unsigned char *time_index, unsigned int *time_array){ // Similar to AppendMoves function above
     // Append the time values for forward movement (We can try different approaches to this *using Timer0 module or *using forward movement incremntation variable)
     time_array[(*time_index)++] = temp; // Temp will hold either the Timer0 or forward incrementation values (experiment on which is better)
 }
@@ -37,8 +37,8 @@ unsigned char Return_Anti_Moves(unsigned char *moves_index, unsigned char *anti_
 }
 
 // Traverse Time Array Function
-unsigned char Return_Time(unsigned char *time_index, unsigned char *time_array){
-    unsigned char temp; // Temp variable to return the indexed time for forward movement
+unsigned int Return_Time(unsigned char *time_index, unsigned int *time_array){
+    unsigned int temp; // Temp variable to return the indexed time for forward movement
     // Traverse the array backwards and set temp to the indexed value (decrement index value)
     temp = time_array[--(*time_index)];
     return temp; // Return the time for forward movement

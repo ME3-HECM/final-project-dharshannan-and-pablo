@@ -2674,18 +2674,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 2032 ]
 "163
-[; ;dc_motor.c: 163:     if(mR->power>50){mR->power=50;}
-[e $ ! > -> . *U _mR 0 `i -> 50 `i 2033  ]
+[; ;dc_motor.c: 163:     if(mR->power>55){mR->power=55;}
+[e $ ! > -> . *U _mR 0 `i -> 55 `i 2033  ]
 {
-[e = . *U _mR 0 -> -> 50 `i `c ]
+[e = . *U _mR 0 -> -> 55 `i `c ]
 }
 [e :U 2033 ]
 "165
-[; ;dc_motor.c: 165:     ++mL->power;
-[e =+ . *U _mL 0 -> -> 1 `i `c ]
+[; ;dc_motor.c: 165:     mL->power = mL->power + 5 ;
+[e = . *U _mL 0 -> + -> . *U _mL 0 `i -> 5 `i `c ]
 "166
-[; ;dc_motor.c: 166:     ++mR->power;
-[e =+ . *U _mR 0 -> -> 1 `i `c ]
+[; ;dc_motor.c: 166:     mR->power = mR->power + 10;
+[e = . *U _mR 0 -> + -> . *U _mR 0 `i -> 10 `i `c ]
 "168
 [; ;dc_motor.c: 168:     setMotorPWM(mL);
 [e ( _setMotorPWM (1 _mL ]
@@ -2734,11 +2734,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 2036 ]
 "187
-[; ;dc_motor.c: 187:     ++mL->power;
-[e =+ . *U _mL 0 -> -> 1 `i `c ]
+[; ;dc_motor.c: 187:     mL->power = mL->power + 5 ;
+[e = . *U _mL 0 -> + -> . *U _mL 0 `i -> 5 `i `c ]
 "188
-[; ;dc_motor.c: 188:     ++mR->power;
-[e =+ . *U _mR 0 -> -> 1 `i `c ]
+[; ;dc_motor.c: 188:     mR->power = mR->power + 5;
+[e = . *U _mR 0 -> + -> . *U _mR 0 `i -> 5 `i `c ]
 "190
 [; ;dc_motor.c: 190:     setMotorPWM(mL);
 [e ( _setMotorPWM (1 _mL ]

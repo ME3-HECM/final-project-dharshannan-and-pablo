@@ -1989,8 +1989,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Memorization.c: 10: unsigned char anti_moves_array[40];
 [v _anti_moves_array `uc ~T0 @X0 -> 40 `i e ]
 "11
-[; ;Memorization.c: 11: unsigned char time_array[40];
-[v _time_array `uc ~T0 @X0 -> 40 `i e ]
+[; ;Memorization.c: 11: unsigned int time_array[40];
+[v _time_array `ui ~T0 @X0 -> 40 `i e ]
 "17
 [; ;Memorization.c: 17: void AppendMoves(unsigned char temp, unsigned char *moves_index, unsigned char *anti_moves_array){
 [v _AppendMoves `(v ~T0 @X0 1 ef3`uc`*uc`*uc ]
@@ -2008,13 +2008,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 2015 ]
 }
 "23
-[; ;Memorization.c: 23: void AppendTime(unsigned char temp, unsigned char *time_index, unsigned char *time_array){
-[v _AppendTime `(v ~T0 @X0 1 ef3`uc`*uc`*uc ]
+[; ;Memorization.c: 23: void AppendTime(unsigned int temp, unsigned char *time_index, unsigned int *time_array){
+[v _AppendTime `(v ~T0 @X0 1 ef3`ui`*uc`*ui ]
 {
 [e :U _AppendTime ]
-[v _temp `uc ~T0 @X0 1 r1 ]
+[v _temp `ui ~T0 @X0 1 r1 ]
 [v _time_index `*uc ~T0 @X0 1 r2 ]
-[v _time_array `*uc ~T0 @X0 1 r3 ]
+[v _time_array `*ui ~T0 @X0 1 r3 ]
 [f ]
 "25
 [; ;Memorization.c: 25:     time_array[(*time_index)++] = temp;
@@ -2046,16 +2046,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 2017 ]
 }
 "40
-[; ;Memorization.c: 40: unsigned char Return_Time(unsigned char *time_index, unsigned char *time_array){
-[v _Return_Time `(uc ~T0 @X0 1 ef2`*uc`*uc ]
+[; ;Memorization.c: 40: unsigned int Return_Time(unsigned char *time_index, unsigned int *time_array){
+[v _Return_Time `(ui ~T0 @X0 1 ef2`*uc`*ui ]
 {
 [e :U _Return_Time ]
 [v _time_index `*uc ~T0 @X0 1 r1 ]
-[v _time_array `*uc ~T0 @X0 1 r2 ]
+[v _time_array `*ui ~T0 @X0 1 r2 ]
 [f ]
 "41
-[; ;Memorization.c: 41:     unsigned char temp;
-[v _temp `uc ~T0 @X0 1 a ]
+[; ;Memorization.c: 41:     unsigned int temp;
+[v _temp `ui ~T0 @X0 1 a ]
 "43
 [; ;Memorization.c: 43:     temp = time_array[--(*time_index)];
 [e = _temp *U + _time_array * -> =- *U _time_index -> -> 1 `i `uc `ux -> -> # *U _time_array `ui `ux ]

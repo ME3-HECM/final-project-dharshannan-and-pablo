@@ -24248,6 +24248,9 @@ void LED_init(void){
 
     LATHbits.LATH3 = 0;
     TRISHbits.TRISH3 = 0;
+
+    LATDbits.LATD7 = 0;
+    TRISDbits.TRISD7 = 0;
 }
 
 

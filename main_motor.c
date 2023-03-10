@@ -59,28 +59,42 @@ void main(void) {
     while (1){
         Update_RGBC(&initial_color); // Update the RGBC values
         color_detected = detect_color(&initial_color); // Pass initial color values into detect color function
-        // If statement to continue moving Buggy forward while color detected is null (0)
-        unsigned char b = 0;
-        if(color_detected == 0){
+        // While loop to continue moving Buggy forward while color detected is null (0)
+        unsigned int b = 0; // Variable to store forward movement time
+        while(color_detected == 0){
             fullSpeedAhead(&motorL,&motorR);
-            b++;
-        }  
+            Update_RGBC(&initial_color); // Update the RGBC values
+            color_detected = detect_color(&initial_color); // Pass initial color values into detect color function
+            b++; // Increment b
+        }
         // If color detected is no longer null, stop Buggy and decide the movement of the Buggy
-        else if(color_detected != 0){
-            AppendTime(b,&time_index,time_array); // Append the value of b (forward incrementation variable) to the time array
+        if(color_detected != 0 && color_detected != 8){ // If color is not null and not white
+            AppendTime((b-8),&time_index,time_array); // Append the value of b (forward incrementation variable) to the time array (*minus 8 to avoid overshoot)
             LATHbits.LATH3 = 1; // Turn ON LED to indicate a color has been detected
             // Stop motor
             while(b>0){
                 stop(&motorL,&motorR);
-                b--;
+                b--; // Decrement b
             }
-            __delay_ms(500); // Delay before movement execution
+            __delay_ms(100); // Delay before movement execution
             LATHbits.LATH3 = 0; // Turn OFF LED
             // Check the color detected and determine the instruction for the buggy
             MoveBuggy(color_detected,&motorL,&motorR);
             color_detected = 0; // Set color detected back to zero after movement is executed
         }
         
+        // If color detected is white, start the track back sequence
+        else if(color_detected == 8){
+            AppendTime((b-8),&time_index,time_array); // Append the value of b (forward incrementation variable) to the time array (*minus 8 to avoid overshoot)
+            LATDbits.LATD7 = 1; // Turn ON LED to indicate white color has been detected (and the Buggy is in track back mode)
+            // Stop motor
+            while(b>0){
+                stop(&motorL,&motorR);
+                b--;
+            }
+            __delay_ms(100); // Delay before movement execution
+            WhiteInstructions(&motorL,&motorR); // Call the white instructions function
+            LATDbits.LATD7 = 0; // Turn OFF LED to indicate exiting track back mode
+        }
     }
- 
 }

@@ -115,6 +115,38 @@ void LightBlueInstructions(DC_motor *mL, DC_motor *mR){
     turnLeft135(mL, mR);
 }
 
+
+void AntiYellow(DC_motor *mL, DC_motor *mR){
+    unsigned char a=0;
+    while (a<20){
+        fullSpeedAhead(mL, mR);
+        a++;
+    }
+    while (a>0){
+        stop(mL, mR);
+        a--;
+    }
+    __delay_ms(250);
+    turnRight90(mL, mR);
+    __delay_ms(250);
+    BlueInstructions(mL, mR);
+}
+
+void AntiPink(DC_motor *mL, DC_motor *mR){
+    unsigned char a=0;
+    while (a<20){
+        fullSpeedAhead(mL, mR);
+        a++;
+    }
+    while (a>0){
+        stop(mL, mR);
+        a--;
+    }
+    __delay_ms(250);
+    turnLeft90(mL, mR);
+    __delay_ms(250);
+    BlueInstructions(mL, mR);
+}
 // Function for White Card track back
 void WhiteInstructions(DC_motor *mL, DC_motor *mR){
     // Execute Blue instruction for 180 deg turn 1st

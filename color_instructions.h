@@ -14,6 +14,8 @@ void YellowInstructions (DC_motor *mL, DC_motor *mR);
 void PinkInstructions(DC_motor *mL, DC_motor *mR);
 void OrangeInstructions(DC_motor *mL, DC_motor *mR);
 void LightBlueInstructions(DC_motor *mL, DC_motor *mR);
+void AntiYellow(DC_motor *mL, DC_motor *mR);
+void AntiPink(DC_motor *mL, DC_motor *mR);
 void WhiteInstructions(DC_motor *mL, DC_motor *mR);
 void MoveBuggy(unsigned char *color_detected, DC_motor *mL, DC_motor *mR);
 

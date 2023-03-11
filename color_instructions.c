@@ -10,7 +10,7 @@
 void RedInstructions(DC_motor *mL, DC_motor *mR){
     
     unsigned char a=0;
-    while (a<15){
+    while (a<18){
         fullSpeedBackwards(mL, mR); // Reverse Buggy a little as it might be too close to wall
         a++;
     }
@@ -18,13 +18,13 @@ void RedInstructions(DC_motor *mL, DC_motor *mR){
         stop(mL, mR);
         a--;
     }
-    __delay_ms(100); // Delay before executing turn
+    __delay_ms(50); // Delay before executing turn
     turnRight90(mL, mR); 
 }
 
 void GreenInstructions(DC_motor *mL, DC_motor *mR){
     unsigned char a=0;
-    while (a<15){
+    while (a<18){
         fullSpeedBackwards(mL, mR);
         a++;
     }
@@ -32,13 +32,13 @@ void GreenInstructions(DC_motor *mL, DC_motor *mR){
         stop(mL, mR);
         a--;
     }
-    __delay_ms(100); 
+    __delay_ms(50); 
     turnLeft90(mL, mR);
 }
 
 void BlueInstructions(DC_motor *mL, DC_motor *mR){
     unsigned char a=0;
-    while (a<15){
+    while (a<18){
         fullSpeedBackwards(mL, mR);
         a++;
     }
@@ -46,7 +46,7 @@ void BlueInstructions(DC_motor *mL, DC_motor *mR){
         stop(mL, mR);
         a--;
     }
-    __delay_ms(100);
+    __delay_ms(50);
     
     // Turn 180 deg in 2 bursts of 90deg
     turnLeft90(mL, mR);
@@ -58,7 +58,7 @@ void BlueInstructions(DC_motor *mL, DC_motor *mR){
 void YellowInstructions(DC_motor *mL, DC_motor *mR){
     
     unsigned char a=0;
-    while (a<28){
+    while (a<40){
         fullSpeedBackwards(mL, mR);
         a++;
     }
@@ -66,13 +66,13 @@ void YellowInstructions(DC_motor *mL, DC_motor *mR){
         stop(mL, mR);
         a--;
     }
-    __delay_ms(100);
+    __delay_ms(50);
     turnRight90(mL, mR);
 }
 
 void PinkInstructions(DC_motor *mL, DC_motor *mR){
     unsigned char a=0;
-    while (a<28){
+    while (a<40){
         fullSpeedBackwards(mL, mR);
         a++;
     }
@@ -80,14 +80,14 @@ void PinkInstructions(DC_motor *mL, DC_motor *mR){
         stop(mL, mR);
         a--;
     }
-    __delay_ms(100);
+    __delay_ms(50);
     turnLeft90(mL, mR);
     
 }
 
 void OrangeInstructions(DC_motor *mL, DC_motor *mR){
     unsigned char a=0;
-    while (a<15){
+    while (a<18){
         fullSpeedBackwards(mL, mR);
         a++;
     }
@@ -95,14 +95,14 @@ void OrangeInstructions(DC_motor *mL, DC_motor *mR){
         stop(mL, mR);
         a--;
     }
-    __delay_ms(100);
+    __delay_ms(50);
     
     turnRight135(mL, mR);
 }
 
 void LightBlueInstructions(DC_motor *mL, DC_motor *mR){
     unsigned char a=0;
-    while (a<15){
+    while (a<18){
         fullSpeedBackwards(mL, mR);
         a++;
     }
@@ -110,9 +110,47 @@ void LightBlueInstructions(DC_motor *mL, DC_motor *mR){
         stop(mL, mR);
         a--;
     }
-    __delay_ms(100);
+    __delay_ms(50);
     
     turnLeft135(mL, mR);
+}
+// Anti moves function for Yellow and Pink (the opposite of each color moves)
+void AntiYellow(DC_motor *mL, DC_motor *mR){
+    unsigned char a=0;
+    
+    turnRight90(mL, mR);
+    __delay_ms(50);
+    
+    while (a<40){
+        fullSpeedAhead(mL, mR);
+        a++;
+    }
+    while (a>0){
+        stop(mL, mR);
+        a--;
+    }
+    __delay_ms(50);
+    
+    BlueInstructions(mL, mR);
+}
+
+void AntiPink(DC_motor *mL, DC_motor *mR){
+    unsigned char a=0;
+    
+    turnLeft90(mL, mR);
+    __delay_ms(50);
+    
+    while (a<40){
+        fullSpeedAhead(mL, mR);
+        a++;
+    }
+    while (a>0){
+        stop(mL, mR);
+        a--;
+    }
+    __delay_ms(50);
+   
+    BlueInstructions(mL, mR);
 }
 
 // Function for White Card track back
@@ -163,10 +201,16 @@ void MoveBuggy(unsigned char *color_detected, DC_motor *mL, DC_motor *mR){
     else if (color_detected==4){
         YellowInstructions(mL, mR);
         // Separate anti-move function
+        if(LATDbits.LATD7 != 1){ // Only append when the Buggy is not in track back mode (indicated by RD7 LED)
+            AppendMoves(9,&moves_index,anti_moves_array); // The anti-move of Blue is itself
+        }
     }
     else if (color_detected==5){
         PinkInstructions(mL, mR);
         // Separate anti-move function
+        if(LATDbits.LATD7 != 1){ // Only append when the Buggy is not in track back mode (indicated by RD7 LED)
+            AppendMoves(10,&moves_index,anti_moves_array); // The anti-move of Blue is itself
+        }
     }
     else if (color_detected==6){
         OrangeInstructions(mL, mR);
@@ -182,4 +226,10 @@ void MoveBuggy(unsigned char *color_detected, DC_motor *mL, DC_motor *mR){
     }
     // White instructions (8) will be called outside of this function to prevent recursive function call error (called in main.c)
     // values of 9 and 10 will be used to call anti-Yellow and anti-Pink instructions
+    else if (color_detected==9){
+        AntiYellow(mL, mR);
+    }
+    else if (color_detected==10){
+        AntiPink(mL, mR);
+    }
 }

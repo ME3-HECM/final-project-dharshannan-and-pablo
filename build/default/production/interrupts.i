@@ -24380,7 +24380,7 @@ void Interrupts_init(void)
 
     TRISBbits.TRISB1 = 1;
     ANSELBbits.ANSELB1 = 0;
-    INT1PPS = 0x09;
+
     PIE0bits.INT1IE = 1;
     IPR0bits.INT1IP = 1;
     INTCONbits.INT1EDG = 0;
@@ -24401,7 +24401,7 @@ void Interrupts_init(void)
 
 
 unsigned int int_threshold_low = 0;
-unsigned int int_threshold_high = 2500;
+unsigned int int_threshold_high = 2900;
 
 void init_colorclick_interrupts(void)
 {

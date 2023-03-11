@@ -24299,6 +24299,8 @@ void YellowInstructions (DC_motor *mL, DC_motor *mR);
 void PinkInstructions(DC_motor *mL, DC_motor *mR);
 void OrangeInstructions(DC_motor *mL, DC_motor *mR);
 void LightBlueInstructions(DC_motor *mL, DC_motor *mR);
+void AntiYellow(DC_motor *mL, DC_motor *mR);
+void AntiPink(DC_motor *mL, DC_motor *mR);
 void WhiteInstructions(DC_motor *mL, DC_motor *mR);
 void MoveBuggy(unsigned char *color_detected, DC_motor *mL, DC_motor *mR);
 # 2 "color_instructions.c" 2
@@ -24313,7 +24315,7 @@ void MoveBuggy(unsigned char *color_detected, DC_motor *mL, DC_motor *mR);
 void RedInstructions(DC_motor *mL, DC_motor *mR){
 
     unsigned char a=0;
-    while (a<15){
+    while (a<18){
         fullSpeedBackwards(mL, mR);
         a++;
     }
@@ -24321,13 +24323,13 @@ void RedInstructions(DC_motor *mL, DC_motor *mR){
         stop(mL, mR);
         a--;
     }
-    _delay((unsigned long)((100)*(64000000/4000.0)));
+    _delay((unsigned long)((50)*(64000000/4000.0)));
     turnRight90(mL, mR);
 }
 
 void GreenInstructions(DC_motor *mL, DC_motor *mR){
     unsigned char a=0;
-    while (a<15){
+    while (a<18){
         fullSpeedBackwards(mL, mR);
         a++;
     }
@@ -24335,13 +24337,13 @@ void GreenInstructions(DC_motor *mL, DC_motor *mR){
         stop(mL, mR);
         a--;
     }
-    _delay((unsigned long)((100)*(64000000/4000.0)));
+    _delay((unsigned long)((50)*(64000000/4000.0)));
     turnLeft90(mL, mR);
 }
 
 void BlueInstructions(DC_motor *mL, DC_motor *mR){
     unsigned char a=0;
-    while (a<15){
+    while (a<18){
         fullSpeedBackwards(mL, mR);
         a++;
     }
@@ -24349,7 +24351,7 @@ void BlueInstructions(DC_motor *mL, DC_motor *mR){
         stop(mL, mR);
         a--;
     }
-    _delay((unsigned long)((100)*(64000000/4000.0)));
+    _delay((unsigned long)((50)*(64000000/4000.0)));
 
 
     turnLeft90(mL, mR);
@@ -24361,7 +24363,7 @@ void BlueInstructions(DC_motor *mL, DC_motor *mR){
 void YellowInstructions(DC_motor *mL, DC_motor *mR){
 
     unsigned char a=0;
-    while (a<28){
+    while (a<40){
         fullSpeedBackwards(mL, mR);
         a++;
     }
@@ -24369,13 +24371,13 @@ void YellowInstructions(DC_motor *mL, DC_motor *mR){
         stop(mL, mR);
         a--;
     }
-    _delay((unsigned long)((100)*(64000000/4000.0)));
+    _delay((unsigned long)((50)*(64000000/4000.0)));
     turnRight90(mL, mR);
 }
 
 void PinkInstructions(DC_motor *mL, DC_motor *mR){
     unsigned char a=0;
-    while (a<28){
+    while (a<40){
         fullSpeedBackwards(mL, mR);
         a++;
     }
@@ -24383,14 +24385,14 @@ void PinkInstructions(DC_motor *mL, DC_motor *mR){
         stop(mL, mR);
         a--;
     }
-    _delay((unsigned long)((100)*(64000000/4000.0)));
+    _delay((unsigned long)((50)*(64000000/4000.0)));
     turnLeft90(mL, mR);
 
 }
 
 void OrangeInstructions(DC_motor *mL, DC_motor *mR){
     unsigned char a=0;
-    while (a<15){
+    while (a<18){
         fullSpeedBackwards(mL, mR);
         a++;
     }
@@ -24398,14 +24400,14 @@ void OrangeInstructions(DC_motor *mL, DC_motor *mR){
         stop(mL, mR);
         a--;
     }
-    _delay((unsigned long)((100)*(64000000/4000.0)));
+    _delay((unsigned long)((50)*(64000000/4000.0)));
 
     turnRight135(mL, mR);
 }
 
 void LightBlueInstructions(DC_motor *mL, DC_motor *mR){
     unsigned char a=0;
-    while (a<15){
+    while (a<18){
         fullSpeedBackwards(mL, mR);
         a++;
     }
@@ -24413,9 +24415,47 @@ void LightBlueInstructions(DC_motor *mL, DC_motor *mR){
         stop(mL, mR);
         a--;
     }
-    _delay((unsigned long)((100)*(64000000/4000.0)));
+    _delay((unsigned long)((50)*(64000000/4000.0)));
 
     turnLeft135(mL, mR);
+}
+
+void AntiYellow(DC_motor *mL, DC_motor *mR){
+    unsigned char a=0;
+
+    turnRight90(mL, mR);
+    _delay((unsigned long)((50)*(64000000/4000.0)));
+
+    while (a<40){
+        fullSpeedAhead(mL, mR);
+        a++;
+    }
+    while (a>0){
+        stop(mL, mR);
+        a--;
+    }
+    _delay((unsigned long)((50)*(64000000/4000.0)));
+
+    BlueInstructions(mL, mR);
+}
+
+void AntiPink(DC_motor *mL, DC_motor *mR){
+    unsigned char a=0;
+
+    turnLeft90(mL, mR);
+    _delay((unsigned long)((50)*(64000000/4000.0)));
+
+    while (a<40){
+        fullSpeedAhead(mL, mR);
+        a++;
+    }
+    while (a>0){
+        stop(mL, mR);
+        a--;
+    }
+    _delay((unsigned long)((50)*(64000000/4000.0)));
+
+    BlueInstructions(mL, mR);
 }
 
 
@@ -24466,10 +24506,16 @@ void MoveBuggy(unsigned char *color_detected, DC_motor *mL, DC_motor *mR){
     else if (color_detected==4){
         YellowInstructions(mL, mR);
 
+        if(LATDbits.LATD7 != 1){
+            AppendMoves(9,&moves_index,anti_moves_array);
+        }
     }
     else if (color_detected==5){
         PinkInstructions(mL, mR);
 
+        if(LATDbits.LATD7 != 1){
+            AppendMoves(10,&moves_index,anti_moves_array);
+        }
     }
     else if (color_detected==6){
         OrangeInstructions(mL, mR);
@@ -24485,4 +24531,10 @@ void MoveBuggy(unsigned char *color_detected, DC_motor *mL, DC_motor *mR){
     }
 
 
+    else if (color_detected==9){
+        AntiYellow(mL, mR);
+    }
+    else if (color_detected==10){
+        AntiPink(mL, mR);
+    }
 }

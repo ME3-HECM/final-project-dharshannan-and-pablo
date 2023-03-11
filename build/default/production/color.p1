@@ -2385,9 +2385,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e $U 2040  ]
 "134
-[; ;color.c: 134:         else if (tempval->C < 0){
+[; ;color.c: 134:         else{
 [e :U 2039 ]
-[e $ ! < . *U _tempval 3 -> -> 0 `i `ui 2041  ]
 {
 "135
 [; ;color.c: 135:             color = 0;
@@ -2395,7 +2394,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "136
 [; ;color.c: 136:         }
 }
-[e :U 2041 ]
 [e :U 2040 ]
 [e :U 2038 ]
 [e :U 2036 ]

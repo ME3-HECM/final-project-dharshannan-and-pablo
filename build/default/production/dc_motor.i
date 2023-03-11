@@ -24422,11 +24422,11 @@ void fullSpeedAhead(DC_motor *mL, DC_motor *mR)
 
 
 
-    if(mL->power>50){mL->power=50;}
-    if(mR->power>55){mR->power=55;}
+    if(mL->power>35){mL->power=35;}
+    if(mR->power>46){mR->power=46;}
 
     mL->power = mL->power + 5 ;
-    mR->power = mR->power + 10;
+    mR->power = mR->power + 8;
 
     setMotorPWM(mL);
     setMotorPWM(mR);
@@ -24444,11 +24444,11 @@ void fullSpeedBackwards(DC_motor *mL, DC_motor *mR){
     mR->brakemode = 0;
 
 
-    if(mL->power>50){mL->power=50;}
-    if(mR->power>50){mR->power=50;}
+    if(mL->power>35){mL->power=35;}
+    if(mR->power>46){mR->power=46;}
 
     mL->power = mL->power + 5 ;
-    mR->power = mR->power + 5;
+    mR->power = mR->power + 8;
 
     setMotorPWM(mL);
     setMotorPWM(mR);
@@ -24490,7 +24490,7 @@ void turnRight90(DC_motor *mL, DC_motor *mR){
 void turn180(DC_motor *mL, DC_motor *mR){
 
     unsigned char a=0;
-    while(a<17){
+    while(a<25){
         turnRight(mL, mR);
         a++;
     }
@@ -24503,7 +24503,7 @@ void turn180(DC_motor *mL, DC_motor *mR){
 void turnRight135(DC_motor *mL, DC_motor *mR){
 
     unsigned char a=0;
-    while(a<21){
+    while(a<22){
         turnRight(mL, mR);
         a++;
     }
@@ -24516,7 +24516,7 @@ void turnRight135(DC_motor *mL, DC_motor *mR){
 void turnLeft135(DC_motor *mL, DC_motor *mR){
 
     unsigned char a=0;
-    while(a<21){
+    while(a<22){
         turnLeft(mL, mR);
         a++;
     }

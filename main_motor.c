@@ -57,8 +57,8 @@ void main(void) {
     unsigned char color_detected = 0;
     WhiteLight(); // Turn on the white light
     while (1){
-        Update_RGBC(&initial_color); // Update the RGBC values
-        color_detected = detect_color(&initial_color); // Pass initial color values into detect color function
+        //Update_RGBC(&initial_color); // Update the RGBC values
+        //color_detected = detect_color(&initial_color); // Pass initial color values into detect color function
         // While loop to continue moving Buggy forward while color detected is null (0)
         unsigned int b = 0; // Variable to store forward movement time
         while(color_detected == 0){
@@ -95,6 +95,7 @@ void main(void) {
             __delay_ms(100); // Delay before movement execution
             WhiteInstructions(&motorL,&motorR); // Call the white instructions function
             LATDbits.LATD7 = 0; // Turn OFF LED to indicate exiting track back mode
+            color_detected = 0; // Set color detected back to zero after movement is executed
         }
     }
 }

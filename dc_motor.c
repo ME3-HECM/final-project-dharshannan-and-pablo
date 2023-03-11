@@ -159,11 +159,11 @@ void fullSpeedAhead(DC_motor *mL, DC_motor *mR)
 
     // Check if motor power is above 50, if yes reset to 50 (saturate)
     // For maze navigation lets move a little slower (initially 75% power), lets only have it at 50%
-    if(mL->power>50){mL->power=50;}
-    if(mR->power>55){mR->power=55;} // Calibrate right motors (to make Buggy move reasonably straight)
+    if(mL->power>35){mL->power=35;}
+    if(mR->power>46){mR->power=46;} // Calibrate right motors (to make Buggy move reasonably straight)
     // Set the left and right motor powers to increment gradually 
     mL->power = mL->power + 5 ;
-    mR->power = mR->power + 10; // Calibrate right motors (to make Buggy move reasonably straight)
+    mR->power = mR->power + 8; // Calibrate right motors (to make Buggy move reasonably straight)
     // Call function for both left and right motor to setPWM
     setMotorPWM(mL);
     setMotorPWM(mR);
@@ -181,11 +181,11 @@ void fullSpeedBackwards(DC_motor *mL, DC_motor *mR){
     mR->brakemode = 0;
 
     // Check if motor power is above 50, if yes reset to 50 (saturate)
-    if(mL->power>50){mL->power=50;}
-    if(mR->power>50){mR->power=50;}
+    if(mL->power>35){mL->power=35;}
+    if(mR->power>46){mR->power=46;}
     // Set the left and right motor powers to increment gradually 
     mL->power = mL->power + 5 ;
-    mR->power = mR->power + 5;
+    mR->power = mR->power + 8;
     // Call function for both left and right motor to setPWM
     setMotorPWM(mL);
     setMotorPWM(mR);
@@ -240,7 +240,7 @@ void turn180(DC_motor *mL, DC_motor *mR){
 void turnRight135(DC_motor *mL, DC_motor *mR){
     
     unsigned char a=0;
-    while(a<21){ // (Calibration of 21 gives 135 deg turn but may differ for different surfaces and buggy acceleration)
+    while(a<22){ // (Calibration of 21 gives 135 deg turn but may differ for different surfaces and buggy acceleration)
         turnRight(mL, mR); // Make the Buggy turn right
         a++;
     }
@@ -253,7 +253,7 @@ void turnRight135(DC_motor *mL, DC_motor *mR){
 void turnLeft135(DC_motor *mL, DC_motor *mR){
     
     unsigned char a=0;
-    while(a<21){ // (Calibration of 21 gives 135 deg turn but may differ for different surfaces and buggy acceleration)
+    while(a<22){ // (Calibration of 21 gives 135 deg turn but may differ for different surfaces and buggy acceleration)
         turnLeft(mL, mR); // Make the Buggy turn left
         a++;
     }

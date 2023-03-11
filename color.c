@@ -131,7 +131,7 @@ unsigned char detect_color(RGB_val *tempval)
         else if((43<=dist_R) && (dist_R<=45) && (32<=dist_G) && (dist_G<=34) && (22<=dist_B) && (dist_B<=24)){ // Dist for WHITE
             color = 8; // Set color to WHITE
         }
-        else if (tempval->C < 0){ // If a shadow is detected
+        else{ // If a shadow is detected
             color = 0; // If none of the above reset color to 0
         }
     }

@@ -24457,6 +24457,8 @@ void YellowInstructions (DC_motor *mL, DC_motor *mR);
 void PinkInstructions(DC_motor *mL, DC_motor *mR);
 void OrangeInstructions(DC_motor *mL, DC_motor *mR);
 void LightBlueInstructions(DC_motor *mL, DC_motor *mR);
+void AntiYellow(DC_motor *mL, DC_motor *mR);
+void AntiPink(DC_motor *mL, DC_motor *mR);
 void WhiteInstructions(DC_motor *mL, DC_motor *mR);
 void MoveBuggy(unsigned char *color_detected, DC_motor *mL, DC_motor *mR);
 # 17 "main_motor.c" 2
@@ -24503,8 +24505,8 @@ void main(void) {
     unsigned char color_detected = 0;
     WhiteLight();
     while (1){
-        Update_RGBC(&initial_color);
-        color_detected = detect_color(&initial_color);
+
+
 
         unsigned int b = 0;
         while(color_detected == 0){
@@ -24515,7 +24517,7 @@ void main(void) {
         }
 
         if(color_detected != 0 && color_detected != 8){
-            AppendTime((b-9),&time_index,time_array);
+            AppendTime((b-8),&time_index,time_array);
             LATHbits.LATH3 = 1;
 
             while(b>0){
@@ -24531,7 +24533,7 @@ void main(void) {
 
 
         else if(color_detected == 8){
-            AppendTime((b-9),&time_index,time_array);
+            AppendTime((b-8),&time_index,time_array);
             LATDbits.LATD7 = 1;
 
             while(b>0){
@@ -24541,6 +24543,7 @@ void main(void) {
             _delay((unsigned long)((100)*(64000000/4000.0)));
             WhiteInstructions(&motorL,&motorR);
             LATDbits.LATD7 = 0;
+            color_detected = 0;
         }
     }
 }

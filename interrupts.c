@@ -17,7 +17,7 @@ void Interrupts_init(void)
     // Initialize color clicker interrupts
     TRISBbits.TRISB1 = 1; // Set RB1 pin as input
     ANSELBbits.ANSELB1 = 0; // Turn off analog on RB1 pin
-    INT1PPS = 0x09; // This is incase we decide to remap RB1 for different I/0
+    //INT1PPS = 0x09; // This is incase we decide to remap RB1 for different I/0
     PIE0bits.INT1IE = 1; // Enable interrupt on RB1 pin
     IPR0bits.INT1IP = 1; // high priority
     INTCONbits.INT1EDG = 0; // Set RB1 interrupt to trigger on falling edge
@@ -38,7 +38,7 @@ void Interrupts_init(void)
 
 // Function to initialize the color clicker interrupt, set threshold values and persistence registers
 unsigned int int_threshold_low = 0; // Low threshold for color click interrupts
-unsigned int int_threshold_high = 2500; // High threshold for color click interrupts
+unsigned int int_threshold_high = 2900; // High threshold for color click interrupts
 
 void init_colorclick_interrupts(void)
 {

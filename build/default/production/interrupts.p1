@@ -21,9 +21,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "10769
 [; ;D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h: 10769: extern volatile ANSELBbits_t ANSELBbits __attribute__((address(0xE9A)));
 [v _ANSELBbits `VS517 ~T0 @X0 0 e@3738 ]
-"132
-[; ;D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h: 132: extern volatile unsigned char INT1PPS __attribute__((address(0xDF1)));
-[v _INT1PPS `Vuc ~T0 @X0 0 e@3569 ]
 "4548
 [; ;D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h: 4548:     struct {
 [s S262 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -2133,9 +2130,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "19
 [; ;interrupts.c: 19:     ANSELBbits.ANSELB1 = 0;
 [e = . . _ANSELBbits 0 1 -> -> 0 `i `uc ]
-"20
-[; ;interrupts.c: 20:     INT1PPS = 0x09;
-[e = _INT1PPS -> -> 9 `i `uc ]
 "21
 [; ;interrupts.c: 21:     PIE0bits.INT1IE = 1;
 [e = . . _PIE0bits 0 1 -> -> 1 `i `uc ]
@@ -2177,10 +2171,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `ui
 ]
 "41
-[; ;interrupts.c: 41: unsigned int int_threshold_high = 2500;
+[; ;interrupts.c: 41: unsigned int int_threshold_high = 2900;
 [v _int_threshold_high `ui ~T0 @X0 1 e ]
 [i _int_threshold_high
--> -> 2500 `i `ui
+-> -> 2900 `i `ui
 ]
 "43
 [; ;interrupts.c: 43: void init_colorclick_interrupts(void)

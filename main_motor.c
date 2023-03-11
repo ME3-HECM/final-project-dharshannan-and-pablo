@@ -69,7 +69,7 @@ void main(void) {
         }
         // If color detected is no longer null, stop Buggy and decide the movement of the Buggy
         if(color_detected != 0 && color_detected != 8){ // If color is not null and not white
-            AppendTime((b-10),&time_index,time_array); // Append the value of b (forward incrementation variable) to the time array (*minus 8 to avoid overshoot)
+            AppendTime((b-9),&time_index,time_array); // Append the value of b (forward incrementation variable) to the time array (*minus 9 to avoid overshoot)
             LATHbits.LATH3 = 1; // Turn ON LED to indicate a color has been detected
             // Stop motor
             while(b>0){
@@ -81,11 +81,12 @@ void main(void) {
             // Check the color detected and determine the instruction for the buggy
             MoveBuggy(color_detected,&motorL,&motorR);
             color_detected = 0; // Set color detected back to zero after movement is executed
+            color_flag = 0; // Force clear color flag to prevent unexpected flagging
         }
         
         // If color detected is white, start the track back sequence
         else if(color_detected == 8){
-            AppendTime((b-10),&time_index,time_array); // Append the value of b (forward incrementation variable) to the time array (*minus 8 to avoid overshoot)
+            AppendTime((b-9),&time_index,time_array); // Append the value of b (forward incrementation variable) to the time array (*minus 9 to avoid overshoot)
             LATDbits.LATD7 = 1; // Turn ON LED to indicate white color has been detected (and the Buggy is in track back mode)
             // Stop motor
             while(b>0){

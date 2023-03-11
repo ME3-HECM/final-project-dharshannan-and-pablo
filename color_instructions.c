@@ -47,7 +47,6 @@ void BlueInstructions(DC_motor *mL, DC_motor *mR){
         a--;
     }
     __delay_ms(50);
-    
     // Turn 180 deg in 2 bursts of 90deg
     turnLeft90(mL, mR);
     __delay_ms(50);
@@ -58,7 +57,7 @@ void BlueInstructions(DC_motor *mL, DC_motor *mR){
 void YellowInstructions(DC_motor *mL, DC_motor *mR){
     
     unsigned char a=0;
-    while (a<40){
+    while (a<45){
         fullSpeedBackwards(mL, mR);
         a++;
     }
@@ -72,7 +71,7 @@ void YellowInstructions(DC_motor *mL, DC_motor *mR){
 
 void PinkInstructions(DC_motor *mL, DC_motor *mR){
     unsigned char a=0;
-    while (a<40){
+    while (a<45){
         fullSpeedBackwards(mL, mR);
         a++;
     }
@@ -96,7 +95,6 @@ void OrangeInstructions(DC_motor *mL, DC_motor *mR){
         a--;
     }
     __delay_ms(50);
-    
     turnRight135(mL, mR);
 }
 
@@ -111,17 +109,16 @@ void LightBlueInstructions(DC_motor *mL, DC_motor *mR){
         a--;
     }
     __delay_ms(50);
-    
     turnLeft135(mL, mR);
 }
 // Anti moves function for Yellow and Pink (the opposite of each color moves)
 void AntiYellow(DC_motor *mL, DC_motor *mR){
     unsigned char a=0;
-    
-    turnRight90(mL, mR);
+    // Reverse slightly and turn Right
+    RedInstructions(mL, mR);
     __delay_ms(50);
     
-    while (a<40){
+    while (a<45){
         fullSpeedAhead(mL, mR);
         a++;
     }
@@ -130,17 +127,17 @@ void AntiYellow(DC_motor *mL, DC_motor *mR){
         a--;
     }
     __delay_ms(50);
-    
+    // Turn 180deg at the end of Anti Yellow
     BlueInstructions(mL, mR);
 }
 
 void AntiPink(DC_motor *mL, DC_motor *mR){
     unsigned char a=0;
-    
-    turnLeft90(mL, mR);
+    // Reverse slightly and turn Left
+    GreenInstructions(mL, mR);
     __delay_ms(50);
     
-    while (a<40){
+    while (a<45){
         fullSpeedAhead(mL, mR);
         a++;
     }
@@ -149,7 +146,7 @@ void AntiPink(DC_motor *mL, DC_motor *mR){
         a--;
     }
     __delay_ms(50);
-   
+    // Turn 180deg at the end of Anti Pink
     BlueInstructions(mL, mR);
 }
 

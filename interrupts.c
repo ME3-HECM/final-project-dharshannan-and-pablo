@@ -45,7 +45,7 @@ void init_colorclick_interrupts(void)
     color_writetoaddr(0x00,0b10011); // Enable RGBC interrupt, RGBC ADC, and internal oscillator, refer pg 13 of TCS3471 document
     __delay_ms(3); // Delay before writing again
     // NOTE 1: A minimum interval of 2.4 ms must pass after PON is asserted before an RGBC can be initiated (pg 13 of TCS3471 document)
-    color_writetoaddr(0x0C,0b0110); // Write to enable persistence register to trigger interrupt after 5 readings outside of threshold range (pg 14 TCS3471)
+    color_writetoaddr(0x0C,0b0100); // Write to enable persistence register to trigger interrupt after 5 readings outside of threshold range (pg 14 TCS3471)
     color_writetoaddr(0x04,(int_threshold_low & 0xFF)); // RGBC clear channel low threshold lower byte (pg 14 TCS3471)
     color_writetoaddr(0x05,(int_threshold_low >> 8)); // RGBC clear channel low threshold higher byte
     color_writetoaddr(0x06,(int_threshold_high & 0xFF)); // RGBC clear channel high threshold lower byte

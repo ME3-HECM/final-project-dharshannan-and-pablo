@@ -10,8 +10,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "19 ./color.h
 [; ;./color.h: 19: void color_click_init(void);
 [v _color_click_init `(v ~T0 @X0 0 ef ]
-"10 ./interrupts.h
-[; ;./interrupts.h: 10: void Interrupts_init(void);
+"15 ./interrupts.h
+[; ;./interrupts.h: 15: void Interrupts_init(void);
 [v _Interrupts_init `(v ~T0 @X0 0 ef ]
 "23 ./serial.h
 [; ;./serial.h: 23: void initUSART4(void);
@@ -25,9 +25,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "38 ./color.h
 [; ;./color.h: 38: void Update_RGBC(RGB_val *tempval);
 [v _Update_RGBC `(v ~T0 @X0 0 ef1`*S2017 ]
-"8 ./interrupts.h
-[; ;./interrupts.h: 8: extern unsigned char tmr_ovf;
-[v _tmr_ovf `uc ~T0 @X0 0 e ]
+"40
+[; ;./color.h: 40: unsigned char detect_color(RGB_val *tempval);
+[v _detect_color `(uc ~T0 @X0 0 ef1`*S2017 ]
 "29 ./serial.h
 [; ;./serial.h: 29: char getCharFromRxBuf(void);
 [v _getCharFromRxBuf `(uc ~T0 @X0 0 ef ]
@@ -2100,18 +2100,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main_calibration.c: 35:     char a = 0;
 [v _a `uc ~T0 @X0 1 a ]
 [e = _a -> -> 0 `i `uc ]
-"36
-[; ;main_calibration.c: 36:     int readingsR[100];
-[v _readingsR `i ~T0 @X0 -> 100 `i a ]
-"37
-[; ;main_calibration.c: 37:     int readingsG[100];
-[v _readingsG `i ~T0 @X0 -> 100 `i a ]
-"38
-[; ;main_calibration.c: 38:     int readingsB[100];
-[v _readingsB `i ~T0 @X0 -> 100 `i a ]
-"39
-[; ;main_calibration.c: 39:     int readingsC[100];
-[v _readingsC `i ~T0 @X0 -> 100 `i a ]
 "41
 [; ;main_calibration.c: 41:     while(1){
 [e :U 2020 ]
@@ -2122,137 +2110,67 @@ Version 4.0 HI-TECH Software Intermediate Code
 "43
 [; ;main_calibration.c: 43:         Update_RGBC(&initial_color);
 [e ( _Update_RGBC (1 &U _initial_color ]
-"46
-[; ;main_calibration.c: 46:         while(tmr_ovf==1 && a<100){
+"100
+[; ;main_calibration.c: 100:         unsigned char color_detected;
+[v _color_detected `uc ~T0 @X0 1 a ]
+"101
+[; ;main_calibration.c: 101:         color_detected = detect_color(&initial_color);
+[e = _color_detected ( _detect_color (1 &U _initial_color ]
+"103
+[; ;main_calibration.c: 103:         char cont = 0x00;
+[v _cont `uc ~T0 @X0 1 a ]
+[e = _cont -> -> 0 `i `uc ]
+"105
+[; ;main_calibration.c: 105:         while(isDataInRxBuf()){
 [e $U 2022  ]
 [e :U 2023 ]
 {
-"47
-[; ;main_calibration.c: 47:             readingsR[a] = initial_color.R;
-[e = *U + &U _readingsR * -> _a `ux -> -> # *U &U _readingsR `ui `ux -> . _initial_color 0 `i ]
-"48
-[; ;main_calibration.c: 48:             readingsG[a] = initial_color.G;
-[e = *U + &U _readingsG * -> _a `ux -> -> # *U &U _readingsG `ui `ux -> . _initial_color 1 `i ]
-"49
-[; ;main_calibration.c: 49:             readingsB[a] = initial_color.B;
-[e = *U + &U _readingsB * -> _a `ux -> -> # *U &U _readingsB `ui `ux -> . _initial_color 2 `i ]
-"50
-[; ;main_calibration.c: 50:             readingsC[a] = initial_color.C;
-[e = *U + &U _readingsC * -> _a `ux -> -> # *U &U _readingsC `ui `ux -> . _initial_color 3 `i ]
-"51
-[; ;main_calibration.c: 51:             a++;
-[e ++ _a -> -> 1 `i `uc ]
-"52
-[; ;main_calibration.c: 52:             tmr_ovf = 0;
-[e = _tmr_ovf -> -> 0 `i `uc ]
-"53
-[; ;main_calibration.c: 53:         }
+"107
+[; ;main_calibration.c: 107:             cont = getCharFromRxBuf();
+[e = _cont ( _getCharFromRxBuf ..  ]
+"108
+[; ;main_calibration.c: 108:         }
 }
 [e :U 2022 ]
-"46
-[; ;main_calibration.c: 46:         while(tmr_ovf==1 && a<100){
-[e $ && == -> _tmr_ovf `i -> 1 `i < -> _a `i -> 100 `i 2023  ]
+"105
+[; ;main_calibration.c: 105:         while(isDataInRxBuf()){
+[e $ != -> ( _isDataInRxBuf ..  `i -> 0 `i 2023  ]
 [e :U 2024 ]
-"56
-[; ;main_calibration.c: 56:         char cont = 0x00;
-[v _cont `uc ~T0 @X0 1 a ]
-[e = _cont -> -> 0 `i `uc ]
-"58
-[; ;main_calibration.c: 58:         while(isDataInRxBuf()){
-[e $U 2025  ]
-[e :U 2026 ]
+"110
+[; ;main_calibration.c: 110:         if(cont == 0x01){
+[e $ ! == -> _cont `i -> 1 `i 2025  ]
 {
-"60
-[; ;main_calibration.c: 60:             cont = getCharFromRxBuf();
-[e = _cont ( _getCharFromRxBuf ..  ]
-"61
-[; ;main_calibration.c: 61:         }
+"112
+[; ;main_calibration.c: 112:             char string2[40];
+[v _string2 `uc ~T0 @X0 -> 40 `i a ]
+"113
+[; ;main_calibration.c: 113:             sprintf(string2,"\nColor Detected = %02d %05d %05d %05d\n",color_detected,initial_color.R,initial_color.G,initial_color.B);
+[e ( _sprintf (1 , , , , (. , &U _string2 :s 1C -> _color_detected `i . _initial_color 0 . _initial_color 1 . _initial_color 2 ]
+"114
+[; ;main_calibration.c: 114:             TxBufferedString(string2);
+[e ( _TxBufferedString (1 &U _string2 ]
+"116
+[; ;main_calibration.c: 116:             sendTxBuf();
+[e ( _sendTxBuf ..  ]
+"117
+[; ;main_calibration.c: 117:             cont = 0x00;
+[e = _cont -> -> 0 `i `uc ]
+"118
+[; ;main_calibration.c: 118:         }
 }
 [e :U 2025 ]
-"58
-[; ;main_calibration.c: 58:         while(isDataInRxBuf()){
-[e $ != -> ( _isDataInRxBuf ..  `i -> 0 `i 2026  ]
-[e :U 2027 ]
-"65
-[; ;main_calibration.c: 65:         if(cont == 0x10){
-[e $ ! == -> _cont `i -> 16 `i 2028  ]
-{
-"66
-[; ;main_calibration.c: 66:             unsigned char i;
-[v _i `uc ~T0 @X0 1 a ]
-"67
-[; ;main_calibration.c: 67:             for(i=0;i<a;i++){
-{
-[e = _i -> -> 0 `i `uc ]
-[e $U 2032  ]
-[e :U 2029 ]
-{
-"69
-[; ;main_calibration.c: 69:                 char string[40];
-[v _string `uc ~T0 @X0 -> 40 `i a ]
-"70
-[; ;main_calibration.c: 70:                 sprintf(string,"\nRGBC = %05d %05d %05d %05d\n",readingsR[i],readingsG[i],readingsB[i],readingsC[i]);
-[e ( _sprintf (1 , , , , (. , &U _string :s 1C *U + &U _readingsR * -> _i `ux -> -> # *U &U _readingsR `ui `ux *U + &U _readingsG * -> _i `ux -> -> # *U &U _readingsG `ui `ux *U + &U _readingsB * -> _i `ux -> -> # *U &U _readingsB `ui `ux *U + &U _readingsC * -> _i `ux -> -> # *U &U _readingsC `ui `ux ]
-"71
-[; ;main_calibration.c: 71:                 TxBufferedString(string);
-[e ( _TxBufferedString (1 &U _string ]
-"73
-[; ;main_calibration.c: 73:                 sendTxBuf();
-[e ( _sendTxBuf ..  ]
-"74
-[; ;main_calibration.c: 74:                 _delay((unsigned long)((250)*(64000000/4000.0)));
-[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
-"75
-[; ;main_calibration.c: 75:             }
-}
-[e ++ _i -> -> 1 `i `uc ]
-[e :U 2032 ]
-[e $ < -> _i `i -> _a `i 2029  ]
-[e :U 2030 ]
-}
-"76
-[; ;main_calibration.c: 76:             cont = 0x00;
-[e = _cont -> -> 0 `i `uc ]
-"77
-[; ;main_calibration.c: 77:             a = 0;
-[e = _a -> -> 0 `i `uc ]
-"78
-[; ;main_calibration.c: 78:         }
-}
-[e :U 2028 ]
-"81
-[; ;main_calibration.c: 81:         if(cont == 0x01){
-[e $ ! == -> _cont `i -> 1 `i 2033  ]
-{
-"83
-[; ;main_calibration.c: 83:             char string2[40];
-[v _string2 `uc ~T0 @X0 -> 40 `i a ]
-"84
-[; ;main_calibration.c: 84:             sprintf(string2,"\nRGBC = %05d %05d %05d %05d\n",initial_color.R,initial_color.G,initial_color.B,initial_color.C);
-[e ( _sprintf (1 , , , , (. , &U _string2 :s 2C . _initial_color 0 . _initial_color 1 . _initial_color 2 . _initial_color 3 ]
-"85
-[; ;main_calibration.c: 85:             TxBufferedString(string2);
-[e ( _TxBufferedString (1 &U _string2 ]
-"87
-[; ;main_calibration.c: 87:             sendTxBuf();
-[e ( _sendTxBuf ..  ]
-"88
-[; ;main_calibration.c: 88:             cont = 0x00;
-[e = _cont -> -> 0 `i `uc ]
-"89
-[; ;main_calibration.c: 89:         }
-}
-[e :U 2033 ]
-"90
-[; ;main_calibration.c: 90:     }
+"119
+[; ;main_calibration.c: 119:         _delay((unsigned long)((100)*(64000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+"120
+[; ;main_calibration.c: 120:     }
 }
 [e :U 2019 ]
 [e $U 2020  ]
 [e :U 2021 ]
-"91
-[; ;main_calibration.c: 91: }
+"121
+[; ;main_calibration.c: 121: }
 [e :UE 2018 ]
 }
 [p f _sprintf 8421508 ]
-[a 1C 10 82 71 66 67 32 61 32 37 48 53 100 32 37 48 53 100 32 37 48 53 100 32 37 48 53 100 10 0 ]
-[a 2C 10 82 71 66 67 32 61 32 37 48 53 100 32 37 48 53 100 32 37 48 53 100 32 37 48 53 100 10 0 ]
+[a 1C 10 67 111 108 111 114 32 68 101 116 101 99 116 101 100 32 61 32 37 48 50 100 32 37 48 53 100 32 37 48 53 100 32 37 48 53 100 10 0 ]

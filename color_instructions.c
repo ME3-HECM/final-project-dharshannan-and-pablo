@@ -18,7 +18,7 @@ void RedInstructions(DC_motor *mL, DC_motor *mR){
         stop(mL, mR);
         a--;
     }
-    __delay_ms(250); // Delay before executing turn
+    __delay_ms(50); // Delay before executing turn
     turnRight90(mL, mR); 
 }
 
@@ -32,7 +32,7 @@ void GreenInstructions(DC_motor *mL, DC_motor *mR){
         stop(mL, mR);
         a--;
     }
-    __delay_ms(250); 
+    __delay_ms(50); 
     turnLeft90(mL, mR);
 }
 
@@ -46,7 +46,7 @@ void BlueInstructions(DC_motor *mL, DC_motor *mR){
         stop(mL, mR);
         a--;
     }
-    __delay_ms(500);
+    __delay_ms(50);
     
     // Turn 180 deg in 2 bursts of 90deg
     turnLeft90(mL, mR);
@@ -66,7 +66,7 @@ void YellowInstructions(DC_motor *mL, DC_motor *mR){
         stop(mL, mR);
         a--;
     }
-    __delay_ms(250);
+    __delay_ms(50);
     turnRight90(mL, mR);
 }
 
@@ -80,7 +80,7 @@ void PinkInstructions(DC_motor *mL, DC_motor *mR){
         stop(mL, mR);
         a--;
     }
-    __delay_ms(250);
+    __delay_ms(50);
     turnLeft90(mL, mR);
     
 }
@@ -95,7 +95,7 @@ void OrangeInstructions(DC_motor *mL, DC_motor *mR){
         stop(mL, mR);
         a--;
     }
-    __delay_ms(250);
+    __delay_ms(50);
     
     turnRight135(mL, mR);
 }
@@ -110,7 +110,7 @@ void LightBlueInstructions(DC_motor *mL, DC_motor *mR){
         stop(mL, mR);
         a--;
     }
-    __delay_ms(250);
+    __delay_ms(50);
     
     turnLeft135(mL, mR);
 }
@@ -118,6 +118,10 @@ void LightBlueInstructions(DC_motor *mL, DC_motor *mR){
 
 void AntiYellow(DC_motor *mL, DC_motor *mR){
     unsigned char a=0;
+    
+    turnRight90(mL, mR);
+    __delay_ms(50);
+    
     while (a<20){
         fullSpeedAhead(mL, mR);
         a++;
@@ -126,14 +130,17 @@ void AntiYellow(DC_motor *mL, DC_motor *mR){
         stop(mL, mR);
         a--;
     }
-    __delay_ms(250);
-    turnRight90(mL, mR);
-    __delay_ms(250);
+    __delay_ms(50);
+    
     BlueInstructions(mL, mR);
 }
 
 void AntiPink(DC_motor *mL, DC_motor *mR){
     unsigned char a=0;
+    
+    turnLeft90(mL, mR);
+    __delay_ms(50);
+    
     while (a<20){
         fullSpeedAhead(mL, mR);
         a++;
@@ -142,9 +149,8 @@ void AntiPink(DC_motor *mL, DC_motor *mR){
         stop(mL, mR);
         a--;
     }
-    __delay_ms(250);
-    turnLeft90(mL, mR);
-    __delay_ms(250);
+    __delay_ms(50);
+   
     BlueInstructions(mL, mR);
 }
 // Function for White Card track back

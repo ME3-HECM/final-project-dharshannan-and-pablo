@@ -159,8 +159,8 @@ void fullSpeedAhead(DC_motor *mL, DC_motor *mR)
 
     // Check if motor power is above 100, if yes reset to 100 (saturate)
     // For maze navigation lets move a little slower (initially 75% power), lets only have it at 50%
-    if(mL->power>50){mL->power=50;}
-    if(mR->power>50){mR->power=50;}
+    if(mL->power>45){mL->power=45;}
+    if(mR->power>45){mR->power=45;}
     // Set the left and right motor powers to increment gradually 
     ++mL->power;
     ++mR->power;
@@ -200,7 +200,7 @@ void fullSpeedBackwards(DC_motor *mL, DC_motor *mR){
 void turnLeft90(DC_motor *mL, DC_motor *mR){
     
     unsigned char a=0;
-    while(a<19){ // (Calibration of 19 gives 90 deg turn but may differ for different surfaces and buggy acceleration)
+    while(a<17){ // (Calibration of 19 gives 90 deg turn but may differ for different surfaces and buggy acceleration)
         turnLeft(mL, mR); // Make the Buggy turn left
         a++;
     }
@@ -213,7 +213,7 @@ void turnLeft90(DC_motor *mL, DC_motor *mR){
 void turnRight90(DC_motor *mL, DC_motor *mR){
     
     unsigned char a=0;
-    while(a<19){ // (Calibration of 19 gives 90 deg turn but may differ for different surfaces and buggy acceleration)
+    while(a<17){ // (Calibration of 19 gives 90 deg turn but may differ for different surfaces and buggy acceleration)
         turnRight(mL, mR); // Make the Buggy turn right
         a++;
     }

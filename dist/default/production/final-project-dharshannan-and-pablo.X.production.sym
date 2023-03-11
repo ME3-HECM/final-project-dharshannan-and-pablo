@@ -680,8 +680,8 @@ bssBANK0 60 FB BANK0 60 1
 bssBANK1 100 13B BANK1 100 1
 %locals
 dist/default/production\final-project-dharshannan-and-pablo.X.production.o
-D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h
-C:\Users\User\AppData\Local\Temp\xcAs1j0.s
+C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h
+C:\Users\capel\AppData\Local\Temp\xcAsi30.s
 13550 2254 0 CODE 0
 13552 2254 0 CODE 0
 13555 2254 0 CODE 0
@@ -851,7 +851,7 @@ color.c
 138 670 0 CODE 0
 139 674 0 CODE 0
 140 676 0 CODE 0
-D:\MPLAB_COMPILER\pic\sources\c99\common\xxtofl.c
+C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
 10 E3C 0 CODE 0
 15 E3E 0 CODE 0
 16 E5C 0 CODE 0
@@ -881,7 +881,7 @@ D:\MPLAB_COMPILER\pic\sources\c99\common\xxtofl.c
 42 FDC 0 CODE 0
 43 FDE 0 CODE 0
 44 FEE 0 CODE 0
-D:\MPLAB_COMPILER\pic\sources\c99\common\fltol.c
+C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fltol.c
 43 1470 0 CODE 0
 47 1470 0 CODE 0
 48 1486 0 CODE 0
@@ -900,7 +900,7 @@ D:\MPLAB_COMPILER\pic\sources\c99\common\fltol.c
 68 1556 0 CODE 0
 69 1566 0 CODE 0
 70 1576 0 CODE 0
-D:\MPLAB_COMPILER\pic\sources\c99\common\sprcmul.c
+C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcmul.c
 8 678 0 CODE 0
 17 678 0 CODE 0
 18 67E 0 CODE 0
@@ -988,7 +988,7 @@ D:\MPLAB_COMPILER\pic\sources\c99\common\sprcmul.c
 201 A8C 0 CODE 0
 203 A90 0 CODE 0
 205 AA0 0 CODE 0
-D:\MPLAB_COMPILER\pic\sources\c99\common\sprcdiv.c
+C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcdiv.c
 11 AA2 0 CODE 0
 26 AA2 0 CODE 0
 27 AA8 0 CODE 0
@@ -1185,34 +1185,34 @@ timers.c
 17 243A 0 CODE 0
 18 243C 0 CODE 0
 color_instructions.c
-143 FF0 0 CODE 0
-144 FF0 0 CODE 0
-145 1002 0 CODE 0
-146 1016 0 CODE 0
-147 102C 0 CODE 0
-148 1030 0 CODE 0
-149 1044 0 CODE 0
-150 1058 0 CODE 0
-151 106E 0 CODE 0
-152 1072 0 CODE 0
-153 1086 0 CODE 0
-154 109A 0 CODE 0
-155 10B0 0 CODE 0
-156 10B4 0 CODE 0
-157 10C8 0 CODE 0
-159 10DC 0 CODE 0
-160 10E0 0 CODE 0
-161 10F4 0 CODE 0
-163 1108 0 CODE 0
-164 110C 0 CODE 0
-165 1120 0 CODE 0
-166 1134 0 CODE 0
-167 114A 0 CODE 0
-168 114E 0 CODE 0
-169 1162 0 CODE 0
-170 1176 0 CODE 0
-171 1190 0 CODE 0
-173 1190 0 CODE 0
+175 FF0 0 CODE 0
+176 FF0 0 CODE 0
+177 1002 0 CODE 0
+178 1016 0 CODE 0
+179 102C 0 CODE 0
+180 1030 0 CODE 0
+181 1044 0 CODE 0
+182 1058 0 CODE 0
+183 106E 0 CODE 0
+184 1072 0 CODE 0
+185 1086 0 CODE 0
+186 109A 0 CODE 0
+187 10B0 0 CODE 0
+188 10B4 0 CODE 0
+189 10C8 0 CODE 0
+191 10DC 0 CODE 0
+192 10E0 0 CODE 0
+193 10F4 0 CODE 0
+195 1108 0 CODE 0
+196 110C 0 CODE 0
+197 1120 0 CODE 0
+198 1134 0 CODE 0
+199 114A 0 CODE 0
+200 114E 0 CODE 0
+201 1162 0 CODE 0
+202 1176 0 CODE 0
+203 1190 0 CODE 0
+206 1190 0 CODE 0
 color_instructions.c
 58 1B16 0 CODE 0
 60 1B16 0 CODE 0
@@ -1421,14 +1421,14 @@ dc_motor.c
 81 142E 0 CODE 0
 82 144E 0 CODE 0
 84 146E 0 CODE 0
-D:\MPLAB_COMPILER\pic\sources\c99\common\Umul16.c
+C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul16.c
 15 238A 0 CODE 0
 37 238A 0 CODE 0
 38 2396 0 CODE 0
 39 239E 0 CODE 0
 52 23A6 0 CODE 0
 53 23AE 0 CODE 0
-D:\MPLAB_COMPILER\pic\sources\c99\common\lwdiv.c
+C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
 7 1E3A 0 CODE 0
 13 1E3A 0 CODE 0
 14 1E42 0 CODE 0
@@ -1523,8 +1523,8 @@ Memorization.c
 23 23FA 0 CODE 0
 25 23FC 0 CODE 0
 26 241C 0 CODE 0
-C:\Users\User\AppData\Local\Temp\xcAs1j0.s
-24057 18 0 CODE 0
+C:\Users\capel\AppData\Local\Temp\xcAsi30.s
+24065 18 0 CODE 0
 interrupts.c
 74 18 0 CODE 0
 77 26 0 CODE 0
@@ -1533,8 +1533,8 @@ interrupts.c
 80 3E 0 CODE 0
 81 44 0 CODE 0
 83 48 0 CODE 0
-C:\Users\User\AppData\Local\Temp\xcAs1j0.s
-24151 8 0 CODE 0
+C:\Users\capel\AppData\Local\Temp\xcAsi30.s
+24159 8 0 CODE 0
 interrupts.c
 88 8 0 CODE 0
 interrupts.c

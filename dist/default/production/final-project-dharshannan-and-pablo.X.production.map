@@ -2,13 +2,15 @@ Microchip MPLAB XC8 Compiler V2.40
 
 Linker command line:
 
--W-3 --edf=D:\MPLAB_COMPILER\pic\dat\20220703182018_en.msgs -cn \
+-W-3 \
+  --edf=C:\Program Files\Microchip\xc8\v2.40\pic\dat\20220703182018_en.msgs \
+  -cn \
   -h+dist/default/production\final-project-dharshannan-and-pablo.X.production.sym \
   --cmf=dist/default/production\final-project-dharshannan-and-pablo.X.production.cmf \
-  -z -Q18F67K40 -oC:\Users\User\AppData\Local\Temp\xcAs1j0.4 \
+  -z -Q18F67K40 -oC:\Users\capel\AppData\Local\Temp\xcAsi30.4 \
   --defsym=__MPLAB_BUILD=1 --fixupoverflow=error \
   -Mdist/default/production/final-project-dharshannan-and-pablo.X.production.map \
-  --md=C:\Users\User\AppData\Local\Temp\xcAs1j0.dat -E1 -ver=XC8 Compiler \
+  --md=C:\Users\capel\AppData\Local\Temp\xcAsi30.dat -E1 -ver=XC8 Compiler \
   --acfsm=1493 -ACODE=00h-01FFFFh -ACONST=00h-01FFFFh \
   -ASMALLCONST=0E00h-0EFFhx498 -AMEDIUMCONST=0E00h-0FFFFh,010E00h-01FFFFh \
   -ACOMRAM=01h-05Fh -AABS1=00h-0DE9h -ABIGRAM=01h-0DE9h \
@@ -28,7 +30,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\User\AppData\Local\Temp\xcAs1j0.o \
+  C:\Users\capel\AppData\Local\Temp\xcAsi30.o \
   dist/default/production\final-project-dharshannan-and-pablo.X.production.o 
 
 Object code version is 3.11
@@ -38,7 +40,7 @@ Machine type is 18F67K40
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\User\AppData\Local\Temp\xcAs1j0.o
+C:\Users\capel\AppData\Local\Temp\xcAsi30.o
                 idloc                            200000   200000       10        0       5
                 config                           300000   300000        C        0       4
                 init                                 58       58        4        C       0
@@ -976,20 +978,25 @@ wtemp8                                 temp         000058
 MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
+C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcmul.c
+		___flmul       		CODE           	0678	0000	1066
+
+C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcmul.c estimated size: 1066
+
+C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcdiv.c
+		___fldiv       		CODE           	0AA2	0000	922
+
+C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcdiv.c estimated size: 922
+
 timers.c
 		_Timer0_init   		CODE           	241E	0000	32
 
 timers.c estimated size: 32
 
-D:\MPLAB_COMPILER\pic\sources\c99\common\sprcmul.c
-		___flmul       		CODE           	0678	0000	1066
-
-D:\MPLAB_COMPILER\pic\sources\c99\common\sprcmul.c estimated size: 1066
-
-D:\MPLAB_COMPILER\pic\sources\c99\common\lwdiv.c
+C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
 		___lwdiv       		CODE           	1E3A	0000	116
 
-D:\MPLAB_COMPILER\pic\sources\c99\common\lwdiv.c estimated size: 116
+C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c estimated size: 116
 
 color.c
 		_Update_RGBC   		CODE           	1EAE	0000	94
@@ -1003,21 +1010,21 @@ color.c
 
 color.c estimated size: 2062
 
-D:\MPLAB_COMPILER\pic\sources\c99\common\fltol.c
+C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fltol.c
 		___fltol       		CODE           	1470	0000	264
 
-D:\MPLAB_COMPILER\pic\sources\c99\common\fltol.c estimated size: 264
-
-D:\MPLAB_COMPILER\pic\sources\c99\common\sprcdiv.c
-		___fldiv       		CODE           	0AA2	0000	922
-
-D:\MPLAB_COMPILER\pic\sources\c99\common\sprcdiv.c estimated size: 922
+C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fltol.c estimated size: 264
 
 LED_Buttons.c
 		_WhiteLight    		CODE           	2528	0000	8
 		_LED_init      		CODE           	24D2	0000	12
 
 LED_Buttons.c estimated size: 20
+
+C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul16.c
+		___wmul        		CODE           	238A	0000	38
+
+C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul16.c estimated size: 38
 
 dc_motor.c
 		_fullSpeedAhead		CODE           	1754	0000	214
@@ -1042,11 +1049,6 @@ interrupts.c
 		_HighISR       		CODE           	0008	0000	38
 
 interrupts.c estimated size: 246
-
-D:\MPLAB_COMPILER\pic\sources\c99\common\Umul16.c
-		___wmul        		CODE           	238A	0000	38
-
-D:\MPLAB_COMPILER\pic\sources\c99\common\Umul16.c estimated size: 38
 
 main_motor.c
 		_main          		CODE           	1192	0000	370
@@ -1082,10 +1084,10 @@ Memorization.c
 
 Memorization.c estimated size: 72
 
-D:\MPLAB_COMPILER\pic\sources\c99\common\xxtofl.c
+C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
 		___xxtofl      		CODE           	0E3C	0000	436
 
-D:\MPLAB_COMPILER\pic\sources\c99\common\xxtofl.c estimated size: 436
+C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c estimated size: 436
 
 shared
 		i2_I2C_2_Master_Stop		CODE           	2514	0000	10

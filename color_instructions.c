@@ -10,7 +10,7 @@
 void RedInstructions(DC_motor *mL, DC_motor *mR){
     
     unsigned char a=0;
-    while (a<18){
+    while (a<16){
         fullSpeedBackwards(mL, mR); // Reverse Buggy a little as it might be too close to wall
         a++;
     }
@@ -24,7 +24,7 @@ void RedInstructions(DC_motor *mL, DC_motor *mR){
 
 void GreenInstructions(DC_motor *mL, DC_motor *mR){
     unsigned char a=0;
-    while (a<18){
+    while (a<16){
         fullSpeedBackwards(mL, mR);
         a++;
     }
@@ -38,7 +38,7 @@ void GreenInstructions(DC_motor *mL, DC_motor *mR){
 
 void BlueInstructions(DC_motor *mL, DC_motor *mR){
     unsigned char a=0;
-    while (a<18){
+    while (a<16){
         fullSpeedBackwards(mL, mR);
         a++;
     }
@@ -87,7 +87,7 @@ void PinkInstructions(DC_motor *mL, DC_motor *mR){
 
 void OrangeInstructions(DC_motor *mL, DC_motor *mR){
     unsigned char a=0;
-    while (a<18){
+    while (a<16){
         fullSpeedBackwards(mL, mR);
         a++;
     }
@@ -102,7 +102,7 @@ void OrangeInstructions(DC_motor *mL, DC_motor *mR){
 
 void LightBlueInstructions(DC_motor *mL, DC_motor *mR){
     unsigned char a=0;
-    while (a<18){
+    while (a<16){
         fullSpeedBackwards(mL, mR);
         a++;
     }

@@ -114,15 +114,15 @@ void turnLeft(DC_motor *mL, DC_motor *mR)
     mR->brakemode = 0;
     
     // Check if motor power is above 100, if yes reset to 100 (saturate)
-    if(mL->power>75){mL->power=75;}
-    if(mR->power>75){mR->power=75;}
+    if(mL->power>40){mL->power=40;}
+    if(mR->power>40){mR->power=40;}
     // Set the left and right motor powers to increment gradually 
-    mL->power = mL->power + 5 ;
-    mR->power = mR->power + 5;
+    mL->power = mL->power + 10 ;
+    mR->power = mR->power + 10;
     // Call function for both left and right motor to setPWM
     setMotorPWM(mL);
     setMotorPWM(mR);
-    __delay_ms(50); // Delay the incrementation
+    __delay_ms(20); // Delay the incrementation
 }
 
 //function to make the robot turn right (*from the front of the Buggy)
@@ -136,15 +136,15 @@ void turnRight(DC_motor *mL, DC_motor *mR)
     mR->brakemode = 0;
     
     // Check if motor power is above 100, if yes reset to 100 (saturate)
-    if(mL->power>75){mL->power=75;}
-    if(mR->power>75){mR->power=75;}
+    if(mL->power>40){mL->power=40;}
+    if(mR->power>40){mR->power=40;}
     // Set the left and right motor powers to increment gradually 
-    mL->power = mL->power + 5 ;
-    mR->power = mR->power + 5;
+    mL->power = mL->power + 10 ;
+    mR->power = mR->power + 10;
     // Call function for both left and right motor to setPWM
     setMotorPWM(mL);
     setMotorPWM(mR);
-    __delay_ms(50); // Delay the incrementation
+    __delay_ms(20); // Delay the incrementation
 }
 
 //function to make the robot go straight
@@ -159,11 +159,11 @@ void fullSpeedAhead(DC_motor *mL, DC_motor *mR)
 
     // Check if motor power is above 50, if yes reset to 50 (saturate)
     // For maze navigation lets move a little slower (initially 75% power), lets only have it at 50%
-    if(mL->power>35){mL->power=35;}
-    if(mR->power>46){mR->power=46;} // Calibrate right motors (to make Buggy move reasonably straight)
+    if(mL->power>40){mL->power=40;}
+    if(mR->power>42){mR->power=42;} // Calibrate right motors (to make Buggy move reasonably straight)
     // Set the left and right motor powers to increment gradually 
     mL->power = mL->power + 5 ;
-    mR->power = mR->power + 8; // Calibrate right motors (to make Buggy move reasonably straight)
+    mR->power = mR->power + 6; // Calibrate right motors (to make Buggy move reasonably straight)
     // Call function for both left and right motor to setPWM
     setMotorPWM(mL);
     setMotorPWM(mR);
@@ -181,11 +181,11 @@ void fullSpeedBackwards(DC_motor *mL, DC_motor *mR){
     mR->brakemode = 0;
 
     // Check if motor power is above 50, if yes reset to 50 (saturate)
-    if(mL->power>35){mL->power=35;}
-    if(mR->power>46){mR->power=46;}
+    if(mL->power>40){mL->power=40;}
+    if(mR->power>42){mR->power=42;}
     // Set the left and right motor powers to increment gradually 
     mL->power = mL->power + 5 ;
-    mR->power = mR->power + 8;
+    mR->power = mR->power + 6;
     // Call function for both left and right motor to setPWM
     setMotorPWM(mL);
     setMotorPWM(mR);
@@ -200,7 +200,15 @@ void fullSpeedBackwards(DC_motor *mL, DC_motor *mR){
 void turnLeft90(DC_motor *mL, DC_motor *mR){
     
     unsigned char a=0;
-    while(a<19){ // (Calibration of 19 gives 90 deg turn but may differ for different surfaces and buggy acceleration)
+    while(a<28){ // (Calibration of 19 gives 90 deg turn but may differ for different surfaces and buggy acceleration)
+        turnLeft(mL, mR); // Make the Buggy turn left
+        a++;
+    }
+    while(a>0){
+        stop(mL, mR); // Stop turn 
+        a--;
+    }
+    while(a<28){ // (Calibration of 19 gives 90 deg turn but may differ for different surfaces and buggy acceleration)
         turnLeft(mL, mR); // Make the Buggy turn left
         a++;
     }
@@ -213,7 +221,15 @@ void turnLeft90(DC_motor *mL, DC_motor *mR){
 void turnRight90(DC_motor *mL, DC_motor *mR){
     
     unsigned char a=0;
-    while(a<19){ // (Calibration of 19 gives 90 deg turn but may differ for different surfaces and buggy acceleration)
+    while(a<27){ // (Calibration of 19 gives 90 deg turn but may differ for different surfaces and buggy acceleration)
+        turnRight(mL, mR); // Make the Buggy turn right
+        a++;
+    }
+    while(a>0){
+        stop(mL, mR); // Stop turn 
+        a--;
+    }
+    while(a<27){ // (Calibration of 19 gives 90 deg turn but may differ for different surfaces and buggy acceleration)
         turnRight(mL, mR); // Make the Buggy turn right
         a++;
     }

@@ -24457,6 +24457,7 @@ void AntiPink(DC_motor *mL, DC_motor *mR){
 
 
 void WhiteInstructions(DC_motor *mL, DC_motor *mR){
+    PIE0bits.INT1IE = 0;
 
     BlueInstructions(mL,mR);
 

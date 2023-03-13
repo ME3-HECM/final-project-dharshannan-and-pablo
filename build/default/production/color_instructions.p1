@@ -28,6 +28,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 "23
 [; ;./dc_motor.h: 23: void fullSpeedAhead(DC_motor *mL, DC_motor *mR);
 [v _fullSpeedAhead `(v ~T0 @X0 0 ef2`*S2015`*S2015 ]
+"4548 D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h
+[; ;D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h: 4548:     struct {
+[s S262 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S262 . INT0IE INT1IE INT2IE INT3IE IOCIE TMR0IE ]
+"4547
+[; ;D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h: 4547: typedef union {
+[u S261 `S262 1 ]
+[n S261 . . ]
+"4557
+[; ;D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h: 4557: extern volatile PIE0bits_t PIE0bits __attribute__((address(0xE29)));
+[v _PIE0bits `VS261 ~T0 @X0 0 e@3625 ]
 "17 ./Memorization.h
 [; ;./Memorization.h: 17: unsigned int Return_Time(unsigned char *time_index, unsigned int *time_array);
 [v _Return_Time `(ui ~T0 @X0 0 ef2`*uc`*ui ]
@@ -2607,81 +2618,84 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _mL `*S2015 ~T0 @X0 1 r1 ]
 [v _mR `*S2015 ~T0 @X0 1 r2 ]
 [f ]
-"156
-[; ;color_instructions.c: 156:     BlueInstructions(mL,mR);
+"155
+[; ;color_instructions.c: 155:     PIE0bits.INT1IE = 0;
+[e = . . _PIE0bits 0 1 -> -> 0 `i `uc ]
+"157
+[; ;color_instructions.c: 157:     BlueInstructions(mL,mR);
 [e ( _BlueInstructions (2 , _mL _mR ]
-"158
-[; ;color_instructions.c: 158:     while(time_index>0){
+"159
+[; ;color_instructions.c: 159:     while(time_index>0){
 [e $U 2080  ]
 [e :U 2081 ]
 {
-"160
-[; ;color_instructions.c: 160:         unsigned int a = 0;
+"161
+[; ;color_instructions.c: 161:         unsigned int a = 0;
 [v _a `ui ~T0 @X0 1 a ]
 [e = _a -> -> 0 `i `ui ]
-"161
-[; ;color_instructions.c: 161:         unsigned int c = Return_Time(&time_index,time_array);
+"162
+[; ;color_instructions.c: 162:         unsigned int c = Return_Time(&time_index,time_array);
 [v _c `ui ~T0 @X0 1 a ]
 [e = _c ( _Return_Time (2 , &U _time_index &U _time_array ]
-"162
-[; ;color_instructions.c: 162:         while(a<c){
+"163
+[; ;color_instructions.c: 163:         while(a<c){
 [e $U 2083  ]
 [e :U 2084 ]
 {
-"163
-[; ;color_instructions.c: 163:             fullSpeedAhead(mL,mR);
-[e ( _fullSpeedAhead (2 , _mL _mR ]
 "164
-[; ;color_instructions.c: 164:             a++;
-[e ++ _a -> -> 1 `i `ui ]
+[; ;color_instructions.c: 164:             fullSpeedAhead(mL,mR);
+[e ( _fullSpeedAhead (2 , _mL _mR ]
 "165
-[; ;color_instructions.c: 165:         }
+[; ;color_instructions.c: 165:             a++;
+[e ++ _a -> -> 1 `i `ui ]
+"166
+[; ;color_instructions.c: 166:         }
 }
 [e :U 2083 ]
-"162
-[; ;color_instructions.c: 162:         while(a<c){
+"163
+[; ;color_instructions.c: 163:         while(a<c){
 [e $ < _a _c 2084  ]
 [e :U 2085 ]
-"167
-[; ;color_instructions.c: 167:         while(a>0){
+"168
+[; ;color_instructions.c: 168:         while(a>0){
 [e $U 2086  ]
 [e :U 2087 ]
 {
-"168
-[; ;color_instructions.c: 168:             stop(mL,mR);
-[e ( _stop (2 , _mL _mR ]
 "169
-[; ;color_instructions.c: 169:             a--;
-[e -- _a -> -> 1 `i `ui ]
+[; ;color_instructions.c: 169:             stop(mL,mR);
+[e ( _stop (2 , _mL _mR ]
 "170
-[; ;color_instructions.c: 170:         }
+[; ;color_instructions.c: 170:             a--;
+[e -- _a -> -> 1 `i `ui ]
+"171
+[; ;color_instructions.c: 171:         }
 }
 [e :U 2086 ]
-"167
-[; ;color_instructions.c: 167:         while(a>0){
+"168
+[; ;color_instructions.c: 168:         while(a>0){
 [e $ > _a -> -> 0 `i `ui 2087  ]
 [e :U 2088 ]
-"172
-[; ;color_instructions.c: 172:         unsigned char anticolor = Return_Anti_Moves(&moves_index, anti_moves_array);
+"173
+[; ;color_instructions.c: 173:         unsigned char anticolor = Return_Anti_Moves(&moves_index, anti_moves_array);
 [v _anticolor `uc ~T0 @X0 1 a ]
 [e = _anticolor ( _Return_Anti_Moves (2 , &U _moves_index &U _anti_moves_array ]
-"173
-[; ;color_instructions.c: 173:         MoveBuggy(anticolor,mL,mR);
-[e ( _MoveBuggy (3 , , -> _anticolor `*uc _mL _mR ]
 "174
-[; ;color_instructions.c: 174:     }
+[; ;color_instructions.c: 174:         MoveBuggy(anticolor,mL,mR);
+[e ( _MoveBuggy (3 , , -> _anticolor `*uc _mL _mR ]
+"175
+[; ;color_instructions.c: 175:     }
 }
 [e :U 2080 ]
-"158
-[; ;color_instructions.c: 158:     while(time_index>0){
+"159
+[; ;color_instructions.c: 159:     while(time_index>0){
 [e $ > -> _time_index `i -> 0 `i 2081  ]
 [e :U 2082 ]
-"175
-[; ;color_instructions.c: 175: }
+"176
+[; ;color_instructions.c: 176: }
 [e :UE 2079 ]
 }
-"179
-[; ;color_instructions.c: 179: void MoveBuggy(unsigned char *color_detected, DC_motor *mL, DC_motor *mR){
+"180
+[; ;color_instructions.c: 180: void MoveBuggy(unsigned char *color_detected, DC_motor *mL, DC_motor *mR){
 [v _MoveBuggy `(v ~T0 @X0 1 ef3`*uc`*S2015`*S2015 ]
 {
 [e :U _MoveBuggy ]
@@ -2689,188 +2703,188 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _mL `*S2015 ~T0 @X0 1 r2 ]
 [v _mR `*S2015 ~T0 @X0 1 r3 ]
 [f ]
-"180
-[; ;color_instructions.c: 180:     if (color_detected==1){
+"181
+[; ;color_instructions.c: 181:     if (color_detected==1){
 [e $ ! == _color_detected -> -> 1 `i `*uc 2090  ]
 {
-"181
-[; ;color_instructions.c: 181:         RedInstructions(mL, mR);
-[e ( _RedInstructions (2 , _mL _mR ]
 "182
-[; ;color_instructions.c: 182:         if(LATDbits.LATD7 != 1){
+[; ;color_instructions.c: 182:         RedInstructions(mL, mR);
+[e ( _RedInstructions (2 , _mL _mR ]
+"183
+[; ;color_instructions.c: 183:         if(LATDbits.LATD7 != 1){
 [e $ ! != -> . . _LATDbits 0 7 `i -> 1 `i 2091  ]
 {
-"183
-[; ;color_instructions.c: 183:             AppendMoves(2,&moves_index,anti_moves_array);
-[e ( _AppendMoves (3 , , -> -> 2 `i `uc &U _moves_index &U _anti_moves_array ]
 "184
-[; ;color_instructions.c: 184:         }
+[; ;color_instructions.c: 184:             AppendMoves(2,&moves_index,anti_moves_array);
+[e ( _AppendMoves (3 , , -> -> 2 `i `uc &U _moves_index &U _anti_moves_array ]
+"185
+[; ;color_instructions.c: 185:         }
 }
 [e :U 2091 ]
-"185
-[; ;color_instructions.c: 185:     }
+"186
+[; ;color_instructions.c: 186:     }
 }
 [e $U 2092  ]
-"186
-[; ;color_instructions.c: 186:     else if (color_detected==2){
+"187
+[; ;color_instructions.c: 187:     else if (color_detected==2){
 [e :U 2090 ]
 [e $ ! == _color_detected -> -> 2 `i `*uc 2093  ]
 {
-"187
-[; ;color_instructions.c: 187:         GreenInstructions(mL, mR);
-[e ( _GreenInstructions (2 , _mL _mR ]
 "188
-[; ;color_instructions.c: 188:         if(LATDbits.LATD7 != 1){
+[; ;color_instructions.c: 188:         GreenInstructions(mL, mR);
+[e ( _GreenInstructions (2 , _mL _mR ]
+"189
+[; ;color_instructions.c: 189:         if(LATDbits.LATD7 != 1){
 [e $ ! != -> . . _LATDbits 0 7 `i -> 1 `i 2094  ]
 {
-"189
-[; ;color_instructions.c: 189:             AppendMoves(1,&moves_index,anti_moves_array);
-[e ( _AppendMoves (3 , , -> -> 1 `i `uc &U _moves_index &U _anti_moves_array ]
 "190
-[; ;color_instructions.c: 190:         }
+[; ;color_instructions.c: 190:             AppendMoves(1,&moves_index,anti_moves_array);
+[e ( _AppendMoves (3 , , -> -> 1 `i `uc &U _moves_index &U _anti_moves_array ]
+"191
+[; ;color_instructions.c: 191:         }
 }
 [e :U 2094 ]
-"191
-[; ;color_instructions.c: 191:     }
+"192
+[; ;color_instructions.c: 192:     }
 }
 [e $U 2095  ]
-"192
-[; ;color_instructions.c: 192:     else if (color_detected==3){
+"193
+[; ;color_instructions.c: 193:     else if (color_detected==3){
 [e :U 2093 ]
 [e $ ! == _color_detected -> -> 3 `i `*uc 2096  ]
 {
-"193
-[; ;color_instructions.c: 193:         BlueInstructions(mL, mR);
-[e ( _BlueInstructions (2 , _mL _mR ]
 "194
-[; ;color_instructions.c: 194:         if(LATDbits.LATD7 != 1){
+[; ;color_instructions.c: 194:         BlueInstructions(mL, mR);
+[e ( _BlueInstructions (2 , _mL _mR ]
+"195
+[; ;color_instructions.c: 195:         if(LATDbits.LATD7 != 1){
 [e $ ! != -> . . _LATDbits 0 7 `i -> 1 `i 2097  ]
 {
-"195
-[; ;color_instructions.c: 195:             AppendMoves(3,&moves_index,anti_moves_array);
-[e ( _AppendMoves (3 , , -> -> 3 `i `uc &U _moves_index &U _anti_moves_array ]
 "196
-[; ;color_instructions.c: 196:         }
+[; ;color_instructions.c: 196:             AppendMoves(3,&moves_index,anti_moves_array);
+[e ( _AppendMoves (3 , , -> -> 3 `i `uc &U _moves_index &U _anti_moves_array ]
+"197
+[; ;color_instructions.c: 197:         }
 }
 [e :U 2097 ]
-"197
-[; ;color_instructions.c: 197:     }
+"198
+[; ;color_instructions.c: 198:     }
 }
 [e $U 2098  ]
-"198
-[; ;color_instructions.c: 198:     else if (color_detected==4){
+"199
+[; ;color_instructions.c: 199:     else if (color_detected==4){
 [e :U 2096 ]
 [e $ ! == _color_detected -> -> 4 `i `*uc 2099  ]
 {
-"199
-[; ;color_instructions.c: 199:         YellowInstructions(mL, mR);
+"200
+[; ;color_instructions.c: 200:         YellowInstructions(mL, mR);
 [e ( _YellowInstructions (2 , _mL _mR ]
-"201
-[; ;color_instructions.c: 201:         if(LATDbits.LATD7 != 1){
+"202
+[; ;color_instructions.c: 202:         if(LATDbits.LATD7 != 1){
 [e $ ! != -> . . _LATDbits 0 7 `i -> 1 `i 2100  ]
 {
-"202
-[; ;color_instructions.c: 202:             AppendMoves(9,&moves_index,anti_moves_array);
-[e ( _AppendMoves (3 , , -> -> 9 `i `uc &U _moves_index &U _anti_moves_array ]
 "203
-[; ;color_instructions.c: 203:         }
+[; ;color_instructions.c: 203:             AppendMoves(9,&moves_index,anti_moves_array);
+[e ( _AppendMoves (3 , , -> -> 9 `i `uc &U _moves_index &U _anti_moves_array ]
+"204
+[; ;color_instructions.c: 204:         }
 }
 [e :U 2100 ]
-"204
-[; ;color_instructions.c: 204:     }
+"205
+[; ;color_instructions.c: 205:     }
 }
 [e $U 2101  ]
-"205
-[; ;color_instructions.c: 205:     else if (color_detected==5){
+"206
+[; ;color_instructions.c: 206:     else if (color_detected==5){
 [e :U 2099 ]
 [e $ ! == _color_detected -> -> 5 `i `*uc 2102  ]
 {
-"206
-[; ;color_instructions.c: 206:         PinkInstructions(mL, mR);
+"207
+[; ;color_instructions.c: 207:         PinkInstructions(mL, mR);
 [e ( _PinkInstructions (2 , _mL _mR ]
-"208
-[; ;color_instructions.c: 208:         if(LATDbits.LATD7 != 1){
+"209
+[; ;color_instructions.c: 209:         if(LATDbits.LATD7 != 1){
 [e $ ! != -> . . _LATDbits 0 7 `i -> 1 `i 2103  ]
 {
-"209
-[; ;color_instructions.c: 209:             AppendMoves(10,&moves_index,anti_moves_array);
-[e ( _AppendMoves (3 , , -> -> 10 `i `uc &U _moves_index &U _anti_moves_array ]
 "210
-[; ;color_instructions.c: 210:         }
+[; ;color_instructions.c: 210:             AppendMoves(10,&moves_index,anti_moves_array);
+[e ( _AppendMoves (3 , , -> -> 10 `i `uc &U _moves_index &U _anti_moves_array ]
+"211
+[; ;color_instructions.c: 211:         }
 }
 [e :U 2103 ]
-"211
-[; ;color_instructions.c: 211:     }
+"212
+[; ;color_instructions.c: 212:     }
 }
 [e $U 2104  ]
-"212
-[; ;color_instructions.c: 212:     else if (color_detected==6){
+"213
+[; ;color_instructions.c: 213:     else if (color_detected==6){
 [e :U 2102 ]
 [e $ ! == _color_detected -> -> 6 `i `*uc 2105  ]
 {
-"213
-[; ;color_instructions.c: 213:         OrangeInstructions(mL, mR);
-[e ( _OrangeInstructions (2 , _mL _mR ]
 "214
-[; ;color_instructions.c: 214:         if(LATDbits.LATD7 != 1){
+[; ;color_instructions.c: 214:         OrangeInstructions(mL, mR);
+[e ( _OrangeInstructions (2 , _mL _mR ]
+"215
+[; ;color_instructions.c: 215:         if(LATDbits.LATD7 != 1){
 [e $ ! != -> . . _LATDbits 0 7 `i -> 1 `i 2106  ]
 {
-"215
-[; ;color_instructions.c: 215:             AppendMoves(7,&moves_index,anti_moves_array);
-[e ( _AppendMoves (3 , , -> -> 7 `i `uc &U _moves_index &U _anti_moves_array ]
 "216
-[; ;color_instructions.c: 216:         }
+[; ;color_instructions.c: 216:             AppendMoves(7,&moves_index,anti_moves_array);
+[e ( _AppendMoves (3 , , -> -> 7 `i `uc &U _moves_index &U _anti_moves_array ]
+"217
+[; ;color_instructions.c: 217:         }
 }
 [e :U 2106 ]
-"217
-[; ;color_instructions.c: 217:     }
+"218
+[; ;color_instructions.c: 218:     }
 }
 [e $U 2107  ]
-"218
-[; ;color_instructions.c: 218:     else if (color_detected==7){
+"219
+[; ;color_instructions.c: 219:     else if (color_detected==7){
 [e :U 2105 ]
 [e $ ! == _color_detected -> -> 7 `i `*uc 2108  ]
 {
-"219
-[; ;color_instructions.c: 219:         LightBlueInstructions(mL, mR);
-[e ( _LightBlueInstructions (2 , _mL _mR ]
 "220
-[; ;color_instructions.c: 220:         if(LATDbits.LATD7 != 1){
+[; ;color_instructions.c: 220:         LightBlueInstructions(mL, mR);
+[e ( _LightBlueInstructions (2 , _mL _mR ]
+"221
+[; ;color_instructions.c: 221:         if(LATDbits.LATD7 != 1){
 [e $ ! != -> . . _LATDbits 0 7 `i -> 1 `i 2109  ]
 {
-"221
-[; ;color_instructions.c: 221:             AppendMoves(6,&moves_index,anti_moves_array);
-[e ( _AppendMoves (3 , , -> -> 6 `i `uc &U _moves_index &U _anti_moves_array ]
 "222
-[; ;color_instructions.c: 222:         }
+[; ;color_instructions.c: 222:             AppendMoves(6,&moves_index,anti_moves_array);
+[e ( _AppendMoves (3 , , -> -> 6 `i `uc &U _moves_index &U _anti_moves_array ]
+"223
+[; ;color_instructions.c: 223:         }
 }
 [e :U 2109 ]
-"223
-[; ;color_instructions.c: 223:     }
+"224
+[; ;color_instructions.c: 224:     }
 }
 [e $U 2110  ]
-"226
-[; ;color_instructions.c: 226:     else if (color_detected==9){
+"227
+[; ;color_instructions.c: 227:     else if (color_detected==9){
 [e :U 2108 ]
 [e $ ! == _color_detected -> -> 9 `i `*uc 2111  ]
 {
-"227
-[; ;color_instructions.c: 227:         AntiYellow(mL, mR);
-[e ( _AntiYellow (2 , _mL _mR ]
 "228
-[; ;color_instructions.c: 228:     }
+[; ;color_instructions.c: 228:         AntiYellow(mL, mR);
+[e ( _AntiYellow (2 , _mL _mR ]
+"229
+[; ;color_instructions.c: 229:     }
 }
 [e $U 2112  ]
-"229
-[; ;color_instructions.c: 229:     else if (color_detected==10){
+"230
+[; ;color_instructions.c: 230:     else if (color_detected==10){
 [e :U 2111 ]
 [e $ ! == _color_detected -> -> 10 `i `*uc 2113  ]
 {
-"230
-[; ;color_instructions.c: 230:         AntiPink(mL, mR);
-[e ( _AntiPink (2 , _mL _mR ]
 "231
-[; ;color_instructions.c: 231:     }
+[; ;color_instructions.c: 231:         AntiPink(mL, mR);
+[e ( _AntiPink (2 , _mL _mR ]
+"232
+[; ;color_instructions.c: 232:     }
 }
 [e :U 2113 ]
 [e :U 2112 ]
@@ -2881,7 +2895,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 2098 ]
 [e :U 2095 ]
 [e :U 2092 ]
-"232
-[; ;color_instructions.c: 232: }
+"233
+[; ;color_instructions.c: 233: }
 [e :UE 2089 ]
 }

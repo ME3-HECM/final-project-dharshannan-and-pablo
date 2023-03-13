@@ -152,6 +152,7 @@ void AntiPink(DC_motor *mL, DC_motor *mR){
 
 // Function for White Card track back
 void WhiteInstructions(DC_motor *mL, DC_motor *mR){
+    PIE0bits.INT1IE = 0; // Disable interrupt on RB1 pin (disable color-click interrupt)
     // Execute Blue instruction for 180 deg turn 1st
     BlueInstructions(mL,mR);
     // Now we move the Buggy using a while loop based on the time index

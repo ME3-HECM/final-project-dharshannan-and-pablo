@@ -96,7 +96,7 @@ void Update_RGBC(RGB_val *tempval){
 }
 
 // Function to detect and decide what color is sensed by light sensors based of RGBC % distribution values
-unsigned char detect_color(RGB_val *tempval)
+unsigned char detect_color(RGB_val *tempval, unsigned char *lost_timer)
 {
     unsigned char color = 0; // Initialize color detected, 1:red, 2:green, 3:blue, 4:yellow, 5:pink
     // 6:orange, 7:light blue, 8:white
@@ -132,7 +132,10 @@ unsigned char detect_color(RGB_val *tempval)
             color = 8; // Set color to WHITE
         }
         else{ // If a shadow is detected
+            LATHbits.LATH3 = 1; // Turn ON LED to indicate a color has been detected
             color = 0; // If none of the above reset color to 0
+            // Increment lost timer
+            lost_timer++;
         }
     }
     color_flag = 0; // Reset color flag

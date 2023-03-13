@@ -12,8 +12,8 @@ void Timer0_init(void)
     T0CON0bits.T016BIT=1;	//16bit mode	
 	
     // it's a good idea to initialise the timer registers so we know we are at 0
-    TMR0H = 0b11000010; // Reset timer value to 49910 (decimal) this is to accurately measure 250ms intervals
-    TMR0L = 0b11110110;
+    TMR0H = 0b00001011; // Reset timer value to 3035 (decimal) this is to accurately measure 1s intervals
+    TMR0L = 0b11011011;
     T0CON0bits.T0EN=1;	//start the timer
 }
 

@@ -73,8 +73,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "4819
 [; ;D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h: 4819: extern volatile PIE4bits_t PIE4bits __attribute__((address(0xE2D)));
 [v _PIE4bits `VS273 ~T0 @X0 0 e@3629 ]
-"17 ./interrupts.h
-[; ;./interrupts.h: 17: void interrupts_clear_colorclick(void);
+"18 ./interrupts.h
+[; ;./interrupts.h: 18: void interrupts_clear_colorclick(void);
 [v _interrupts_clear_colorclick `(v ~T0 @X0 0 ef ]
 "26 ./color.h
 [; ;./color.h: 26: void color_writetoaddr(char address, char value);
@@ -2242,72 +2242,78 @@ Version 4.0 HI-TECH Software Intermediate Code
 [i _tmr_ovf
 -> -> 0 `i `uc
 ]
+"73
+[; ;interrupts.c: 73: unsigned char lost_flag = 0;
+[v _lost_flag `uc ~T0 @X0 1 e ]
+[i _lost_flag
+-> -> 0 `i `uc
+]
 [v $root$_LowISR `(v ~T0 @X0 0 e ]
-"74
-[; ;interrupts.c: 74: void __attribute__((picinterrupt(("low_priority")))) LowISR()
-[v _LowISR `(v ~T3 @X0 1 ef ]
 "75
-[; ;interrupts.c: 75: {
+[; ;interrupts.c: 75: void __attribute__((picinterrupt(("low_priority")))) LowISR()
+[v _LowISR `(v ~T3 @X0 1 ef ]
+"76
+[; ;interrupts.c: 76: {
 {
 [e :U _LowISR ]
 [f ]
-"77
-[; ;interrupts.c: 77:     if(PIR0bits.TMR0IF){
+"78
+[; ;interrupts.c: 78:     if(PIR0bits.TMR0IF){
 [e $ ! != -> . . _PIR0bits 0 5 `i -> 0 `i 2020  ]
 {
-"78
-[; ;interrupts.c: 78:         TMR0H = 0b11000010;
-[e = _TMR0H -> -> 194 `i `uc ]
 "79
-[; ;interrupts.c: 79:         TMR0L = 0b11110110;
-[e = _TMR0L -> -> 246 `i `uc ]
+[; ;interrupts.c: 79:         TMR0H = 0b00001011;
+[e = _TMR0H -> -> 11 `i `uc ]
 "80
-[; ;interrupts.c: 80:         tmr_ovf = 1;
-[e = _tmr_ovf -> -> 1 `i `uc ]
+[; ;interrupts.c: 80:         TMR0L = 0b11011011;
+[e = _TMR0L -> -> 219 `i `uc ]
 "81
-[; ;interrupts.c: 81:         PIR0bits.TMR0IF=0;
-[e = . . _PIR0bits 0 5 -> -> 0 `i `uc ]
+[; ;interrupts.c: 81:         tmr_ovf = 1;
+[e = _tmr_ovf -> -> 1 `i `uc ]
 "82
-[; ;interrupts.c: 82:     }
+[; ;interrupts.c: 82:         PIR0bits.TMR0IF=0;
+[e = . . _PIR0bits 0 5 -> -> 0 `i `uc ]
+"83
+[; ;interrupts.c: 83:     }
 }
 [e :U 2020 ]
-"83
-[; ;interrupts.c: 83: }
+"84
+[; ;interrupts.c: 84: }
 [e :UE 2019 ]
 }
-"87
-[; ;interrupts.c: 87: unsigned char color_flag = 0;
+"88
+[; ;interrupts.c: 88: unsigned char color_flag = 0;
 [v _color_flag `uc ~T0 @X0 1 e ]
 [i _color_flag
 -> -> 0 `i `uc
 ]
 [v $root$_HighISR `(v ~T0 @X0 0 e ]
-"88
-[; ;interrupts.c: 88: void __attribute__((picinterrupt(("high_priority")))) HighISR()
-[v _HighISR `(v ~T4 @X0 1 ef ]
 "89
-[; ;interrupts.c: 89: {
+[; ;interrupts.c: 89: void __attribute__((picinterrupt(("high_priority")))) HighISR()
+[v _HighISR `(v ~T4 @X0 1 ef ]
+"90
+[; ;interrupts.c: 90: {
 {
 [e :U _HighISR ]
 [f ]
-"115
-[; ;interrupts.c: 115:     if(PIR0bits.INT1IF){
+"116
+[; ;interrupts.c: 116:     if(PIR0bits.INT1IF){
 [e $ ! != -> . . _PIR0bits 0 1 `i -> 0 `i 2022  ]
 {
-"116
-[; ;interrupts.c: 116:         color_flag = 1;
+"117
+[; ;interrupts.c: 117:         color_flag = 1;
 [e = _color_flag -> -> 1 `i `uc ]
-"118
-[; ;interrupts.c: 118:         interrupts_clear_colorclick();
-[e ( _interrupts_clear_colorclick ..  ]
 "119
-[; ;interrupts.c: 119:         PIR0bits.INT1IF = 0;
-[e = . . _PIR0bits 0 1 -> -> 0 `i `uc ]
+[; ;interrupts.c: 119:         interrupts_clear_colorclick();
+[e ( _interrupts_clear_colorclick ..  ]
 "120
-[; ;interrupts.c: 120:     }
+[; ;interrupts.c: 120:         PIR0bits.INT1IF = 0;
+[e = . . _PIR0bits 0 1 -> -> 0 `i `uc ]
+"121
+[; ;interrupts.c: 121:     }
 }
 [e :U 2022 ]
-"122
-[; ;interrupts.c: 122: }
+"123
+[; ;interrupts.c: 123: }
 [e :UE 2021 ]
 }

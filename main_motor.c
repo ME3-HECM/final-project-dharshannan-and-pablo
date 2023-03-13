@@ -55,6 +55,7 @@ void main(void) {
     
     // Initialize color detected variable
     unsigned char color_detected = 0;
+    unsigned char lost_timer = 0; // To keep track of how long the Buggy has not read a card for
     WhiteLight(); // Turn on the white light
     while (1){
         //Update_RGBC(&initial_color); // Update the RGBC values
@@ -64,12 +65,17 @@ void main(void) {
         while(color_detected == 0){
             fullSpeedAhead(&motorL,&motorR);
             Update_RGBC(&initial_color); // Update the RGBC values
-            color_detected = detect_color(&initial_color); // Pass initial color values into detect color function
+            color_detected = detect_color(&initial_color, lost_timer); // Pass initial color values into detect color function 
             b++; // Increment b
+            // IF lost timer is greater than 20s then set the color to white (to return)
+            if(lost_timer>=10){
+                color_detected = 8;
+                lost_flag = 1; // Raise Lost flag
+            }
         }
         // If color detected is no longer null, stop Buggy and decide the movement of the Buggy
         if(color_detected != 0 && color_detected != 8){ // If color is not null and not white
-            AppendTime((b-9),&time_index,time_array); // Append the value of b (forward incrementation variable) to the time array (*minus 9 to avoid overshoot)
+            AppendTime((b-6),&time_index,time_array); // Append the value of b (forward incrementation variable) to the time array (*minus 6 to avoid overshoot)
             LATHbits.LATH3 = 1; // Turn ON LED to indicate a color has been detected
             // Stop motor
             while(b>0){
@@ -82,11 +88,13 @@ void main(void) {
             MoveBuggy(color_detected,&motorL,&motorR);
             color_detected = 0; // Set color detected back to zero after movement is executed
             color_flag = 0; // Force clear color flag to prevent unexpected flagging
+            lost_timer = 0; // Reset lost timer if color is detected
         }
         
         // If color detected is white, start the track back sequence
         else if(color_detected == 8){
-            AppendTime((b-9),&time_index,time_array); // Append the value of b (forward incrementation variable) to the time array (*minus 9 to avoid overshoot)
+            if(lost_flag){AppendTime((b-lost_timer),&time_index,time_array);}
+            else {AppendTime((b-6),&time_index,time_array);} // Append the value of b (forward incrementation variable) to the time array (*minus 6 to avoid overshoot)
             LATDbits.LATD7 = 1; // Turn ON LED to indicate white color has been detected (and the Buggy is in track back mode)
             // Stop motor
             while(b>0){
@@ -97,6 +105,8 @@ void main(void) {
             WhiteInstructions(&motorL,&motorR); // Call the white instructions function
             LATDbits.LATD7 = 0; // Turn OFF LED to indicate exiting track back mode
             color_detected = 0; // Set color detected back to zero after movement is executed
+            lost_timer = 0; // Reset lost timer if color is detected
+            Sleep(); // Sleep after it returns home
         }
     }
 }

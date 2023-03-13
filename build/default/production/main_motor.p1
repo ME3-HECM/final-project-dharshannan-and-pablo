@@ -10,8 +10,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "19 ./color.h
 [; ;./color.h: 19: void color_click_init(void);
 [v _color_click_init `(v ~T0 @X0 0 ef ]
-"15 ./interrupts.h
-[; ;./interrupts.h: 15: void Interrupts_init(void);
+"16 ./interrupts.h
+[; ;./interrupts.h: 16: void Interrupts_init(void);
 [v _Interrupts_init `(v ~T0 @X0 0 ef ]
 "8 ./timers.h
 [; ;./timers.h: 8: void Timer0_init(void);
@@ -48,8 +48,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./color.h: 38: void Update_RGBC(RGB_val *tempval);
 [v _Update_RGBC `(v ~T0 @X0 0 ef1`*S2016 ]
 "40
-[; ;./color.h: 40: unsigned char detect_color(RGB_val *tempval);
-[v _detect_color `(uc ~T0 @X0 0 ef1`*S2016 ]
+[; ;./color.h: 40: unsigned char detect_color(RGB_val *tempval,unsigned char *lost_timer);
+[v _detect_color `(uc ~T0 @X0 0 ef2`*S2016`*uc ]
+"11 ./interrupts.h
+[; ;./interrupts.h: 11: extern unsigned char lost_flag;
+[v _lost_flag `uc ~T0 @X0 0 e ]
 "15 ./Memorization.h
 [; ;./Memorization.h: 15: void AppendTime(unsigned int temp, unsigned char *time_index, unsigned int *time_array);
 [v _AppendTime `(v ~T0 @X0 0 ef3`ui`*uc`*ui ]
@@ -2215,143 +2218,181 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _color_detected `uc ~T0 @X0 1 a ]
 [e = _color_detected -> -> 0 `i `uc ]
 "58
-[; ;main_motor.c: 58:     WhiteLight();
-[e ( _WhiteLight ..  ]
+[; ;main_motor.c: 58:     unsigned char lost_timer = 0;
+[v _lost_timer `uc ~T0 @X0 1 a ]
+[e = _lost_timer -> -> 0 `i `uc ]
 "59
-[; ;main_motor.c: 59:     while (1){
+[; ;main_motor.c: 59:     WhiteLight();
+[e ( _WhiteLight ..  ]
+"60
+[; ;main_motor.c: 60:     while (1){
 [e :U 2019 ]
 {
-"63
-[; ;main_motor.c: 63:         unsigned int b = 0;
+"64
+[; ;main_motor.c: 64:         unsigned int b = 0;
 [v _b `ui ~T0 @X0 1 a ]
 [e = _b -> -> 0 `i `ui ]
-"64
-[; ;main_motor.c: 64:         while(color_detected == 0){
+"65
+[; ;main_motor.c: 65:         while(color_detected == 0){
 [e $U 2021  ]
 [e :U 2022 ]
 {
-"65
-[; ;main_motor.c: 65:             fullSpeedAhead(&motorL,&motorR);
-[e ( _fullSpeedAhead (2 , &U _motorL &U _motorR ]
 "66
-[; ;main_motor.c: 66:             Update_RGBC(&initial_color);
-[e ( _Update_RGBC (1 &U _initial_color ]
+[; ;main_motor.c: 66:             fullSpeedAhead(&motorL,&motorR);
+[e ( _fullSpeedAhead (2 , &U _motorL &U _motorR ]
 "67
-[; ;main_motor.c: 67:             color_detected = detect_color(&initial_color);
-[e = _color_detected ( _detect_color (1 &U _initial_color ]
+[; ;main_motor.c: 67:             Update_RGBC(&initial_color);
+[e ( _Update_RGBC (1 &U _initial_color ]
 "68
-[; ;main_motor.c: 68:             b++;
-[e ++ _b -> -> 1 `i `ui ]
+[; ;main_motor.c: 68:             color_detected = detect_color(&initial_color, lost_timer);
+[e = _color_detected ( _detect_color (2 , &U _initial_color -> _lost_timer `*uc ]
 "69
-[; ;main_motor.c: 69:         }
-}
-[e :U 2021 ]
-"64
-[; ;main_motor.c: 64:         while(color_detected == 0){
-[e $ == -> _color_detected `i -> 0 `i 2022  ]
-[e :U 2023 ]
+[; ;main_motor.c: 69:             b++;
+[e ++ _b -> -> 1 `i `ui ]
 "71
-[; ;main_motor.c: 71:         if(color_detected != 0 && color_detected != 8){
-[e $ ! && != -> _color_detected `i -> 0 `i != -> _color_detected `i -> 8 `i 2024  ]
+[; ;main_motor.c: 71:             if(lost_timer>=10){
+[e $ ! >= -> _lost_timer `i -> 10 `i 2024  ]
 {
 "72
-[; ;main_motor.c: 72:             AppendTime((b-9),&time_index,time_array);
-[e ( _AppendTime (3 , , - _b -> -> 9 `i `ui &U _time_index &U _time_array ]
+[; ;main_motor.c: 72:                 color_detected = 8;
+[e = _color_detected -> -> 8 `i `uc ]
 "73
-[; ;main_motor.c: 73:             LATHbits.LATH3 = 1;
-[e = . . _LATHbits 0 3 -> -> 1 `i `uc ]
-"75
-[; ;main_motor.c: 75:             while(b>0){
-[e $U 2025  ]
-[e :U 2026 ]
-{
-"76
-[; ;main_motor.c: 76:                 stop(&motorL,&motorR);
-[e ( _stop (2 , &U _motorL &U _motorR ]
-"77
-[; ;main_motor.c: 77:                 b--;
-[e -- _b -> -> 1 `i `ui ]
-"78
-[; ;main_motor.c: 78:             }
+[; ;main_motor.c: 73:                 lost_flag = 1;
+[e = _lost_flag -> -> 1 `i `uc ]
+"74
+[; ;main_motor.c: 74:             }
 }
-[e :U 2025 ]
-"75
-[; ;main_motor.c: 75:             while(b>0){
-[e $ > _b -> -> 0 `i `ui 2026  ]
-[e :U 2027 ]
-"79
-[; ;main_motor.c: 79:             _delay((unsigned long)((100)*(64000000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
-"80
-[; ;main_motor.c: 80:             LATHbits.LATH3 = 0;
-[e = . . _LATHbits 0 3 -> -> 0 `i `uc ]
-"82
-[; ;main_motor.c: 82:             MoveBuggy(color_detected,&motorL,&motorR);
-[e ( _MoveBuggy (3 , , -> _color_detected `*uc &U _motorL &U _motorR ]
-"83
-[; ;main_motor.c: 83:             color_detected = 0;
-[e = _color_detected -> -> 0 `i `uc ]
-"84
-[; ;main_motor.c: 84:             color_flag = 0;
-[e = _color_flag -> -> 0 `i `uc ]
-"85
-[; ;main_motor.c: 85:         }
-}
-[e $U 2028  ]
-"88
-[; ;main_motor.c: 88:         else if(color_detected == 8){
 [e :U 2024 ]
-[e $ ! == -> _color_detected `i -> 8 `i 2029  ]
+"75
+[; ;main_motor.c: 75:         }
+}
+[e :U 2021 ]
+"65
+[; ;main_motor.c: 65:         while(color_detected == 0){
+[e $ == -> _color_detected `i -> 0 `i 2022  ]
+[e :U 2023 ]
+"77
+[; ;main_motor.c: 77:         if(color_detected != 0 && color_detected != 8){
+[e $ ! && != -> _color_detected `i -> 0 `i != -> _color_detected `i -> 8 `i 2025  ]
 {
+"78
+[; ;main_motor.c: 78:             AppendTime((b-6),&time_index,time_array);
+[e ( _AppendTime (3 , , - _b -> -> 6 `i `ui &U _time_index &U _time_array ]
+"79
+[; ;main_motor.c: 79:             LATHbits.LATH3 = 1;
+[e = . . _LATHbits 0 3 -> -> 1 `i `uc ]
+"81
+[; ;main_motor.c: 81:             while(b>0){
+[e $U 2026  ]
+[e :U 2027 ]
+{
+"82
+[; ;main_motor.c: 82:                 stop(&motorL,&motorR);
+[e ( _stop (2 , &U _motorL &U _motorR ]
+"83
+[; ;main_motor.c: 83:                 b--;
+[e -- _b -> -> 1 `i `ui ]
+"84
+[; ;main_motor.c: 84:             }
+}
+[e :U 2026 ]
+"81
+[; ;main_motor.c: 81:             while(b>0){
+[e $ > _b -> -> 0 `i `ui 2027  ]
+[e :U 2028 ]
+"85
+[; ;main_motor.c: 85:             _delay((unsigned long)((100)*(64000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+"86
+[; ;main_motor.c: 86:             LATHbits.LATH3 = 0;
+[e = . . _LATHbits 0 3 -> -> 0 `i `uc ]
+"88
+[; ;main_motor.c: 88:             MoveBuggy(color_detected,&motorL,&motorR);
+[e ( _MoveBuggy (3 , , -> _color_detected `*uc &U _motorL &U _motorR ]
 "89
-[; ;main_motor.c: 89:             AppendTime((b-9),&time_index,time_array);
-[e ( _AppendTime (3 , , - _b -> -> 9 `i `ui &U _time_index &U _time_array ]
+[; ;main_motor.c: 89:             color_detected = 0;
+[e = _color_detected -> -> 0 `i `uc ]
 "90
-[; ;main_motor.c: 90:             LATDbits.LATD7 = 1;
-[e = . . _LATDbits 0 7 -> -> 1 `i `uc ]
+[; ;main_motor.c: 90:             color_flag = 0;
+[e = _color_flag -> -> 0 `i `uc ]
+"91
+[; ;main_motor.c: 91:             lost_timer = 0;
+[e = _lost_timer -> -> 0 `i `uc ]
 "92
-[; ;main_motor.c: 92:             while(b>0){
-[e $U 2030  ]
+[; ;main_motor.c: 92:         }
+}
+[e $U 2029  ]
+"95
+[; ;main_motor.c: 95:         else if(color_detected == 8){
+[e :U 2025 ]
+[e $ ! == -> _color_detected `i -> 8 `i 2030  ]
+{
+"96
+[; ;main_motor.c: 96:             if(lost_flag){AppendTime((b-lost_timer),&time_index,time_array);}
+[e $ ! != -> _lost_flag `i -> 0 `i 2031  ]
+{
+[e ( _AppendTime (3 , , - _b -> _lost_timer `ui &U _time_index &U _time_array ]
+}
+[e $U 2032  ]
+"97
+[; ;main_motor.c: 97:             else {AppendTime((b-6),&time_index,time_array);}
 [e :U 2031 ]
 {
-"93
-[; ;main_motor.c: 93:                 stop(&motorL,&motorR);
+[e ( _AppendTime (3 , , - _b -> -> 6 `i `ui &U _time_index &U _time_array ]
+}
+[e :U 2032 ]
+"98
+[; ;main_motor.c: 98:             LATDbits.LATD7 = 1;
+[e = . . _LATDbits 0 7 -> -> 1 `i `uc ]
+"100
+[; ;main_motor.c: 100:             while(b>0){
+[e $U 2033  ]
+[e :U 2034 ]
+{
+"101
+[; ;main_motor.c: 101:                 stop(&motorL,&motorR);
 [e ( _stop (2 , &U _motorL &U _motorR ]
-"94
-[; ;main_motor.c: 94:                 b--;
+"102
+[; ;main_motor.c: 102:                 b--;
 [e -- _b -> -> 1 `i `ui ]
-"95
-[; ;main_motor.c: 95:             }
+"103
+[; ;main_motor.c: 103:             }
+}
+[e :U 2033 ]
+"100
+[; ;main_motor.c: 100:             while(b>0){
+[e $ > _b -> -> 0 `i `ui 2034  ]
+[e :U 2035 ]
+"104
+[; ;main_motor.c: 104:             _delay((unsigned long)((100)*(64000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+"105
+[; ;main_motor.c: 105:             WhiteInstructions(&motorL,&motorR);
+[e ( _WhiteInstructions (2 , &U _motorL &U _motorR ]
+"106
+[; ;main_motor.c: 106:             LATDbits.LATD7 = 0;
+[e = . . _LATDbits 0 7 -> -> 0 `i `uc ]
+"107
+[; ;main_motor.c: 107:             color_detected = 0;
+[e = _color_detected -> -> 0 `i `uc ]
+"108
+[; ;main_motor.c: 108:             lost_timer = 0;
+[e = _lost_timer -> -> 0 `i `uc ]
+"109
+[; ;main_motor.c: 109:             __asm(" sleep");
+[; <"  sleep ;# ">
+"110
+[; ;main_motor.c: 110:         }
 }
 [e :U 2030 ]
-"92
-[; ;main_motor.c: 92:             while(b>0){
-[e $ > _b -> -> 0 `i `ui 2031  ]
-[e :U 2032 ]
-"96
-[; ;main_motor.c: 96:             _delay((unsigned long)((100)*(64000000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
-"97
-[; ;main_motor.c: 97:             WhiteInstructions(&motorL,&motorR);
-[e ( _WhiteInstructions (2 , &U _motorL &U _motorR ]
-"98
-[; ;main_motor.c: 98:             LATDbits.LATD7 = 0;
-[e = . . _LATDbits 0 7 -> -> 0 `i `uc ]
-"99
-[; ;main_motor.c: 99:             color_detected = 0;
-[e = _color_detected -> -> 0 `i `uc ]
-"100
-[; ;main_motor.c: 100:         }
-}
 [e :U 2029 ]
-[e :U 2028 ]
-"101
-[; ;main_motor.c: 101:     }
+"111
+[; ;main_motor.c: 111:     }
 }
 [e :U 2018 ]
 [e $U 2019  ]
 [e :U 2020 ]
-"102
-[; ;main_motor.c: 102: }
+"112
+[; ;main_motor.c: 112: }
 [e :UE 2017 ]
 }

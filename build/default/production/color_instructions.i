@@ -24353,7 +24353,6 @@ void BlueInstructions(DC_motor *mL, DC_motor *mR){
     }
     _delay((unsigned long)((50)*(64000000/4000.0)));
 
-
     turnLeft90(mL, mR);
     _delay((unsigned long)((50)*(64000000/4000.0)));
     turnLeft90(mL, mR);
@@ -24401,7 +24400,6 @@ void OrangeInstructions(DC_motor *mL, DC_motor *mR){
         a--;
     }
     _delay((unsigned long)((50)*(64000000/4000.0)));
-
     turnRight135(mL, mR);
 }
 
@@ -24416,7 +24414,6 @@ void LightBlueInstructions(DC_motor *mL, DC_motor *mR){
         a--;
     }
     _delay((unsigned long)((50)*(64000000/4000.0)));
-
     turnLeft135(mL, mR);
 }
 

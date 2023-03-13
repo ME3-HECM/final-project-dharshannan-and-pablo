@@ -70,13 +70,14 @@ void interrupts_clear_colorclick(void)
 ************************************/
 
 unsigned char tmr_ovf = 0; // Timer overflow flag
+unsigned char lost_flag = 0; // Lost flag
 // Low priority interrupt
 void __interrupt(low_priority) LowISR()
 {
 	//add your ISR code here i.e. check the flag, do something (i.e. toggle an LED), clear the flag...
     if(PIR0bits.TMR0IF){ 	//check the interrupt source
-        TMR0H = 0b11000010; // Reset timer value to 49910 (decimal) this is to accurately measure 250ms intervals
-        TMR0L = 0b11110110;
+        TMR0H = 0b00001011; // Reset timer value to 3035 (decimal) this is to accurately measure 1s intervals
+        TMR0L = 0b11011011;
         tmr_ovf = 1;
         PIR0bits.TMR0IF=0; //clear the interrupt flag!     
     }

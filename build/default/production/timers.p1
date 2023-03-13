@@ -2038,11 +2038,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;timers.c: 12:     T0CON0bits.T016BIT=1;
 [e = . . _T0CON0bits 0 1 -> -> 1 `i `uc ]
 "15
-[; ;timers.c: 15:     TMR0H = 0b11000010;
-[e = _TMR0H -> -> 194 `i `uc ]
+[; ;timers.c: 15:     TMR0H = 0b00001011;
+[e = _TMR0H -> -> 11 `i `uc ]
 "16
-[; ;timers.c: 16:     TMR0L = 0b11110110;
-[e = _TMR0L -> -> 246 `i `uc ]
+[; ;timers.c: 16:     TMR0L = 0b11011011;
+[e = _TMR0L -> -> 219 `i `uc ]
 "17
 [; ;timers.c: 17:     T0CON0bits.T0EN=1;
 [e = . . _T0CON0bits 0 4 -> -> 1 `i `uc ]

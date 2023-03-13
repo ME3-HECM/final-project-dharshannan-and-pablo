@@ -24271,7 +24271,7 @@ unsigned int color_read_Clear(void);
 
 void Update_RGBC(RGB_val *tempval);
 
-unsigned char detect_color(RGB_val *tempval);
+unsigned char detect_color(RGB_val *tempval,unsigned char *lost_timer);
 # 2 "color.c" 2
 
 # 1 "./i2c.h" 1
@@ -24320,6 +24320,7 @@ unsigned char I2C_2_Master_Read(unsigned char ack);
 
 extern unsigned char tmr_ovf;
 extern unsigned char color_flag;
+extern unsigned char lost_flag;
 extern unsigned int int_threshold_low;
 extern unsigned int int_threshold_high;
 
@@ -24425,7 +24426,7 @@ void Update_RGBC(RGB_val *tempval){
 }
 
 
-unsigned char detect_color(RGB_val *tempval)
+unsigned char detect_color(RGB_val *tempval, unsigned char *lost_timer)
 {
     unsigned char color = 0;
 
@@ -24461,7 +24462,10 @@ unsigned char detect_color(RGB_val *tempval)
             color = 8;
         }
         else{
+            LATHbits.LATH3 = 1;
             color = 0;
+
+            lost_timer++;
         }
     }
     color_flag = 0;

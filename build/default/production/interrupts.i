@@ -24242,6 +24242,7 @@ unsigned char __t3rd16on(void);
 
 extern unsigned char tmr_ovf;
 extern unsigned char color_flag;
+extern unsigned char lost_flag;
 extern unsigned int int_threshold_low;
 extern unsigned int int_threshold_high;
 
@@ -24323,7 +24324,7 @@ unsigned int color_read_Clear(void);
 
 void Update_RGBC(RGB_val *tempval);
 
-unsigned char detect_color(RGB_val *tempval);
+unsigned char detect_color(RGB_val *tempval,unsigned char *lost_timer);
 # 4 "interrupts.c" 2
 
 # 1 "./i2c.h" 1
@@ -24433,13 +24434,14 @@ void interrupts_clear_colorclick(void)
 
 
 unsigned char tmr_ovf = 0;
+unsigned char lost_flag = 0;
 
 void __attribute__((picinterrupt(("low_priority")))) LowISR()
 {
 
     if(PIR0bits.TMR0IF){
-        TMR0H = 0b11000010;
-        TMR0L = 0b11110110;
+        TMR0H = 0b00001011;
+        TMR0L = 0b11011011;
         tmr_ovf = 1;
         PIR0bits.TMR0IF=0;
     }
@@ -24450,7 +24452,7 @@ void __attribute__((picinterrupt(("low_priority")))) LowISR()
 unsigned char color_flag = 0;
 void __attribute__((picinterrupt(("high_priority")))) HighISR()
 {
-# 115 "interrupts.c"
+# 116 "interrupts.c"
     if(PIR0bits.INT1IF){
         color_flag = 1;
 

@@ -31,6 +31,37 @@ Version 4.0 HI-TECH Software Intermediate Code
 "10 ./interrupts.h
 [; ;./interrupts.h: 10: extern unsigned char color_flag;
 [v _color_flag `uc ~T0 @X0 0 e ]
+"29235 D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h
+[; ;D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h: 29235:     struct {
+[s S1361 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1361 . LATH0 LATH1 LATH2 LATH3 ]
+"29241
+[; ;D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h: 29241:     struct {
+[s S1362 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1362 . LH0 LH1 LH2 LH3 ]
+"29247
+[; ;D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h: 29247:     struct {
+[s S1363 :4 `uc 1 :1 `uc 1 ]
+[n S1363 . . LH4 ]
+"29251
+[; ;D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h: 29251:     struct {
+[s S1364 :5 `uc 1 :1 `uc 1 ]
+[n S1364 . . LH5 ]
+"29255
+[; ;D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h: 29255:     struct {
+[s S1365 :6 `uc 1 :1 `uc 1 ]
+[n S1365 . . LH6 ]
+"29259
+[; ;D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h: 29259:     struct {
+[s S1366 :7 `uc 1 :1 `uc 1 ]
+[n S1366 . . LH7 ]
+"29234
+[; ;D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h: 29234: typedef union {
+[u S1360 `S1361 1 `S1362 1 `S1363 1 `S1364 1 `S1365 1 `S1366 1 ]
+[n S1360 . . . . . . . ]
+"29264
+[; ;D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h: 29264: extern volatile LATHbits_t LATHbits __attribute__((address(0xF80)));
+[v _LATHbits `VS1360 ~T0 @X0 0 e@3968 ]
 "54 D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h
 [; ;D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h: 54: __asm("PPSLOCK equ 0DEFh");
 [; <" PPSLOCK equ 0DEFh ;# ">
@@ -2255,15 +2286,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 2022 ]
 }
 "99
-[; ;color.c: 99: unsigned char detect_color(RGB_val *tempval)
-[v _detect_color `(uc ~T0 @X0 1 ef1`*S2015 ]
+[; ;color.c: 99: unsigned char detect_color(RGB_val *tempval, unsigned char *lost_timer)
+[v _detect_color `(uc ~T0 @X0 1 ef2`*S2015`*uc ]
 "100
 [; ;color.c: 100: {
 {
 [e :U _detect_color ]
 "99
-[; ;color.c: 99: unsigned char detect_color(RGB_val *tempval)
+[; ;color.c: 99: unsigned char detect_color(RGB_val *tempval, unsigned char *lost_timer)
 [v _tempval `*S2015 ~T0 @X0 1 r1 ]
+[v _lost_timer `*uc ~T0 @X0 1 r2 ]
 "100
 [; ;color.c: 100: {
 [f ]
@@ -2389,10 +2421,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 2039 ]
 {
 "135
-[; ;color.c: 135:             color = 0;
-[e = _color -> -> 0 `i `uc ]
+[; ;color.c: 135:             LATHbits.LATH3 = 1;
+[e = . . _LATHbits 0 3 -> -> 1 `i `uc ]
 "136
-[; ;color.c: 136:         }
+[; ;color.c: 136:             color = 0;
+[e = _color -> -> 0 `i `uc ]
+"138
+[; ;color.c: 138:             lost_timer++;
+[e ++ _lost_timer * -> -> 1 `i `x -> -> # *U _lost_timer `i `x ]
+"139
+[; ;color.c: 139:         }
 }
 [e :U 2040 ]
 [e :U 2038 ]
@@ -2402,18 +2440,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 2030 ]
 [e :U 2028 ]
 [e :U 2026 ]
-"137
-[; ;color.c: 137:     }
+"140
+[; ;color.c: 140:     }
 }
 [e :U 2024 ]
-"138
-[; ;color.c: 138:     color_flag = 0;
+"141
+[; ;color.c: 141:     color_flag = 0;
 [e = _color_flag -> -> 0 `i `uc ]
-"139
-[; ;color.c: 139:     return color;
+"142
+[; ;color.c: 142:     return color;
 [e ) _color ]
 [e $UE 2023  ]
-"140
-[; ;color.c: 140: }
+"143
+[; ;color.c: 143: }
 [e :UE 2023 ]
 }

@@ -24312,7 +24312,7 @@ unsigned int color_read_Clear(void);
 
 void Update_RGBC(RGB_val *tempval);
 
-unsigned char detect_color(RGB_val *tempval);
+unsigned char detect_color(RGB_val *tempval,unsigned char *lost_timer);
 # 11 "main_motor.c" 2
 
 # 1 "./i2c.h" 1
@@ -24367,6 +24367,7 @@ void WhiteLight(void);
 
 extern unsigned char tmr_ovf;
 extern unsigned char color_flag;
+extern unsigned char lost_flag;
 extern unsigned int int_threshold_low;
 extern unsigned int int_threshold_high;
 
@@ -24503,6 +24504,7 @@ void main(void) {
 
 
     unsigned char color_detected = 0;
+    unsigned char lost_timer = 0;
     WhiteLight();
     while (1){
 
@@ -24512,12 +24514,17 @@ void main(void) {
         while(color_detected == 0){
             fullSpeedAhead(&motorL,&motorR);
             Update_RGBC(&initial_color);
-            color_detected = detect_color(&initial_color);
+            color_detected = detect_color(&initial_color, lost_timer);
             b++;
+
+            if(lost_timer>=10){
+                color_detected = 8;
+                lost_flag = 1;
+            }
         }
 
         if(color_detected != 0 && color_detected != 8){
-            AppendTime((b-9),&time_index,time_array);
+            AppendTime((b-6),&time_index,time_array);
             LATHbits.LATH3 = 1;
 
             while(b>0){
@@ -24530,11 +24537,13 @@ void main(void) {
             MoveBuggy(color_detected,&motorL,&motorR);
             color_detected = 0;
             color_flag = 0;
+            lost_timer = 0;
         }
 
 
         else if(color_detected == 8){
-            AppendTime((b-9),&time_index,time_array);
+            if(lost_flag){AppendTime((b-lost_timer),&time_index,time_array);}
+            else {AppendTime((b-6),&time_index,time_array);}
             LATDbits.LATD7 = 1;
 
             while(b>0){
@@ -24545,6 +24554,8 @@ void main(void) {
             WhiteInstructions(&motorL,&motorR);
             LATDbits.LATD7 = 0;
             color_detected = 0;
+            lost_timer = 0;
+            __asm(" sleep");
         }
     }
 }

@@ -132,10 +132,7 @@ unsigned char detect_color(RGB_val *tempval, unsigned char *lost_timer)
             color = 8; // Set color to WHITE
         }
         else{ // If a shadow is detected
-            LATHbits.LATH3 = 1; // Turn ON LED to indicate a color has been detected
             color = 0; // If none of the above reset color to 0
-            // Increment lost timer
-            lost_timer++;
         }
     }
     color_flag = 0; // Reset color flag

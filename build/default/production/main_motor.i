@@ -24516,11 +24516,6 @@ void main(void) {
             Update_RGBC(&initial_color);
             color_detected = detect_color(&initial_color, lost_timer);
             b++;
-
-            if(lost_timer>=10){
-                color_detected = 8;
-                lost_flag = 1;
-            }
         }
 
         if(color_detected != 0 && color_detected != 8){
@@ -24542,8 +24537,7 @@ void main(void) {
 
 
         else if(color_detected == 8){
-            if(lost_flag){AppendTime((b-lost_timer),&time_index,time_array);}
-            else {AppendTime((b-6),&time_index,time_array);}
+            AppendTime((b-6),&time_index,time_array);
             LATDbits.LATD7 = 1;
 
             while(b>0){

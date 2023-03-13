@@ -24462,10 +24462,7 @@ unsigned char detect_color(RGB_val *tempval, unsigned char *lost_timer)
             color = 8;
         }
         else{
-            LATHbits.LATH3 = 1;
             color = 0;
-
-            lost_timer++;
         }
     }
     color_flag = 0;

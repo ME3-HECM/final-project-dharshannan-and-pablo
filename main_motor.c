@@ -67,11 +67,6 @@ void main(void) {
             Update_RGBC(&initial_color); // Update the RGBC values
             color_detected = detect_color(&initial_color, lost_timer); // Pass initial color values into detect color function 
             b++; // Increment b
-            // IF lost timer is greater than 20s then set the color to white (to return)
-            if(lost_timer>=10){
-                color_detected = 8;
-                lost_flag = 1; // Raise Lost flag
-            }
         }
         // If color detected is no longer null, stop Buggy and decide the movement of the Buggy
         if(color_detected != 0 && color_detected != 8){ // If color is not null and not white
@@ -93,8 +88,7 @@ void main(void) {
         
         // If color detected is white, start the track back sequence
         else if(color_detected == 8){
-            if(lost_flag){AppendTime((b-lost_timer),&time_index,time_array);}
-            else {AppendTime((b-6),&time_index,time_array);} // Append the value of b (forward incrementation variable) to the time array (*minus 6 to avoid overshoot)
+            AppendTime((b-6),&time_index,time_array); // Append the value of b (forward incrementation variable) to the time array (*minus 6 to avoid overshoot)
             LATDbits.LATD7 = 1; // Turn ON LED to indicate white color has been detected (and the Buggy is in track back mode)
             // Stop motor
             while(b>0){

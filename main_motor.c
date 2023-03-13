@@ -56,6 +56,9 @@ void main(void) {
     // Initialize color detected variable
     unsigned char color_detected = 0;
     unsigned char lost_timer = 0; // To keep track of how long the Buggy has not read a card for
+    
+    while (PORTFbits.RF2); //empty while loop (wait for button press)
+    
     WhiteLight(); // Turn on the white light
     while (1){
         //Update_RGBC(&initial_color); // Update the RGBC values

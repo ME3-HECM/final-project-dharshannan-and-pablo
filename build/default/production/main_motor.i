@@ -24505,6 +24505,9 @@ void main(void) {
 
     unsigned char color_detected = 0;
     unsigned char lost_timer = 0;
+
+    while (PORTFbits.RF2);
+
     WhiteLight();
     while (1){
 

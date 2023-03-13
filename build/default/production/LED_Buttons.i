@@ -24251,6 +24251,12 @@ void LED_init(void){
 
     LATDbits.LATD7 = 0;
     TRISDbits.TRISD7 = 0;
+
+
+    TRISFbits.TRISF2=1;
+    TRISFbits.TRISF3=1;
+    ANSELFbits.ANSELF2=0;
+    ANSELFbits.ANSELF3=0;
 }
 
 

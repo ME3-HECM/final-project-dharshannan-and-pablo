@@ -100,6 +100,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 "29717
 [; ;D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h: 29717: extern volatile TRISDbits_t TRISDbits __attribute__((address(0xF84)));
 [v _TRISDbits `VS1379 ~T0 @X0 0 e@3972 ]
+"12308
+[; ;D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h: 12308:     struct {
+[s S568 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S568 . ANSELF0 ANSELF1 ANSELF2 ANSELF3 ANSELF4 ANSELF5 ANSELF6 ANSELF7 ]
+"12307
+[; ;D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h: 12307: typedef union {
+[u S567 `S568 1 ]
+[n S567 . . ]
+"12319
+[; ;D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h: 12319: extern volatile ANSELFbits_t ANSELFbits __attribute__((address(0xEB4)));
+[v _ANSELFbits `VS567 ~T0 @X0 0 e@3764 ]
 "29146
 [; ;D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h: 29146:     struct {
 [s S1358 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -2146,26 +2157,38 @@ Version 4.0 HI-TECH Software Intermediate Code
 "16
 [; ;LED_Buttons.c: 16:     TRISDbits.TRISD7 = 0;
 [e = . . _TRISDbits 0 7 -> -> 0 `i `uc ]
-"17
-[; ;LED_Buttons.c: 17: }
+"19
+[; ;LED_Buttons.c: 19:     TRISFbits.TRISF2=1;
+[e = . . _TRISFbits 0 2 -> -> 1 `i `uc ]
+"20
+[; ;LED_Buttons.c: 20:     TRISFbits.TRISF3=1;
+[e = . . _TRISFbits 0 3 -> -> 1 `i `uc ]
+"21
+[; ;LED_Buttons.c: 21:     ANSELFbits.ANSELF2=0;
+[e = . . _ANSELFbits 0 2 -> -> 0 `i `uc ]
+"22
+[; ;LED_Buttons.c: 22:     ANSELFbits.ANSELF3=0;
+[e = . . _ANSELFbits 0 3 -> -> 0 `i `uc ]
+"23
+[; ;LED_Buttons.c: 23: }
 [e :UE 2015 ]
 }
-"20
-[; ;LED_Buttons.c: 20: void WhiteLight(void){
+"26
+[; ;LED_Buttons.c: 26: void WhiteLight(void){
 [v _WhiteLight `(v ~T0 @X0 1 ef ]
 {
 [e :U _WhiteLight ]
 [f ]
-"21
-[; ;LED_Buttons.c: 21:     LATGbits.LATG1 = 1;
+"27
+[; ;LED_Buttons.c: 27:     LATGbits.LATG1 = 1;
 [e = . . _LATGbits 0 1 -> -> 1 `i `uc ]
-"22
-[; ;LED_Buttons.c: 22:     LATAbits.LATA4 = 1;
+"28
+[; ;LED_Buttons.c: 28:     LATAbits.LATA4 = 1;
 [e = . . _LATAbits 0 4 -> -> 1 `i `uc ]
-"23
-[; ;LED_Buttons.c: 23:     LATFbits.LATF7 = 1;
+"29
+[; ;LED_Buttons.c: 29:     LATFbits.LATF7 = 1;
 [e = . . _LATFbits 0 7 -> -> 1 `i `uc ]
-"24
-[; ;LED_Buttons.c: 24: }
+"30
+[; ;LED_Buttons.c: 30: }
 [e :UE 2016 ]
 }

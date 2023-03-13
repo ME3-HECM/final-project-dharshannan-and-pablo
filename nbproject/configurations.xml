@@ -28,9 +28,9 @@
       <itemPath>interrupts.c</itemPath>
       <itemPath>serial.c</itemPath>
       <itemPath>timers.c</itemPath>
+      <itemPath>Memorization.c</itemPath>
       <itemPath>color_instructions.c</itemPath>
       <itemPath>main_motor.c</itemPath>
-      <itemPath>Memorization.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

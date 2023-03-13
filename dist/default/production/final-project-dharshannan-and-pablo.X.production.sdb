@@ -662,7 +662,7 @@
 "30071
 [u S432 . 1 `S427 1 . 1 0 ]
 [v _TRISHbits TRISHbits `VES432  1 e 1 @3976 ]
-[s S2080 . 1 `uc 1 RF0 1 0 :1:0 
+[s S2087 . 1 `uc 1 RF0 1 0 :1:0 
 `uc 1 RF1 1 0 :1:1 
 `uc 1 RF2 1 0 :1:2 
 `uc 1 RF3 1 0 :1:3 
@@ -672,12 +672,12 @@
 `uc 1 RF7 1 0 :1:7 
 ]
 "30601
-[s S2089 . 1 `uc 1 . 1 0 :1:0 
+[s S2096 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 C2OUTF 1 0 :1:1 
 `uc 1 C1OUTF 1 0 :1:2 
 ]
-[u S2093 . 1 `S2080 1 . 1 0 `S2089 1 . 1 0 ]
-[v _PORTFbits PORTFbits `VES2093  1 e 1 @3982 ]
+[u S2100 . 1 `S2087 1 . 1 0 `S2096 1 . 1 0 ]
+[v _PORTFbits PORTFbits `VES2100  1 e 1 @3982 ]
 "34199
 [v _CCPR2H CCPR2H `VEuc  1 e 1 @4006 ]
 [s S1035 . 1 `uc 1 MODE 1 0 :4:0 
@@ -994,17 +994,17 @@
 "8 D:\MPLAB_COMPILER\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S2554 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S2536 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S2559 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
-[u S2562 . 4 `l 1 i 4 0 `d 1 f 4 0 `S2554 1 fAsBytes 4 0 `S2559 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S2562  1 a 4 66 ]
+[s S2541 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S2544 . 4 `l 1 i 4 0 `d 1 f 4 0 `S2536 1 fAsBytes 4 0 `S2541 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S2544  1 a 4 66 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 60 ]
-[s S2630 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S2612 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S2633 . 2 `s 1 i 2 0 `us 1 n 2 0 `S2630 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S2633  1 a 2 70 ]
+[u S2615 . 2 `s 1 i 2 0 `us 1 n 2 0 `S2612 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S2615  1 a 2 70 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 65 ]
 "11

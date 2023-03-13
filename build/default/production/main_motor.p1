@@ -53,6 +53,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "30601
 [; ;D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h: 30601: extern volatile PORTFbits_t PORTFbits __attribute__((address(0xF8E)));
 [v _PORTFbits `VS1411 ~T0 @X0 0 e@3982 ]
+"10 ./interrupts.h
+[; ;./interrupts.h: 10: extern unsigned char color_flag;
+[v _color_flag `uc ~T0 @X0 0 e ]
 "21 ./LED_Buttons.h
 [; ;./LED_Buttons.h: 21: void WhiteLight(void);
 [v _WhiteLight `(v ~T0 @X0 0 ef ]
@@ -118,9 +121,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "21 ./color_instructions.h
 [; ;./color_instructions.h: 21: void MoveBuggy(unsigned char *color_detected, DC_motor *mL, DC_motor *mR);
 [v _MoveBuggy `(v ~T0 @X0 0 ef3`*uc`*S2015`*S2015 ]
-"10 ./interrupts.h
-[; ;./interrupts.h: 10: extern unsigned char color_flag;
-[v _color_flag `uc ~T0 @X0 0 e ]
 "28810 D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h
 [; ;D:/MPLABX/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f67k40.h: 28810:     struct {
 [s S1349 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -2243,6 +2243,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 2018 ]
 [e $ != -> . . _PORTFbits 0 2 `i -> 0 `i 2019  ]
 [e :U 2020 ]
+"61
+[; ;main_motor.c: 61:     color_flag = 0;
+[e = _color_flag -> -> 0 `i `uc ]
 "62
 [; ;main_motor.c: 62:     WhiteLight();
 [e ( _WhiteLight ..  ]
@@ -2272,8 +2275,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main_motor.c: 72:             b++;
 [e ++ _b -> -> 1 `i `ui ]
 "74
-[; ;main_motor.c: 74:             if(initial_color.C > 1600 && initial_color.C < 2000){
-[e $ ! && > . _initial_color 3 -> -> 1600 `i `ui < . _initial_color 3 -> -> 2000 `i `ui 2027  ]
+[; ;main_motor.c: 74:             if(initial_color.C > 1900 && initial_color.C < 2200){
+[e $ ! && > . _initial_color 3 -> -> 1900 `i `ui < . _initial_color 3 -> -> 2200 `i `ui 2027  ]
 {
 "75
 [; ;main_motor.c: 75:                 lost_timer++;

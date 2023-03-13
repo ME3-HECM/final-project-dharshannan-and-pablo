@@ -24507,7 +24507,7 @@ void main(void) {
     unsigned char lost_timer = 0;
 
     while (PORTFbits.RF2);
-
+    color_flag = 0;
     WhiteLight();
     while (1){
 
@@ -24520,7 +24520,7 @@ void main(void) {
             color_detected = detect_color(&initial_color);
             b++;
 
-            if(initial_color.C > 1600 && initial_color.C < 2000){
+            if(initial_color.C > 1900 && initial_color.C < 2200){
                 lost_timer++;
             }
 

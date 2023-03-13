@@ -71,7 +71,7 @@ void main(void) {
             color_detected = detect_color(&initial_color); // Pass initial color values into detect color function 
             b++; // Increment b
             // Lost Track back dependencies
-            if(initial_color.C > 1600 && initial_color.C < 2000){ // If it hits a wall (Black wall) (*These clear values may require calibration)
+            if(initial_color.C > 1900 && initial_color.C < 2200){ // If it hits a wall (Blackish Brown wall) (*These clear values may require calibration)
                 lost_timer++; // Increment the lost timer
             }
             // If the buggy is stuck at the black wall for an extended period flag lost flag and set color detected to white (track back mode)

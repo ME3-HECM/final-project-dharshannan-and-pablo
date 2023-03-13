@@ -2255,16 +2255,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 2022 ]
 }
 "99
-[; ;color.c: 99: unsigned char detect_color(RGB_val *tempval, unsigned char *lost_timer)
-[v _detect_color `(uc ~T0 @X0 1 ef2`*S2015`*uc ]
+[; ;color.c: 99: unsigned char detect_color(RGB_val *tempval)
+[v _detect_color `(uc ~T0 @X0 1 ef1`*S2015 ]
 "100
 [; ;color.c: 100: {
 {
 [e :U _detect_color ]
 "99
-[; ;color.c: 99: unsigned char detect_color(RGB_val *tempval, unsigned char *lost_timer)
+[; ;color.c: 99: unsigned char detect_color(RGB_val *tempval)
 [v _tempval `*S2015 ~T0 @X0 1 r1 ]
-[v _lost_timer `*uc ~T0 @X0 1 r2 ]
 "100
 [; ;color.c: 100: {
 [f ]

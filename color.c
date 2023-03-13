@@ -96,7 +96,7 @@ void Update_RGBC(RGB_val *tempval){
 }
 
 // Function to detect and decide what color is sensed by light sensors based of RGBC % distribution values
-unsigned char detect_color(RGB_val *tempval, unsigned char *lost_timer)
+unsigned char detect_color(RGB_val *tempval)
 {
     unsigned char color = 0; // Initialize color detected, 1:red, 2:green, 3:blue, 4:yellow, 5:pink
     // 6:orange, 7:light blue, 8:white

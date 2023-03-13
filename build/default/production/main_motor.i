@@ -24312,7 +24312,7 @@ unsigned int color_read_Clear(void);
 
 void Update_RGBC(RGB_val *tempval);
 
-unsigned char detect_color(RGB_val *tempval,unsigned char *lost_timer);
+unsigned char detect_color(RGB_val *tempval);
 # 11 "main_motor.c" 2
 
 # 1 "./i2c.h" 1
@@ -24517,8 +24517,17 @@ void main(void) {
         while(color_detected == 0){
             fullSpeedAhead(&motorL,&motorR);
             Update_RGBC(&initial_color);
-            color_detected = detect_color(&initial_color, lost_timer);
+            color_detected = detect_color(&initial_color);
             b++;
+
+            if(initial_color.C > 1600 && initial_color.C < 2000){
+                lost_timer++;
+            }
+
+            if(lost_timer>100){
+                lost_flag = 1;
+                color_detected = 8;
+            }
         }
 
         if(color_detected != 0 && color_detected != 8){
@@ -24540,7 +24549,9 @@ void main(void) {
 
 
         else if(color_detected == 8){
-            AppendTime((b-6),&time_index,time_array);
+
+            if(lost_flag){AppendTime((b-lost_timer-6),&time_index,time_array);}
+            else{AppendTime((b-6),&time_index,time_array);}
             LATDbits.LATD7 = 1;
 
             while(b>0){

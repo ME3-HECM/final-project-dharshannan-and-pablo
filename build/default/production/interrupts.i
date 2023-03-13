@@ -24324,7 +24324,7 @@ unsigned int color_read_Clear(void);
 
 void Update_RGBC(RGB_val *tempval);
 
-unsigned char detect_color(RGB_val *tempval,unsigned char *lost_timer);
+unsigned char detect_color(RGB_val *tempval);
 # 4 "interrupts.c" 2
 
 # 1 "./i2c.h" 1

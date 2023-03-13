@@ -37,6 +37,6 @@ unsigned int color_read_Clear(void);
 // Function to update colors read
 void Update_RGBC(RGB_val *tempval);
 // Function to decide color detected
-unsigned char detect_color(RGB_val *tempval,unsigned char *lost_timer);
+unsigned char detect_color(RGB_val *tempval);
 
 #endif

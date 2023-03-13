@@ -58,7 +58,7 @@ void main(void) {
     unsigned char lost_timer = 0; // To keep track of how long the Buggy has not read a card for
     
     while (PORTFbits.RF2); //empty while loop (wait for button press)
-    
+    color_flag = 0; // Incase there's an unwanted trigger
     WhiteLight(); // Turn on the white light
     while (1){
         //Update_RGBC(&initial_color); // Update the RGBC values
@@ -68,8 +68,17 @@ void main(void) {
         while(color_detected == 0){
             fullSpeedAhead(&motorL,&motorR);
             Update_RGBC(&initial_color); // Update the RGBC values
-            color_detected = detect_color(&initial_color, lost_timer); // Pass initial color values into detect color function 
+            color_detected = detect_color(&initial_color); // Pass initial color values into detect color function 
             b++; // Increment b
+            // Lost Track back dependencies
+            if(initial_color.C > 1600 && initial_color.C < 2000){ // If it hits a wall (Black wall) (*These clear values may require calibration)
+                lost_timer++; // Increment the lost timer
+            }
+            // If the buggy is stuck at the black wall for an extended period flag lost flag and set color detected to white (track back mode)
+            if(lost_timer>100){
+                lost_flag = 1;
+                color_detected = 8;
+            }
         }
         // If color detected is no longer null, stop Buggy and decide the movement of the Buggy
         if(color_detected != 0 && color_detected != 8){ // If color is not null and not white
@@ -91,7 +100,9 @@ void main(void) {
         
         // If color detected is white, start the track back sequence
         else if(color_detected == 8){
-            AppendTime((b-6),&time_index,time_array); // Append the value of b (forward incrementation variable) to the time array (*minus 6 to avoid overshoot)
+            // Append values depending on lost flag
+            if(lost_flag){AppendTime((b-lost_timer-6),&time_index,time_array);} // Append the value of b (forward incrementation variable) to the time array (*minus 6 to avoid overshoot)
+            else{AppendTime((b-6),&time_index,time_array);}
             LATDbits.LATD7 = 1; // Turn ON LED to indicate white color has been detected (and the Buggy is in track back mode)
             // Stop motor
             while(b>0){

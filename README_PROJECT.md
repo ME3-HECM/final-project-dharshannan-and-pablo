@@ -76,34 +76,45 @@ The source file contains our main function. We start by manually the initial col
     
     The source file contains functions that initialise the different movements that the buggy can make as well as initialising the DCmotors PWM nad setting the motor PWM. Some of the movements menstioned include moving forwards, backwards, breaking, turning right and turning left. 
 
+1. ```"i2c.c/h"```
+    .........................................................
+    .........................................................
+    .........................................................
+    .........................................................
+    .........................................................
+    .........................................................
+
+
+1. ```"interrupts.c/h"```
+    
+    The header file simply contains the function prototypes from the corresponding source file.
+
+    The source file turns on interrupts, and defines:
+    - a high priority interrupt every time the buggy detects a colour;
+    - a low priority interrupt every time the timer overflows (1 second has passed).
+
+1. ```"LED_Buttons.c"```
+    
+    The header file simply contains the function prototypes from the corresponding source file.
+    
+    The source file contains functions to initialie all the LED's and the function to turn on all the red, green and blue LEDs to produce white light on the color clicker
+
+1. ```"Memorization.c/h"```
+    The header file simply contains the function prototypes from the corresponding source file and initialises move index and arrays to be global variables.  
+    
+    The source contains functions to hold in memory the time the buggy moves forward and the moves it has made
+    
+1. ```"serial.c/h"```
+
+    The source file contains functions to send information to a computer through the serial port
+
+
 1. ```"timers.c/h"```
 
     The header file defines the prescaler values and Timer0 initial bits for both the "testing mode" and "normal mode".
     
     The source file initialises Timer0 to be used in the low priority interrupt (to increment out time each second).
-
-1. ```"interrupts.c/h"```
-
-    The source file turns on interrupts, and defines:
-    - a high priority interrupt every time sunrise or sunset occurs;
-    - a low priority interrupt every time the timer overflows (1 second has passed).
-
-1. ```"LEDconfig.c/h"```
-
-    The source file contains functions to initialise LED RD7.
-
-1. ```"LEDarray.c/h"```
-
-    The source file contains functions to initialise the LED array.
-
-1. ```"LCD.c/h"```
-
-    The source contains functions to initialise the LCD screen.
     
-## Achieving sun synchronocity
-To achieve sun synchronocity we implemented the "Solar Midnight" method. This method involves calculating the length of time between sunset and sunrise. This value is then divided by 2 and added to 0 (representing midnight-12am). This gives us the theoretical time suggested by sun synchronocity. We check this time with the current time at the moment sunrise occurs. If the difference between the current time and the "suggested" time is greater than +-45 minutes, we reset the current time to the "suggested" time. 
-
-We also take into account the time period we are in. If we are in the "daylight savings" period (daysave=1) the time will reset accordingly at 2am on the last sunday of October to 1am. Once we come out of the "daylight savings" period (daysave=0), which is the last Sunday of March, the timer will reset from 1am to 2am.
 
 
 

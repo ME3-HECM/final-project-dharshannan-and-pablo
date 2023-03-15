@@ -114,6 +114,7 @@ The source file contains our main function. We start by manually the initial col
     The source file contains functions to initialie all the LED's and the function to turn on all the red, green and blue LEDs to produce white light on the color clicker
 
 1. ```"Memorization.c/h"```
+    
     The header file contains the function prototypes from the corresponding source file and initialises move index and arrays to be global variables.  
     
     The source contains functions to hold in memory the time the buggy moves forward and the moves it has made

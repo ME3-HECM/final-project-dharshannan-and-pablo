@@ -1,0 +1,3 @@
+# Text files containing RGBC values used for calibration within Python file. 100 values were sampled for 25 seconds
+# for each of the colored cards. The data from the text file is imported into Python, pre-processed and analysed.
+# Percentage distribution of RGB values were calculated for each of the colored cards, which were then coded on the color.c file for the project.

@@ -21,7 +21,7 @@ Our hardware has been set up as in Lab 4:
 - The **LED on pin RD7** is used as to signal when the buggy has detected the white card and is turned ON for the period of track back mode until the buggy has reached   its starting position.
 - The **Colour Clicker** is used to detect the colours as RGB values.
 
-[Insert Picture of the Buggy here]
+(gifs/Final_Project.jpg)
 
 
 ## Demonstration video

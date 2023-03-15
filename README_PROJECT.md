@@ -5,7 +5,7 @@
 - [Demonstration video](#demonstration-video)
 - [Program structure](#program-structure)
 - [Challenge brief](#challenge-brief)
-- ["Mine" enviroment specification](#mine-enviroment-specification)
+- ["Mine" environment specification](#mine-environment-specification)
 - [Resources and project submission](#resources-and-project-submission)
 - [Supplementary itechnical information](#supplementary-technical-information)
 

@@ -56,7 +56,7 @@ The source file contains our main function. We start by manually the initial col
 
 1. ```"color_instructions.c/h"```
 
-    The header file simply contains the function prototypes from the corresponding source file.
+    The header file contains the function prototypes from the corresponding source file.
     
     The source file contains functions that contain the instructions to be performed by the buggy for every colour as well as the inverse functions when needed for the white card instructions.
 
@@ -74,7 +74,7 @@ The source file contains our main function. We start by manually the initial col
     } DC_motor;
     ```
     
-    The source file contains functions that initialise the different movements that the buggy can make as well as initialising the DCmotors PWM nad setting the motor PWM. Some of the movements menstioned include moving forwards, backwards, breaking, turning right and turning left. 
+    The source file contains functions that initialise the different movements that the buggy can make as well as initialising the DCmotors PWM and setting the motor PWM. Some of the movements mentioned include moving forwards, backwards, breaking, turning right and turning left. 
 
 1. ```"i2c.c/h"```
     Here we define functions for I2C communications between the color click and the clicker board.
@@ -108,12 +108,12 @@ The source file contains our main function. We start by manually the initial col
 
 1. ```"LED_Buttons.c"```
     
-    The header file simply contains the function prototypes from the corresponding source file.
+    The header file contains the function prototypes from the corresponding source file.
     
     The source file contains functions to initialie all the LED's and the function to turn on all the red, green and blue LEDs to produce white light on the color clicker
 
 1. ```"Memorization.c/h"```
-    The header file simply contains the function prototypes from the corresponding source file and initialises move index and arrays to be global variables.  
+    The header file contains the function prototypes from the corresponding source file and initialises move index and arrays to be global variables.  
     
     The source contains functions to hold in memory the time the buggy moves forward and the moves it has made
     

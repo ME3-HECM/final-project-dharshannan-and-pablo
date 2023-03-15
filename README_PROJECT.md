@@ -13,65 +13,68 @@
 
 
 ## Instructions to users
-Please follow the following procedures to set up your energy saving automatic outside light:
-1. Set up your hardware as detailed in [Hardware setup](#hardware-setup);
-1. Manually input the date (required), time (required), Daylight Savings Period (required), sunrise timing (optional) and sunset timing (optional) in ```main.c```;
-1. To operate in "normal mode" change the prescaler time on ```timers.c``` to 0b1000 (1:256)
-1. To operate in "test mode" change the prescaler time on ```timers.c``` to 0b0000 (1:1)
+I do not think we need this section.
 
 
 ## Hardware setup
 Our hardware has been set up as in Lab 4:
-- The **LED on pin RD7** is used as the street light (it switches on at dusk and off at dawn (it is off from 1am-5am too to save energy));
-- The **LCD screen** is used as the date and time indicator in all modes (it displays the date and time in decimal).
+- The **LED on pin RD7** is used as to signal when the buggy has detected a colour.
+- The **Colour Clicker** is used to detect the colours as RGB values.
 
-![Street Lamp](gifs/Mini_Project.jpg) 
-
+[Insert Picture of the Buggy here]
 
 
 ## Demonstration video
-Our video demonstrates operation of the street light during daylight savings change of clock (note that the clocks changed on 31 October 2021 (Sunday) at 2am - it turned back 1 hour to 1am):
+Our video demonstrates the operation of the buggy in the medium level maze, showing that it works for almost all colours.
 
-https://www.youtube.com/watch?v=r1nD_SjOgA4
+[Insert video of the medium maze buggy here]
 
 
 ## Program structure
 Our program has been structured as follows:
 1. ```"main.c"```
 
-We configure our oscillators and windowed watchdog timer here. All other header files used in this project are included here too. 
+We define the main structures used along the code and the basic instructions to be completed by the buggy when colours are detected. 
 
-The source file contains our main function. We start by manually inputting the date and time when the device is first programmed. The sunrise time on the day that the device is first programmed can also be manually inputted too if known, or left to the default timing of 7am if unknown. We then proceed to initialise all our hardware modules. The program then runs indefinitely in an infinite while loop (or more realistically, until the hardware fails). During each iteration:
-    - we check whether the sunrise/sunset flag has been toggled (by our high priority interrupt) and turn the street light off/on as required;
-    - we check whether the time flag has been toggled (by our low priority interrupt) and increment our time for every second that passes by;
-    - we switch off the street light from 1am-5am and disable the high priority interrupt (to prevent accidentally switching on the street light);
-    - we display the current time on the LCD screen
+The source file contains our main function. We start by manually the initial color values for Red, Green, Blue and Clear. We also start the initialization sequences for the colour clicker, LED, Interrupts and Timer0. We then proceed by defining the twostrcutures for both right and left motors and set the PWM period to 99. 
 
-1. ```"datetime.c/h"```
+1. ```"color.c/h"```
 
-    The header file defines a structure ```datetime``` which is used throughout the project:
+    The header file defines a structure ```RGB_val``` which is used throughout the project:
     ```
-    typedef struct {
-        unsigned int year;
-        unsigned char date,month,day,hour,minute,second,daysave,sunset_hour,sunset_minute,sunset_second;
-    } date_time;
+    typedef struct RGB_val {
+        unsigned int R;
+        unsigned int G;
+        unsigned int B;
+        unisgned int C;
+    } RGB_val;
     ```
     
-    The source file contains 2 key functions:
-    - ```date_time incre_time(date_time curr)``` which updates our current time every second, functions to check for clock changes due to daylight savings and changes to the date, month and year are also called here;
-    - ```date_time set_sunsynchronocity(date_time curr)``` which synchronises our time with the sun indefinitely.
+    The source file contains 2 key sets of functions:
+    - The colour clicker initialization functions. Allows the color clicker to detetect Red, Green Blue and clear
+    - ```detect_color(RGB_val *tempval)``` which initialises the color ddetected and checks which colour it has detected given the confidence the value and confidence intervals manuallt set after extensive data Analysis. 
 
-1. ```"ADC.c/h"```
+1. ```"color_instructions.c/h"```
 
     The header file simply contains the function prototypes from the corresponding source file.
     
-    The source file contains functions to initialise our ADC module, and obtain the current ADC readings for the LDR voltage.
+    The source file contains functions that contain the instructions to be performed by the buggy for every colour as well as the inverse functions when needed for the white card instructions.
 
-1. ```"comparator.c/h"```
+1. ```"dc_motor.c/h"```
 
-    The header file simply contains the function prototypes from the corresponding source file.
+ The header file defines a structure ```DC_motor``` which is used throughout the project:
+    ```
+    typedef struct DC_motor {
+        signed char power;
+        char direction;
+        char brakemode;
+        unsigned int PWMperiod;
+        unsigned char *posDutyHighByte;
+        unsigned char *negDutyHighByte:
+    } DC_motor;
+    ```
     
-    The source file contains functions initialise the comparator module to use in our interrupts.
+    The source file contains functions that initialise the different movements that the buggy can make as well as initialising the DCmotors PWM nad setting the motor PWM. Some of the movements menstioned include moving forwards, backwards, breaking, turning right and turning left. 
 
 1. ```"timers.c/h"```
 

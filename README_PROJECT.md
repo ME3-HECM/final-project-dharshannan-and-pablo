@@ -1,4 +1,4 @@
-# Mini project - Energy saving automatic outside light - Dharshannan and Pablo
+# Final project - SMART Buggy - Dharshannan and Pablo
 ## Table of contents
 - [Instructions to users](#instructions-to-users)
 - [Hardware setup](#hardware-setup)

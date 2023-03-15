@@ -77,6 +77,7 @@ The source file contains our main function. We start by manually the initial col
     The source file contains functions that initialise the different movements that the buggy can make as well as initialising the DCmotors PWM and setting the motor PWM. Some of the movements mentioned include moving forwards, backwards, breaking, turning right and turning left. 
 
 1. ```"i2c.c/h"```
+    
     Here we define functions for I2C communications between the color click and the clicker board.
 
 

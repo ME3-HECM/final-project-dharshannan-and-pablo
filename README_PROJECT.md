@@ -17,7 +17,8 @@ I do not think we need this section.
 
 ## Hardware setup
 Our hardware has been set up as in Lab 4:
-- The **LED on pin RD7** is used as to signal when the buggy has detected a colour.
+- The **LED on pin RH3** is used as to signal when the buggy has detected a colored card.
+- The **LED on pin RD7** is used as to signal when the buggy has detected the white card and is turned ON for the period of track back mode until the buggy has reached   its starting position.
 - The **Colour Clicker** is used to detect the colours as RGB values.
 
 [Insert Picture of the Buggy here]
@@ -26,7 +27,7 @@ Our hardware has been set up as in Lab 4:
 ## Demonstration video
 Our video demonstrates the operation of the buggy in the medium level maze, showing that it works for almost all colours.
 
-[Insert video of the medium maze buggy here]
+(https://www.youtube.com/watch?v=uHknbKGVIsA&t=9s)
 
 
 ## Program structure
@@ -76,20 +77,33 @@ The source file contains our main function. We start by manually the initial col
     The source file contains functions that initialise the different movements that the buggy can make as well as initialising the DCmotors PWM nad setting the motor PWM. Some of the movements menstioned include moving forwards, backwards, breaking, turning right and turning left. 
 
 1. ```"i2c.c/h"```
-    .........................................................
-    .........................................................
-    .........................................................
-    .........................................................
-    .........................................................
-    .........................................................
+    Here we define functions for I2C communications between the color click and the clicker board.
 
 
 1. ```"interrupts.c/h"```
     
-    The header file simply contains the function prototypes from the corresponding source file.
+    The header file contains the function prototypes from the corresponding source file.
 
     The source file turns on interrupts, and defines:
     - a high priority interrupt every time the buggy detects a colour;
+    ```
+	    void __interrupt(high_priority) HighISR()
+	{
+	    //add your ISR code here i.e. check the flag, do something (i.e. toggle an LED), clear the flag..
+
+	    /****************************************************
+	    // Here we interrupt to check if color card is found
+	    *****************************************************/
+
+	    if(PIR0bits.INT1IF){ // If the flag is raised (clear channel value is outside of threshold range)
+		color_flag = 1; // Raise flag for colored card detection
+		//LATHbits.LATH3 = !LATHbits.LATH3; // Turn ON and OFF LED for debugging purposes
+		interrupts_clear_colorclick(); // Clear colorclick interrupts
+		PIR0bits.INT1IF = 0; // Clear interrupt flag
+	    }
+
+	}
+    ```
     - a low priority interrupt every time the timer overflows (1 second has passed).
 
 1. ```"LED_Buttons.c"```

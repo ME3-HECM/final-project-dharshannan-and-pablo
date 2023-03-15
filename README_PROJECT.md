@@ -34,9 +34,9 @@ Our video demonstrates the operation of the buggy in the medium level maze, show
 Our program has been structured as follows:
 1. ```"main.c"```
 
-We define the main structures used along the code and the basic instructions to be completed by the buggy when colours are detected. 
+	We define the main structures used along the code and the basic instructions to be completed by the buggy when colours are detected. 
 
-The source file contains our main function. We start by manually the initial color values for Red, Green, Blue and Clear. We also start the initialization sequences for the colour clicker, LED, Interrupts and Timer0. We then proceed by defining the twostrcutures for both right and left motors and set the PWM period to 99. 
+	The source file contains our main function. We start by manually the initial color values for Red, Green, Blue and Clear. We also start the initialization sequences for the colour clicker, LED, Interrupts and Timer0. We then proceed by defining the twostrcutures for both right and left motors and set the PWM period to 99. 
 
 1. ```"color.c/h"```
 

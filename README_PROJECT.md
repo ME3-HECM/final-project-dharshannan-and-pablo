@@ -37,7 +37,7 @@ Our program has been structured as follows:
 
 	We define the main structures used along the code and the basic instructions to be completed by the buggy when colours are detected. 
 
-	The source file contains our main function. We start by manually the initial color values for Red, Green, Blue and Clear. We also start the initialization sequences for the colour clicker, LED, Interrupts and Timer0. We then proceed by defining the twostrcutures for both right and left motors and set the PWM period to 99. 
+	The source file contains our main function. We start by manually the initial color values for Red, Green, Blue and Clear. We also start the initialization sequences for the colour clicker, LED, Interrupts and Timer0. We then proceed by defining the two strcutures for both right and left motors and set the PWM period to 99. 
 
 1. ```"color.c/h"```
 
@@ -52,8 +52,8 @@ Our program has been structured as follows:
     ```
     
     The source file contains 2 key sets of functions:
-    - The colour clicker initialization functions. Allows the color clicker to detetect Red, Green Blue and clear
-    - ```detect_color(RGB_val *tempval)``` which initialises the color ddetected and checks which colour it has detected given the confidence of the value and confidence intervals are manually set after extensive data analysis. 
+    - The colour clicker initialization functions. Allows the color clicker to detect Red, Green Blue and Clear
+    - ```detect_color(RGB_val *tempval)``` which initialises the color detected and checks which colour it has detected given the confidence of the value and confidence intervals are manually set after extensive data analysis. 
 
 1. ```"color_instructions.c/h"```
 
@@ -112,7 +112,7 @@ Our program has been structured as follows:
     
     The header file contains the function prototypes from the corresponding source file.
     
-    The source file contains functions to initialie all the LED's and the function to turn on all the red, green and blue LEDs to produce white light on the color clicker
+    The source file contains functions to initialie all the LED's and buttons and the function to turn on all the red, green and blue LEDs to produce white light on the color clicker
 
 1. ```"Memorization.c/h"```
     

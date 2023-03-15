@@ -16,11 +16,12 @@ To start the buggy, the RF2 button is pressed. When the buggy returns to its ori
 
 
 ## Hardware setup
-Our hardware has been set up as in Lab 4:
+Our hardware has been set up as below:
 - The **LED on pin RH3** is used as to signal when the buggy has detected a colored card.
 - The **LED on pin RD7** is used as to signal when the buggy has detected the white card and is turned ON for the period of track back mode until the buggy has reached   its starting position.
 - The **Colour Clicker LEDs** is used to detect the colours as RGB values and provide illumination.
 
+Image of Buggy:
 ![Buggy_Image](gifs/Final_Project.jpg)
 
 

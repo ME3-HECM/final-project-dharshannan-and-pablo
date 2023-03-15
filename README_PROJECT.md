@@ -7,7 +7,7 @@
 - [Challenge brief](#challenge-brief)
 - ["Mine" environment specification](#mine-environment-specification)
 - [Resources and project submission](#resources-and-project-submission)
-- [Supplementary itechnical information](#supplementary-technical-information)
+- [Supplementary technical information](#supplementary-technical-information)
 
 
 

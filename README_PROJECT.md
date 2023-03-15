@@ -52,7 +52,7 @@ The source file contains our main function. We start by manually the initial col
     
     The source file contains 2 key sets of functions:
     - The colour clicker initialization functions. Allows the color clicker to detetect Red, Green Blue and clear
-    - ```detect_color(RGB_val *tempval)``` which initialises the color ddetected and checks which colour it has detected given the confidence the value and confidence intervals manuallt set after extensive data Analysis. 
+    - ```detect_color(RGB_val *tempval)``` which initialises the color ddetected and checks which colour it has detected given the confidence of the value and confidence intervals are manually set after extensive data analysis. 
 
 1. ```"color_instructions.c/h"```
 

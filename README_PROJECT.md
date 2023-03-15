@@ -62,7 +62,7 @@ The source file contains our main function. We start by manually the initial col
 
 1. ```"dc_motor.c/h"```
 
- The header file defines a structure ```DC_motor``` which is used throughout the project:
+    The header file defines a structure ```DC_motor``` which is used throughout the project:
     ```
     typedef struct DC_motor {
         signed char power;

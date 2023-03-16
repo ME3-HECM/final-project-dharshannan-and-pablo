@@ -66,7 +66,7 @@ print(stdRED, stdGREEN, stdBLUE) # Print the standard deviation of RGB values
 ```
 
 ## Lost Capability
-The buggy is programed to enter tack back mode when it is lost, most significantly when it gets stuck. When the buggy is stuck for a period of time, it is programmed to keep track of how long it is stuck for and deducts this time from the forward movement for its track back array. The code below highlights how this is achieved within the main_motor.c file
+The buggy is programed to enter tack back mode when it is lost, most significantly when it gets stuck. When the buggy is stuck for a period of time, it is programmed to keep track of how long it is stuck for and deducts this time from the forward movement for its track back array. The code below highlights how this is achieved within the main_motor.c file:
 ```
  // Initialize color detected variable
     unsigned char color_detected = 0;

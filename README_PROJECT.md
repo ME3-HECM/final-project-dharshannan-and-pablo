@@ -3,6 +3,7 @@
 - [Instructions to users](#instructions-to-users)
 - [Hardware setup](#hardware-setup)
 - [Demonstration video](#demonstration-video)
+- [Lost Function](#lost-function)
 - [Program structure](#program-structure)
 - [Challenge brief](#challenge-brief)
 - ["Mine" environment specification](#mine-environment-specification)
@@ -29,6 +30,11 @@ Image of Buggy:
 Our video demonstrates the operation of the buggy in the medium level maze, showing that it works for almost all colours.
 
 (https://www.youtube.com/watch?v=uHknbKGVIsA&t=9s)
+
+## Lost function
+Explanation
+
+Insert demonstration buggy
 
 
 ## Program structure

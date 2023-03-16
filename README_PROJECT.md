@@ -103,7 +103,7 @@ The buggy is programed to enter tack back mode when it is lost, most significant
 	// If color detected is white, start the track back sequence
         else if(color_detected == 8){
             // Append values depending on lost flag
-            if(lost_flag){AppendTime((b-lost_timer-6),&time_index,time_array);} // Append the value of b (forward incrementation variable) to the time array (*minus 6 		   //to avoid overshoot)
+            if(lost_flag){AppendTime((b-lost_timer-6),&time_index,time_array);} // Append the value of b (forward incrementation variable) to the time array (*minus 6 to avoid overshoot)
             else{AppendTime((b-6),&time_index,time_array);}
 ```
 The above code shows how the lost track back is achieved, by setting the color_detected to white when the buggy is lost (stuck), which in turn initiates the track back mode.

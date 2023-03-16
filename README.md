@@ -28,11 +28,11 @@ Image of Buggy:
 
 
 ## Demonstration video
-Our video demonstrates the operation of the buggy in the medium level maze, showing that it works for almost all colours.
+Our video demonstrates the operation of the buggy in the medium level maze, showing that it works for almost all colours:
 
 (https://www.youtube.com/watch?v=uHknbKGVIsA&t=9s)
 
-The 2nd video below shows the buggy operating in the Hard Level Maze with some minor help and adjustments required
+The 2nd video below shows the buggy operating in the Hard Level Maze with some minor help and adjustments required:
 
 (https://imperiallondon.sharepoint.com/:v:/s/ECM-ME/EWtXbQerbYBBp0bYAvjNSY8BuRn0s2rY24evYJtY6hrCeQ?e=3yrhQv)
 

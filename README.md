@@ -118,7 +118,7 @@ Demonstration video of lost capability:
 
 ## Program structure
 Our program has been structured as follows:
-1. ```"main.c"```
+1. ```"main_motor.c"```
 
 	We define the main structures used along the code and the basic instructions to be completed by the buggy when colours are detected. 
 

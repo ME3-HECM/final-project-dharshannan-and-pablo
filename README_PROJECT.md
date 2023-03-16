@@ -33,7 +33,7 @@ Our video demonstrates the operation of the buggy in the medium level maze, show
 (https://www.youtube.com/watch?v=uHknbKGVIsA&t=9s)
 
 ## Colour Calibration
-The color calibration is done by 1st collecting 100 RGB values for each colored card via serial and appending these values into a text file via RealTerm. The text files are the imported into Python and the average RGB values are calculated for each card. These average values are then coded onto the color.c file with defined confidence intervals. Snippet of the Python code is provided below, however to view the full code and text files used for the calibration, these can be found in the Calibration folder in the main branch of this repository.
+The color calibration is done by 1st collecting 100 RGB values over a span of 25 seconds for each colored card via serial and appending these values into a text file via RealTerm. The text files are the imported into Python and the average RGB values are calculated for each card. These average values are then coded onto the color.c file with defined confidence intervals. Snippet of the Python code is provided below, however to view the full code and text files used for the calibration, these can be found in the Calibration folder in the main branch of this repository.
 
 Python code snippet:
 ```

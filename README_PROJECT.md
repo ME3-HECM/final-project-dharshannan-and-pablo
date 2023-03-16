@@ -4,7 +4,7 @@
 - [Hardware setup](#hardware-setup)
 - [Demonstration video](#demonstration-video)
 - [Colour Calibration](#colour-calibration)
-- [Lost Function](#lost-function)
+- [Lost Capability](#lost-capability)
 - [Program structure](#program-structure)
 - [Challenge brief](#challenge-brief)
 - ["Mine" environment specification](#mine-environment-specification)
@@ -33,12 +33,83 @@ Our video demonstrates the operation of the buggy in the medium level maze, show
 (https://www.youtube.com/watch?v=uHknbKGVIsA&t=9s)
 
 ## Colour Calibration
+The color calibration is done by 1st collecting 100 RGB values for each colored card via serial and appending these values into a text file via RealTerm. The text files are the imported into Python and the average RGB values are calculated for each card. These average values are then coded onto the color.c file with defined confidence intervals. Snippet of the Python code is provided below, however to view the full code and text files used for the calibration, these can be found in the Calibration folder in the main branch of this repository.
 
+Python code snippet:
+```
+# =============================================================================
+# Now we will process the data !!!
+# =============================================================================
+percentage = [] # Holds %distribution values for each data point
+for i in range(0, len(Red2)):
+    # Calculate distribution values for each RGB values
+    distR = Red2[i]/(Red2[i] + Green[i] + Blue[i]) 
+    distG = Green[i]/(Red2[i] + Green[i] + Blue[i])
+    distB = Blue[i]/(Red2[i] + Green[i] + Blue[i])
+    # Append these values
+    percentage.append([distR,distG,distB])
 
-## Lost function
-Explanation
+#print(percentage)
+percentage = np.array(percentage) # Turn to numpy array
+# Now we average to get an average value for each RGB distribution
+avgRED = sum(percentage[:,0])/len(percentage)
+avgGREEN = sum(percentage[:,1])/len(percentage)
+avgBLUE = sum(percentage[:,2])/len(percentage)
 
-Insert demonstration buggy
+print(avgRED,avgGREEN,avgBLUE) # Print the average RGB values
+# Calculate standard deviation for each RGB values also
+stdRED = st.stdev(percentage[:,0])
+stdGREEN = st.stdev(percentage[:,1])
+stdBLUE = st.stdev(percentage[:,2])
+
+print(stdRED, stdGREEN, stdBLUE) # Print the standard deviation of RGB values
+```
+
+## Lost Capability
+The buggy is programed to enter tack back mode when it is lost, most significantly when it gets stuck. When the buggy is stuck for a period of time, it is programmed to keep track of how long it is stuck for and deducts this time from the forward movement for its track back array. The code below highlights how this is achieved within the main_motor.c file
+```
+ // Initialize color detected variable
+    unsigned char color_detected = 0;
+    unsigned char lost_timer = 0; // To keep track of how long the Buggy has not read a card for
+    
+    while (PORTFbits.RF2); //empty while loop (wait for button press)
+    color_flag = 0; // Incase there's an unwanted trigger
+    WhiteLight(); // Turn on the white light
+    while (1){
+        //Update_RGBC(&initial_color); // Update the RGBC values
+        //color_detected = detect_color(&initial_color); // Pass initial color values into detect color function
+        // While loop to continue moving Buggy forward while color detected is null (0)
+        unsigned int b = 0; // Variable to store forward movement time
+        while(color_detected == 0){
+            fullSpeedAhead(&motorL,&motorR);
+            Update_RGBC(&initial_color); // Update the RGBC values
+            color_detected = detect_color(&initial_color); // Pass initial color values into detect color function 
+            b++; // Increment b
+            // Lost Track back dependencies
+            if(initial_color.C > 1900 && initial_color.C < 2200){ // If it hits a wall (Blackish Brown wall) (*These clear values may require calibration)
+                lost_timer++; // Increment the lost timer
+            }
+            // If the buggy is stuck at the black wall for an extended period flag lost flag and set color detected to white (track back mode)
+            if(lost_timer>100){
+                lost_flag = 1;
+                color_detected = 8;
+            }
+        }
+	.
+	.
+	.
+	.
+	.
+	// If color detected is white, start the track back sequence
+        else if(color_detected == 8){
+            // Append values depending on lost flag
+            if(lost_flag){AppendTime((b-lost_timer-6),&time_index,time_array);} // Append the value of b (forward incrementation variable) to the time array (*minus 6 		   //to avoid overshoot)
+            else{AppendTime((b-6),&time_index,time_array);}
+```
+The above code shows how the lost track back is achieved, by setting the color_detected to white when the buggy is lost (stuck), which in turn initiates the track back mode.
+
+Demonstration video of lost capability:
+(https://imperiallondon.sharepoint.com/:v:/s/ECM-ME/ESC_FXGhF5BNtCdX6YW23tcBz2LB3_Vin3qPxFECxT0U7A?e=kGdi9E)
 
 
 ## Program structure
